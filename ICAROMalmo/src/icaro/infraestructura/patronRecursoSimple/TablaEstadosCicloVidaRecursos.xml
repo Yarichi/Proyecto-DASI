@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstadosCicloVida.dtd">
+<tablaEstados descripcionTabla="Automata del ciclo de vida de un recurso">
+
+	<estadoInicial idInicial="creado">
+		<transicion input="arrancar" estadoSiguiente="arrancando"/>
+	</estadoInicial>
+
+	<estado idIntermedio="arrancando">
+		<transicion input="fallo" estadoSiguiente="falloArranque"/>
+		<transicion input="error" estadoSiguiente="error"/>
+		<transicion input="ok" estadoSiguiente="activo"/>
+	</estado>
+	
+	<estado idIntermedio="falloArranque">
+		<transicion input="arranca" estadoSiguiente="arrancado"/>
+	</estado>
+	
+	<estado idIntermedio="activo">
+		<transicion input="fallo" estadoSiguiente="falloTemporal"/>
+		<transicion input="error" estadoSiguiente="error"/>
+		<transicion input="parar" estadoSiguiente="parado"/>
+		<transicion input="terminar" estadoSiguiente="terminando"/>
+	</estado>
+	
+	<estado idIntermedio="falloTemporal">
+		<transicion input="continuar" estadoSiguiente="activo"/>
+	</estado>
+
+	<estado idIntermedio="parado">
+		<transicion input="activar" estadoSiguiente="activo"/>
+	</estado>
+	
+	<estado idIntermedio="terminando">
+		<transicion input="ok" estadoSiguiente="terminado"/>
+	</estado>
+	
+	<estado idIntermedio="error">
+		<transicion input="terminar" estadoSiguiente="terminando"/>
+	</estado>
+	
+	<estadoFinal idFinal="terminado"/>
+	
+	<transicionUniversal input="error" estadoSiguiente="error"/>
+
+</tablaEstados>

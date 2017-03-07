@@ -1,0 +1,35 @@
+<escenarioSimulacion>
+   <identEscenario>equipo1</identEscenario>
+   <numRobots>2</numRobots>
+   <numVictimas>3</numVictimas>
+   <robots key="Robot1">
+      <point>
+         <x>-3</x>
+         <y>32</y>
+      </point>
+   </robots>
+   <robots key="Robot2">
+      <point>
+         <x>68</x>
+         <y>356</y>
+      </point>
+   </robots>
+   <victimas key="Victima2">
+      <point>
+         <x>446</x>
+         <y>87</y>
+      </point>
+   </victimas>
+   <victimas key="Victima1">
+      <point>
+         <x>148</x>
+         <y>198</y>
+      </point>
+   </victimas>
+   <victimas key="Victima3">
+      <point>
+         <x>530</x>
+         <y>304</y>
+      </point>
+   </victimas>
+</escenarioSimulacion>

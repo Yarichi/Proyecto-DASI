@@ -1,0 +1,29 @@
+
+import icaro.infraestructura.recursosOrganizacion.recursoTrazas.ItfUsoRecursoTrazas;
+import icaro.infraestructura.recursosOrganizacion.recursoTrazas.imp.componentes.InfoTraza;
+import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.*;
+import icaro.infraestructura.patronAgenteCognitivo.procesadorObjetivos.gestorTareas.ItfGestorTareas;
+import icaro.aplicaciones.Rosace.informacion.*;
+import icaro.aplicaciones.Rosace.tareasComunes.*;
+import icaro.aplicaciones.agentes.agenteAplicacionAsignadorTareasCognitivo.informacion.*;
+import icaro.aplicaciones.agentes.agenteAplicacionAsignadorTareasCognitivo.objetivos.*;
+import icaro.aplicaciones.agentes.agenteAplicacionAsignadorTareasCognitivo.tareas.*;
+import java.util.ArrayList;
+import java.lang.String;
+import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.InformeDeTarea;
+import icaro.aplicaciones.agentes.componentesInternos.movimientoCtrl.*;
+
+global ItfGestorTareas gestorTareas;
+global ItfUsoRecursoTrazas recursoTrazas;
+global String agentId;
+
+//Primera regla que se ejecutara. Solo se debe disparar una vez.
+// Suponemos que el este componente es un robot como el resto del equipo
+rule "Regla inicial"
+ when
+    not ( exists(InfoCompMovimiento()))
+ then
+   recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());   
+    System.out.println( "\n"+agentId +"EJECUTO LA REGLA\n\n" + drools.getRule().getName()); 
+end
+

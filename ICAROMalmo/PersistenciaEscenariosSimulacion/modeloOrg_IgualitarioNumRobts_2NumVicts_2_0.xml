@@ -1,0 +1,64 @@
+<escenarioSimulacion>
+   <identEscenario>modeloOrg_IgualitarioNumRobts_2NumVicts_2_0</identEscenario>
+   <modeloOrganizativo>Igualitario</modeloOrganizativo>
+   <numRobots>2</numRobots>
+   <numVictimas>2</numVictimas>
+   <robots key="Robot1">
+      <robotStatus1>
+         <idRobot>Robot1</idRobot>
+         <idRobotRol>indefinido</idRobotRol>
+         <availableEnergy>100000</availableEnergy>
+         <robotCoordinateActualP>
+            <x>55</x>
+            <y>67</y>
+         </robotCoordinateActualP>
+         <robotCapabilities class="java.util.ArrayList">
+            <robotCapability nombre="radar">
+               <descripcion>radar del robot</descripcion>
+            </robotCapability>
+         </robotCapabilities>
+      </robotStatus1>
+   </robots>
+   <robots key="Robot2">
+      <robotStatus1>
+         <idRobot>Robot2</idRobot>
+         <idRobotRol>indefinido</idRobotRol>
+         <availableEnergy>100000</availableEnergy>
+         <robotCoordinateActualP>
+            <x>33</x>
+            <y>232</y>
+         </robotCoordinateActualP>
+         <robotCapabilities class="java.util.ArrayList">
+            <robotCapability nombre="radar">
+               <descripcion>radar del robot</descripcion>
+            </robotCapability>
+         </robotCapabilities>
+      </robotStatus1>
+   </robots>
+   <victimas key="Victima2">
+      <victim>
+         <name>Victima2</name>
+         <priority>100</priority>
+         <requiredCompetencies class="java.util.ArrayList">
+            <competency>25</competency>
+         </requiredCompetencies>
+         <victimCoordinateP>
+            <x>140</x>
+            <y>132</y>
+         </victimCoordinateP>
+      </victim>
+   </victimas>
+   <victimas key="Victima1">
+      <victim>
+         <name>Victima1</name>
+         <priority>100</priority>
+         <requiredCompetencies class="java.util.ArrayList">
+            <competency>25</competency>
+         </requiredCompetencies>
+         <victimCoordinateP>
+            <x>179</x>
+            <y>181</y>
+         </victimCoordinateP>
+      </victim>
+   </victimas>
+</escenarioSimulacion>

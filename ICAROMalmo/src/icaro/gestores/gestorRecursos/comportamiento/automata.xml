@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<!-- Descriptor de la tabla de estados del automata -->
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstados.dtd">
+<!-- para validacion manual:
+<!DOCTYPE tablaEstados SYSTEM "../../../../../schemas/TablaEstados.dtd">
+ -->
+<!-- Tabla del Gestor de recursos general --> 
+
+<tablaEstados descripcionTabla="Tabla de transiciones del gestor de recursos general">
+	<estadoInicial idInicial="estadoInicial">
+		<transicion input="comenzar" accion="configurarGestor" estadoSiguiente="configurando" modoDeTransicion="bloqueante"/>
+	</estadoInicial>
+	<estado idIntermedio="configurando">
+		<transicion input="gestor_configurado" accion="listarRecursos" estadoSiguiente="listandoRecursos" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="listandoRecursos">
+		<transicion input="recursos_listados" accion="crearRecurso" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+                <transicion input="sinRecursosDefinidos" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="creandoRecurso">
+		<transicion input="recurso_creado" accion="crearRecurso" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+                <transicion input="RecursoRemotoCreadoyRegistrado" accion="vacio" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+                <transicion input="recursos_creados" accion="arrancarRecurso" estadoSiguiente="arrancandoRecurso" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_creacion_recurso" accion="recuperarErrorCreacionRecurso" estadoSiguiente="errorCreacionRecurso" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="arrancandoRecurso">
+		<transicion input="recurso_arrancado" accion="arrancarRecurso" estadoSiguiente="arrancandoRecurso" modoDeTransicion="bloqueante"/>
+		<transicion input="recursos_arrancados_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_recurso" accion="recuperarErrorArranqueRecurso" estadoSiguiente="errorArranqueRecurso" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="esperandoPeticiones">
+		<transicion input="crear_recurso" accion="crearRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_recurso" accion="finalizarRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="recursos_creados_ok" accion="monitorizarRecursos" estadoSiguiente="monitorizando" modoDeTransicion="bloqueante"/>
+                <transicion input="monitorizar" accion="monitorizarRecursos" estadoSiguiente="monitorizando" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="monitorizando">
+		<transicion input="recursos_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="crear_recurso" accion="crearRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_recurso" accion="finalizarRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_al_monitorizar" accion="recuperarErrorAlMonitorizarRecursos" estadoSiguiente="errorMonitorizacionRecursos" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorCreacionRecurso">
+		<transicion input="reintenta" accion="reintentarCreacionRecurso" estadoSiguiente="reintentandoCreacionRecurso" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="reintentandoCreacionRecurso">
+		<transicion input="reintento_error" accion="reintentarCreacionRecurso" estadoSiguiente="reintentandoCreacionRecurso" modoDeTransicion="bloqueante"/>
+		<transicion input="reintento_ok" accion="crearRecurso" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+		<transicion input="continua_creacion" accion="crearRecurso" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+		<transicion input="imposible_recuperar_creacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorArranqueRecurso">
+		<transicion input="imposible_recuperar_arranque" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+		<transicion input="recuperacion_arranque_recursos_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorMonitorizacionRecursos">
+		<transicion input="recuperacion_monitorizacion_recursos_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="crear_recurso" accion="crearRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_recurso" accion="finalizarRecurso" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="imposible_recuperar_error_monitorizacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="decidiendoTratamientoErrorIrrecuperable">
+		<transicion input="tratamiento_terminar_recursos_y_gestor_recursos" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="generandoInformeError">
+		<transicion input="informe_generado" accion="terminarRecursosActivos" estadoSiguiente="terminandoRecursos" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="terminandoRecursos">
+		<transicion input="recursos_terminados" accion="terminarGestorRecursos" estadoSiguiente="gestorRecursosTerminado" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estadoFinal idFinal="gestorRecursosTerminado"/>
+	<transicionUniversal input="ordenTerminacion" accion="terminarRecursosActivos" estadoSiguiente="terminandoRecursos" modoDeTransicion="bloqueante"/>
+        <transicionUniversal input="peticionTerminacion" accion="terminarRecursosActivos" estadoSiguiente="terminandoRecursos" modoDeTransicion="bloqueante"/>
+</tablaEstados>

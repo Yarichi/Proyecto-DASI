@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xs:schema targetNamespace="urn:icaro:aplicaciones:descripcionOrganizaciones" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="urn:icaro:aplicaciones:descripcionOrganizaciones" xmlns:icaro="urn:icaro:aplicaciones:descripcionOrganizaciones" elementFormDefault="qualified">
+	<xs:complexType name="AgentesAplicacion">
+		<xs:sequence>
+			<xs:element name="Instancia" type="Instancia" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="nodoComun" type="Nodo" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ComponenteGestionado">
+		<xs:sequence/>
+		<xs:attribute name="refId" use="required" type="xs:string"/>
+		<xs:attribute name="refDescripcion" use="optional" type="xs:string"/>
+		<xs:attribute name="tipoComponente" use="required" type="TipoComponente"/>
+	</xs:complexType>
+	<xs:complexType name="ComponentesGestionados">
+		<xs:sequence>
+			<xs:element name="componenteGestionado" type="ComponenteGestionado" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoAgente">
+		<xs:sequence/>
+		<xs:attribute name="nombreComportamiento" use="required" type="NombreAgente"/>
+		<xs:attribute name="localizacionComportamiento" use="optional" type="xs:string"/>
+		<xs:attribute name="tipo" use="required" type="TipoAgente"/>
+		<xs:attribute name="rol" use="required" type="RolAgente"/>
+                <xs:attribute name="localizacionClaseAcciones" use="optional" type="xs:string"/>
+                <xs:attribute name="localizacionFicheroReglas" use="optional" type="xs:string"/>
+                <xs:attribute name="localizacionFicheroAutomata" use="optional" type="xs:string"/>
+                
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoAgenteCognitivo">
+		<xs:complexContent>
+			<xs:extension base="DescComportamientoAgente">
+				<xs:sequence>
+					<xs:element name="rutaReglas" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoAgenteReactivo">
+		<xs:complexContent>
+			<xs:extension base="DescComportamientoAgente">
+				<xs:sequence>
+					<xs:element name="rutaAutomata" type="xs:string" minOccurs="0" maxOccurs="1"/>
+					<xs:element name="rutaAcciones" type="xs:string" minOccurs="0" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoAgentes">
+		<xs:sequence>
+			<xs:element name="DescComportamientoGestores" type="DescComportamientoGestores" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="DescComportamientoAgentesAplicacion" type="DescComportamientoAgentesAplicacion" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoAgentesAplicacion">
+		<xs:sequence>
+                        <xs:element name="DescComportamientoAgente" type="DescComportamientoAgente" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DescComportamientoGestores">
+		<xs:sequence>
+			<xs:element name="DescComportamientoAgente" type="DescComportamientoAgente" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DescOrganizacion">
+		<xs:sequence>
+			<xs:element name="PropiedadesGlobales" type="PropiedadesGlobales" minOccurs="1" maxOccurs="1"/>
+                        <xs:element name="NodosDespliegue" type="ListaNodosEjecucion" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="DescripcionComponentes" type="DescripcionComponentes" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="DescInstancias" type="DescInstancias" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="DescOrganizacion" type="icaro:DescOrganizacion"/>
+	
+	<xs:complexType name="DescRecursoAplicacion">
+		<xs:attribute name="nombre" use="required" type="xs:string"/>
+		<xs:attribute name="localizacionClaseGeneradora" use="optional" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="DescRecursosAplicacion">
+		<xs:sequence>
+			<xs:element name="DescRecursoAplicacion" type="DescRecursoAplicacion" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="DescripcionComponentes">
+		<xs:sequence>
+			<xs:element name="DescComportamientoAgentes" type="DescComportamientoAgentes" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="DescRecursosAplicacion" type="DescRecursosAplicacion" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Gestores">
+		<xs:sequence>
+			<xs:element name="InstanciaGestor" type="InstanciaGestor" minOccurs="1" maxOccurs="unbounded"/>
+			<xs:element name="nodoComun" type="Nodo" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="Instancia">
+		<xs:sequence>
+			<xs:element name="listaPropiedades" type="ListaPropiedades" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="nodoEspecifico" type="Nodo" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+		<xs:attribute name="id" use="required" type="xs:string"/>
+		<xs:attribute name="refDescripcion" use="required" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="InstanciaGestor">
+		<xs:complexContent>
+			<xs:extension base="Instancia">
+				<xs:sequence>
+					<xs:element name="componentesGestionados" type="ComponentesGestionados" minOccurs="1" maxOccurs="1"/>
+				</xs:sequence>
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:complexType name="DescInstancias">
+		<xs:sequence>
+			<xs:element name="Gestores" type="Gestores" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="AgentesAplicacion" type="AgentesAplicacion" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="RecursosAplicacion" type="RecursosAplicacion" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nodoComun" type="Nodo" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ListaPropiedades">
+		<xs:sequence>
+			<xs:element name="propiedad" type="Propiedad" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+        <xs:complexType name="ListaNodosEjecucion">
+		<xs:sequence>
+			<xs:element name="nodoEjecucion" type="Nodo" minOccurs="1" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="Nodo">
+		<xs:sequence>
+			<xs:element name="nombreUso" type="xs:string" minOccurs="1" maxOccurs="1"/>
+			<xs:element name="nombreCompletoHost" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="NombreAgente">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="(AgenteAplicacion|GestorOrganizacion|GestorRecursos|GestorAgentes|GestorNodo)([A-Za-z0-9])*"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="Propiedad">
+		<xs:sequence/>
+		<xs:attribute name="atributo" use="required" type="xs:string"/>
+		<xs:attribute name="valor" use="required" type="xs:string"/>
+	</xs:complexType>
+	<xs:complexType name="PropiedadesGlobales">
+		<xs:sequence>
+			<xs:element name="intervaloMonitorizacionGestores" type="xs:int" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="activarPanelTrazasDebug" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="listaPropiedades" type="ListaPropiedades" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RecursosAplicacion">
+		<xs:sequence>
+			<xs:element name="nodoComun" type="Nodo" minOccurs="0" maxOccurs="1"/>
+			<xs:element name="Instancia" type="Instancia" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="RolAgente">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AgenteAplicacion"/>
+			<xs:enumeration value="Gestor"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoAgente">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Cognitivo"/>
+                        <xs:enumeration value="ADO"/>
+                        <xs:enumeration value="DirigidoPorObjetivos"/>
+			<xs:enumeration value="CognitivoConExpectativas"/>
+			<xs:enumeration value="Reactivo"/>
+			<xs:enumeration value="ReactivoSCXML"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TipoComponente">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AgenteAplicacion"/>
+			<xs:enumeration value="Gestor"/>
+			<xs:enumeration value="RecursoAplicacion"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

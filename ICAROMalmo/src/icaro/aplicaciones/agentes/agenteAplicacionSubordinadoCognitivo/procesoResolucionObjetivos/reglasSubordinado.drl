@@ -1,0 +1,125 @@
+import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.InformeDeTarea;
+import icaro.infraestructura.recursosOrganizacion.recursoTrazas.ItfUsoRecursoTrazas;
+import icaro.infraestructura.recursosOrganizacion.recursoTrazas.imp.componentes.InfoTraza;
+import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.*;
+import icaro.infraestructura.patronAgenteCognitivo.procesadorObjetivos.gestorTareas.ItfGestorTareas;
+import icaro.aplicaciones.Rosace.informacion.*;
+import icaro.aplicaciones.Rosace.tareasComunes.*;
+//import icaro.aplicaciones.agentes.agenteAplicacionSubordinadoCognitivo.informacion.*;
+import icaro.aplicaciones.agentes.agenteAplicacionSubordinadoCognitivo.objetivos.*;
+import icaro.aplicaciones.agentes.agenteAplicacionSubordinadoCognitivo.tareas.*;
+import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.Objetivo;
+
+import java.util.ArrayList;
+import java.lang.String;
+
+
+global ItfGestorTareas gestorTareas;
+global ItfUsoRecursoTrazas recursoTrazas;
+global String agentId;
+
+/*Primera regla que se ejecutara. Solo se debe disparar una vez.
+rule "Acciones Iniciales Subordinado"
+ when
+    not ( exists(Focus()))
+    not ( exists(MisObjetivos()))
+ then
+   TareaSincrona tarea1 = gestorTareas.crearTareaSincrona(InicializarInfoWorkMem.class);
+   tarea1.ejecutar( );
+ //  TareaSincrona tarea2 = gestorTareas.crearTareaSincrona(InsertarObjetoRobot.class);
+    TareaSincrona tarea2 = gestorTareas.crearTareaSincrona(InicializarRobotStatus.class);
+   tarea2.ejecutar( );
+    System.out.println( "\n"+agentId +"EJECUTO LA REGLA Acciones Iniciales\n\n" ); 
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," :REGLA " + drools.getRule().getName());
+   //JM nuevo
+   //recursoTrazas.aceptaNuevaTraza(new InfoTraza("OrdenAsignacion",agentId + " : REGLA " + drools.getRule().getName(), InfoTraza.NivelTraza.debug));    
+    
+end
+*/
+rule "Si me llega una peticion de envio de mi evaluacion del Agte Asignador  la calculo y se la mando"
+ when    
+//    focoActual : Focus(foco == null)
+    misObjs: MisObjetivos()
+    robot:RobotStatus1()
+    victims2R:VictimsToRescue(victims2Rescue!=null)
+    peticionAgte: PeticionAgente( mensajePeticion == VocabularioRosace.MsgPeticionEnvioEvaluaciones,
+                                 identAgente == VocabularioRosace.IdentAgteDistribuidorTareas,victimaCC:justificacion)
+  then
+     TareaSincrona tarea = gestorTareas.crearTareaSincrona(MandarEvaluacionAlAgteAsignador.class);
+     tarea.ejecutar(null,peticionAgte,misObjs,robot,victims2R); 
+     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," :REGLA " + drools.getRule().getName());
+     System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+" \n\n" );
+end
+
+rule "Procesar propuesta para que asuma el objetivo cuando no tengo objetivo focalizado "
+   when
+      victimaCC:Victim(idVict:name)   
+//      focoActual : Focus(foco == null)
+      misObjs: MisObjetivos()
+      miStatus:RobotStatus1()
+      victims2R:VictimsToRescue(victims2Rescue !=null)
+      propuesta:PropuestaAgente (msgPropuesta:mensajePropuesta == VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo,identObjectRefPropuesta == idVict)
+      not( exists ( AceptacionPropuesta(propuestaAceptada == propuesta  )))
+   then
+      TareaSincrona tarea = gestorTareas.crearTareaSincrona(ProcesarPropuestaParaAsumirObjetivo.class);
+      tarea.ejecutar(null,miStatus,misObjs,victims2R,propuesta );
+      recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId,"( ID Victima: "+idVict + " ) EJECUTO LA REGLA " + drools.getRule().getName() + "\n");
+      System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+" \n\n" );                     
+end
+
+rule "Si he aceptado la propuesta para asumir el objetivo lo genero y lo focalizo "
+   when
+      victimaCC:Victim(idVict:name)   
+      focoActual : Focus(foco == null)
+      misObjs: MisObjetivos()
+  //    RobotStatus()
+  //    victims2R:VictimsToRescue(victims2Rescue!=null)
+      acPropuesta:AceptacionPropuesta (identAgente == agentId,identObjectRefAcetPropuesta == idVict)
+   then
+      TareaSincrona tarea = gestorTareas.crearTareaSincrona(GeneraryEncolarObjetivoActualizarFoco.class);
+      tarea.ejecutar(misObjs,focoActual,victimaCC,acPropuesta );
+      recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId,"( ID Victima: "+idVict + " ) EJECUTO LA REGLA " + drools.getRule().getName() + "\n");
+      System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+" \n\n" );                     
+ //     depuracionOrdenAsignacionVictimas(agentId, idVict, recursoTrazas);
+end
+
+rule "Si estoy con un objetivo y he aceptado la propuesta para asumir otro objetivo lo genero y focalizo el mas prioritario "
+   when
+      victimaCC:Victim(idVict:name)
+      obj: AyudarVictima ( victimId != idVict)
+      focoActual : Focus(foco == obj)
+      misObjs : MisObjetivos()
+ //     miStatus:RobotStatus()
+ //     victims2R:VictimsToRescue(victims2Rescue!=null)
+      acPropuesta:AceptacionPropuesta (identAgente == agentId,identObjectRefAcetPropuesta == idVict)
+   then
+      TareaSincrona tarea = gestorTareas.crearTareaSincrona(GeneraryEncolarObjetivoActualizarFoco.class);
+      tarea.ejecutar(misObjs,focoActual,victimaCC,acPropuesta );
+      recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId,"( ID Victima: "+idVict + " ) EJECUTO LA REGLA " + drools.getRule().getName() + "\n");
+      System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+" \n\n" );                     
+      
+ //     depuracionOrdenAsignacionVictimas(agentId, idVict, recursoTrazas);      
+end
+
+
+rule "Fin de la simulacion"
+  when    
+    robot:RobotStatus1()
+    victims2R:VictimsToRescue(victims2Rescue!=null)
+    misObjs: MisObjetivos()
+//    finSimu: FinSimulacion(flagActivacion==false)                
+    finSimu: FinSimulacion()                
+  then
+     TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizarSimulacion.class);
+     tarea.ejecutar(robot,victims2R,misObjs,finSimu);
+     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
+ //    depuracion2(agentId, drools.getRule().getName(), recursoTrazas);
+end
+
+
+
+function void depuracionOrdenAsignacionVictimas(String agentId, String victim, ItfUsoRecursoTrazas recursoTrazas){
+            recursoTrazas.aceptaNuevaTraza(new InfoTraza("OrdenAsignacion",
+                                                     "El robot " + agentId + " se hace cargo de la victima " + victim,
+                                                     InfoTraza.NivelTraza.debug));
+}

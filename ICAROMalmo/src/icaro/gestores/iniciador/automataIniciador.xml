@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<!-- Descriptor de la tabla de estados del automata -->
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstados.dtd">
+<!-- para validacion manual:
+<!DOCTYPE tablaEstados SYSTEM "../../../../../schemas/TablaEstados.dtd">
+ -->
+<tablaEstados descripcionTabla="Tabla de transiciones del gestor de agentes general">
+	<estadoInicial idInicial="estadoInicial">
+		<transicion input="comenzar" accion="verificarExistenciaEntidadesDescripcion" estadoSiguiente="creandoRecursosNucleoOrganizacion" />
+	</estadoInicial>
+	<estado idIntermedio="creandoRecursosNucleoOrganizacion">
+		<transicion input="existenEntidadesDescripcion" accion="crearRecursosNucleoOrganizacion" estadoSiguiente="creandoRecursosNucleoOrganizacion" modoDeTransicion="bloqueante"/>
+                <transicion input="recursosNucleoCreados" accion="crearGestorInicial" estadoSiguiente="creandoGestorInicial" modoDeTransicion="bloqueante"/>
+                <transicion input="error_InterpretacionDescripcionOrganizacion" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+                <transicion input="errorLocalizacionFicherosDescripcion" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+        </estado>
+	<estado idIntermedio="creandoGestorInicial">
+		<transicion input="GestorInicialCreado" accion="arrancarGestorInicialyTerminar" estadoSiguiente="arrancandoGestorInicial" modoDeTransicion="bloqueante"/>
+		<transicion input="error_al_crearGestorInicial" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="arrancandoGestorInicial">
+		<transicion input="GestorInicial_arrancado_ok" accion="terminarPorPropiaVoluntad" estadoSiguiente="comenzandoTerminacion" modoDeTransicion="bloqueante"/>
+		<transicion input="error_al_arrancarGestorInicial" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="generandoInformeError">
+		<transicion input="informe_generado" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+                <transicion input="peticion_terminar_todo_usuario" accion="procesarPeticionTerminacion" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+        </estado>
+	<estado idIntermedio="procesandoTerminacion">
+		<transicion input="terminacion_confirmada" accion="comenzarTerminacionConfirmada" estadoSiguiente="comenzandoTerminacion" modoDeTransicion="bloqueante"/>
+		<transicion input="terminacion_anulada" accion="vacio" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+                <transicion input="peticion_terminar_todo_usuario" accion="procesarPeticionTerminacion" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+        </estado>
+	<estado idIntermedio="comenzandoTerminacion">
+		<transicion input="termina" accion="terminarPorPropiaVoluntad" estadoSiguiente="iniciadorTerminado" modoDeTransicion="bloqueante"/>
+	</estado>
+    <estadoFinal idFinal="iniciadorTerminado"/>
+    <transicionUniversal input="peticion_terminar_todo" accion="procesarPeticionTerminacion" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+    <transicionUniversal input="peticion_terminar_todo_usuario" accion="procesarPeticionTerminacion" estadoSiguiente="procesandoTerminacion" modoDeTransicion="bloqueante"/>
+
+</tablaEstados>

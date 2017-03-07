@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<schemas xmlns='http://xml.netbeans.org/schema/JAXBWizConfig' destdir='build/generated-sources/jaxb' projectName='IcaroRosaceNuevosDesarrollos_1' version='1.0'>
+	<schema type='-xmlschema' package='' name='descripcionOrganizacion'>
+		<xjc-options>
+			<xjc-option name='-readOnly' value='true'/>
+		</xjc-options>
+		<schema-sources>
+			<schema-source location='xml-resources/jaxb/descripcionOrganizacion/DescripcionOrganizacionSchema.xsd' origLocation='schemas/DescripcionOrganizacionSchema.xsd'/>
+		</schema-sources>
+		<bindings>
+		</bindings>
+		<catalog/>
+	</schema>
+</schemas>

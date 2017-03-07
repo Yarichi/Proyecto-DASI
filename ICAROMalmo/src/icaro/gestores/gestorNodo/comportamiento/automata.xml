@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<!-- Descriptor de la tabla de estados del automata -->
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstados.dtd">
+<!-- para validacion manual:
+<!DOCTYPE tablaEstados SYSTEM "../../../../../schemas/TablaEstados.dtd">
+ -->
+<!-- Tabla del Gestor de la Organizacion general
+-->
+
+<!-- 
+	El Gestor de Nodo recibe ordenes de otro Gestor de la Organización que puede ser un GO un GA o un GR
+	Las ordenes que pude recibir son: CrearGestor pasandole como parámetro el identificador del gestor a crear
+        CrearAgente pasandole como parámetro el identificador del agente a crear
+        ReportarAGestor pasandole como parámetro el identificador del gestor  a reportar
+        Peticionde terminar todo : peticion_terminar_todo
+-->
+<tablaEstados descripcionTabla="Tabla de transiciones del Gestor de Nodo">
+	<estadoInicial idInicial="estadoInicial">
+		<transicion input="comenzar" accion="configurarGestor" estadoSiguiente="configurandoGestor" modoDeTransicion="bloqueante"/>
+	</estadoInicial>
+	<estado idIntermedio="configurandoGestor">
+		<transicion input="gestor_configurado" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+	</estado>
+       <estado idIntermedio="esperandoPeticiones">
+		<transicion input="peticion_crearGestor" accion="crearGestor" estadoSiguiente="creandoGestor" modoDeTransicion="bloqueante"/>
+        <transicion input="peticion_crearAgente" accion="crearUnAgenteEnNodoLocalyPublicIntfEnRMIO" estadoSiguiente="creandoAgente" modoDeTransicion="bloqueante"/>
+		<transicion input="peticion_crearRecurso" accion="crearUnRecursoEnNodoLocalyPublicIntfEnRMIO" estadoSiguiente="creandoRecurso" modoDeTransicion="bloqueante"/>
+                <transicion input="reportarAGestor" accion="definirGestorAReportar" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+                <transicion input="monitorizar" accion="monitorizarGestores" estadoSiguiente="monitorizando" modoDeTransicion="bloqueante"/>
+		<transicion input="peticion_terminar_todo" accion="procesarPeticionTerminacion" estadoSiguiente="esperarConfirmacionUsuario" modoDeTransicion="bloqueante"/>
+
+	</estado>
+	<estado idIntermedio="creandoGestor">
+		<transicion input="gestor_creado" accion="arrancandoGestor" estadoSiguiente="arrancandoGestor" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_creacion_gestores" accion="recuperarErrorCreacionGestores" estadoSiguiente="errorCreacionGestores" modoDeTransicion="bloqueante"/>
+	</estado>	
+        <estado idIntermedio="creandoAgente">
+		<transicion input="agente_creado" accion="arrancandoAgente" estadoSiguiente="arrancandoAgente" modoDeTransicion="bloqueante"/>
+        <transicion input="agenteRemoto_creado" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_creacion_agente" accion="recuperarErrorCreacionAgente" estadoSiguiente="errorCreacionAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+        <estado idIntermedio="creandoRecurso">
+		<transicion input="recursoCreadoyRegistrado" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_creacion_recurso" accion="recuperarErrorCreacionRecurso" estadoSiguiente="errorCreacionRecursos" modoDeTransicion="bloqueante"/>
+                <transicion input="error_en_registroRemoto_recurso" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError"  modoDeTransicion="bloqueante"/>
+        </estado>
+        <estado idIntermedio="arrancandoGestor">
+		<transicion input="gestor_arrancado_ok" accion="informarGestorOrdenante" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_gestores" accion="recuperarErrorArranqueGestores" estadoSiguiente="errorArranqueGestores" modoDeTransicion="bloqueante"/>
+	</estado>
+        <estado idIntermedio="arrancandoAgente">
+		<transicion input="agente_arrancado_ok" accion="informarGestorAgentes" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_agentes" accion="recuperarErrorArranqueGestores" estadoSiguiente="errorArranqueAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+         <estado idIntermedio="arrancandoRecurso">
+		<transicion input="recurso_arrancado_ok" accion="informarGestorRecursos" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_recurso" accion="recuperarErrorArranqueGestores" estadoSiguiente="errorArranqueRecruso" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="arrancandoGestorAgentes">
+		<transicion input="gestor_agentes_arrancado_ok" accion="gestoresArrancadosConExito" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_gestores" accion="recuperarErrorArranqueGestores" estadoSiguiente="errorArranqueGestores" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="monitorizando">
+		<transicion input="gestores_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_al_monitorizar" accion="recuperarErrorAlMonitorizarGestores" estadoSiguiente="errorMonitorizacionGestores" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorCreacionGestores">
+		<transicion input="imposible_recuperar_creacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+		<transicion input="recuperacion_creacion_gestores_ok" accion="arrancarGestorRecursos" estadoSiguiente="arrancandoGestorRecursos" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorArranqueGestores">
+		<transicion input="imposible_recuperar_arranque" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+		<transicion input="recuperacion_arranque_gestores_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="errorMonitorizacionGestores">
+		<transicion input="recuperacion_monitorizacion_gestores_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="imposible_recuperar_error_monitorizacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+	</estado>
+	<!--<estado idIntermedio="decidiendoTratamientoErrorIrrecuperable">
+		<transicion input="tratamiento_terminar_gestores_y_gestor_organizacion" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>-->
+	<estado idIntermedio="decidiendoTratamientoErrorIrrecuperable">
+		<transicion input="peticion_terminar_todo_usuario" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>
+<estado idIntermedio="generandoInformeError">
+		<transicion input="informe_generado" accion="terminarGestorAgentes" estadoSiguiente="terminandoGestorAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+	
+	
+	<estado idIntermedio="esperarConfirmacionUsuario">
+		<transicion input="terminacion_confirmada" accion="comenzarTerminacionConfirmada" estadoSiguiente="comenzandoTerminacion" modoDeTransicion="bloqueante"/>
+		<transicion input="terminacion_anulada" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+                
+        </estado>
+	<estado idIntermedio="comenzandoTerminacion">
+		<transicion input="termina" accion="terminarGestorAgentes" estadoSiguiente="terminandoGestorAgentes" modoDeTransicion="bloqueante"/>	
+                <transicion input="terminacion_confirmada" accion="comenzarTerminacionConfirmada" estadoSiguiente="comenzandoTerminacion" modoDeTransicion="bloqueante"/>
+        </estado>
+	
+	
+    <estado idIntermedio="terminandoGestorAgentes">
+		<transicion input="timeout_gestor_agentes" accion="tratarTerminacionNoConfirmada" estadoSiguiente="tratandoTerminacionNoConfirmadaGestorAgentes" modoDeTransicion="bloqueante" />
+ 		<transicion input="gestor_agentes_terminado" accion="terminarGestorRecursos" estadoSiguiente="terminandoGestorRecursos" modoDeTransicion="bloqueante"/>
+                <transicion input="continuaTerminacion" accion="terminarGestorRecursos" estadoSiguiente="terminandoGestorRecursos" modoDeTransicion="bloqueante" />
+        </estado>
+	
+	<estado idIntermedio="tratandoTerminacionNoConfirmadaGestorAgentes">
+		<transicion input="continuaTerminacion" accion="terminarGestorRecursos" estadoSiguiente="terminandoGestorRecursos" modoDeTransicion="bloqueante" />
+	</estado>
+	
+	<estado idIntermedio="terminandoGestorRecursos">	
+		<transicion input="gestor_recursos_terminado" accion="terminarGestorOrganizacion" estadoSiguiente="gestorOrganizacionTerminado" modoDeTransicion="bloqueante"/>
+		<transicion input="timeout_gestor_recursos" accion="tratarTerminacionNoConfirmada" estadoSiguiente="tratandoTerminacionNoConfirmadaGestorRecursos" modoDeTransicion="bloqueante" />  
+                <transicion input="continuaTerminacion" accion="terminarGestorOrganizacion" estadoSiguiente="gestorOrganizacionTerminado" modoDeTransicion="bloqueante" />
+        </estado>
+	
+	<estado idIntermedio="tratandoTerminacionNoConfirmadaGestorRecursos">
+		<transicion input="continuaTerminacion" accion="terminarGestorOrganizacion" estadoSiguiente="gestorOrganizacionTerminado" modoDeTransicion="bloqueante" />
+	</estado>
+	
+        <transicionUniversal input="peticion_terminar_todo" accion="procesarPeticionTerminacion" estadoSiguiente="gestorNodoTerminado" modoDeTransicion="bloqueante"/>
+	<transicionUniversal input="peticion_terminar_todo_usuario" accion="procesarPeticionTerminacion" estadoSiguiente="esperarConfirmacionUsuario" modoDeTransicion="bloqueante"/>
+
+
+	<estadoFinal idFinal="gestorNodoTerminado"/>
+	
+	
+</tablaEstados>

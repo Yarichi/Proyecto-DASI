@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstados.dtd">
+<!-- para validacion manual:
+<!DOCTYPE tablaEstados SYSTEM "../../../../../../schemas/TablaEstados.dtd">
+ -->
+<tablaEstados descripcionTabla="Tabla de estados para el agente AgenteAplicacionAgteControladorSimuladorRosace">
+<!--******************************************************************************************************
+    ******************     Declaracion del estado inicial y su transicion             	******************
+    ******************************************************************************************************-->
+  <estadoInicial idInicial="estadoInicial">
+     <transicion input="comenzar" accion="accionComenzar" estadoSiguiente="obtencionDelEscenario" modoDeTransicion="bloqueante"/>
+  </estadoInicial>
+
+<!--******************************************************************************************************
+    ******************     Declaracion de estados intermedios y sus transiciones        ******************
+    ******************************************************************************************************-->  
+    <estado idIntermedio="obtencionDelEscenario">
+
+     <transicion input="escenarioSeleccionadoUsuario" accion="ValidarEscenarioRecibido" estadoSiguiente="obtencionDelEscenario" modoDeTransicion="bloqueante"/>
+      <transicion input="escenarioDefinidoValido" accion="actualizarInfoVisorSimulador" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>
+     <transicion input="timeoutEsperaDefinicionEscenario" accion="solicitarDefinicionEscenario" estadoSiguiente="esperandoDefinicionEscenario" modoDeTransicion="bloqueante"/>
+      <transicion input="EscenarioEnfaseDeCreacion" accion="crearTempSolicitarDefinicionEscenario" estadoSiguiente="esperandoDefinicionEscenario" modoDeTransicion="bloqueante"/>
+      <transicion input="escenarioNoDefinidoTrasAgotarLosIntentos" accion="solicitarDefinicionEscenario" estadoSiguiente="obtencionDelEscenario" modoDeTransicion="bloqueante"/>
+  </estado>
+<estado idIntermedio="esperandoPeticionesUsuario">
+
+     <transicion input="sendSequenceOfSimulatedVictimsToRobotTeam" accion="validarPeticionSimulacion" estadoSiguiente="clasificacionPeticionSimulacion" modoDeTransicion="bloqueante"/>
+      <transicion input="peticionSimulacionVictima" accion="validarPeticionSimulacion" estadoSiguiente="clasificacionPeticionSimulacion" modoDeTransicion="bloqueante"/>
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="esperandoIniciarSimulacion" modoDeTransicion="bloqueante"/>
+      <transicion input="peticionInicioSimulacion" accion="validarPeticionSimulacion" estadoSiguiente="clasificacionPeticionSimulacion" modoDeTransicion="bloqueante"/>
+      <transicion input="escenarioDefinidoValido" accion="actualizarInfoVisorSimulador" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>
+      <transicion input="escenarioSeleccionadoUsuario" accion="ValidarEscenarioRecibido" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>
+  </estado>
+  <estado idIntermedio="esperandoIniciarSimulacion">
+
+     <transicion input="sendSequenceOfSimulatedVictimsToRobotTeam" accion="sendSequenceOfSimulatedVictimsToRobotTeam" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+      <transicion input="peticionSimulacionVictima" accion="sendSimulatedVictimToRobotTeam" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="esperandoIniciarSimulacion" modoDeTransicion="bloqueante"/>
+  
+  </estado>
+  <estado idIntermedio="clasificacionPeticionSimulacion">
+     <transicion input="escenarioyTipoSimulacionValidos" accion="ejecutarPetionSimulacionValida" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="escenarioDefinidoNoValido" accion="solicitarDefinicionEscenario" estadoSiguiente="obtencionDelEscenario" modoDeTransicion="bloqueante"/> 
+    <transicion input="NuevoEscenarioDefinidoyTipoSimulacionValido" accion="ValidarEscenarioRecibido" estadoSiguiente="obtencionDelEscenario" modoDeTransicion="bloqueante"/> 
+  </estado>
+  
+  <estado idIntermedio="simulando">
+    <transicion input="peticionSimulacionVictima" accion="ejecutarPeticionSimulacionVictima" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="victimaAsignadaARobot" accion="procesarInfoVictimaAsignada" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="victimaRescatada" accion="procesarInfoVictimaRescatada" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="infoEstadoAgente" accion="procesarInfoEstadoAgente" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+     <transicion input="finSimulacion" accion="guardarCasoYconfirmarVisualizacionResultados" estadoSiguiente="esperandoConfirmarVisualizResultados" modoDeTransicion="bloqueante"/>
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+    <transicion input="enviarIdentsEquipo" accion="mostrarRobotsActivos" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+    <transicion input="peticionPararRobot" accion="pararRobot" estadoSiguiente="simulando" modoDeTransicion="bloqueante"/>
+    <transicion input="peticionTerminarSimulacion" accion="notificarFinCasoSimulacion" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>
+  </estado>
+  
+  <estado idIntermedio="esperandoConfirmarVisualizResultados">
+
+     <transicion input="resultadosPresentadosYguardados" accion="notificarFinCasoSimulacion" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>
+     
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>     
+  
+  </estado>
+  <estado idIntermedio="esperandoConfirmarNuevoCasoSimulacion">
+
+     <transicion input="resultadosPresentadosYguardados" accion="notificarEquipoFinCasoSimulacion" estadoSiguiente="esperandoConfirmarNuevoCasoSimulacion" modoDeTransicion="bloqueante"/>
+     
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="esperandoPeticionesUsuario" modoDeTransicion="bloqueante"/>     
+  
+  </estado>
+  <estado idIntermedio="finalizandoSimulacion">
+
+     <transicion input="finSimulacion" accion="FinSimulacion" estadoSiguiente="finalizandoSimulacion" modoDeTransicion="bloqueante"/>
+     
+     <transicion input="mostrarEscenarioActualSimulado" accion="mostrarEscenarioActualSimulado" estadoSiguiente="finalizandoSimulacion" modoDeTransicion="bloqueante"/>     
+  
+  </estado>
+
+<!--******************************************************************************************************
+    ******************     Declaracion de estados finales             	                ******************
+    ******************************************************************************************************-->  
+
+  <estadoFinal idFinal="estadoFinal"/>
+
+<!--******************************************************************************************************
+    ******************     Declaracion de transiciones universales             	        ******************
+    ******************************************************************************************************-->  
+
+</tablaEstados>

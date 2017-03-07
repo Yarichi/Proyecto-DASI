@@ -1,0 +1,33 @@
+<!-- edited with XML Spy v3.5 (http://www.xmlspy.com) by Jorge (private) -->
+<!-- DTD para Tabla de estados. Aumentada con funcionalidad adicional-->
+<!--Las transiciones universales son aquellas que, desde cualquier estado, con el input especificado, van a un estado siguiente, ejecutando una acción con un modo de ejecución. Son una forma de ahorrar líneas de definición de transiciones, ya que habría que poner una transición con ese input en cada estado para lograr el efecto que se consigue con las transiciones universales.-->
+<!ELEMENT tablaEstados (estadoInicial, estado*, estadoFinal+, transicionUniversal*)>
+<!ATTLIST tablaEstados
+	descripcionTabla CDATA #IMPLIED
+>
+<!ELEMENT estadoInicial (transicion+)>
+<!ATTLIST estadoInicial
+	idInicial ID #REQUIRED
+>
+<!ELEMENT estado (transicion+)>
+<!ATTLIST estado
+	idIntermedio ID #REQUIRED
+>
+<!ELEMENT estadoFinal EMPTY>
+<!ATTLIST estadoFinal
+	idFinal ID #REQUIRED
+>
+<!ELEMENT transicionUniversal EMPTY>
+<!ATTLIST transicionUniversal
+	input CDATA #REQUIRED
+	accion CDATA #REQUIRED
+	estadoSiguiente IDREF #REQUIRED
+	modoDeTransicion (bloqueante | paralelo) #REQUIRED
+>
+<!ELEMENT transicion EMPTY>
+<!ATTLIST transicion
+	input CDATA #REQUIRED
+	accion CDATA #REQUIRED
+	estadoSiguiente IDREF #REQUIRED
+	modoDeTransicion (bloqueante | paralelo) #REQUIRED
+>

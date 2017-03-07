@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!-- Descriptor de la tabla de estados del automata -->
+<!DOCTYPE tablaEstados SYSTEM "schemas/TablaEstados.dtd">
+<!-- para validacion manual:
+<!DOCTYPE tablaEstados SYSTEM "../../../../../schemas/TablaEstados.dtd">
+ -->
+<tablaEstados descripcionTabla="Tabla de transiciones del gestor de agentes general">
+
+	<estadoInicial idInicial="estadoInicial">
+		<transicion input="comenzar" accion="configurarGestor" estadoSiguiente="configurandoGestor" modoDeTransicion="bloqueante"/>
+	</estadoInicial>
+	
+	<estado idIntermedio="configurandoGestor">
+		<transicion input="gestor_configurado" accion="crearAgentes" estadoSiguiente="creandoAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="creandoAgentes">
+		<transicion input="agente_creado" accion="crearAgentes" estadoSiguiente="creandoAgentes" modoDeTransicion="bloqueante"/>
+                <transicion input="listaAgentesGestionadosVacia" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		 <transicion input="agenteRemotoCreadoyRegistrado" accion="addAgenteAListaAgtesGestionados" estadoSiguiente="creandoAgentes" modoDeTransicion="bloqueante"/>
+                <transicion input="agentes_creados" accion="arrancarAgentes" estadoSiguiente="arrancandoAgentes" modoDeTransicion="bloqueante"/>
+                <transicion input="error_en_creacion_agentes" accion="recuperarErrorCreacionAgentes" estadoSiguiente="errorCreacionAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="arrancandoAgentes">
+		<transicion input="agente_arrancado" accion="arrancarAgente" estadoSiguiente="arrancandoAgentes" modoDeTransicion="bloqueante"/>
+		<transicion input="agentes_arrancados_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+                <transicion input="error_en_arranque_agentes" accion="recuperarErrorArranqueAgentes" estadoSiguiente="errorArranqueAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+<estado idIntermedio="creandoAgente">
+		<transicion input="agente_creado" accion="crearAgente" estadoSiguiente="creandoAgente" modoDeTransicion="bloqueante"/>
+                <transicion input="agenteRemotoCreadoyRegistrado" accion="vacio" estadoSiguiente="creandoAgente" modoDeTransicion="bloqueante"/>
+                <transicion input="agentes_creados" accion="arrancarAgente" estadoSiguiente="arrancandoAgente" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_creacion_agente" accion="recuperarErrorCreacionAgente" estadoSiguiente="errorCreacionAgente" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="arrancandoAgente">
+		<transicion input="agente_arrancado" accion="arrancarAgente" estadoSiguiente="arrancandoAgente" modoDeTransicion="bloqueante"/>
+		<transicion input="agentes_arrancados_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_en_arranque_agente" accion="recuperarErrorArranqueAgente" estadoSiguiente="errorArranqueAgente" modoDeTransicion="bloqueante"/>
+	</estado>
+	<estado idIntermedio="esperandoPeticiones">
+		<transicion input="crear_agente" accion="crearAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_agente" accion="finalizarAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="monitorizar" accion="monitorizarAgentes" estadoSiguiente="monitorizando" modoDeTransicion="bloqueante"/>
+		<transicion input="peticion_terminar_todo" accion="pedirTerminacionAGestorOrg" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante" /> 
+	</estado>
+
+	<estado idIntermedio="monitorizando">
+		<transicion input="agentes_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="crear_agente" accion="crearAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_agente" accion="finalizarAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="error_al_monitorizar" accion="recuperarErrorAlMonitorizarAgentes" estadoSiguiente="errorMonitorizacionAgentes" modoDeTransicion="bloqueante"/>
+                <transicion input="peticion_terminar_todo" accion="pedirTerminacionAGestorOrg" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante" />
+        </estado>
+
+	<estado idIntermedio="errorCreacionAgentes">
+		<transicion input="imposible_recuperar_creacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+		<transicion input="recuperacion_creacion_agentes_ok" accion="arrancarAgentes" estadoSiguiente="arrancandoAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="errorArranqueAgentes">
+		<transicion input="imposible_recuperar_arranque" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+		<transicion input="recuperacion_arranque_agentes_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="errorMonitorizacionAgentes">
+		<transicion input="recuperacion_monitorizacion_agentes_ok" accion="vacio" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="crear_agente" accion="crearAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="finalizar_agente" accion="finalizarAgente" estadoSiguiente="esperandoPeticiones" modoDeTransicion="bloqueante"/>
+		<transicion input="imposible_recuperar_error_monitorizacion" accion="decidirTratamientoErrorIrrecuperable" estadoSiguiente="decidiendoTratamientoErrorIrrecuperable" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="decidiendoTratamientoErrorIrrecuperable">
+		<transicion input="tratamiento_terminar_agentes_y_gestor_agentes" accion="generarInformeErrorIrrecuperable" estadoSiguiente="generandoInformeError" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="generandoInformeError">
+		<transicion input="informe_generado" accion="terminarAgentesActivos" estadoSiguiente="terminandoAgentes" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<estado idIntermedio="terminandoAgentes">
+		<transicion input="agentes_terminados" accion="terminarGestorAgentes" estadoSiguiente="gestorAgentesTerminado" modoDeTransicion="bloqueante"/>
+	</estado>
+
+	<transicionUniversal input="termina" accion="terminarAgentesActivos" estadoSiguiente="terminandoAgentes" modoDeTransicion="bloqueante"/>
+        <transicionUniversal input="ordenTerminacion" accion="terminarAgentesActivos" estadoSiguiente="terminandoAgentes" modoDeTransicion="bloqueante"/>
+        <estadoFinal idFinal="gestorAgentesTerminado"/>
+
+</tablaEstados>
