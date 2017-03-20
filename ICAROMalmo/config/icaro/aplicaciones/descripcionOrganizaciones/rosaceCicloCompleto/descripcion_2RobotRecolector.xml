@@ -9,7 +9,7 @@
      <icaro:intervaloMonitorizacionGestores>8000000</icaro:intervaloMonitorizacionGestores>
      <icaro:activarPanelTrazasDebug>true</icaro:activarPanelTrazasDebug>
         <icaro:listaPropiedades>
-            <icaro:propiedad atributo="identificadorEquipo" valor = "rescate1" />
+            <icaro:propiedad atributo="identificadorEquipo" valor = "Recolector" />
             <icaro:propiedad atributo="organizacion" valor = "Igualitario" />
             <icaro:propiedad atributo="timeMsTarea:TimeOutContactarMiembrosEquipo" valor = "3000" />
             <icaro:propiedad atributo="intervaloMilisegundosEnvioMensajesDesdeCC" valor = "10000" />   <!-- valor expresado en milisegundos -->  
@@ -47,6 +47,9 @@
        nombreComportamiento="AgenteAplicacionAgteControladorSimuladorRosace" rol="AgenteAplicacion" localizacionComportamiento="icaro.aplicaciones.agentes.agenteAplicacionAgteControladorSimuladorRosaceReactivo.comportamiento"
                             tipo="Reactivo" />
     <icaro:DescComportamientoAgente
+       nombreComportamiento="AgenteAplicacionRecolectorCoordCognitivo" rol="AgenteAplicacion" localizacionComportamiento="icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo" tipo="Cognitivo" 
+       localizacionFicheroReglas="icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.procesoResolucionObjetivos.reglasRecolectorCoord.drl"/>
+       <icaro:DescComportamientoAgente
        nombreComportamiento="AgenteAplicacionRecolectorCognitivo" rol="AgenteAplicacion" localizacionComportamiento="icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo" tipo="Cognitivo" 
        localizacionFicheroReglas="icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.procesoResolucionObjetivos.reglasRecolector.drl"/>
 </icaro:DescComportamientoAgentesAplicacion>
@@ -91,7 +94,7 @@
         <icaro:AgentesAplicacion>
                 <icaro:Instancia id="AgenteControladorSimulador" refDescripcion="AgenteAplicacionAgteControladorSimuladorRosace">
                 </icaro:Instancia>
-                <icaro:Instancia id="robot1Recolector" refDescripcion="AgenteAplicacionRecolectorCognitivo">
+                <icaro:Instancia id="robot1Recolector" refDescripcion="AgenteAplicacionRecolectorCoordCognitivo">
                 </icaro:Instancia>
                 <icaro:Instancia id="robot2Recolector" refDescripcion="AgenteAplicacionRecolectorCognitivo">
                 </icaro:Instancia>

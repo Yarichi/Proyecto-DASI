@@ -13,14 +13,14 @@ import icaro.infraestructura.entidadesBasicas.NombresPredefinidos;
 public class VocabularioRosace extends NombresPredefinidos{
     public static final String NombrePropiedadGlobalIdentEquipo= "identificadorEquipo";
     public static final String NombrePropiedadGlobalModeloOrganizacion= "organizacion";
-    public static final String IdentMisionEquipo = "mision1";
+    public static final String IdentMisionEquipo = "Recolectar Apples";
     public static final String IdentEquipoIgualitario= "robotMasterIA";
     public static final String IdentEquipoJerarquico= "Jerarquico";  ///ES LO QUE ESTABA ANTES
 //    public static final String IdentEquipoJerarquico= "robotSubordinado";
     public static final String IdentEquipoJerarquicoConCambioRol= "jerarquicoConCR";
     public static final String IdentAgteDistribuidorTareas= IdentEquipoJerarquico+"RobotAsignador";
     public static final String IdentRolAgtesRecolectadores= "agenteRecolector";
-    
+    public static final String IdentRolAgtesRecolectoresCoord = "agenteRecolectorCoord";
     public static final String IdentRolAgteDistribuidorTareas= "agenteAsignador";
     public static final String IdentRolAgtesSubordinados= "robotSubordinado";
     public static final String IdentRolAgtesSubordinadosConCR= "robotSubordinadoConCR";

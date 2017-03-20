@@ -25,7 +25,7 @@ rule "Acciones Iniciales"
     not ( exists(MisObjetivos()))
  then
    TareaSincrona tarea1 = gestorTareas.crearTareaSincrona(InicializarInfoWorkMemAlum.class);
-   tarea1.ejecutar(VocabularioRosace.IdentRolAgtesIgualitarios);           
+   tarea1.ejecutar(VocabularioRosace.IdentRolAgtesRecolectadores);           
    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());   
     System.out.println( "\n"+agentId +"EJECUTO LA REGLA Acciones Iniciales\n\n" ); 
 end
