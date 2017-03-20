@@ -37,7 +37,7 @@ public class InicializarInfoWorkMemAlum extends TareaSincrona{
              MisObjetivos misObjs= new MisObjetivos();
              this.getEnvioHechos().insertarHechoWithoutFireRules(miFoco);
              this.getEnvioHechos().insertarHechoWithoutFireRules(misObjs);
-             RobotStatus1 miStatus = new RobotStatus1() ;
+             RobotStatus1 miStatus = new RobotStatus1();
                     miStatus.setIdRobot(this.identAgente);
                     miStatus.setIdRobotRol(identRolAgte);
                     miStatus.setestadoMovimiento(EstadoMovimientoRobot.RobotParado.name());

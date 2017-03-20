@@ -19,6 +19,8 @@ public class VocabularioRosace extends NombresPredefinidos{
 //    public static final String IdentEquipoJerarquico= "robotSubordinado";
     public static final String IdentEquipoJerarquicoConCambioRol= "jerarquicoConCR";
     public static final String IdentAgteDistribuidorTareas= IdentEquipoJerarquico+"RobotAsignador";
+    public static final String IdentRolAgtesRecolectadores= "agenteRecolector";
+    
     public static final String IdentRolAgteDistribuidorTareas= "agenteAsignador";
     public static final String IdentRolAgtesSubordinados= "robotSubordinado";
     public static final String IdentRolAgtesSubordinadosConCR= "robotSubordinadoConCR";
