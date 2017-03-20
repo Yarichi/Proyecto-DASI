@@ -3,10 +3,53 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Luis/Desktop/ICAROMalmo/config/icaro/aplicaciones/descripcionOrganizaciones/rosaceCicloCompleto/descripcion_4RobotsParaConocerse.xml</file>
-            <file>file:/C:/Users/Luis/Desktop/ICAROMalmo/src/icaro/aplicaciones/agentes/agenteAplicacionAsignadorTareasCognitivo/procesoResolucionObjetivos/reglasjearqJefeCambioRol.drl</file>
-            <file>file:/C:/Users/Luis/Desktop/ICAROMalmo/config/icaro/aplicaciones/descripcionOrganizaciones/rosaceCicloCompleto/descripcion_1RobotRecolector.xml</file>
-            <file>file:/C:/Users/Luis/Desktop/ICAROMalmo/src/icaro/aplicaciones/agentes/agenteAplicacionRecolectorCognitivo/procesoResolucionObjetivos/reglasRecolector.drl</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/patronAgenteReactivo/control/acciones/AccionesSemanticasAgenteReactivo.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/config/icaro/aplicaciones/descripcionOrganizaciones/rosaceCicloCompleto/descripcion_2Robots_nVictimasIgualitarioEj1.xml</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/entidadesBasicas/procesadorCognitivo/Tarea.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/agentes/agenteAplicacionrobotIgualitarioNCognitivo/tareas/MandarPropuestaParaIraEmpatados.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/entidadesBasicas/procesadorCognitivo/MisObjetivos.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/imp/GeneraEstadisticaLlegadaYAsignacionVictimas.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/gestores/gestorRecursos/comportamiento/AccionesSemanticasGestorRecursos.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/agentes/agenteAplicacionrobotIgualitarioNCognitivo/procesoResolucionObjetivos/reglasIgualitarioConocerse1.drl</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/config/icaro/aplicaciones/descripcionOrganizaciones/rosaceCicloCompleto/descripcion_4RobotsParaConocerse.xml</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/jFreeChart/demo/PieChartDemo1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/PeticionAgente.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/RobotStatus1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/pruebas/AccionesSemanticasIniciador.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/InfoEstadoAgente.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/jFreeChart/demo/package.html</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/InfoRolAgente.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/jFreeChart/demo/TimeSeriesChartDemo1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/ItfUsoRecursoEstadistica.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/patronAgenteReactivo/percepcion/factoriaEInterfaces/imp/PercepcionAgenteReactivoImp.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/imp/GeneraEstadisticaIntervaloLlegadaYAsignacionVictimas.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/CreacionOrganizacion.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/jFreeChart/demo/BarChartDemo1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/agentes/agenteAplicacionrobotIgualitarioNCognitivo/procesoResolucionObjetivos/reglasIgualitarioNC2.drl</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/InfoEquipo.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/VocabularioRosace.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/agentes/agenteAplicacionrobotIgualitarioNCognitivo/procesoResolucionObjetivos/reglasIgualitarioCoordConocerse1.drl</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/gestores/gestorRecursos/comportamiento/automata.xml</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/pruebas/InformeArranqueGestor.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/InicializarInfoWorkMemAlum.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/ArranqueICARO.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/CrearComponentesInternos.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/ProcesarInformeLlegadaDestinoAsinc.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/InicializarInfoWorkMemCRN1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/patronAgenteCognitivo/procesadorObjetivos/gestorTareas/imp/GestorTareasImp.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/entidadesBasicas/procesadorCognitivo/TareaSincrona.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/entidadesBasicas/componentesBasicos/automatas/FactoriaAutomatas.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/imp/visualizacionEstadisticas/CombinedXYPlotDemo1.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/agentes/agenteAplicacionSubordinadoCognitivo/tareas/GeneraryEncolarObjetivoActualizarFoco.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/ProcesarInformeLlegadaDestino.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/ProcesarOrdenFinCasoSimulacion.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/infraestructura/entidadesBasicas/procesadorCognitivo/TareaAsincrona.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/GenerarObjetivoyFocalizarlo.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/InicializarInfoWorkMem.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/tareasComunes/InicializarInfoWorkMemCR.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/utils/AccesoPropiedadesGlobalesRosace.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/recursos/recursoEstadistica/imp/ClaseGeneradoraRecursoEstadistica.java</file>
+            <file>file:/E:/FicheroRed/IcaroRosaceAlumnosDasi/src/icaro/aplicaciones/Rosace/informacion/InfoInteraccionBasica.java</file>
         </group>
     </open-files>
 </project-private>

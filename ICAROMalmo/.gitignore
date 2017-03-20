@@ -2,7 +2,7 @@
     *.class
 
     #netbeans ignore personal stuff
-    nbproject/
+    #nbproject/
 
     ## generic files to ignore
     *~
@@ -12,8 +12,8 @@
     *.out
 
     # Package Files #
-    *.jar
+    #*.jar
     *.war
     *.ear
 /build/
-/dist/
+/bin/
