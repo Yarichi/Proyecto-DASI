@@ -39,7 +39,7 @@
  *
  */
 
-package icaro.aplicaciones.recursos.recursoEstadistica.imp.jFreeChart.demo;
+package icaro.aplicaciones.recursos.recursoEstadistica.jFreeChart.demo;
 
 import java.awt.Color;
 import java.text.SimpleDateFormat;

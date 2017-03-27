@@ -1,4 +1,4 @@
-package icaro.pruebas;
+package icaro.infraestructura.pruebas;
 
 import icaro.gestores.iniciador.*;
 import icaro.infraestructura.entidadesBasicas.comunicacion.EventoRecAgte;
