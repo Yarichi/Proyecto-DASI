@@ -105,3 +105,17 @@ then
     System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
+
+rule "Obtener informacion del entorno"
+when
+	miEquipo: InfoEquipo(idTeam:teamId, state == Objetivo.SOLVED); //Se ha definido el equipo
+	
+then
+	
+end
+
+/* 
+	Regla obtener informacion
+	Reglas necesarias para las manzanas
+	
+*/

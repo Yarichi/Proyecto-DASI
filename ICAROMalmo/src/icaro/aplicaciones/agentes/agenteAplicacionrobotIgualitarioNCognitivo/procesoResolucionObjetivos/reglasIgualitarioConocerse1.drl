@@ -72,6 +72,8 @@ then
     System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
+
+
 // consecucion del objetivo DefinirMiEquipo
 // El objetivo se considera conseguido si tengo todas las respuestas posibles o si llega el informe timeout de espera
 rule "Proceso timeout para conseguir Objetivo Conocer MiEquipo "
@@ -89,3 +91,8 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
 
+
+/*
+
+
+*/
