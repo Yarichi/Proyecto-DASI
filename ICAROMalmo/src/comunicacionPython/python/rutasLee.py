@@ -1,5 +1,6 @@
 from Queue import Queue
-
+import cProfile
+import re
 class CalculoRutas:
 	
 	def __init__(self,(xIni,yIni),obstacles, w, h):
@@ -27,7 +28,7 @@ class CalculoRutas:
 		#Comprobaciones de los limites del mapa
 		for i in [-1,1]:
 			if x+i >= 0 and x+i < self.width and not self.inGrid(x+i, y) and not self.isAObstacle((x+i,y)):
-				if "%i"%(x+i) not in self.grid.keys():
+				if "%i"%(x+i) not in self.grid:
 					self.grid["%i"%(x+i)] = {}
 				self.grid["%i"%(x+i)]["%i"%(y)] = self.grid["%i"%(x)]["%i"%(y)] + 1;
 				self.cola.put((x+i,y))
@@ -37,8 +38,7 @@ class CalculoRutas:
 				self.cola.put((x,y+i))
 	
 	def inGrid(self, x, y):
-		keys = self.grid.keys()
-		return (("%i"%(x)) in keys) and (("%i"%(y)) in self.grid["%i"%(x)].keys())
+		return (("%i"%(x)) in self.grid) and (("%i"%(y)) in self.grid["%i"%(x)])
 	
 	
 	def getMinimoAlrededor(self,auxCoor):
@@ -70,8 +70,8 @@ class CalculoRutas:
 
 
 if __name__ == "__main__":
-	c = CalculoRutas((99,99),[(2,3),(3,3),(3,2)],100,100)
-	print c.calculaRuta(1, 1)
+	c = CalculoRutas((399,399),[(2,3),(3,3),(3,2)],400,400)
+	print c.calculaRuta(1,1)
 	
 '''		
 public class AlgoritmoRutaLee {
