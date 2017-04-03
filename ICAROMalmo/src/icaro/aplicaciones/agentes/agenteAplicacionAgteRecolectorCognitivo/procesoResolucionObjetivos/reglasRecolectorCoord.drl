@@ -106,16 +106,55 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
 
-rule "Obtener informacion del entorno"
+//Cuando se resuelve la definicion del equipo salta
+rule "Obtencion de informacion del entorno"
 when
-	miEquipo: InfoEquipo(idTeam:teamId, state == Objetivo.SOLVED); //Se ha definido el equipo
-	
+	obj: DefinirMiEquipo(state == Objetivo.SOLVED)
 then
-	
+	TareaSincrona tare = gestorTareas.crearTareaSincrona(ConseguirInformacionDelEntorno.class);
+	tarea.ejecutar();
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
 
-/* 
-	Regla obtener informacion
-	Reglas necesarias para las manzanas
-	
-*/
+rule "Generacion objetivo de recolectar manzana"
+when
+
+then
+
+end
+
+rule "Obtencion de coste de completar la recoleccion de manzana"
+when
+
+then
+
+end
+
+rule "Primer timeout para obtencion de todos los costes de reccolectar manzana"
+when
+
+then
+
+end
+
+rule "Segundo timeout para obtencion de todos los costes de reccolectar manzana"
+when
+
+then
+
+end
+
+rule "Seleccion del agente con menor coste para recolectar la manzana"
+when
+
+then
+
+end
+
+rule "Consecucion del objetivo recolectar manzana por el agente"
+when
+
+then
+
+end
