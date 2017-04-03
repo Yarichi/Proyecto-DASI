@@ -105,7 +105,7 @@ then
     System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
-
+/*
 //Cuando se resuelve la definicion del equipo salta
 rule "Obtencion de informacion del entorno"
 when
@@ -158,3 +158,4 @@ when
 then
 
 end
+*/

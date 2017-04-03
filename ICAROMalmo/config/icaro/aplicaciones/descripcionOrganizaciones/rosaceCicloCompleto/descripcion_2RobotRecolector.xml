@@ -58,7 +58,7 @@
 	******************   Descripcion de los recursos de aplicacion                          ******************
 	********************************************************************************************************-->
 <icaro:DescRecursosAplicacion>
-        <icaro:DescRecursoAplicacion nombre="RecursoVisualizadorEntornosSimulacion" localizacionClaseGeneradora="icaro.aplicaciones.recursos.recursoVisualizadorEntornosSimulacion.imp.ClaseGeneradoraRecursoVisualizadorEntornosSimulacion"/>			            		
+    <icaro:DescRecursoAplicacion nombre="RecursoMalmo" localizacionClaseGeneradora="icaro.aplicaciones.recursos.recursoMalmo.imp.ClaseGeneradoraRecursoMalmo"/>
 </icaro:DescRecursosAplicacion>
 
 </icaro:DescripcionComponentes>
@@ -83,8 +83,7 @@
                 </icaro:InstanciaGestor>
                 <icaro:InstanciaGestor id="GestorRecursos" refDescripcion="GestorRecursos">
                     <icaro:componentesGestionados>
-                        <!--    <icaro:componenteGestionado refId="RecursoVisualizadorEntornosSimulacion1" tipoComponente="RecursoAplicacion"/>	    
-				<icaro:componenteGestionado refId="RecursoPersistenciaEntornosSimulacion1" tipoComponente="RecursoAplicacion"/>	    -->                       
+						<icaro:componenteGestionado refId="RecursoMalmo1" tipoComponente="RecursoAplicacion"/>                       
                     </icaro:componentesGestionados>
                 </icaro:InstanciaGestor>
             </icaro:Gestores>
@@ -103,9 +102,7 @@
 	******************   Instancias de Recursos de aplicacion                               ******************
 	********************************************************************************************************-->        
         <icaro:RecursosAplicacion>
-              <icaro:Instancia id="RecursoVisualizadorEntornosSimulacion1" refDescripcion="RecursoVisualizadorEntornosSimulacion" xsi:type="icaro:Instancia"/> 
-                <icaro:Instancia id="RecursoPersistenciaEntornosSimulacion1" refDescripcion="RecursoPersistenciaEntornosSimulacion" xsi:type="icaro:Instancia"/>
-                <icaro:Instancia id="RecursoCreacionEntornosSimulacion1" refDescripcion="RecursoCreacionEntornosSimulacion" xsi:type="icaro:Instancia"/> 
+                <icaro:Instancia id="RecursoMalmo1" refDescripcion="RecursoMalmo" xsi:type="icaro:Instancia"/>                 
         </icaro:RecursosAplicacion>     
 	<!--******************************************************************************************************
 	******************   Descripcion comun del nodo en el que se despliegan las instancias  ******************
