@@ -35,8 +35,10 @@ class OrderServer(object):
     def initializeStructures(self, list, dispatcher):
         self.index = {}
         #self.index = defaultdict(lambda: None, self.index)
+        self.commandList = []
         for element in list:
             self.index[element[0]] = element[1]
+            self.commandList.append(element[0])
         self.orderDispatcher = dispatcher
 
     def __init__(self, port, actionList, dispatcher):
@@ -58,7 +60,7 @@ class OrderServer(object):
         while message != "end":
             message = self.clientsocket.recv(128)
             message = self.onlyAllowedCharacter(message)
-            if message != "end":
+            if message != "end" and message in self.commandList:
                 self.orderDispatcher.dispatch(self.index[message])
         self.socket.close()
         self.orderDispatcher.stopExecution()
@@ -69,12 +71,14 @@ def prueba():
 #Iniciando el despachador de ordenes
 dispatch = OrderDispatcher()
 #creamos la clase que recibe y apunta ordenes
-o = OrderServer(17999, [("prueba", prueba)], dispatch)
+o = OrderServer(9288, [("prueba", prueba)], dispatch)
 #print Aceptamos la conexion con la clase de java
 o.startConnection()
 #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
 thread = threading.Thread(target=o.receiveOrder)
 thread.start()
 #iniciando la ejecucion de ordenes
-dispatch.execution()
+thread2 = threading.Thread(target=dispatch.execution)
+thread2.start()
 thread.join()
+thread2.join()
