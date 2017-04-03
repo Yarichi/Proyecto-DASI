@@ -14,7 +14,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		try 
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
-			String[] command = {pythonPath, "src\\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\OrderServer.py"};
+			String[] command = {pythonPath, "src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\OrderServer.py"};
             pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
             Thread.sleep(200);
