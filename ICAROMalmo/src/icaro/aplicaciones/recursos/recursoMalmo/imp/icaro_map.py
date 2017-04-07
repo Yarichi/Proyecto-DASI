@@ -24,10 +24,21 @@ import os
 import sys
 import time
 import json
+from OrderServer import initDispatcher
+from InitialInfoProvider import provideInitialInfo
+
+def generateObstacles():
+    for i in range(48):
+	    world_items["obstacles"].append([38, 227, i + 3])
+    for i in [23, 24, 25, 26]:
+        for j in [22, 23, 24, 25, 26]:
+            world_items["obstacles"].append([i, 226, j])
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-world_items = dict(apples=[[20,227,20],[12,227,32],[5,227,10],[27,227,20],[20,227,25]],enemies=[[46,227,46]])
+world_items = dict(apples=[[20,227,20],[12,227,32],[5,227,10],[27,227,20],[20,227,25]],enemies=[[46,227,46]],agents=[[22, 227, 23]],obstacles=[])
+
+generateObstacles()
 
 xTop = 50
 zTop = 50
@@ -75,7 +86,7 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                     <AllowPassageOfTime>false</AllowPassageOfTime>
                 </Time>
                 <Weather>clear</Weather>
-              </ServerInitialConditions>
+              </ServerInitialConditions>	
 
             <ServerHandlers>
                 <FlatWorldGenerator generatorString="3;7,220*1,5*3,2;3;,biome_1" />
@@ -98,7 +109,7 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
               <AgentSection mode="Creative">
                 <Name>MalmoTutorialBot</Name>
                 <AgentStart>
-                    <Placement x="23" y="227.0" z="23" yaw="45"/>
+                    <Placement x="22" y="228.0" z="23" yaw="45"/>
                     <Inventory>
                         <InventoryItem slot="8" type="diamond_pickaxe"/>
                     </Inventory>
@@ -121,18 +132,23 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </Mission>'''
 
 # Create default Malmo objects:
+agent_host = []
 
-agent_host = MalmoPython.AgentHost()
+agent_host.append(MalmoPython.AgentHost())
 try:
-    agent_host.parse( sys.argv )
+    agent_host[0].parse( sys.argv )
 except RuntimeError as e:
     print 'ERROR:',e
-    print agent_host.getUsage()
+    print agent_host[0].getUsage()
     exit(1)
-if agent_host.receivedArgument("help"):
-    print agent_host.getUsage()
+if agent_host[0].receivedArgument("help"):
+    print agent_host[0].getUsage()
     exit(0)
 
+initDispatcher(world_items, agent_host)
+time.sleep(2)
+provideInitialInfo(world_items)
+	
 my_mission = MalmoPython.MissionSpec(missionXML, True)
 my_mission_record = MalmoPython.MissionRecordSpec()
 
@@ -140,7 +156,7 @@ my_mission_record = MalmoPython.MissionRecordSpec()
 max_retries = 3
 for retry in range(max_retries):
     try:
-        agent_host.startMission( my_mission, my_mission_record )
+        agent_host[0].startMission( my_mission, my_mission_record )
         break
     except RuntimeError as e:
         if retry == max_retries - 1:
@@ -151,11 +167,11 @@ for retry in range(max_retries):
 
 # Loop until mission starts:
 print "Waiting for the mission to start ",
-world_state = agent_host.getWorldState()
+world_state = agent_host[0].getWorldState()
 while not world_state.has_mission_begun:
     sys.stdout.write(".")
     time.sleep(0.1)
-    world_state = agent_host.getWorldState()
+    world_state = agent_host[0].getWorldState()
     for error in world_state.errors:
         print "Error:",error.text
 
@@ -177,7 +193,7 @@ print "Mission running ",
 while world_state.is_mission_running:
     sys.stdout.write(".")
     time.sleep(0.1)
-    world_state = agent_host.getWorldState()
+    world_state = agent_host[0].getWorldState()
     for error in world_state.errors:
         print "Error:",error.text
     if world_state.number_of_observations_since_last_state > 0: # Have any observations come in?

@@ -7,23 +7,27 @@ import Queue as Queue
 import threading
 
 class OrderDispatcher(object):
-    def __init__(self):
+    def __init__(self, agentNumber):
         self.queue = Queue.Queue()
         self.stop = False
+        self.number = agentNumber
         
     def dispatch(self, action):
         self.queue.put(action)
         
     def execution(self):
-	    ##if(!self.queue.empty)
-        ##threading.Thread(target=self.queue.get())
+        finishCondition = True
         while self.stop == False:
-            if self.queue.empty() == False:
-                fun = self.queue.get()
-                fun()
+            if self.queue.empty() == False and finishCondition:
+                obj = self.queue.get()
+                #obj.action(agent_host[self.number])
+                obj.action(self.number)
+                finishCondition = obj.isFinished()
 
     def stopExecution(self):
         self.stop = True
+        
+
 
 class OrderServer(object):
 
@@ -34,7 +38,6 @@ class OrderServer(object):
 
     def initializeStructures(self, list, dispatcher):
         self.index = {}
-        #self.index = defaultdict(lambda: None, self.index)
         self.commandList = []
         for element in list:
             self.index[element[0]] = element[1]
@@ -48,7 +51,7 @@ class OrderServer(object):
     def onlyAllowedCharacter(self, message):
         newMessage = ''
         for character in message:
-            if (character >= 'a' and character <= 'z') or (character >= 'A' and character <= 'Z'):
+            if (character >= 'a' and character <= 'z') or (character >= 'A' and character <= 'Z') or character == " " or (character >= '0' and character <= '9'):
                 newMessage = newMessage + character
         return newMessage
 
@@ -60,25 +63,71 @@ class OrderServer(object):
         while message != "end":
             message = self.clientsocket.recv(128)
             message = self.onlyAllowedCharacter(message)
-            if message != "end" and message in self.commandList:
-                self.orderDispatcher.dispatch(self.index[message])
+            message = message.split(" ")
+            print message
+            if message[0] != "end":
+                agentNumber = int(message[1])
+            message = message[0]
+            if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher):
+                self.orderDispatcher[agentNumber].dispatch(Command(self.index[message]))
         self.socket.close()
-        self.orderDispatcher.stopExecution()
+        for obj in self.orderDispatcher:
+            obj.stopExecution()
 
-def prueba():
+class Command(object):
+    
+    def __init__(self, command):
+        self.command = command
+        self.finish = False
+
+    def action(self, index):
+        print "on action function"
+        self.finish = self.command(index)
+        print "on end action function"
+        print str(self.finish)
+    
+    def isFinished(self):
+        return self.finish
+
+
+def prueba(index):
     print("prueba ejecutada correctamente.")
+    print str(index)
+    finish = True
+    index.sendCommand("move 1")
+    print str(finish)
+    return finish
 	
-#Iniciando el despachador de ordenes
-dispatch = OrderDispatcher()
-#creamos la clase que recibe y apunta ordenes
-o = OrderServer(9288, [("prueba", prueba)], dispatch)
-#print Aceptamos la conexion con la clase de java
-o.startConnection()
-#print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
-thread = threading.Thread(target=o.receiveOrder)
-thread.start()
-#iniciando la ejecucion de ordenes
-thread2 = threading.Thread(target=dispatch.execution)
-thread2.start()
-thread.join()
-thread2.join()
+def initDispatcher(world_items, agent_host):
+    #TODO se supone que tenemos el numero de agentes
+    #cogemos el numero de agentes
+    amountAgents = len(world_items["agents"])
+    #amountAgents = 3;
+    #iniciamos la lista de despachadores de ordenes
+    dispatches = []
+    #para el numero de agentes
+    print str(amountAgents)
+    for contador in range(amountAgents):
+        #Iniciamos el despachador de ordenes
+        #dispatch = OrderDispatcher(contador)
+        dispatch = OrderDispatcher(agent_host[contador])
+        #lo metemos en la lista
+        dispatches.append(dispatch)
+    #creamos la clase que recibe y apunta ordenes
+    o = OrderServer(9288, [("prueba", prueba)], dispatches)
+    #print Aceptamos la conexion con la clase de java
+    o.startConnection()
+    #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
+    thread = threading.Thread(target=o.receiveOrder)
+    thread.start()
+    #iniciando la ejecucion de ordenes
+    #thread2 = threading.Thread(target=dispatch.execution)
+    #thread2.start()
+    thread2 = []
+    for contador in range(amountAgents):
+        thread2.append(threading.Thread(target=dispatches[contador].execution))
+        thread2[contador].start()
+    #esperamos hasta que los threads acabemos
+    #thread.join()
+    #for contador in range(amountAgents):
+    #    thread2[contador].join()

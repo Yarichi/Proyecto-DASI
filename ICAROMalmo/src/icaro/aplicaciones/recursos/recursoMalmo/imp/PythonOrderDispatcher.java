@@ -7,21 +7,19 @@ public class PythonOrderDispatcher implements OrderDispatcher
 {
     protected Socket socket;
     protected DataOutputStream outFlow;
-    protected Process pythonDispatcherThread;
     
-	public PythonOrderDispatcher(String pythonPath, int port)
+	public PythonOrderDispatcher(int port)
 	{
 		try 
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
-			String[] command = {pythonPath, "src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\OrderServer.py"};
-            pythonDispatcherThread = Runtime.getRuntime().exec(command);
-			//damos tiempo para que se inicie tranquilamente
-            Thread.sleep(200);
-            //creamos el socket para comunicarnos con la interfaz de python
-			socket = new Socket("127.0.0.1", port);
+			String[] command = {"E:\\JDK\\Python27\\python.exe","E:\\IDE\\workspace\\DASI_comunicacion\\src\\OrderServer.py"};
+            Process pythonDispatcher = Runtime.getRuntime().exec(command);
+            pythonDispatcher.waitFor();
+			//creamos el socket para comunicarnos con la interfaz de python
+			this.socket = new Socket("127.0.0.1", port);
 	        //Flujo de datos hacia la interfaz de python
-	        outFlow = new DataOutputStream(socket.getOutputStream());
+	        this.outFlow = new DataOutputStream(socket.getOutputStream());
 		} 
 		catch (UnknownHostException e)
 		{
@@ -33,7 +31,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		}
 		catch (InterruptedException e) 
 		{
-			System.err.println("Capturada la excepción al esperar ");
+			System.err.println("Capturada la excepción al esperar a que se ejecute la instruccion cmd ");
 		}
 	}
 
@@ -42,7 +40,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
         try
         {            
             //Se manda la orden a la interfaz de python
-            outFlow.writeUTF(order);           
+            this.outFlow.writeUTF(order);           
         }
         catch (Exception e)
         {
@@ -55,22 +53,13 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		try
 		{
 			//mandamos el mensaje de cierre de conexion
-			outFlow.writeUTF("end");
+			this.outFlow.writeUTF("end");
 			//cerramos el socket para finalizar la comunicacion
 			socket.close();
-			//damos tiempo para que se cierre tranquilamente
-            Thread.sleep(200);
-			//eliminamos los subprocesos si se queda con los ojos para los lados
-			if(pythonDispatcherThread.isAlive())
-				pythonDispatcherThread.destroyForcibly();
 		}
 		catch (IOException e) 
 		{
 			System.err.println("Capturada la excepción al cerrar el socket ");
-		}
-		catch (InterruptedException e) 
-		{
-			System.err.println("Capturada la excepción al esperar ");
 		}
 	}
 	
