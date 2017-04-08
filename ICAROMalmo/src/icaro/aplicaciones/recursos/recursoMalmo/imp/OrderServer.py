@@ -64,7 +64,6 @@ class OrderServer(object):
             message = self.clientsocket.recv(128)
             message = self.onlyAllowedCharacter(message)
             message = message.split(" ")
-            print message
             if message[0] != "end":
                 agentNumber = int(message[1])
             message = message[0]
