@@ -1,6 +1,5 @@
 package icaro.aplicaciones.recursos.recursoMalmo.imp;
 
-
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.io.BufferedReader;

@@ -89,14 +89,48 @@ class Command(object):
         return self.finish
 
 
-def prueba(index):
+def up(index):
     print("prueba ejecutada correctamente.")
     print str(index)
     finish = True
     index.sendCommand("move 1")
     print str(finish)
     return finish
+
+def down(index):
+    print("prueba ejecutada correctamente.")
+    print str(index)
+    finish = True
+    index.sendCommand("move -1")
+    print str(finish)
+    return finish
 	
+def right(index):
+    print("prueba ejecutada correctamente.")
+    print str(index)
+    finish = True
+    index.sendCommand("strafe 1")
+    print str(finish)
+    return finish
+
+def left(index):
+    print("prueba ejecutada correctamente.")
+    print str(index)
+    finish = True
+    index.sendCommand("strafe -1")
+    print str(finish)
+    return finish
+
+def stop(index):
+    print("prueba ejecutada correctamente.")
+    print str(index)
+    finish = True
+    index.sendCommand("move 0")
+    index.sendCommand("strafe 0")
+    print str(finish)
+    return finish
+
+
 def initDispatcher(world_items, agent_host):
     #TODO se supone que tenemos el numero de agentes
     #cogemos el numero de agentes
@@ -113,7 +147,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("prueba", prueba)], dispatches)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop)], dispatches)
     #print Aceptamos la conexion con la clase de java
     o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador

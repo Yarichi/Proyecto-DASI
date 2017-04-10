@@ -109,12 +109,13 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
               <AgentSection mode="Creative">
                 <Name>MalmoTutorialBot</Name>
                 <AgentStart>
-                    <Placement x="22" y="228.0" z="23" yaw="45"/>
+                    <Placement x="22" y="228.0" z="23" pitch="30" yaw="0"/>
                     <Inventory>
                         <InventoryItem slot="8" type="diamond_pickaxe"/>
                     </Inventory>
                 </AgentStart>
                 <AgentHandlers>
+                  <DiscreteMovementCommands/>
                   <ObservationFromFullStats/>
                   <ObservationFromGrid>
                       <Grid name="floor3x3">
@@ -122,7 +123,6 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                         <max x="1" y="-1" z="1"/>
                       </Grid>
                   </ObservationFromGrid>
-                  <ContinuousMovementCommands turnSpeedDegs="180"/>
                   <InventoryCommands/>
                   <AgentQuitFromTouchingBlockType>
                       <Block type="diamond_block" />
