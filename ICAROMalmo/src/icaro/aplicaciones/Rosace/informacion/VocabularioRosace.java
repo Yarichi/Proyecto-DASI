@@ -120,6 +120,7 @@ public class VocabularioRosace extends NombresPredefinidos{
     static public  final String IdentRecursoCreacionEntornosSimulacion = "RecursoCreacionEntornosSimulacion1";
     static public  final String IdentRecursoVisualizadorEntornosSimulacion = "RecursoVisualizadorEntornosSimulacion1";
     static public  final String IdentPersistenciaEntornosSimulacion = "RecursoPersistenciaEntornosSimulacion1";
+    static public  final String IdentRecursoMalmo = "RecursoMalmo1";
     static public  final String NombreDirectorioPersistenciaResSimulacion = "PersistenciaResultadosSimulacion";
     static public  final String NombreDirectorioPersistenciaEscenarios = "PersistenciaEscenariosSimulacion";
     // Valores de los inputs del agente controlador. Son necesarios para que el visualizador envie notificaciones y para definir

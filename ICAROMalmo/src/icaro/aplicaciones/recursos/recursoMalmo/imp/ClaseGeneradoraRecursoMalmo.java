@@ -3,16 +3,19 @@ package icaro.aplicaciones.recursos.recursoMalmo.imp;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 
+import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Obstaculo;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
+import icaro.infraestructura.entidadesBasicas.NombresPredefinidos;
 import icaro.infraestructura.patronRecursoSimple.imp.ImplRecursoSimple;
 
 public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements ItfUsoRecursoMalmo{
@@ -20,12 +23,19 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ServerSocket serversocket;
 	private Socket socket;
 	private ArrayList<String> agents, apples, obstacles;
-	
+	private ArrayList<Manzana> apples_parsed;
+	private PythonOrderDispatcher dispatcher;
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
 		BufferedReader input;
 		String message;
+		try {
+			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python", "C:\\Users\\Sergio\\git\\Proyecto-DASI\\ICAROMalmo\\src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py", 9288);
+		} catch (IOException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		agents = new ArrayList<String>();
 		apples = new ArrayList<String>();
 		obstacles = new ArrayList<String>();
@@ -48,6 +58,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			System.err.println("Error: "+e.getMessage());
 		}
+		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
+		apples_parsed = parseManzanas(apples);
+		
 		
 	}
 	
@@ -75,21 +88,46 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		else if(lines[0].equalsIgnoreCase("ob"))
 			buildInformation(lines[1], obstacles);
 	}
+	
+	private ArrayList<Agente> parseAgentes(String agentes){
+		return null;
+	}
+	
+	private ArrayList<Manzana> parseManzanas(ArrayList<String> manzanas){
+		ArrayList<Manzana> manzanas_return = new ArrayList<Manzana>();
+		StringBuilder aux;
+		for (String s : manzanas){
+			aux = new StringBuilder(s);
+			aux.deleteCharAt(0);
+			aux.deleteCharAt(aux.length()-1);
+			s = aux.toString();
+			String[] coords = s.split(",");
+			manzanas_return.add(new Manzana(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]),Integer.parseInt(coords[2])));
+		}
+		return manzanas_return;
+		
+		
+	}
+	private ArrayList<Obstaculo> parseObstaculos(String obs){
+		return null;
+	}
+	
 
-	public ArrayList<String> getObstaculos() {
-		return obstacles;
+	public ArrayList<Obstaculo> getObstaculos() {
+		return null;
 	}
 
-	public ArrayList<String> getAgentes() {
-		return agents;
+	public ArrayList<Agente> getAgentes() {
+		return null;
 	}
 
-	public String getInformacionAgente(String idAgente) {
-		return agents.get(Integer.parseInt(idAgente));
+	public Agente getInformacionAgente(String idAgente) {
+		//return agents.get(Integer.parseInt(idAgente));
+		return null;
 	}
 
-	public ArrayList<String> getInformacionManzanas() {
-		return apples;
+	public ArrayList<Manzana> getInformacionManzanas() {
+		return this.apples_parsed;
 	}
 
 }

@@ -8,7 +8,7 @@ public class Main {
 
 	public static void main(String[] args) throws IOException
 	{
-		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python", "V:\\repos\\Proyecto-DASI\\ICAROMalmo\\src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py", 9288);
+		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python", "C:\\Users\\Sergio\\git\\Proyecto-DASI\\ICAROMalmo\\src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py", 9288);
 		//dispatcher.sendCommand("prueba 0");
 
 		ClaseGeneradoraRecursoMalmo asd = null;
@@ -19,8 +19,8 @@ public class Main {
 			e.printStackTrace();
 		}
 		
-		System.out.println(asd.getInformacionManzanas().toString());
-		System.out.println(asd.getAgentes().toString());
+		System.out.println(asd.getInformacionManzanas());
+	System.out.println(asd.getAgentes().toString());
 		System.out.println(asd.getObstaculos().toString());
 		
 		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
