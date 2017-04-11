@@ -3,6 +3,7 @@ package icaro.aplicaciones.recursos.recursoMalmo.imp;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.ServerSocket;
@@ -28,12 +29,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
+		
+		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		BufferedReader input;
 		String message;
 		try {
-			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python", "C:\\Users\\Sergio\\git\\Proyecto-DASI\\ICAROMalmo\\src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py", 9288);
+			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
+			//Runtime.getRuntime().exec("C:\\Python27\\python " + rutaIcaroMap);
+			this.dispatcher = new PythonOrderDispatcher("C:\\Anaconda2\\python.exe", rutaIcaroMap, 9288);
 		} catch (IOException e1) {
-			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
 		agents = new ArrayList<String>();
@@ -58,7 +62,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			System.err.println("Error: "+e.getMessage());
 		}
-		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		apples_parsed = parseManzanas(apples);
 		
 		

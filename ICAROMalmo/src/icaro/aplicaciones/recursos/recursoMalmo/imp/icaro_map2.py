@@ -36,6 +36,7 @@ import Tkinter as tk
 from OrderServer import initDispatcher
 from InitialInfoProvider import provideInitialInfo
 
+
 class TabQAgent:
     """Tabular Q-learning agent for discrete state/action spaces."""
 

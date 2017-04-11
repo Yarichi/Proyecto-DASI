@@ -3,7 +3,7 @@
   "modid": "malmomod",
   "name": "Microsoft Malmo Mod",
   "description": "Platform for AI experimentation.",
-  "version": "0.20.0",
+  "version": "0.21.0",
   "mcversion": "1.8",
   "url": "https://github.com/Microsoft/malmo",
   "updateUrl": "",

@@ -29,46 +29,47 @@
 [ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
 [ant:javac] 1 warning
 :runClient
-[17:04:09] [main/INFO] [GradleStart]: Extra: []
-[17:04:09] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Luis/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker]
-[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
-[17:04:09] [main/INFO] [FML]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
-[17:04:09] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_111, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_111\jre
-[17:04:09] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[17:04:09] [main/INFO] [FML]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
-[17:04:09] [main/WARN] [FML]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:04:09] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[17:04:09] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[17:04:10] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[17:04:10] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[17:04:10] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
-[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
-[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
-[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[17:04:10] [Client thread/INFO]: Setting user: Player997
-[17:04:12] [Client thread/INFO]: LWJGL Version: 2.9.1
-[17:04:12] [Client thread/INFO] [STDOUT]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
-// Quite honestly, I wouldn't worry myself about that.
+[18:44:58] [main/INFO] [GradleStart]: Extra: []
+[18:44:58] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Luis/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker]
+[18:44:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[18:44:58] [main/INFO] [FML]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
+[18:44:58] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_111, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_111\jre
+[18:44:58] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[18:44:58] [main/INFO] [FML]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[18:44:58] [main/WARN] [FML]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[18:44:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[18:44:58] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[18:44:58] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[18:44:59] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[18:44:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[18:44:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[18:44:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[18:44:59] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[18:44:59] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[18:44:59] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[18:44:59] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[18:44:59] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
+[18:44:59] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
+[18:44:59] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[18:45:00] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[18:45:00] [Client thread/INFO]: Setting user: Player690
+[18:45:02] [Client thread/INFO]: LWJGL Version: 2.9.1
+[18:45:02] [Client thread/INFO] [FML]: Could not load splash.properties, will create a default one
+[18:45:02] [Client thread/INFO] [STDOUT]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
+// Why did you do that?
 
-Time: 11/04/17 17:04
+Time: 11/04/17 18:45
 Description: Loading screen debug info
 
 This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
@@ -83,7 +84,7 @@ Details:
 	Operating System: Windows 10 (amd64) version 10.0
 	Java Version: 1.8.0_111, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 608507992 bytes (580 MB) / 707788800 bytes (675 MB) up to 1908932608 bytes (1820 MB)
+	Memory: 605204400 bytes (577 MB) / 704643072 bytes (672 MB) up to 1908932608 bytes (1820 MB)
 	JVM Flags: 1 total; -Xmx2G
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
@@ -91,61 +92,378 @@ Details:
 OverclockingPlugin (unknown)
   com.microsoft.Malmo.OverclockingClassTransformer
 	GL info: ' Vendor: 'VMware, Inc.' Version: '2.1 Mesa 10.0.1' Renderer: 'Gallium 0.4 on llvmpipe (LLVM 3.3, 256 bits)'
-[17:04:12] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
-[17:04:12] [Client thread/INFO] [FML]: MinecraftForge v11.14.3.1543 Initialized
-[17:04:12] [Client thread/INFO] [FML]: Replaced 204 ore recipies
-[17:04:12] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
-[17:04:12] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
-[17:04:12] [Client thread/INFO] [FML]: Searching C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
-[17:04:14] [Client thread/INFO] [FML]: Forge Mod Loader has identified 4 mods to load
-[17:04:14] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
-[17:04:14] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
-[17:04:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:15] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
-[17:04:15] [Client thread/INFO] [FML]: Found 384 ObjectHolder annotations
-[17:04:15] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
-[17:04:15] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
-[17:04:15] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
-[17:04:15] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.20
-[17:04:15] [Client thread/INFO] [FML]: Applying holder lookups
-[17:04:15] [Client thread/INFO] [FML]: Holder lookups applied
-[17:04:15] [Client thread/INFO] [FML]: Injecting itemstacks
-[17:04:15] [Client thread/INFO] [FML]: Itemstack injection complete
-[17:04:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:04:15] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[17:04:15] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:04:15] [Thread-9/INFO]: OpenAL initialized.
-[17:04:15] [Sound Library Loader/INFO]: Sound engine started
-[17:04:17] [Client thread/INFO] [FML]: Max texture size: 8192
-[17:04:17] [Client thread/INFO]: Created: 16x16 textures-atlas
-[17:04:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
-[17:04:17] [Client thread/INFO] [FML]: Injecting itemstacks
-[17:04:17] [Client thread/INFO] [FML]: Itemstack injection complete
-[17:04:18] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 4 mods
-[17:04:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
-[17:04:18] [Client thread/INFO]: SoundSystem shutting down...
-[17:04:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[17:04:18] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[17:04:18] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[17:04:18] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[17:04:18] [Thread-11/INFO]: OpenAL initialized.
-[17:04:18] [Sound Library Loader/INFO]: Sound engine started
-[17:04:19] [Client thread/INFO] [FML]: Max texture size: 8192
-[17:04:19] [Client thread/INFO]: Created: 512x512 textures-atlas
-[17:04:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
-[17:04:20] [Thread-13/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
-[17:04:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
-[17:04:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
-[17:04:22] [Client thread/INFO]: Stopping!
-[17:04:22] [Client thread/INFO]: SoundSystem shutting down...
-[17:04:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:45:02] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
+[18:45:02] [Client thread/INFO] [FML]: MinecraftForge v11.14.3.1543 Initialized
+[18:45:02] [Client thread/INFO] [FML]: Replaced 204 ore recipies
+[18:45:02] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
+[18:45:02] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
+[18:45:02] [Client thread/INFO] [FML]: Searching C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
+[18:45:04] [Client thread/INFO] [FML]: Forge Mod Loader has identified 4 mods to load
+[18:45:04] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
+[18:45:04] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
+[18:45:04] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[18:45:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:04] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[18:45:04] [Client thread/INFO] [FML]: Found 384 ObjectHolder annotations
+[18:45:04] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[18:45:04] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[18:45:04] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[18:45:04] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.21
+[18:45:04] [Client thread/INFO] [FML]: Applying holder lookups
+[18:45:04] [Client thread/INFO] [FML]: Holder lookups applied
+[18:45:04] [Client thread/INFO] [FML]: Injecting itemstacks
+[18:45:04] [Client thread/INFO] [FML]: Itemstack injection complete
+[18:45:04] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:45:05] [Thread-8/INFO]: Initializing LWJGL OpenAL
+[18:45:05] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:45:05] [Thread-8/INFO]: OpenAL initialized.
+[18:45:05] [Sound Library Loader/INFO]: Sound engine started
+[18:45:06] [Client thread/INFO] [FML]: Max texture size: 8192
+[18:45:06] [Client thread/INFO]: Created: 16x16 textures-atlas
+[18:45:07] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
+[18:45:07] [Client thread/INFO] [FML]: Injecting itemstacks
+[18:45:07] [Client thread/INFO] [FML]: Itemstack injection complete
+[18:45:07] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 4 mods
+[18:45:07] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[18:45:07] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:07] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:07] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[18:45:07] [Client thread/INFO]: SoundSystem shutting down...
+[18:45:07] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[18:45:07] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[18:45:08] [Thread-10/INFO]: Initializing LWJGL OpenAL
+[18:45:08] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[18:45:08] [Thread-10/INFO]: OpenAL initialized.
+[18:45:08] [Sound Library Loader/INFO]: Sound engine started
+[18:45:09] [Client thread/INFO] [FML]: Max texture size: 8192
+[18:45:09] [Client thread/INFO]: Created: 512x512 textures-atlas
+[18:45:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
+[18:45:10] [Thread-12/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
+[18:45:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[18:45:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[18:45:22] [Thread-14/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[18:45:22] [Thread-14/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,220*1,5*3,2;3;,biome_1" seed=""/><DrawingDecorator><DrawCuboid type="air" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="obsidian" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="0" y1="227" y2="237" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="50" y1="227" y2="237" z1="0" z2="0"/><DrawCuboid type="glass" x1="50" x2="50" y1="227" y2="237" z1="50" z2="0"/><DrawCuboid t
+[18:45:23] [Thread-14/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[18:45:23] [Thread-15/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10527
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_NEW_WORLD
+[18:45:23] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_NEW_WORLD
+[18:45:24] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:45:24] [Server thread/INFO]: Generating keypair
+[18:45:24] [Server thread/INFO]: Converting map!
+[18:45:24] [Server thread/INFO]: Scanning folders...
+[18:45:24] [Server thread/INFO]: Total conversion count is 0
+[18:45:24] [Server thread/INFO] [FML]: Injecting existing block and item data into this server instance
+[18:45:24] [Server thread/INFO] [FML]: Applying holder lookups
+[18:45:24] [Server thread/INFO] [FML]: Holder lookups applied
+[18:45:24] [Server thread/INFO] [FML]: Loading dimension 0 (TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6) (net.minecraft.server.integrated.IntegratedServer@6831771c)
+[18:45:24] [Server thread/WARN]: Unable to find spawn biome
+[18:45:24] [Server thread/INFO] [FML]: Loading dimension 1 (TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6) (net.minecraft.server.integrated.IntegratedServer@6831771c)
+[18:45:24] [Server thread/INFO] [FML]: Loading dimension -1 (TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6) (net.minecraft.server.integrated.IntegratedServer@6831771c)
+[18:45:24] [Server thread/INFO]: Preparing start region for level 0
+[18:45:25] [Server thread/INFO]: Preparing spawn area: 41%
+[18:45:26] [Server thread/INFO]: Preparing spawn area: 83%
+[18:45:26] [Server thread/INFO]: Changing view distance to 6, from 10
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_MOD_READY
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_MOD_READY
+[18:45:27] [Netty Local Client IO #0/INFO] [FML]: Server protocol version 2
+[18:45:27] [Netty Server IO #1/INFO] [FML]: Client protocol version 2
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:execute:468]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[18:45:27] [Netty Server IO #1/INFO] [FML]: Client attempting to join with 4 mods : FML@8.0.99.99,malmomod@0.21.0,Forge@11.14.3.1543,mcp@9.05
+[18:45:27] [Server thread/INFO]: Received mission: §9Hello world!
+[18:45:27] [Server thread/INFO]: Source: §a127.0.0.1
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[18:45:27] [Netty Local Client IO #0/INFO] [FML]: [Netty Local Client IO #0] Client side modded connection established
+[18:45:27] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[18:45:27] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> MalmoTutorialBot
+[18:45:27] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[18:45:27] [Server thread/INFO]: MalmoTutorialBot[local:E:4c0fa253] logged in with entity id 0 at (-5.5, 227.0, -9.5)
+[18:45:28] [Server thread/INFO]: MalmoTutorialBot joined the game
+[18:45:28] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:45:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[18:45:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[18:45:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[18:45:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[18:46:07] [Thread-19/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller$TCPConnectionHandler:run:342]: ~~~~~~~~ Socket stream error: java.net.SocketException: Connection reset
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10570.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10570.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10570.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10570.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:sendData:1727]: ERROR: TCP video frames are not getting through - quitting mission.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10842.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10842.
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[18:46:08] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[18:46:08] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:46:46] [Server thread/INFO]: Saving and pausing game...
+[18:46:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Overworld
+[18:46:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Nether
+[18:46:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/The End
+[18:46:52] [Server thread/INFO]: Saving and pausing game...
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Overworld
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Nether
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/The End
+[18:46:52] [Server thread/INFO]: Stopping server
+[18:46:52] [Server thread/INFO]: Saving players
+[18:46:52] [Server thread/INFO]: Saving worlds
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Overworld
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/Nether
+[18:46:52] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6'/The End
+[18:46:52] [Server thread/INFO] [FML]: Unloading dimension 0
+[18:46:52] [Server thread/INFO] [FML]: Unloading dimension -1
+[18:46:52] [Server thread/INFO] [FML]: Unloading dimension 1
+[18:46:52] [Server thread/INFO] [FML]: Applying holder lookups
+[18:46:52] [Server thread/INFO] [FML]: Holder lookups applied
+[18:47:16] [Thread-21/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[18:47:16] [Thread-21/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,220*1,5*3,2;3;,biome_1" seed=""/><DrawingDecorator><DrawCuboid type="air" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="obsidian" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="0" y1="227" y2="237" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="50" y1="227" y2="237" z1="0" z2="0"/><DrawCuboid type="glass" x1="50" x2="50" y1="227" y2="237" z1="50" z2="0"/><DrawCuboid t
+[18:47:16] [Thread-21/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_NEW_WORLD
+[18:47:16] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_NEW_WORLD
+[18:47:16] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[18:47:16] [Server thread/INFO]: Generating keypair
+[18:47:16] [Server thread/INFO]: Converting map!
+[18:47:16] [Server thread/INFO]: Scanning folders...
+[18:47:16] [Server thread/INFO]: Total conversion count is 0
+[18:47:16] [Server thread/INFO] [FML]: Injecting existing block and item data into this server instance
+[18:47:16] [Server thread/INFO] [FML]: Applying holder lookups
+[18:47:16] [Server thread/INFO] [FML]: Holder lookups applied
+[18:47:16] [Server thread/INFO] [FML]: Loading dimension 0 (TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219) (net.minecraft.server.integrated.IntegratedServer@461d16a0)
+[18:47:16] [Server thread/WARN]: Unable to find spawn biome
+[18:47:16] [Server thread/INFO] [FML]: Loading dimension 1 (TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219) (net.minecraft.server.integrated.IntegratedServer@461d16a0)
+[18:47:16] [Server thread/INFO] [FML]: Loading dimension -1 (TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219) (net.minecraft.server.integrated.IntegratedServer@461d16a0)
+[18:47:16] [Server thread/INFO]: Preparing start region for level 0
+[18:47:17] [Server thread/INFO]: Preparing spawn area: 43%
+[18:47:18] [Server thread/INFO]: Preparing spawn area: 86%
+[18:47:19] [Server thread/INFO]: Changing view distance to 6, from 10
+[18:47:19] [Client thread/INFO]: Deleting level TEMP_10000_61e9925e-48e6-4a86-837f-aa6f67a825c6
+[18:47:19] [Client thread/INFO]: Attempt 1...
+[18:47:19] [Netty Local Client IO #1/INFO] [FML]: Server protocol version 2
+[18:47:19] [Netty Server IO #3/INFO] [FML]: Client protocol version 2
+[18:47:19] [Netty Server IO #3/INFO] [FML]: Client attempting to join with 4 mods : FML@8.0.99.99,malmomod@0.21.0,Forge@11.14.3.1543,mcp@9.05
+[18:47:19] [Netty Local Client IO #1/INFO] [FML]: [Netty Local Client IO #1] Client side modded connection established
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_MOD_READY
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[18:47:19] [Server thread/INFO] [FML]: [Server thread] Server side modded connection established
+[18:47:19] [Server thread/INFO]: MalmoTutorialBot[local:E:2ef56d80] logged in with entity id 315 at (-5.5, 227.0, -8.5)
+[18:47:19] [Server thread/INFO]: MalmoTutorialBot joined the game
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_MOD_READY
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:execute:468]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[18:47:19] [Server thread/INFO]: Received mission: §9Hello world!
+[18:47:19] [Server thread/INFO]: Source: §a127.0.0.1
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[18:47:19] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> MalmoTutorialBot
+[18:47:20] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[18:47:20] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[18:47:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[18:47:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:47:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[18:47:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[18:47:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[18:47:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[18:48:04] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$RunningEpisode:onServerTick:1162]: Warning: managed 18/20 ticks this second.
+[18:49:17] [Thread-24/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller$TCPConnectionHandler:run:342]: ~~~~~~~~ Socket stream error: java.net.SocketException: Connection reset
+[18:49:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10231.
+[18:49:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10231.
+[18:49:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10231.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10231.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:sendData:1727]: ERROR: TCP video frames are not getting through - quitting mission.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10945.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:onClientTick:1585]: Error - agent is not responding to pings.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10945.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10945.
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[18:49:18] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[18:49:18] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:49:29] [Thread-26/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[18:49:29] [Thread-26/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,220*1,5*3,2;3;,biome_1" seed=""/><DrawingDecorator><DrawCuboid type="air" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="obsidian" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="0" y1="227" y2="237" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="50" y1="227" y2="237" z1="0" z2="0"/><DrawCuboid type="glass" x1="50" x2="50" y1="227" y2="237" z1="50" z2="0"/><DrawCuboid t
+[18:49:29] [Thread-26/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:49:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[18:49:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[18:49:29] [Server thread/INFO]: Received mission: §9Hello world!
+[18:49:29] [Server thread/INFO]: Source: §a127.0.0.1
+[18:49:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[18:49:29] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[18:49:29] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[18:49:29] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[18:49:29] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> MalmoTutorialBot
+[18:49:30] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:49:30] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[18:49:30] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[18:49:30] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[18:51:10] [Thread-28/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller$TCPConnectionHandler:run:342]: ~~~~~~~~ Socket stream error: java.net.SocketException: Connection reset
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10777.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10777.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10777.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10777.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:sendData:1727]: ERROR: TCP video frames are not getting through - quitting mission.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10190.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10190.
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[18:51:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[18:51:10] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:51:21] [Thread-30/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
+[18:51:21] [Thread-30/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,220*1,5*3,2;3;,biome_1" seed=""/><DrawingDecorator><DrawCuboid type="air" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="obsidian" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="0" y1="227" y2="237" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="50" y1="227" y2="237" z1="0" z2="0"/><DrawCuboid type="glass" x1="50" x2="50" y1="227" y2="237" z1="50" z2="0"/><DrawCuboid t
+[18:51:21] [Thread-30/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:checkForMissionCommand:492]: INCOMING MISSION: Received MissionInit directly through queue.
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
+[18:51:21] [Server thread/INFO]: Received mission: §9Hello world!
+[18:51:21] [Server thread/INFO]: Source: §a127.0.0.1
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
+[18:51:21] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[18:51:21] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
+[18:51:21] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> MalmoTutorialBot
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
+[18:51:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
+[18:51:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
+[18:51:22] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
+[18:57:25] [Thread-32/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller$TCPConnectionHandler:run:342]: ~~~~~~~~ Socket stream error: java.net.SocketException: Connection reset
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10461.
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10461.
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10461.
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10461.
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:57:25] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionRunningEpisode:sendData:1727]: ERROR: TCP video frames are not getting through - quitting mission.
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: IDLING
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: IDLING
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_QUIT
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_QUIT
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: MISSION_ENDED
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: MISSION_ENDED
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Client.ClientStateMachine$MissionEndedEpisode:sendMissionEnded:1915]: Sending mission ended message to 127.0.0.1:10272.
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:158]: Failed to send TCP bytes to 127.0.0.1:10272.
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPSocketHelper:sendTCPBytes:159]: java.net.SocketException: Connection reset by peer: socket write error
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_MISSION_END
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_MISSION_END
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: CLEAN_UP
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[18:57:26] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:clearCommands:127]: JETTISONING 0 COMMANDS
+[18:57:26] [Server thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
+[18:57:32] [Client thread/INFO]: Stopping!
+[18:57:32] [Client thread/INFO]: SoundSystem shutting down...
+[18:57:32] [Server thread/INFO]: Stopping server
+[18:57:32] [Server thread/INFO]: Saving players
+[18:57:32] [Server thread/INFO]: Saving worlds
+[18:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219'/Overworld
+[18:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219'/Nether
+[18:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_72cc1aa1-bdae-4e7e-a1d0-25cf143b1219'/The End
+[18:57:32] [Server thread/INFO] [FML]: Unloading dimension 0
+[18:57:32] [Server thread/INFO] [FML]: Unloading dimension -1
+[18:57:32] [Server thread/INFO] [FML]: Unloading dimension 1
+[18:57:32] [Server thread/INFO] [FML]: Applying holder lookups
+[18:57:32] [Server thread/INFO] [FML]: Holder lookups applied
+[18:57:32] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
 
 BUILD SUCCESSFUL
 
-Total time: 21.175 secs
+Total time: 12 mins 41.908 secs

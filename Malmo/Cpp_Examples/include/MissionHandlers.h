@@ -31,8 +31,8 @@
 // in the accompanying FLOSSE file.
 //
 
-#ifndef C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_HANDLERS_H
-#define C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_HANDLERS_H
+#ifndef C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_HANDLERS_H
+#define C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_HANDLERS_H
 
 #ifndef XSD_USE_CHAR
 #define XSD_USE_CHAR
@@ -304,9 +304,12 @@ namespace malmo
     class RewardDensityForBuildAndBreak;
     class UnnamedGridDefinition;
     class RewardDensityForTimeTaken;
+    class MobWithDescription;
+    class MobWithDescriptionAndReward;
     class PointWithToleranceAndDescription;
     class BlockSpecWithDescription;
     class BlockOrItemSpecWithDescription;
+    class MobList;
     class CommandQuota;
     class yaw;
     class pitch;
@@ -355,10 +358,12 @@ namespace malmo
     class max;
     class RewardForStructureCopying;
     class RewardForTimeTaken;
+    class RewardForCatchingMob;
     class AgentQuitFromReachingPosition;
     class AgentQuitFromTimeUp;
     class AgentQuitFromTouchingBlockType;
     class AgentQuitFromCollectingItem;
+    class AgentQuitFromCatchingMob;
     class AgentQuitFromReachingCommandQuota;
     class Seed;
     class UpdateSpeed;
@@ -4422,6 +4427,190 @@ namespace malmo
       static const value _xsd_RewardDensityForTimeTaken_indexes_[3];
     };
 
+    class MobWithDescription: public ::xml_schema::type
+    {
+      public:
+      // type
+      //
+      typedef ::malmo::schemas::MobList type_type;
+      typedef ::xsd::cxx::tree::traits< type_type, char > type_traits;
+
+      const type_type&
+      type () const;
+
+      type_type&
+      type ();
+
+      void
+      type (const type_type& x);
+
+      void
+      type (::std::auto_ptr< type_type > p);
+
+      // description
+      //
+      typedef ::xml_schema::string description_type;
+      typedef ::xsd::cxx::tree::traits< description_type, char > description_traits;
+
+      const description_type&
+      description () const;
+
+      description_type&
+      description ();
+
+      void
+      description (const description_type& x);
+
+      void
+      description (::std::auto_ptr< description_type > p);
+
+      static const description_type&
+      description_default_value ();
+
+      // global
+      //
+      typedef ::xml_schema::boolean global_type;
+      typedef ::xsd::cxx::tree::traits< global_type, char > global_traits;
+
+      const global_type&
+      global () const;
+
+      global_type&
+      global ();
+
+      void
+      global (const global_type& x);
+
+      static global_type
+      global_default_value ();
+
+      // Constructors.
+      //
+      MobWithDescription (const type_type&);
+
+      MobWithDescription (const ::xercesc::DOMElement& e,
+                          ::xml_schema::flags f = 0,
+                          ::xml_schema::container* c = 0);
+
+      MobWithDescription (const MobWithDescription& x,
+                          ::xml_schema::flags f = 0,
+                          ::xml_schema::container* c = 0);
+
+      virtual MobWithDescription*
+      _clone (::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0) const;
+
+      MobWithDescription&
+      operator= (const MobWithDescription& x);
+
+      virtual 
+      ~MobWithDescription ();
+
+      // Implementation.
+      //
+      protected:
+      void
+      parse (::xsd::cxx::xml::dom::parser< char >&,
+             ::xml_schema::flags);
+
+      protected:
+      ::xsd::cxx::tree::one< type_type > type_;
+      ::xsd::cxx::tree::one< description_type > description_;
+      static const description_type description_default_value_;
+      ::xsd::cxx::tree::one< global_type > global_;
+    };
+
+    class MobWithDescriptionAndReward: public ::malmo::schemas::MobWithDescription
+    {
+      public:
+      // reward
+      //
+      typedef ::xml_schema::decimal reward_type;
+      typedef ::xsd::cxx::tree::traits< reward_type, char, ::xsd::cxx::tree::schema_type::decimal > reward_traits;
+
+      const reward_type&
+      reward () const;
+
+      reward_type&
+      reward ();
+
+      void
+      reward (const reward_type& x);
+
+      // distribution
+      //
+      typedef ::xml_schema::string distribution_type;
+      typedef ::xsd::cxx::tree::traits< distribution_type, char > distribution_traits;
+
+      const distribution_type&
+      distribution () const;
+
+      distribution_type&
+      distribution ();
+
+      void
+      distribution (const distribution_type& x);
+
+      void
+      distribution (::std::auto_ptr< distribution_type > p);
+
+      static const distribution_type&
+      distribution_default_value ();
+
+      // oneshot
+      //
+      typedef ::xml_schema::boolean oneshot_type;
+      typedef ::xsd::cxx::tree::traits< oneshot_type, char > oneshot_traits;
+
+      const oneshot_type&
+      oneshot () const;
+
+      oneshot_type&
+      oneshot ();
+
+      void
+      oneshot (const oneshot_type& x);
+
+      static oneshot_type
+      oneshot_default_value ();
+
+      // Constructors.
+      //
+      MobWithDescriptionAndReward (const type_type&,
+                                   const reward_type&);
+
+      MobWithDescriptionAndReward (const ::xercesc::DOMElement& e,
+                                   ::xml_schema::flags f = 0,
+                                   ::xml_schema::container* c = 0);
+
+      MobWithDescriptionAndReward (const MobWithDescriptionAndReward& x,
+                                   ::xml_schema::flags f = 0,
+                                   ::xml_schema::container* c = 0);
+
+      virtual MobWithDescriptionAndReward*
+      _clone (::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0) const;
+
+      MobWithDescriptionAndReward&
+      operator= (const MobWithDescriptionAndReward& x);
+
+      virtual 
+      ~MobWithDescriptionAndReward ();
+
+      // Implementation.
+      //
+      protected:
+      void
+      parse (::xsd::cxx::xml::dom::parser< char >&,
+             ::xml_schema::flags);
+
+      protected:
+      ::xsd::cxx::tree::one< reward_type > reward_;
+      ::xsd::cxx::tree::one< distribution_type > distribution_;
+      static const distribution_type distribution_default_value_;
+      ::xsd::cxx::tree::one< oneshot_type > oneshot_;
+    };
+
     class PointWithToleranceAndDescription: public ::malmo::schemas::Pos
     {
       public:
@@ -4611,6 +4800,45 @@ namespace malmo
       protected:
       ::xsd::cxx::tree::one< description_type > description_;
       static const description_type description_default_value_;
+    };
+
+    class MobList: public ::xml_schema::simple_type,
+      public ::xsd::cxx::tree::list< ::malmo::schemas::EntityTypes, char >
+    {
+      public:
+      MobList ();
+
+      MobList (size_type n, const ::malmo::schemas::EntityTypes& x);
+
+      template < typename I >
+      MobList (const I& begin, const I& end)
+      : ::xsd::cxx::tree::list< ::malmo::schemas::EntityTypes, char > (begin, end, this)
+      {
+      }
+
+      MobList (const ::xercesc::DOMElement& e,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+      MobList (const ::xercesc::DOMAttr& a,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+      MobList (const ::std::string& s,
+               const ::xercesc::DOMElement* e,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+      MobList (const MobList& x,
+               ::xml_schema::flags f = 0,
+               ::xml_schema::container* c = 0);
+
+      virtual MobList*
+      _clone (::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0) const;
+
+      virtual 
+      ~MobList ();
     };
 
     class CommandQuota: public ::xml_schema::type
@@ -8724,6 +8952,80 @@ namespace malmo
       static const rewardDistribution_type rewardDistribution_default_value_;
     };
 
+    class RewardForCatchingMob: public ::xml_schema::type
+    {
+      public:
+      // Mob
+      //
+      typedef ::malmo::schemas::MobWithDescriptionAndReward Mob_type;
+      typedef ::xsd::cxx::tree::sequence< Mob_type > Mob_sequence;
+      typedef Mob_sequence::iterator Mob_iterator;
+      typedef Mob_sequence::const_iterator Mob_const_iterator;
+      typedef ::xsd::cxx::tree::traits< Mob_type, char > Mob_traits;
+
+      const Mob_sequence&
+      Mob () const;
+
+      Mob_sequence&
+      Mob ();
+
+      void
+      Mob (const Mob_sequence& s);
+
+      // dimension
+      //
+      typedef ::malmo::schemas::Dimension dimension_type;
+      typedef ::xsd::cxx::tree::traits< dimension_type, char > dimension_traits;
+
+      const dimension_type&
+      dimension () const;
+
+      dimension_type&
+      dimension ();
+
+      void
+      dimension (const dimension_type& x);
+
+      void
+      dimension (::std::auto_ptr< dimension_type > p);
+
+      static dimension_type
+      dimension_default_value ();
+
+      // Constructors.
+      //
+      RewardForCatchingMob ();
+
+      RewardForCatchingMob (const ::xercesc::DOMElement& e,
+                            ::xml_schema::flags f = 0,
+                            ::xml_schema::container* c = 0);
+
+      RewardForCatchingMob (const RewardForCatchingMob& x,
+                            ::xml_schema::flags f = 0,
+                            ::xml_schema::container* c = 0);
+
+      virtual RewardForCatchingMob*
+      _clone (::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0) const;
+
+      RewardForCatchingMob&
+      operator= (const RewardForCatchingMob& x);
+
+      virtual 
+      ~RewardForCatchingMob ();
+
+      // Implementation.
+      //
+      protected:
+      void
+      parse (::xsd::cxx::xml::dom::parser< char >&,
+             ::xml_schema::flags);
+
+      protected:
+      Mob_sequence Mob_;
+      ::xsd::cxx::tree::one< dimension_type > dimension_;
+    };
+
     class AgentQuitFromReachingPosition: public ::xml_schema::type
     {
       public:
@@ -8953,6 +9255,59 @@ namespace malmo
 
       protected:
       Item_sequence Item_;
+    };
+
+    class AgentQuitFromCatchingMob: public ::xml_schema::type
+    {
+      public:
+      // Mob
+      //
+      typedef ::malmo::schemas::MobWithDescription Mob_type;
+      typedef ::xsd::cxx::tree::sequence< Mob_type > Mob_sequence;
+      typedef Mob_sequence::iterator Mob_iterator;
+      typedef Mob_sequence::const_iterator Mob_const_iterator;
+      typedef ::xsd::cxx::tree::traits< Mob_type, char > Mob_traits;
+
+      const Mob_sequence&
+      Mob () const;
+
+      Mob_sequence&
+      Mob ();
+
+      void
+      Mob (const Mob_sequence& s);
+
+      // Constructors.
+      //
+      AgentQuitFromCatchingMob ();
+
+      AgentQuitFromCatchingMob (const ::xercesc::DOMElement& e,
+                                ::xml_schema::flags f = 0,
+                                ::xml_schema::container* c = 0);
+
+      AgentQuitFromCatchingMob (const AgentQuitFromCatchingMob& x,
+                                ::xml_schema::flags f = 0,
+                                ::xml_schema::container* c = 0);
+
+      virtual AgentQuitFromCatchingMob*
+      _clone (::xml_schema::flags f = 0,
+              ::xml_schema::container* c = 0) const;
+
+      AgentQuitFromCatchingMob&
+      operator= (const AgentQuitFromCatchingMob& x);
+
+      virtual 
+      ~AgentQuitFromCatchingMob ();
+
+      // Implementation.
+      //
+      protected:
+      void
+      parse (::xsd::cxx::xml::dom::parser< char >&,
+             ::xml_schema::flags);
+
+      protected:
+      Mob_sequence Mob_;
     };
 
     class AgentQuitFromReachingCommandQuota: public ::xml_schema::type
@@ -11037,6 +11392,12 @@ namespace malmo
                 const RewardDensityForTimeTaken&);
 
     void
+    operator<< (::xercesc::DOMElement&, const MobWithDescription&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const MobWithDescriptionAndReward&);
+
+    void
     operator<< (::xercesc::DOMElement&, const PointWithToleranceAndDescription&);
 
     void
@@ -11044,6 +11405,16 @@ namespace malmo
 
     void
     operator<< (::xercesc::DOMElement&, const BlockOrItemSpecWithDescription&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const MobList&);
+
+    void
+    operator<< (::xercesc::DOMAttr&, const MobList&);
+
+    void
+    operator<< (::xml_schema::list_stream&,
+                const MobList&);
 
     void
     operator<< (::xercesc::DOMElement&, const CommandQuota&);
@@ -11267,6 +11638,9 @@ namespace malmo
     operator<< (::xercesc::DOMElement&, const RewardForTimeTaken&);
 
     void
+    operator<< (::xercesc::DOMElement&, const RewardForCatchingMob&);
+
+    void
     operator<< (::xercesc::DOMElement&, const AgentQuitFromReachingPosition&);
 
     void
@@ -11277,6 +11651,9 @@ namespace malmo
 
     void
     operator<< (::xercesc::DOMElement&, const AgentQuitFromCollectingItem&);
+
+    void
+    operator<< (::xercesc::DOMElement&, const AgentQuitFromCatchingMob&);
 
     void
     operator<< (::xercesc::DOMElement&, const AgentQuitFromReachingCommandQuota&);
@@ -11422,4 +11799,4 @@ namespace malmo
 //
 // End epilogue.
 
-#endif // C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_HANDLERS_H
+#endif // C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_HANDLERS_H

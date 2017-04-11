@@ -25,11 +25,7 @@
 //                                               java -cp MalmoJavaJar.jar;JavaExamples_run_mission.jar -Djava.library.path=. JavaExamples_run_mission (on Windows)
 
 import com.microsoft.msr.malmo.*;
-import com.microsoft.msr.malmo.AgentHost.ObservationsPolicy;
 
-import java.util.Scanner;
-import java.io.IOException;
-import java.util.Locale;
 public class JavaExamples_run_mission
 {
     static
@@ -61,11 +57,8 @@ public class JavaExamples_run_mission
         }
 
         MissionSpec my_mission = new MissionSpec();
-        my_mission.timeLimitInSeconds(1000);
-		int videoW = 600;
-		int videoH = 600;
-		System.out.println("Video of" + videoH + videoW);
-        my_mission.requestVideo( videoW, videoH );
+        my_mission.timeLimitInSeconds(10);
+        my_mission.requestVideo( 320, 240 );
         my_mission.rewardForReachingPosition(19.5f,0.0f,19.5f,100.0f,1.1f);
 
         MissionRecordSpec my_mission_record = new MissionRecordSpec("./saved_data.tgz");
@@ -83,7 +76,7 @@ public class JavaExamples_run_mission
         }
 
         WorldState world_state;
-        
+
         System.out.print( "Waiting for the mission to start" );
         do {
             System.out.print( "." );
@@ -98,16 +91,11 @@ public class JavaExamples_run_mission
                 System.err.println( "Error: " + world_state.getErrors().get(i).getText() );
         } while( !world_state.getIsMissionRunning() );
         System.out.println( "" );
-		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
+
         // main loop:
         do {
-            //agent_host.sendCommand( "move 1" );
-			System.out.println("Introduce un valor: ");
-			
-			String instruction = sc.nextLine();
-			
-            agent_host.sendCommand(instruction);
-			
+            agent_host.sendCommand( "move 1" );
+            agent_host.sendCommand( "turn " + Math.random() );
             try {
                 Thread.sleep(500);
             } catch(InterruptedException ex) {
@@ -115,10 +103,6 @@ public class JavaExamples_run_mission
                 return;
             }
             world_state = agent_host.getWorldState();
-            TimestampedStringVector obs = world_state.getObservations();
-            my_mission.observeGrid(1, 1, 1, 1, 1, 1, "Cristina");
-            System.out.println(my_mission.getAsXML(true));
-            System.out.println("Tamaño de observaciones: " + obs.size());
             System.out.print( "video,observations,rewards received: " );
             System.out.print( world_state.getNumberOfVideoFramesSinceLastState() + "," );
             System.out.print( world_state.getNumberOfObservationsSinceLastState() + "," );
@@ -132,7 +116,7 @@ public class JavaExamples_run_mission
                 System.err.println( "Error: " + error.getText() );
             }
         } while( world_state.getIsMissionRunning() );
-		sc.close();
+
         System.out.println( "Mission has stopped." );
     }
 }

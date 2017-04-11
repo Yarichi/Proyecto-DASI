@@ -22,7 +22,7 @@
 # Richard S. Sutton and Andrews G. Barto
 # Reinforcement Learning, An Introduction
 # MIT Press, 1998
-from pprint import pprint
+
 import MalmoPython
 import json
 import logging
@@ -32,8 +32,6 @@ import random
 import sys
 import time
 import Tkinter as tk
-
-
 
 save_images = False
 if save_images:        
@@ -150,7 +148,6 @@ class TabQAgent:
         assert len(world_state.video_frames) > 0, 'No video frames!?'
         
         obs = json.loads( world_state.observations[-1].text )
-        pprint(obs)
         prev_x = obs[u'XPos']
         prev_z = obs[u'ZPos']
         print 'Initial position:',prev_x,',',prev_z

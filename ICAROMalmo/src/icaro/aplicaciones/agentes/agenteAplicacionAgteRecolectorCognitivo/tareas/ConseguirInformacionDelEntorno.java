@@ -17,12 +17,12 @@ public class ConseguirInformacionDelEntorno extends TareaSincrona{
 	@Override
 	public void ejecutar(Object... params) {
 		try {
-			//ItfUsoRecursoMalmo itfMalmo = (ItfUsoRecursoMalmo)this.repoInterfaces.obtenerInterfazUso(VocabularioRosace.IdentRecursoMalmo);
-			//ArrayList<Manzana> manzanas = itfMalmo.getInformacionManzanas();
-			//ArrayList<Agente> agentes = itfMalmo.getAgentes();
-			//Objetivo o = new RecolectarTodasLasManzanas(manzanas);
-			//this.itfProcObjetivos.insertarHecho(o);
-			//ArrayList<Obstaculo> obstaculos = itfMalmo.getObstaculos();
+			ItfUsoRecursoMalmo itfMalmo = (ItfUsoRecursoMalmo)this.repoInterfaces.obtenerInterfazUso(VocabularioRosace.IdentRecursoMalmo);
+			ArrayList<Manzana> manzanas = itfMalmo.getInformacionManzanas();
+			ArrayList<Agente> agentes = itfMalmo.getAgentes();
+			Objetivo o = new RecolectarTodasLasManzanas(manzanas);
+			this.itfProcObjetivos.insertarHecho(o);
+			ArrayList<Obstaculo> obstaculos = itfMalmo.getObstaculos();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

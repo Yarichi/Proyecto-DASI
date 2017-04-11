@@ -1,5 +1,6 @@
 package icaro.aplicaciones.recursos.recursoMalmo.imp;
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.rmi.RemoteException;
@@ -8,7 +9,8 @@ public class Main {
 
 	public static void main(String[] args) throws IOException
 	{
-		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python", "C:\\Users\\Sergio\\git\\Proyecto-DASI\\ICAROMalmo\\src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py", 9288);
+		String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
+		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
 		//dispatcher.sendCommand("prueba 0");
 
 		ClaseGeneradoraRecursoMalmo asd = null;

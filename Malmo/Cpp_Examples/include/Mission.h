@@ -31,8 +31,8 @@
 // in the accompanying FLOSSE file.
 //
 
-#ifndef C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_H
-#define C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_H
+#ifndef C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_H
+#define C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_H
 
 #ifndef XSD_USE_CHAR
 #define XSD_USE_CHAR
@@ -1929,6 +1929,27 @@ namespace malmo
       void
       RewardForTimeTaken (::std::auto_ptr< RewardForTimeTaken_type > p);
 
+      // RewardForCatchingMob
+      //
+      typedef ::malmo::schemas::RewardForCatchingMob RewardForCatchingMob_type;
+      typedef ::xsd::cxx::tree::optional< RewardForCatchingMob_type > RewardForCatchingMob_optional;
+      typedef ::xsd::cxx::tree::traits< RewardForCatchingMob_type, char > RewardForCatchingMob_traits;
+
+      const RewardForCatchingMob_optional&
+      RewardForCatchingMob () const;
+
+      RewardForCatchingMob_optional&
+      RewardForCatchingMob ();
+
+      void
+      RewardForCatchingMob (const RewardForCatchingMob_type& x);
+
+      void
+      RewardForCatchingMob (const RewardForCatchingMob_optional& x);
+
+      void
+      RewardForCatchingMob (::std::auto_ptr< RewardForCatchingMob_type > p);
+
       // ContinuousMovementCommands
       //
       typedef ::malmo::schemas::ContinuousMovementCommands ContinuousMovementCommands_type;
@@ -2202,6 +2223,27 @@ namespace malmo
       void
       AgentQuitFromReachingCommandQuota (::std::auto_ptr< AgentQuitFromReachingCommandQuota_type > p);
 
+      // AgentQuitFromCatchingMob
+      //
+      typedef ::malmo::schemas::AgentQuitFromCatchingMob AgentQuitFromCatchingMob_type;
+      typedef ::xsd::cxx::tree::optional< AgentQuitFromCatchingMob_type > AgentQuitFromCatchingMob_optional;
+      typedef ::xsd::cxx::tree::traits< AgentQuitFromCatchingMob_type, char > AgentQuitFromCatchingMob_traits;
+
+      const AgentQuitFromCatchingMob_optional&
+      AgentQuitFromCatchingMob () const;
+
+      AgentQuitFromCatchingMob_optional&
+      AgentQuitFromCatchingMob ();
+
+      void
+      AgentQuitFromCatchingMob (const AgentQuitFromCatchingMob_type& x);
+
+      void
+      AgentQuitFromCatchingMob (const AgentQuitFromCatchingMob_optional& x);
+
+      void
+      AgentQuitFromCatchingMob (::std::auto_ptr< AgentQuitFromCatchingMob_type > p);
+
       // Constructors.
       //
       AgentHandlers ();
@@ -2254,6 +2296,7 @@ namespace malmo
       RewardForMissionEnd_optional RewardForMissionEnd_;
       RewardForStructureCopying_optional RewardForStructureCopying_;
       RewardForTimeTaken_optional RewardForTimeTaken_;
+      RewardForCatchingMob_optional RewardForCatchingMob_;
       ContinuousMovementCommands_optional ContinuousMovementCommands_;
       AbsoluteMovementCommands_optional AbsoluteMovementCommands_;
       DiscreteMovementCommands_optional DiscreteMovementCommands_;
@@ -2267,6 +2310,7 @@ namespace malmo
       AgentQuitFromTouchingBlockType_optional AgentQuitFromTouchingBlockType_;
       AgentQuitFromCollectingItem_optional AgentQuitFromCollectingItem_;
       AgentQuitFromReachingCommandQuota_optional AgentQuitFromReachingCommandQuota_;
+      AgentQuitFromCatchingMob_optional AgentQuitFromCatchingMob_;
     };
 
     class ServerHandlers: public ::xml_schema::type
@@ -2964,4 +3008,4 @@ namespace malmo
 //
 // End epilogue.
 
-#endif // C__CYGWIN_HOME_KAHOFMAN_GITPROJECTS_MALMO_BUILD_SCHEMAS_MISSION_H
+#endif // C__USERS_MALMO_MALMO_PLATFORM_SCHEMAS_MISSION_H
