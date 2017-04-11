@@ -1,0 +1,11 @@
+[17:02:26] [Client thread/INFO]: Setting user: Player484
+[17:02:29] [Client thread/INFO]: LWJGL Version: 2.9.1
+[17:02:32] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[17:02:32] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\Desktop\Malmo-0.20.0-Windows-64bit\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:02:32] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\Desktop\Malmo-0.20.0-Windows-64bit\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:02:32] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\Desktop\Malmo-0.20.0-Windows-64bit\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:02:32] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:02:33] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[17:02:33] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:02:33] [Thread-9/INFO]: OpenAL initialized.
+[17:02:33] [Sound Library Loader/INFO]: Sound engine started

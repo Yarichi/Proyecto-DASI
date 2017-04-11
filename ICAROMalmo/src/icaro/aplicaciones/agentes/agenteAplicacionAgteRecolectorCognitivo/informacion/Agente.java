@@ -1,8 +1,13 @@
 package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion;
 
 public class Agente {
+	private String idAgente;
 	private int x, y, z;
 
+	
+	public String getId(){
+		return this.idAgente;
+	}
 	public int getX() {
 		return x;
 	}

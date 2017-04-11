@@ -1,0 +1,151 @@
+****************************
+ Powered By MCP:             
+ http://modcoderpack.com/    
+ Searge, ProfMobius, Fesh0r, 
+ R4wk, ZeuX, IngisKahn, bspkrs
+ MCP Data version : 9.10
+****************************
+:deobfCompileDummyTask
+:deobfProvidedDummyTask
+:compileApiJava UP-TO-DATE
+:processApiResources UP-TO-DATE
+:apiClasses UP-TO-DATE
+:copyModToClient
+:copyModToServer
+:deleteSchemas
+:copySchemas
+:jaxb UP-TO-DATE
+:sourceMainJava UP-TO-DATE
+:compileJava UP-TO-DATE
+:processResources UP-TO-DATE
+:classes UP-TO-DATE
+:jar
+:getVersionJson
+:extractNatives SKIPPED
+:extractUserdev UP-TO-DATE
+:getAssetIndex UP-TO-DATE
+:getAssets
+:makeStart
+[ant:javac] warning: [options] bootstrap class path not set in conjunction with -source 1.6
+[ant:javac] 1 warning
+:runClient
+[17:04:09] [main/INFO] [GradleStart]: Extra: []
+[17:04:09] [main/INFO] [GradleStart]: Running with arguments: [--userProperties, {}, --assetsDir, C:/Users/Luis/.gradle/caches/minecraft/assets, --assetIndex, 1.8, --accessToken{REDACTED}, --version, 1.8, --tweakClass, net.minecraftforge.fml.common.launcher.FMLTweaker]
+[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Using primary tweak class name net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLTweaker
+[17:04:09] [main/INFO] [FML]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
+[17:04:09] [main/INFO] [FML]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_111, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_111\jre
+[17:04:09] [main/INFO] [FML]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[17:04:09] [main/INFO] [FML]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[17:04:09] [main/WARN] [FML]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:04:09] [main/ERROR] [FML]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[17:04:09] [main/ERROR] [FML]: FML appears to be missing any signature data. This is not a good thing
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[17:04:09] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[17:04:10] [main/INFO] [LaunchWrapper]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[17:04:10] [main/INFO] [LaunchWrapper]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[17:04:10] [main/INFO] [LaunchWrapper]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
+[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
+[17:04:10] [main/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[17:04:10] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[17:04:10] [Client thread/INFO]: Setting user: Player997
+[17:04:12] [Client thread/INFO]: LWJGL Version: 2.9.1
+[17:04:12] [Client thread/INFO] [STDOUT]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
+// Quite honestly, I wouldn't worry myself about that.
+
+Time: 11/04/17 17:04
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_111, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 608507992 bytes (580 MB) / 707788800 bytes (675 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 1 total; -Xmx2G
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+OverclockingPlugin (unknown)
+  com.microsoft.Malmo.OverclockingClassTransformer
+	GL info: ' Vendor: 'VMware, Inc.' Version: '2.1 Mesa 10.0.1' Renderer: 'Gallium 0.4 on llvmpipe (LLVM 3.3, 256 bits)'
+[17:04:12] [Client thread/INFO] [MinecraftForge]: Attempting early MinecraftForge initialization
+[17:04:12] [Client thread/INFO] [FML]: MinecraftForge v11.14.3.1543 Initialized
+[17:04:12] [Client thread/INFO] [FML]: Replaced 204 ore recipies
+[17:04:12] [Client thread/INFO] [MinecraftForge]: Completed early MinecraftForge initialization
+[17:04:12] [Client thread/INFO] [FML]: Found 0 mods from the command line. Injecting into mod discoverer
+[17:04:12] [Client thread/INFO] [FML]: Searching C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
+[17:04:14] [Client thread/INFO] [FML]: Forge Mod Loader has identified 4 mods to load
+[17:04:14] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
+[17:04:14] [Client thread/INFO] [FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
+[17:04:14] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:14] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:15] [Client thread/INFO] [FML]: Processing ObjectHolder annotations
+[17:04:15] [Client thread/INFO] [FML]: Found 384 ObjectHolder annotations
+[17:04:15] [Client thread/INFO] [FML]: Identifying ItemStackHolder annotations
+[17:04:15] [Client thread/INFO] [FML]: Found 0 ItemStackHolder annotations
+[17:04:15] [Client thread/INFO] [FML]: Configured a dormant chunk cache size of 0
+[17:04:15] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.20
+[17:04:15] [Client thread/INFO] [FML]: Applying holder lookups
+[17:04:15] [Client thread/INFO] [FML]: Holder lookups applied
+[17:04:15] [Client thread/INFO] [FML]: Injecting itemstacks
+[17:04:15] [Client thread/INFO] [FML]: Itemstack injection complete
+[17:04:15] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:04:15] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[17:04:15] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:04:15] [Thread-9/INFO]: OpenAL initialized.
+[17:04:15] [Sound Library Loader/INFO]: Sound engine started
+[17:04:17] [Client thread/INFO] [FML]: Max texture size: 8192
+[17:04:17] [Client thread/INFO]: Created: 16x16 textures-atlas
+[17:04:17] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
+[17:04:17] [Client thread/INFO] [FML]: Injecting itemstacks
+[17:04:17] [Client thread/INFO] [FML]: Itemstack injection complete
+[17:04:18] [Client thread/INFO] [FML]: Forge Mod Loader has successfully loaded 4 mods
+[17:04:18] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:18] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Luis\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.20.0.jar
+[17:04:18] [Client thread/INFO]: SoundSystem shutting down...
+[17:04:18] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[17:04:18] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[17:04:18] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[17:04:18] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[17:04:18] [Thread-11/INFO]: OpenAL initialized.
+[17:04:18] [Sound Library Loader/INFO]: Sound engine started
+[17:04:19] [Client thread/INFO] [FML]: Max texture size: 8192
+[17:04:19] [Client thread/INFO]: Created: 512x512 textures-atlas
+[17:04:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
+[17:04:20] [Thread-13/INFO] [STDOUT]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
+[17:04:20] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[17:04:21] [Client thread/INFO] [STDOUT]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[17:04:22] [Client thread/INFO]: Stopping!
+[17:04:22] [Client thread/INFO]: SoundSystem shutting down...
+[17:04:22] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+
+BUILD SUCCESSFUL
+
+Total time: 21.175 secs

@@ -1,0 +1,16 @@
+[
+{
+  "modid": "malmomod",
+  "name": "Microsoft Malmo Mod",
+  "description": "Platform for AI experimentation.",
+  "version": "0.20.0",
+  "mcversion": "1.8",
+  "url": "https://github.com/Microsoft/malmo",
+  "updateUrl": "",
+  "authorList": ["Tim, Dave, Katja, Matt"],
+  "credits": "Made possible with help from many people",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
