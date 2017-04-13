@@ -2,12 +2,14 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.infor
 
 public class Manzana {
 	private int x, y, z;
+	private String Id;
 	private boolean recolectado;
 	
-	public Manzana(int x, int y, int z) {
+	public Manzana(String id, int x, int y, int z) {
 		this.x = x;
 		this.y = y;
 		this.z = z;
+		this.Id = id;
 		this.recolectado = false;
 	}
 	public int getX() {
@@ -37,6 +39,12 @@ public class Manzana {
 	
 	public String toString(){
 		return "Manzana -> X: "+this.x+ " Y: "+this.y+ " Z: "+this.z + '\n';
+	}
+	public String getId() {
+		return Id;
+	}
+	public void setId(String id) {
+		Id = id;
 	}
 
 	

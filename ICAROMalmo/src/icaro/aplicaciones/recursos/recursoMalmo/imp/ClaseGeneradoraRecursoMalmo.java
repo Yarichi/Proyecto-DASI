@@ -99,13 +99,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Manzana> parseManzanas(ArrayList<String> manzanas){
 		ArrayList<Manzana> manzanas_return = new ArrayList<Manzana>();
 		StringBuilder aux;
+		int i = 0;
 		for (String s : manzanas){
 			aux = new StringBuilder(s);
 			aux.deleteCharAt(0);
 			aux.deleteCharAt(aux.length()-1);
 			s = aux.toString();
 			String[] coords = s.split(",");
-			manzanas_return.add(new Manzana(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]),Integer.parseInt(coords[2])));
+			manzanas_return.add(new Manzana("Manzana" + i, Integer.parseInt(coords[0]), Integer.parseInt(coords[1]),Integer.parseInt(coords[2])));
+			i++;
 		}
 		return manzanas_return;
 		

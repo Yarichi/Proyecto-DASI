@@ -119,28 +119,74 @@ then
 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
-/*
+
+rule "Focalizar objetivo de recolectar todas las manzanas"
+when
+	obj:RecolectarTodasLasManzanas(state == Objetivo.PENDING);
+	misObj: MisObjetivos();
+	foco : Focus();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(GenerarObjetivoyFocalizarlo.class);
+	tarea.ejecutar(obj, misObj, foco);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
+end
+
 rule "Generacion objetivo de recolectar manzana"
 when
-
+	obj: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
+	foco : Focus(foco == obj);
 then
-
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(GenerarObjetivoRecolectarManzana.class);
+	tarea.ejecutar(obj);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
+
 
 rule "Obtencion de coste de completar la recoleccion de manzana"
 when
-
+	obj: RecolectarManzana(id: id);
+	objDec: DecidirQuienVa(objectDecisionId == id);
+	info: InfoDecidirRecolector(ObjetivoID == id);
+	infoEquipo: InfoEquipoMoic();
+	Focus(foco == objDec); 
 then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PedirEvaluacionATodos.class);
+	tarea.ejecutar(obj, info, infoEquipo);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
+end
 
+rule "Proceso una respuesta para la recoleccion de manzanas"
+when
+	obj: RecolectarManzana(id: id);
+	objDec: DecidirQuienVa(objectDecisionId == id);
+	info: InfoDecidirRecolector(ObjetivoID == id);
+	respuesta: RespuestaRecoleccion(objetivoID == id);
+	Focus(foco == objDec);
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ProcesarRespuestaRecoleccion.class);
+	tarea.ejecutar(info, respuesta);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
 
 rule "Primer timeout para obtencion de todos los costes de reccolectar manzana"
 when
-
+	obj: RecolectarManzana(id: id);
+	objDec: DecidirQuienVa(objectDecisionId == id);
+	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == false, todasLasPeticiones == true);
+	infoEquipo: InfoEquipoMoic();
+	Focus(foco == objDec);
+	informeTarea:InformeDeTarea(identTarea == VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones1, contenidoInforme==id );
 then
-
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PedirEvaluacionRestantes.class);
+	tarea.ejecutar(obj, info, infoEquipo, informeTarea);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
 end
-
+/*
 rule "Segundo timeout para obtencion de todos los costes de reccolectar manzana"
 when
 
