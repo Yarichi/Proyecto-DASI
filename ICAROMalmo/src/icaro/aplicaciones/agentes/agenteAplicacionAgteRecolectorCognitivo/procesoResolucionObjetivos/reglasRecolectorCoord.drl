@@ -206,5 +206,21 @@ when
 
 then
 
+
+end
+//Regla del calculo de la evaluacion
+rule "Calculo mi evaluacion de recolectarManzana"
+when
+
+then
+
+
+end
+//Regla de recepcion de recoger manzana. 
+rule "Proceso petición de recolección de manzana"
+when
+
+then
+
 end
 */

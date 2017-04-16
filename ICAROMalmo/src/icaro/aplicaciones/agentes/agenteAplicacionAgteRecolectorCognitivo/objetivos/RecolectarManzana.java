@@ -13,6 +13,14 @@ public class RecolectarManzana extends Objetivo{
 	private Manzana manzana;
 	public String id;
 	
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
 	public RecolectarManzana(Manzana m){
 		this.manzana = m;
 		this.id = m.getId();
