@@ -4,6 +4,12 @@ public class Agente {
 	private String idAgente;
 	private int x, y, z;
 
+	public Agente(String idAgente, int x, int y, int z){
+		this.idAgente = idAgente;
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
 	
 	public String getId(){
 		return this.idAgente;
@@ -32,5 +38,8 @@ public class Agente {
 		this.z = z;
 	}
 	
+	public String toString(){
+		return "Agente -> X: "+this.x+ " Y: "+this.y+ " Z: "+this.z + '\n';
+	}
 	
 }

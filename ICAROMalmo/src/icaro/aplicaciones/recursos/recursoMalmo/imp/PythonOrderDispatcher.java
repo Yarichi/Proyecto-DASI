@@ -19,11 +19,11 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
 			String[] command = {pythonPath, pythonScript};
-			//pythonDispatcherThread = Runtime.getRuntime().exec(command);
+			pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
 			Thread.sleep(2000);
             //creamos el socket para comunicarnos con la interfaz de python
-			socket = new Socket("127.0.0.1", port);
+			socket = new Socket("localhost", port);
 	        //Flujo de datos hacia la interfaz de python
 	        outFlow = new DataOutputStream(socket.getOutputStream());
 		} 

@@ -22,8 +22,8 @@ public class Main {
 		}
 		
 		System.out.println(asd.getInformacionManzanas());
-	System.out.println(asd.getAgentes().toString());
-		System.out.println(asd.getObstaculos().toString());
+		System.out.println(asd.getInformacionAgentes());
+		System.out.println(asd.getInformacionObstaculos());
 		
 		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 		String cadena="";

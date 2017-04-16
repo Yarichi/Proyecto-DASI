@@ -3,6 +3,12 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.infor
 public class Obstaculo {
 	private int x, y, z;
 
+	public Obstaculo(int x, int y, int z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
 	public int getX() {
 		return x;
 	}
@@ -27,4 +33,7 @@ public class Obstaculo {
 		this.z = z;
 	}
 	
+	public String toString(){
+		return "Obstaculo -> X: "+this.x+ " Y: "+this.y+ " Z: "+this.z + '\n';
+	}
 }

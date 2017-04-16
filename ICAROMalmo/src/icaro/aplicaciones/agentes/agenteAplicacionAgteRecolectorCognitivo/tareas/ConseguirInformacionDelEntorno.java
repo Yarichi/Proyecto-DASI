@@ -19,10 +19,10 @@ public class ConseguirInformacionDelEntorno extends TareaSincrona{
 		try {
 			ItfUsoRecursoMalmo itfMalmo = (ItfUsoRecursoMalmo)this.repoInterfaces.obtenerInterfazUso(VocabularioRosace.IdentRecursoMalmo);
 			ArrayList<Manzana> manzanas = itfMalmo.getInformacionManzanas();
-			ArrayList<Agente> agentes = itfMalmo.getAgentes();
+			ArrayList<Agente> agentes = itfMalmo.getInformacionAgentes();
 			Objetivo o = new RecolectarTodasLasManzanas(manzanas);
 			this.itfProcObjetivos.insertarHecho(o);
-			ArrayList<Obstaculo> obstaculos = itfMalmo.getObstaculos();
+			ArrayList<Obstaculo> obstaculos = itfMalmo.getInformacionObstaculos();
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

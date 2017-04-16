@@ -33,7 +33,7 @@ class OrderServer(object):
 
     def initializeConnection(self, port):
         self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(('127.0.0.1', port))
+        self.socket.bind(('localhost', port))
         self.socket.listen(1)
 
     def initializeStructures(self, list, dispatcher):

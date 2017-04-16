@@ -235,7 +235,6 @@ class TabQAgent:
                                      outline="#fff", fill="#fff")
         self.root.update()
             
-
 def generateObstacles():
     for i in range(48):
         world_items["obstacles"].append([38, 227, i + 3])
@@ -350,14 +349,8 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </Inventory>
         </AgentStart>
         <AgentHandlers>
-            <ContinuousMovementCommands/>
-            <DiscreteMovementCommands>
-                <ModifierList
-                type="allow-list">
-                    <command>move</command>
-                    <command>strafe</command>
-                </ModifierList>
-            </DiscreteMovementCommands>
+            <DiscreteMovementCommands/>
+     
             <ObservationFromFullStats />
             <ObservationFromGrid>
                 <Grid name="floor3x3">
