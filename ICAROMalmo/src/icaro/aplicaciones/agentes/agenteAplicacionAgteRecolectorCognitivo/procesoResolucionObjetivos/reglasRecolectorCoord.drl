@@ -206,33 +206,46 @@ end
 /*
 rule "Segundo timeout para obtencion de todos los costes de reccolectar manzana"
 when
-
+	obj: RecolectarManzana(id: id);
+	objDec: DecidirQuienVa(objectDecisionId == id);
+	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == false, todasLasPeticiones == true);
+	infoEquipo: InfoEquipoMoic();
+	Focus(foco == objDec);
+	informeTarea:InformeDeTarea(identTarea == VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones1, contenidoInforme==id );
 then
- TareaSincrona tarea = gestorTareas.crearTareaSincrona(PeticionRecolectarManzana.class);
-	tarea.ejecutar();
- System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PeticionRecolectarManzana.class);
+	tarea.ejecutar(obj, objDec, info);
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
 
 rule "Seleccion del agente con menor coste para recolectar la manzana"
 when
-
+	obj: RecolectarManzana(id: id);
+	objDec: DecidirQuienVa(objectDecisionId == id);
+	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == true);
+	infoEquipo: InfoEquipoMoic();
+	Focus(foco == objDec);
+	informeTarea:InformeDeTarea(identTarea == VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones1, contenidoInforme==id );
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PeticionRecolectarManzana.class);
-	tarea.ejecutar();
+	tarea.ejecutar(obj, objDec, info);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
 
 rule "Resolucion del objetivo recolectar manzana por el agente"
 when
-
+	obj: RecolectarTodasLasManzanas();
+	//mensaje de que se completo cierta manzana
+	
 then
 
 
 	//no lleva tarea, lo hacemos aqui directamente.
-	
-	
+	modify{
+		obj.setRecolectada(id);
+	}
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
