@@ -11,7 +11,7 @@ import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.Objetivo;
  */
 public class RecolectarManzana extends Objetivo{
 	private Manzana manzana;
-	public String id;
+	private String id;
 	
 	public String getId() {
 		return id;

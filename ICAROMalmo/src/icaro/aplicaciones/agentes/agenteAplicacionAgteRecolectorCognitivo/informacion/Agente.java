@@ -1,45 +1,38 @@
 package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion;
 
+import icaro.aplicaciones.Rosace.informacion.Coordinate;
+
 public class Agente {
 	private String idAgente;
-	private int x, y, z;
+	private Coordinate coordinate;
 
 	public Agente(String idAgente, int x, int y, int z){
 		this.idAgente = idAgente;
-		this.x = x;
-		this.y = y;
-		this.z = z;
+		this.coordinate = new Coordinate(x, y, z);
 	}
 	
 	public String getId(){
 		return this.idAgente;
 	}
-	public int getX() {
-		return x;
-	}
-
-	public void setX(int x) {
-		this.x = x;
-	}
-
-	public int getY() {
-		return y;
-	}
-
-	public void setY(int y) {
-		this.y = y;
-	}
-
-	public int getZ() {
-		return z;
-	}
-
-	public void setZ(int z) {
-		this.z = z;
-	}
 	
+	public String getIdAgente() {
+		return idAgente;
+	}
+
+	public void setIdAgente(String idAgente) {
+		this.idAgente = idAgente;
+	}
+
+	public Coordinate getCoordinate() {
+		return coordinate;
+	}
+
+	public void setCoordinate(Coordinate coordinate) {
+		this.coordinate = coordinate;
+	}
+
 	public String toString(){
-		return "Agente -> X: "+this.x+ " Y: "+this.y+ " Z: "+this.z + '\n';
+		return "Agente -> X: "+this.coordinate.getX()+ " Y: "+this.coordinate.getY()+ " Z: "+this.coordinate.getZ() + '\n';
 	}
 	
 }

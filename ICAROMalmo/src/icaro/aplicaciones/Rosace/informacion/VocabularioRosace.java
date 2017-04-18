@@ -19,8 +19,8 @@ public class VocabularioRosace extends NombresPredefinidos{
 //    public static final String IdentEquipoJerarquico= "robotSubordinado";
     public static final String IdentEquipoJerarquicoConCambioRol= "jerarquicoConCR";
     public static final String IdentAgteDistribuidorTareas= IdentEquipoJerarquico+"RobotAsignador";
-    public static final String IdentRolAgtesRecolectadores= "agenteRecolector";
-    public static final String IdentRolAgtesRecolectoresCoord = "agenteRecolectorCoord";
+    public static final String IdentRolAgtesRecolectores= "agenteRecolector";
+    public static final String IdentRolAgtesRecolectorCoord = "agenteRecolectorCoord";
     public static final String IdentRolAgteDistribuidorTareas= "agenteAsignador";
     public static final String IdentRolAgtesSubordinados= "robotSubordinado";
     public static final String IdentRolAgtesSubordinadosConCR= "robotSubordinadoConCR";
@@ -147,5 +147,6 @@ public class VocabularioRosace extends NombresPredefinidos{
     static public  enum PeticionAgteControlSimul{TerminarSimulacion,mostrarEscenarioActualSimulado,pararRobot,sendSequenceOfSimulatedVictimsToRobotTeam,enviarIdentsEquipo};
     static public  enum EstadoMovimientoRobot {Indefinido,RobotParado, RobotEnMovimiento, RobotBloqueado, RobotBloqueadoPorObstaculo,RobotavanceImposible,enDestino, error};
     public static  enum EvalEnergiaRobot {sinEnergia,energiaSuficiente,EnergiaJusta, EnergiaInsuficiente };
-    static public  enum EstadoVictima {esperandoRescate,asignada, reAsignada, rescatada};
+    static public  enum EstadoVictima {esperandoRescate,asignada, reAsignada, rescatada}
+	public static final String RespuestaCosteRecoleccion = "RespuestaCosteRecoleccion";
 }

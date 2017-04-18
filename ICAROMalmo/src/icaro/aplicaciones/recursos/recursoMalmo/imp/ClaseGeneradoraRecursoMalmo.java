@@ -9,6 +9,7 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+import icaro.aplicaciones.Rosace.informacion.Coordinate;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Obstaculo;
@@ -159,6 +160,12 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			if(tmp.getId() == idAgente) return tmp;
 		}
 		
+		return null;
+	}
+
+	@Override
+	public Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
+		// TODO Auto-generated method stub
 		return null;
 	}
 

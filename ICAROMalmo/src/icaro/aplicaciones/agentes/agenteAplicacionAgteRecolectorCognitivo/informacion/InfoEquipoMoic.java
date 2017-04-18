@@ -18,7 +18,7 @@ import org.openide.util.Exceptions;
 
 /**
  *
- * @author FGarijo
+ * @author Sergio y Luis.
  */
 public class InfoEquipoMoic {
       private String  identEquipo  ;

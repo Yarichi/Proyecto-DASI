@@ -10,6 +10,11 @@ import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.inf
 import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.objetivos.*;
 import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.tareas.*;
 
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.*;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.*;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas.*;
+
+
 import java.util.ArrayList;
 import java.lang.String;
 
@@ -25,7 +30,7 @@ rule "Acciones Iniciales"
     not ( exists(MisObjetivos()))
  then
    TareaSincrona tarea1 = gestorTareas.crearTareaSincrona(InicializarInfoWorkMemAlum.class);
-   tarea1.ejecutar(VocabularioRosace.IdentRolAgtesRecolectadores);           
+   tarea1.ejecutar(VocabularioRosace.IdentRolAgtesRecolectores);           
    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());   
     System.out.println( "\n"+agentId +"EJECUTO LA REGLA Acciones Iniciales\n\n" ); 
 end

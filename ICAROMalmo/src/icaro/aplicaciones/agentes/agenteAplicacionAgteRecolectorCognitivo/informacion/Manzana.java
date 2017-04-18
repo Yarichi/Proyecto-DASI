@@ -1,34 +1,16 @@
 package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion;
 
+import icaro.aplicaciones.Rosace.informacion.Coordinate;
+
 public class Manzana {
-	private int x, y, z;
+	private Coordinate coordinate;
 	private String Id;
 	private boolean recolectado;
 	
 	public Manzana(String id, int x, int y, int z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
+		this.coordinate = new Coordinate(x,y,z);
 		this.Id = id;
 		this.recolectado = false;
-	}
-	public int getX() {
-		return x;
-	}
-	public void setX(int x) {
-		this.x = x;
-	}
-	public int getY() {
-		return y;
-	}
-	public void setY(int y) {
-		this.y = y;
-	}
-	public int getZ() {
-		return z;
-	}
-	public void setZ(int z) {
-		this.z = z;
 	}
 	public boolean isRecolectado() {
 		return recolectado;
@@ -38,13 +20,16 @@ public class Manzana {
 	}
 	
 	public String toString(){
-		return "Manzana -> X: "+this.x+ " Y: "+this.y+ " Z: "+this.z + '\n';
+		return "Manzana -> X: "+this.coordinate.getX() + " Y: "+ this.coordinate.getY() + " Z: "+ this.coordinate.getZ() + '\n';
 	}
 	public String getId() {
 		return Id;
 	}
 	public void setId(String id) {
 		Id = id;
+	}
+	public Coordinate getCoordinate() {
+		return this.coordinate;
 	}
 
 	

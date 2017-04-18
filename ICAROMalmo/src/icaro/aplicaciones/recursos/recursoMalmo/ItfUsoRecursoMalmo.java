@@ -2,6 +2,7 @@ package icaro.aplicaciones.recursos.recursoMalmo;
 
 import java.util.ArrayList;
 
+import icaro.aplicaciones.Rosace.informacion.Coordinate;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Obstaculo;
@@ -12,5 +13,5 @@ public interface ItfUsoRecursoMalmo extends ItfUsoRecursoSimple{
 	public abstract ArrayList<Agente> getInformacionAgentes() throws Exception;
 	public abstract Agente getInformacionAgente(String idAgente) throws Exception;
 	public abstract ArrayList<Manzana> getInformacionManzanas() throws Exception;
-	
+	public abstract Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception;
 }
