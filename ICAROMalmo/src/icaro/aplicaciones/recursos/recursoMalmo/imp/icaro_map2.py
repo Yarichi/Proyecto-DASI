@@ -35,6 +35,7 @@ import time
 import Tkinter as tk
 from OrderServer import initDispatcher
 from InitialInfoProvider import provideInitialInfo
+import threading
 
 
 class TabQAgent:
@@ -369,7 +370,8 @@ my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
 initDispatcher(world_items, agent_host)
 time.sleep(2)
-provideInitialInfo(world_items)
+thread = threading.Thread(target=provideInitialInfo(world_items))
+thread.start()
     
 my_mission_record = MalmoPython.MissionRecordSpec()
 
@@ -414,3 +416,4 @@ while world_state.is_mission_running:
 print
 print "Mission ended"
 # Mission has ended.
+thread.join()

@@ -26,6 +26,7 @@ import time
 import json
 from OrderServer import initDispatcher
 from InitialInfoProvider import provideInitialInfo
+import threading
 
 def generateObstacles():
     for i in range(48):
@@ -147,7 +148,8 @@ if agent_host[0].receivedArgument("help"):
 
 initDispatcher(world_items, agent_host)
 time.sleep(2)
-provideInitialInfo(world_items)
+thread = threading.Thread(target=provideInitialInfo(world_items))
+thread.start()
 	
 my_mission = MalmoPython.MissionSpec(missionXML, True)
 my_mission_record = MalmoPython.MissionRecordSpec()
@@ -204,3 +206,4 @@ while world_state.is_mission_running:
 print
 print "Mission ended"
 # Mission has ended.
+thread.join()

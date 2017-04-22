@@ -3,6 +3,7 @@ package icaro.aplicaciones.recursos.recursoMalmo.imp;
 import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.io.BufferedReader;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -20,7 +21,9 @@ import icaro.infraestructura.patronRecursoSimple.imp.ImplRecursoSimple;
 public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements ItfUsoRecursoMalmo{
 	private static final long serialVersionUID = 8053587275334286680L;
 	private ServerSocket serversocket;
-	private Socket socket;
+	private Socket inSocket, outSocket;
+	private DataOutputStream outFlow;
+	BufferedReader inputData;
 	private ArrayList<String> agents, apples, obstacles;
 	private ArrayList<Manzana> apples_parsed;
 	private ArrayList<Agente> agents_parsed;
@@ -31,8 +34,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		super(idRecurso);
 		
 		//NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
-		BufferedReader input;
-		String message;
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
 			//Runtime.getRuntime().exec("C:\\Python27\\python " + rutaIcaroMap);
@@ -46,18 +47,13 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		try
 		{
 			serversocket = new ServerSocket(9289);
-			socket = new Socket();
-			socket = serversocket.accept();
-			input = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-			message = input.readLine();
-			do
-			{
-				setInformation(message);
-				System.out.println(message);
-				message = input.readLine();
-			}
-			while(!message.equalsIgnoreCase("end"));
-			serversocket.close();
+			inSocket = new Socket();
+			inSocket = serversocket.accept();
+			inputData = new BufferedReader(new InputStreamReader(inSocket.getInputStream()));
+			Thread.sleep(1000);
+			outSocket = new Socket("localhost", 9290);
+	        outFlow = new DataOutputStream(outSocket.getOutputStream());
+	        updateInformation();
 		}
 		catch(Exception e)
 		{
@@ -140,7 +136,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		}
 		return obstaculo_return;
 	}
-	
 
 	public ArrayList<Obstaculo> getInformacionObstaculos() {
 		return this.obstacles_parsed;
@@ -162,6 +157,28 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		
 		return null;
 	}
+	
+	public void updateInformation()
+	{
+		String message;
+        try 
+        {
+			outFlow.writeUTF("loop");
+			message = inputData.readLine();
+			do
+			{
+				setInformation(message);
+				System.out.println(message);
+				message = inputData.readLine();
+				System.out.println(message);
+			}
+			while(!message.equalsIgnoreCase("end"));
+		}
+        catch (IOException e) 
+        {
+			e.printStackTrace();
+		}
+	}
 
 	@Override
 	public Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
@@ -169,4 +186,19 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		return null;
 	}
 
+	public void close()
+	{
+		try
+		{
+			dispatcher.closeDispatcher();
+			outFlow.writeUTF("end");
+			inSocket.close();
+			outSocket.close();
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
 }
