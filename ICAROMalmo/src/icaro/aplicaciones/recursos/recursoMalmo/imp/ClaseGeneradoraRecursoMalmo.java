@@ -33,11 +33,11 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	{
 		super(idRecurso);
 		
-		//NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
+		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
 			//Runtime.getRuntime().exec("C:\\Python27\\python " + rutaIcaroMap);
-			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python.exe", rutaIcaroMap, 9288);
+			this.dispatcher = new PythonOrderDispatcher("E:\\JDK\\Python27\\python.exe", rutaIcaroMap, 9288);
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
@@ -173,6 +173,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 				System.out.println(message);
 			}
 			while(!message.equalsIgnoreCase("end"));
+			apples_parsed = parseManzanas(apples);
+			agents_parsed = parseAgentes(agents);
+			obstacles_parsed = parseObstaculos(obstacles);
 		}
         catch (IOException e) 
         {

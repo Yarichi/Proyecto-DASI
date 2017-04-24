@@ -370,10 +370,12 @@ my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
 initDispatcher(world_items, agent_host)
 time.sleep(2)
-thread = threading.Thread(target=provideInitialInfo(world_items))
+thread = threading.Thread(target=provideInitialInfo,args = [world_items])
 thread.start()
     
 my_mission_record = MalmoPython.MissionRecordSpec()
+
+print "Comenzando mision"
 
 # Attempt to start a mission:
 max_retries = 3
@@ -388,6 +390,8 @@ for retry in range(max_retries):
         else:
             time.sleep(2)
 
+print "esperando hasta que la mision comience"
+
 # Loop until mission starts:
 print "Waiting for the mission to start ",
 world_state = agent_host[0].getWorldState()
@@ -398,8 +402,7 @@ while not world_state.has_mission_begun:
     for error in world_state.errors:
         print "Error:", error.text
 
-print
-print "Mission running ",
+print "Mission running "
 
 # Loop until mission ends:
 while world_state.is_mission_running:
@@ -413,7 +416,7 @@ while world_state.is_mission_running:
         observations = json.loads(msg)  # and parse the JSON
         grid = observations.get(u'floor3x3', 0)  # and get the grid we asked for
         # ADD SOME CODE HERE TO SAVE YOUR AGENT
-print
+
 print "Mission ended"
 # Mission has ended.
 thread.join()
