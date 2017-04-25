@@ -24,7 +24,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private Socket inSocket, outSocket;
 	private DataOutputStream outFlow;
 	BufferedReader inputData;
-	private ArrayList<String> agents, apples, obstacles;
+	private ArrayList<String> agents, apples, obstacles, ids;
 	private ArrayList<Manzana> apples_parsed;
 	private ArrayList<Agente> agents_parsed;
 	private ArrayList<Obstaculo> obstacles_parsed;
@@ -44,6 +44,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		agents = new ArrayList<String>();
 		apples = new ArrayList<String>();
 		obstacles = new ArrayList<String>();
+		ids = new ArrayList<String>();
 		try
 		{
 			serversocket = new ServerSocket(9289);
@@ -59,9 +60,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			System.err.println("Error: "+e.getMessage());
 		}
-		apples_parsed = parseManzanas(apples);
-		agents_parsed = parseAgentes(agents);
-		obstacles_parsed = parseObstaculos(obstacles);
 	}
 	
 	private void buildInformation(String line, ArrayList<String> data)
@@ -87,6 +85,8 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			buildInformation(lines[1], apples);
 		else if(lines[0].equalsIgnoreCase("ob"))
 			buildInformation(lines[1], obstacles);
+		else if(lines[0].equalsIgnoreCase("id"))
+			buildInformation(lines[1], ids);
 	}
 	
 	private ArrayList<Agente> parseAgentes(ArrayList<String> agentes){
@@ -163,6 +163,10 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		String message;
         try 
         {
+        	agents.clear();
+        	apples.clear();
+        	obstacles.clear();
+        	ids.clear();
 			outFlow.writeUTF("loop");
 			message = inputData.readLine();
 			do

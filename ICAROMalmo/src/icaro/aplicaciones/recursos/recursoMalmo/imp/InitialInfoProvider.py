@@ -35,6 +35,10 @@ def provideInitialInfo(world_items):
         string = "ob" + "_" + str(world_items["obstacles"]) + "\n"
         outSck.send(string)
         time.sleep(0.3)
+        print "envio 4"
+        string = "id" + "_" + str(world_items["agentsId"]) + "\n"
+        outSck.send(string)
+        time.sleep(0.3)
         print "envio de fin de info"
         outSck.send("end" + "\n")
         print "a la espera de mas o cierre"

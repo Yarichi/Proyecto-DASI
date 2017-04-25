@@ -36,6 +36,7 @@ import Tkinter as tk
 from OrderServer import initDispatcher
 from InitialInfoProvider import provideInitialInfo
 import threading
+import re
 
 
 class TabQAgent:
@@ -243,6 +244,21 @@ def generateObstacles():
         for j in [22, 23, 24, 25, 26]:
             world_items["obstacles"].append([i, 226, j])
 
+def generateAgentsIds():
+    #obtenemos en una lista de cadenas los nombres de los agentes con las etiquetas
+    modified = re.findall("<Name>.*</Name>", mission_xml)
+    print modified
+    #quitamos las etiquetas
+    for counter in range(len(modified)):
+        element = modified[counter]
+        element = re.sub("<Name>", "", element)
+        element = re.sub("</Name>", "", element)
+        modified[counter] = element
+    print modified
+    #Una vez quitado las etiquetas se meten en el diccionario
+    world_items["agentsId"] = modified
+    print world_items
+
 def drawEntity(x, y, z, tipo, yaw, pitch, xVel, yVel, zVel):
     return '''<DrawEntity x="%f" y="%f" z="%f" type="%s" yaw="%f" pitch="%f" xVel="%f" yVel="%f" zVel="%f"/>''' \
           % (x, y, z, tipo, yaw, pitch, xVel, yVel, zVel)
@@ -368,6 +384,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 </Mission>'''
 my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
+generateAgentsIds()
 initDispatcher(world_items, agent_host)
 time.sleep(2)
 thread = threading.Thread(target=provideInitialInfo,args = [world_items])

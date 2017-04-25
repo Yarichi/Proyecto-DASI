@@ -36,18 +36,25 @@ class OrderServer(object):
         self.socket.bind(('localhost', port))
         self.socket.listen(1)
 
-    def initializeStructures(self, list, dispatcher):
+    def initializeStructures(self, list, dispatcher, agentsId):
         self.index = {}
         self.commandList = []
         for element in list:
             self.index[element[0]] = element[1]
             self.commandList.append(element[0])
         self.orderDispatcher = dispatcher
+        self.agentsId = agentsId
 
-    def __init__(self, port, actionList, dispatcher):
-        self.initializeStructures(actionList, dispatcher)
+    def __init__(self, port, actionList, dispatcher, agentsId):
+        self.initializeStructures(actionList, dispatcher, agentsId)
         self.initializeConnection(port)
 		
+    def convertStringToId(self, queryId):
+        for counter in range(len(self.agentsId)):
+            if self.agentsId[counter].lower() == queryId.lower():
+                return counter
+        return -1
+        
     def onlyAllowedCharacter(self, message):
         newMessage = ''
         for character in message:
@@ -62,12 +69,16 @@ class OrderServer(object):
         message = ""
         while message != "end":
             message = self.clientsocket.recv(128)
+            print "\nmensaje recibido" + " = " + message
             message = self.onlyAllowedCharacter(message)
             message = message.split(" ")
             if message[0] != "end":
-                agentNumber = int(message[1])
+                print message
+                print message[1]
+                print str(self.convertStringToId(message[1]))
+                agentNumber = self.convertStringToId(message[1])
             message = message[0]
-            if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher):
+            if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher) and agentNumber != -1:
                 self.orderDispatcher[agentNumber].dispatch(Command(self.index[message]))
         self.socket.close()
         for obj in self.orderDispatcher:
@@ -147,7 +158,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop)], dispatches)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop)], dispatches, world_items["agentsId"])
     #print Aceptamos la conexion con la clase de java
     o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
