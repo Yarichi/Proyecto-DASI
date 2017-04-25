@@ -10,8 +10,8 @@ public class Main {
 
 	public static void main(String[] args) throws IOException, InterruptedException
 	{
-		//String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
-		//PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
+		String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
+		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
 		//dispatcher.sendCommand("prueba 0");
 		//String input;
 		ClaseGeneradoraRecursoMalmo asd = new ClaseGeneradoraRecursoMalmo(null);
@@ -30,7 +30,7 @@ public class Main {
         //System.out.println(asd.getInformacionManzanas());
 		//System.out.println(asd.getInformacionAgentes());
 		//System.out.println(asd.getInformacionObstaculos());
-		/*
+		
 		BufferedReader entrada = new BufferedReader(new InputStreamReader(System.in));
 		String cadena="";
 		try 
@@ -38,7 +38,9 @@ public class Main {
 			while(!cadena.equalsIgnoreCase("end"))
 			{
 				cadena = new String(entrada.readLine());
-				//dispatcher.sendCommand(cadena);
+				dispatcher.sendCommand(cadena);
+				asd.updateInformation();
+				System.out.println(asd.getInformacionAgentes());
 			}
 		}
 		catch (IOException e) 
@@ -46,7 +48,7 @@ public class Main {
 			System.out.println("Error de E/S");
 		} 
 		
-		dispatcher.closeDispatcher();*/
+		dispatcher.closeDispatcher();
 		Thread.sleep(20000);
 		asd.close();
 	}

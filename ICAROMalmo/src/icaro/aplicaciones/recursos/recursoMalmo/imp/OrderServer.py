@@ -6,6 +6,8 @@ import heapq
 import Queue as Queue
 import threading
 
+agents_pos = dict();
+
 class OrderDispatcher(object):
     def __init__(self, agentNumber):
         self.queue = Queue.Queue()
@@ -100,11 +102,15 @@ class Command(object):
         return self.finish
 
 
+
 def up(index):
     print("prueba ejecutada correctamente.")
     print str(index)
     finish = True
-    index.sendCommand("move 1")
+    #agents_pos[index][0] += 1
+    #index.sendCommand("tpx " + agents_pos[index][0])
+    #index.sendCommand("move 1")
+    index.sendCommand("movenorth 1")
     print str(finish)
     return finish
 
@@ -112,6 +118,8 @@ def down(index):
     print("prueba ejecutada correctamente.")
     print str(index)
     finish = True
+    #agents_pos[index][0] -= 1
+    #index.sendCommand("tpx " + agents_pos[index][0])
     index.sendCommand("move -1")
     print str(finish)
     return finish
@@ -120,6 +128,8 @@ def right(index):
     print("prueba ejecutada correctamente.")
     print str(index)
     finish = True
+    #agents_pos[index][2] += 1
+    #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("strafe 1")
     print str(finish)
     return finish
@@ -128,6 +138,8 @@ def left(index):
     print("prueba ejecutada correctamente.")
     print str(index)
     finish = True
+    #agents_pos[index][2] -= 1
+    #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("strafe -1")
     print str(finish)
     return finish
@@ -142,10 +154,16 @@ def stop(index):
     return finish
 
 
+
 def initDispatcher(world_items, agent_host):
     #TODO se supone que tenemos el numero de agentes
     #cogemos el numero de agentes
     amountAgents = len(world_items["agents"])
+    #Cogemos la posicion de todos los agentes.
+    cont = 0;
+    for id in world_items["agentsId"]:
+        agents_pos[str(cont)] = world_items["agents"][cont]
+        cont+=1
     #amountAgents = 3;
     #iniciamos la lista de despachadores de ordenes
     dispatches = []

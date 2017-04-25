@@ -1,49 +1,25 @@
-[20:27:08] [Client thread/INFO]: Setting user: Player946
-[20:27:10] [Client thread/INFO]: LWJGL Version: 2.9.1
-[20:27:13] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[20:27:13] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:13] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:13] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:13] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:27:13] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[20:27:13] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:27:13] [Thread-9/INFO]: OpenAL initialized.
-[20:27:14] [Sound Library Loader/INFO]: Sound engine started
-[20:27:15] [Client thread/INFO]: Created: 16x16 textures-atlas
-[20:27:16] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[20:27:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[20:27:16] [Client thread/INFO]: SoundSystem shutting down...
-[20:27:16] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[20:27:16] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[20:27:16] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[20:27:16] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[20:27:16] [Thread-11/INFO]: OpenAL initialized.
-[20:27:17] [Sound Library Loader/INFO]: Sound engine started
-[20:27:18] [Client thread/INFO]: Created: 512x512 textures-atlas
-[20:28:21] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[20:28:21] [Server thread/INFO]: Generating keypair
-[20:28:21] [Server thread/INFO]: Converting map!
-[20:28:21] [Server thread/INFO]: Scanning folders...
-[20:28:21] [Server thread/INFO]: Total conversion count is 0
-[20:28:21] [Server thread/WARN]: Unable to find spawn biome
-[20:28:21] [Server thread/INFO]: Preparing start region for level 0
-[20:28:22] [Server thread/INFO]: Preparing spawn area: 34%
-[20:28:23] [Server thread/INFO]: Preparing spawn area: 72%
-[20:28:24] [Server thread/INFO]: Changing view distance to 6, from 10
-[20:28:24] [Client thread/INFO]: Deleting level TEMP_10000_8196e447-c74c-46a9-b31a-0ed72ba4c069
-[20:28:24] [Client thread/INFO]: Attempt 1...
-[20:28:25] [Server thread/INFO]: Received mission: §9Hello world!
-[20:28:25] [Server thread/INFO]: Source: §a127.0.0.1
-[20:28:25] [Server thread/INFO]: MalmoTutorialBot[local:E:420c0bca] logged in with entity id 0 at (-7.5, 227.0, -8.5)
-[20:28:25] [Server thread/INFO]: MalmoTutorialBot joined the game
-[20:42:01] [Client thread/INFO]: Stopping!
-[20:42:01] [Client thread/INFO]: SoundSystem shutting down...
-[20:42:01] [Server thread/INFO]: Stopping server
-[20:42:01] [Server thread/INFO]: Saving players
-[20:42:01] [Server thread/INFO]: Saving worlds
-[20:42:01] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_64280985-740b-47ff-a404-bf3f3abc7c89'/Overworld
-[20:42:01] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_64280985-740b-47ff-a404-bf3f3abc7c89'/Nether
-[20:42:01] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_64280985-740b-47ff-a404-bf3f3abc7c89'/The End
-[20:42:01] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[00:00:26] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[00:00:26] [Server thread/INFO]: Generating keypair
+[00:00:26] [Server thread/INFO]: Converting map!
+[00:00:26] [Server thread/INFO]: Scanning folders...
+[00:00:26] [Server thread/INFO]: Total conversion count is 0
+[00:00:26] [Server thread/WARN]: Unable to find spawn biome
+[00:00:26] [Server thread/INFO]: Preparing start region for level 0
+[00:00:27] [Server thread/INFO]: Preparing spawn area: 32%
+[00:00:28] [Server thread/INFO]: Preparing spawn area: 67%
+[00:00:29] [Server thread/INFO]: Changing view distance to 6, from 10
+[00:00:30] [Client thread/INFO]: Deleting level TEMP_10000_b2aba85a-d231-45b2-b98d-e1a63f29b057
+[00:00:30] [Client thread/INFO]: Attempt 1...
+[00:00:31] [Server thread/INFO]: MalmoTutorialBot[local:E:6c18884d] logged in with entity id 0 at (-5.5, 227.0, -5.5)
+[00:00:31] [Server thread/INFO]: MalmoTutorialBot joined the game
+[00:00:31] [Server thread/INFO]: Received mission: §9Hello world!
+[00:00:31] [Server thread/INFO]: Source: §a127.0.0.1
+[00:00:32] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[00:00:32] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[00:00:57] [Client thread/INFO]: Stopping!
+[00:00:57] [Client thread/INFO]: SoundSystem shutting down...
+[00:00:57] [Server thread/INFO]: Stopping server
+[00:00:57] [Server thread/INFO]: Saving players
+[00:00:57] [Server thread/INFO]: Saving worlds
+[00:00:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9038b4d6-917a-431e-9cee-2df2bdb0773b'/Overworld
+[00:00:57] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

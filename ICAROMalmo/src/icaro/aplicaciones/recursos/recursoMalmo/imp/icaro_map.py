@@ -117,6 +117,7 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                 </AgentStart>
                 <AgentHandlers>
                   <DiscreteMovementCommands/>
+                  <AbsoluteMovementCommands/>
                   <ObservationFromFullStats/>
                   <ObservationFromGrid>
                       <Grid name="floor3x3">

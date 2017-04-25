@@ -357,7 +357,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
     </ServerSection>
 
 
-    <AgentSection mode="Creative">
+    <AgentSection mode="Survival">
         <Name>MalmoTutorialBot</Name>
         <AgentStart>
             <Placement x="22" y="228.0" z="23" pitch="30" yaw="0" />
@@ -366,8 +366,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </Inventory>
         </AgentStart>
         <AgentHandlers>
-            <DiscreteMovementCommands/>
-     
+            <DiscreteMovementCommands autoFall="false" autoJump="false"/>
             <ObservationFromFullStats />
             <ObservationFromGrid>
                 <Grid name="floor3x3">
@@ -382,8 +381,12 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         </AgentHandlers>
     </AgentSection>
 </Mission>'''
-my_mission = MalmoPython.MissionSpec(mission_xml, True)
 
+my_mission = MalmoPython.MissionSpec(mission_xml, True)
+#my_mission.removeAllCommandHandlers()
+#my_mission.allowAllDiscreteMovementCommands()
+#my_mission.allowAllAbsoluteMovementCommands()
+my_mission.allowAllContinuousMovementCommands()
 generateAgentsIds()
 initDispatcher(world_items, agent_host)
 time.sleep(2)
@@ -420,6 +423,17 @@ while not world_state.has_mission_begun:
         print "Error:", error.text
 
 print "Mission running "
+
+# Possible solution for challenge set in tutorial_4.py:
+
+#agent_host.sendCommand("hotbar.9 1") #Press the hotbar key
+#agent_host.sendCommand("hotbar.9 0") #Release hotbar key - agent should now be holding diamond_pickaxe
+
+#agent_host.sendCommand("pitch 0.2") #Start looking downward slowly
+#time.sleep(1)                        #Wait a second until we are looking in roughly the right direction
+#agent_host.sendCommand("pitch 0")    #Stop tilting the camer
+#agent_host[0].sendCommand("move 1")     #And start running...
+#agent_host.sendCommand("attack 1")   #Whilst flailing our pickaxe!
 
 # Loop until mission ends:
 while world_state.is_mission_running:
