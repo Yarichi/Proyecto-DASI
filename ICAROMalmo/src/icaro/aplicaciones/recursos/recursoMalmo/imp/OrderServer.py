@@ -109,8 +109,8 @@ def up(index):
     finish = True
     #agents_pos[index][0] += 1
     #index.sendCommand("tpx " + agents_pos[index][0])
-    #index.sendCommand("move 1")
-    index.sendCommand("movenorth 1")
+    index.sendCommand("move 1")
+    #index.sendCommand("movenorth 1")
     print str(finish)
     return finish
 

@@ -352,7 +352,6 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                     type="red_flower" variant="blue_orchid" /> <!-- yes, blue orchids are indeed a type of red flower. -->
                 ''' + drawItems() + '''
             </DrawingDecorator>
-            <ServerQuitWhenAnyAgentFinishes />
         </ServerHandlers>
     </ServerSection>
 
@@ -360,13 +359,13 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
     <AgentSection mode="Survival">
         <Name>MalmoTutorialBot</Name>
         <AgentStart>
-            <Placement x="22" y="228.0" z="23" pitch="30" yaw="0" />
+            <Placement x="22.5" y="228.0" z="22.5" pitch="30" yaw="0" />
             <Inventory>
                 <InventoryItem slot="8" type="diamond_pickaxe" />
             </Inventory>
         </AgentStart>
         <AgentHandlers>
-            <DiscreteMovementCommands autoFall="false" autoJump="false"/>
+            <DiscreteMovementCommands/>
             <ObservationFromFullStats />
             <ObservationFromGrid>
                 <Grid name="floor3x3">
@@ -386,7 +385,7 @@ my_mission = MalmoPython.MissionSpec(mission_xml, True)
 #my_mission.removeAllCommandHandlers()
 #my_mission.allowAllDiscreteMovementCommands()
 #my_mission.allowAllAbsoluteMovementCommands()
-my_mission.allowAllContinuousMovementCommands()
+#my_mission.allowAllContinuousMovementCommands()
 generateAgentsIds()
 initDispatcher(world_items, agent_host)
 time.sleep(2)

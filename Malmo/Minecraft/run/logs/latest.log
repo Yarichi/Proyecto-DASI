@@ -1,25 +1,55 @@
-[00:00:26] [Server thread/INFO]: Starting integrated minecraft server version 1.8
-[00:00:26] [Server thread/INFO]: Generating keypair
-[00:00:26] [Server thread/INFO]: Converting map!
-[00:00:26] [Server thread/INFO]: Scanning folders...
-[00:00:26] [Server thread/INFO]: Total conversion count is 0
-[00:00:26] [Server thread/WARN]: Unable to find spawn biome
-[00:00:26] [Server thread/INFO]: Preparing start region for level 0
-[00:00:27] [Server thread/INFO]: Preparing spawn area: 32%
-[00:00:28] [Server thread/INFO]: Preparing spawn area: 67%
-[00:00:29] [Server thread/INFO]: Changing view distance to 6, from 10
-[00:00:30] [Client thread/INFO]: Deleting level TEMP_10000_b2aba85a-d231-45b2-b98d-e1a63f29b057
-[00:00:30] [Client thread/INFO]: Attempt 1...
-[00:00:31] [Server thread/INFO]: MalmoTutorialBot[local:E:6c18884d] logged in with entity id 0 at (-5.5, 227.0, -5.5)
-[00:00:31] [Server thread/INFO]: MalmoTutorialBot joined the game
-[00:00:31] [Server thread/INFO]: Received mission: §9Hello world!
-[00:00:31] [Server thread/INFO]: Source: §a127.0.0.1
-[00:00:32] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
-[00:00:32] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
-[00:00:57] [Client thread/INFO]: Stopping!
-[00:00:57] [Client thread/INFO]: SoundSystem shutting down...
-[00:00:57] [Server thread/INFO]: Stopping server
-[00:00:57] [Server thread/INFO]: Saving players
-[00:00:57] [Server thread/INFO]: Saving worlds
-[00:00:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9038b4d6-917a-431e-9cee-2df2bdb0773b'/Overworld
-[00:00:57] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:51:27] [Client thread/INFO]: Setting user: Player260
+[16:51:29] [Client thread/INFO]: LWJGL Version: 2.9.1
+[16:51:31] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[16:51:31] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:31] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:31] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:31] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:51:31] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[16:51:31] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:51:31] [Thread-9/INFO]: OpenAL initialized.
+[16:51:31] [Sound Library Loader/INFO]: Sound engine started
+[16:51:33] [Client thread/INFO]: Created: 16x16 textures-atlas
+[16:51:33] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[16:51:33] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:33] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:33] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[16:51:33] [Client thread/INFO]: SoundSystem shutting down...
+[16:51:33] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:51:33] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[16:51:34] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[16:51:34] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[16:51:34] [Thread-11/INFO]: OpenAL initialized.
+[16:51:34] [Sound Library Loader/INFO]: Sound engine started
+[16:51:35] [Client thread/INFO]: Created: 512x512 textures-atlas
+[16:53:08] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[16:53:08] [Server thread/INFO]: Generating keypair
+[16:53:08] [Server thread/INFO]: Converting map!
+[16:53:08] [Server thread/INFO]: Scanning folders...
+[16:53:08] [Server thread/INFO]: Total conversion count is 0
+[16:53:08] [Server thread/WARN]: Unable to find spawn biome
+[16:53:08] [Server thread/INFO]: Preparing start region for level 0
+[16:53:09] [Server thread/INFO]: Preparing spawn area: 39%
+[16:53:10] [Server thread/INFO]: Preparing spawn area: 84%
+[16:53:10] [Server thread/INFO]: Changing view distance to 6, from 10
+[16:53:11] [Client thread/INFO]: Deleting level TEMP_10000_f0a9064f-bcba-45e5-ad9b-7fb8430a40ea
+[16:53:11] [Client thread/INFO]: Attempt 1...
+[16:53:11] [Server thread/INFO]: MalmoTutorialBot[local:E:69e688d5] logged in with entity id 0 at (-5.5, 227.0, -5.5)
+[16:53:11] [Server thread/INFO]: MalmoTutorialBot joined the game
+[16:53:11] [Server thread/INFO]: Received mission: §9Hello world!
+[16:53:11] [Server thread/INFO]: Source: §a127.0.0.1
+[16:53:12] [Client thread/INFO]: [CHAT] Received mission: §9Hello world!
+[16:53:12] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[16:53:58] [Client thread/INFO]: Stopping!
+[16:53:58] [Client thread/INFO]: SoundSystem shutting down...
+[16:53:58] [Server thread/INFO]: Stopping server
+[16:53:58] [Server thread/INFO]: Saving players
+[16:53:58] [Server thread/INFO]: Saving worlds
+[16:53:58] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5'/Overworld
+[16:53:58] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5'/Nether
+[16:53:58] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5'/The End
+[16:53:58] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[16:53:58] [Client Shutdown Thread/INFO]: Stopping server
+[16:53:58] [Client Shutdown Thread/INFO]: Saving players
+[16:53:58] [Client Shutdown Thread/INFO]: Saving worlds
+[16:53:58] [Client Shutdown Thread/INFO]: Saving chunks for level 'TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5'/Overworld
