@@ -149,4 +149,5 @@ public class VocabularioRosace extends NombresPredefinidos{
     public static  enum EvalEnergiaRobot {sinEnergia,energiaSuficiente,EnergiaJusta, EnergiaInsuficiente };
     static public  enum EstadoVictima {esperandoRescate,asignada, reAsignada, rescatada}
 	public static final String RespuestaCosteRecoleccion = "RespuestaCosteRecoleccion";
+	public static final String MalmoListo = "RecursoMalmoIniciado";
 }

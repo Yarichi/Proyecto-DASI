@@ -13,7 +13,7 @@ import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.tar
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.*;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.*;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas.*;
-
+import icaro.infraestructura.entidadesBasicas.comunicacion.*;
 
 import java.util.ArrayList;
 import java.lang.String;
@@ -96,11 +96,13 @@ end
 //Basicamente inicializamos el robotstatusMoic
 rule "Inicializar mi RobotStatusMoic(Obtener mi informacion)"
 when
+	mensajeMalmo: MensajeSimple(VocabularioRosace.MalmoListo == contenido)
 	obj: DefinirMiEquipo(state == Objetivo.SOLVED)
    	not( exists( RobotStatusMoic() ) )
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(InicializarRobotStatusMoic.class);
 	tarea.ejecutar();
+	retract(mensajeMalmo);
 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end

@@ -21,7 +21,7 @@ import icaro.infraestructura.entidadesBasicas.comunicacion.MensajeSimple;
 import icaro.infraestructura.patronAgenteCognitivo.factoriaEInterfacesPatCogn.imp.AgenteCognitivotImp2;
 import icaro.infraestructura.patronRecursoSimple.imp.ImplRecursoSimple;
 
-public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements ItfUsoRecursoMalmo{
+public class ClaseGeneradoraRecursoMalmo2 extends ImplRecursoSimple implements ItfUsoRecursoMalmo{
 	private static final long serialVersionUID = 8053587275334286680L;
 	private ServerSocket serversocket;
 	private Socket inSocket, outSocket;
@@ -32,11 +32,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Agente> agents_parsed;
 	private ArrayList<Obstaculo> obstacles_parsed;
 	private PythonOrderDispatcher dispatcher;
-	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
+	public ClaseGeneradoraRecursoMalmo2(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
-
-		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
+		
+	
+		
+		
+		
+		//NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
 			//Runtime.getRuntime().exec("C:\\Python27\\python " + rutaIcaroMap);
@@ -62,19 +66,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		catch(Exception e)
 		{
 			System.err.println("Error: "+e.getMessage());
-		}
-		
-		MensajeSimple mensaje = new MensajeSimple(VocabularioRosace.MalmoListo, VocabularioRosace.IdentRecursoMalmo , null);
-		try {
-			AgenteCognitivotImp2 agente;
-			for(int i=1;i<=2;i++){
-				 agente = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot" + i + "Recolector");
-				 agente.getControl().insertarHecho(mensaje);
-			}
-		} catch (Exception e2) {
-			// TODO Auto-generated catch block
-			e2.printStackTrace();
-		}
+		}		
 	}
 	
 	private void buildInformation(String line, ArrayList<String> data)

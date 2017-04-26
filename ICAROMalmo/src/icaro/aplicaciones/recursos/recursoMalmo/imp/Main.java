@@ -14,7 +14,7 @@ public class Main {
 		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
 		//dispatcher.sendCommand("prueba 0");
 		//String input;
-		ClaseGeneradoraRecursoMalmo asd = new ClaseGeneradoraRecursoMalmo(null);
+		ClaseGeneradoraRecursoMalmo2 asd = new ClaseGeneradoraRecursoMalmo2(null);
 		asd.updateInformation();
 		
         /*String entradaTeclado = "";

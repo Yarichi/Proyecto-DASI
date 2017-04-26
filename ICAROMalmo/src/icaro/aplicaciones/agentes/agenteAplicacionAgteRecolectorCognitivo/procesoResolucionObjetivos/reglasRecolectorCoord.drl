@@ -10,7 +10,7 @@ import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.inf
 import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.objetivos.*;
 import icaro.aplicaciones.agentes.agenteAplicacionrobotIgualitarioNCognitivo.tareas.*;
 import icaro.aplicaciones.agentes.componentesInternos.movimientoCtrl.*;
-
+import icaro.infraestructura.entidadesBasicas.comunicacion.*;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.*;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas.*;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.*;
@@ -113,10 +113,12 @@ end
 //Cuando se resuelve la definicion del equipo salta
 rule "Obtencion de informacion del entorno"
 when
+	mensajeMalmo: MensajeSimple(VocabularioRosace.MalmoListo == contenido)
 	obj: DefinirMiEquipo(state == Objetivo.SOLVED)
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConseguirInformacionDelEntorno.class);
 	tarea.ejecutar();
+	retract(mensajeMalmo);
 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
