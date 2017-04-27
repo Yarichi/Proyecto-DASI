@@ -240,7 +240,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop),("agent",agent)], dispatches, world_items, agent_host)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
     #o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
