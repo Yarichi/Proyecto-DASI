@@ -11,9 +11,9 @@ import java.util.ArrayList;
 
 public class PythonOrderDispatcher implements OrderDispatcher 
 {
-	private ServerSocket serversocket;
-	private Socket inSocket, outSocket;
-	BufferedReader inputData;
+	private ServerSocket serversocket, serversocketAck;
+	private Socket inSocket, inSocketAck, outSocket;
+	BufferedReader inputData, inputDataAck;
     protected DataOutputStream outputData;
     protected Process pythonDispatcherThread;
     protected ArrayList<String> commandAcks;
@@ -35,6 +35,12 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			inSocket = serversocket.accept();
 			//creamos la clase con la que recibimos los mensajes asociados a inSocket
 			inputData = new BufferedReader(new InputStreamReader(inSocket.getInputStream()));
+			//creamos el inSocket para recibir los mensajes de python
+			serversocketAck = new ServerSocket(port + 2);
+			inSocketAck = new Socket();
+			inSocketAck = serversocketAck.accept();
+			//creamos la clase con la que recibimos los mensajes asociados a inSocket
+			inputDataAck = new BufferedReader(new InputStreamReader(inSocketAck.getInputStream()));
 	        //Flujo de datos hacia la interfaz de python
 	        outputData = new DataOutputStream(outSocket.getOutputStream());
 	        //iniciamos la estructura de almacenamiento de acks de comandos finalizados
@@ -77,11 +83,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
         {            
             //Se manda la orden a la interfaz de python
             outputData.writeUTF(order);
-            do
-            {
-            	returnValue = processAck(returnValue, inputData.readLine());
-            }
-            while(inputData.ready());
+            returnValue = inputData.readLine();
         }
         catch (Exception e)
         {
@@ -91,28 +93,25 @@ public class PythonOrderDispatcher implements OrderDispatcher
         return returnValue;
 	}
 	
-	public String getLastAck()
+	public ArrayList<String> getAcks()
 	{
-		String ack;
-		if(commandAcks.size() > 0)
-		{
-			ack = commandAcks.get(0);
-			commandAcks.remove(0);
-			return ack;
-		}
-		else
-			return "";
+		return commandAcks;
 	}
 	
-	protected String processAck(String returnValue, String message)
+	public void updateAcks()
 	{
-		if(!message.startsWith("ag") && !message.startsWith("ob") && !message.startsWith("ap") && !message.startsWith("Error") && !message.startsWith("Ack"))
+		try 
 		{
-			commandAcks.add(message);
-			return returnValue;
+			while(inputDataAck.ready())
+			{
+				commandAcks.add(inputDataAck.readLine());
+			}
 		}
-		else
-			return message;			
+		catch (IOException e) 
+		{
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 	public void closeDispatcher()

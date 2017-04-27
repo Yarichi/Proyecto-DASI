@@ -42,6 +42,9 @@ class OrderServer(object):
         time.sleep(1)
         self.outSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.outSocket.connect(("127.0.0.1", port + 1))
+        time.sleep(1)
+        self.outSocketAck = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.outSocketAck.connect(("127.0.0.1", port + 2))
 
     def initializeStructures(self, list, dispatcher, initInfo, agents):
         self.index = {}
@@ -116,7 +119,7 @@ class OrderServer(object):
                     self.lock.acquire(True)
                     self.outSocket.send("Ack\n")
                     self.lock.release()
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3]]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocketAck, self.lock, message[2], message[3]]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
@@ -128,7 +131,7 @@ class OrderServer(object):
                     self.lock.acquire(True)
                     self.outSocket.send("Ack\n")
                     self.lock.release()
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3]]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocketAck, self.lock, message[2], message[3]]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
