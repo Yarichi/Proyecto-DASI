@@ -24,7 +24,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
 			String[] command = {pythonPath, pythonScript};
-			//pythonDispatcherThread = Runtime.getRuntime().exec(command);
+			pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
 			Thread.sleep(2000);
             //creamos el outSocket para comunicarnos con la interfaz de python
@@ -127,8 +127,8 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			//damos tiempo para que se cierre tranquilamente
             Thread.sleep(200);
 			//eliminamos los subprocesos si se queda con los ojos para los lados
-            //if(pythonDispatcherThread.isAlive())
-            //	pythonDispatcherThread.destroyForcibly();
+            if(pythonDispatcherThread.isAlive())
+            	pythonDispatcherThread.destroyForcibly();
 		}
 		catch (IOException e) 
 		{

@@ -11,7 +11,7 @@ public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException
 	{
 		String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
-		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("E:\\JDK\\Python27\\python",rutaIcaroMap, 9288);
+		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
 		Thread.sleep(3000);
 		System.out.println(dispatcher.sendCommand("obstacles"));
 		//String input;
