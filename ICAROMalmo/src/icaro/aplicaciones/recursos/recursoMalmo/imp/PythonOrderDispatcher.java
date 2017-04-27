@@ -81,8 +81,8 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			//damos tiempo para que se cierre tranquilamente
             Thread.sleep(200);
 			//eliminamos los subprocesos si se queda con los ojos para los lados
-            //if(pythonDispatcherThread.isAlive())
-            //	pythonDispatcherThread.destroyForcibly();
+            if(pythonDispatcherThread.isAlive())
+            	pythonDispatcherThread.destroyForcibly();
 		}
 		catch (IOException e) 
 		{

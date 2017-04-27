@@ -31,7 +31,7 @@ public class ClaseGeneradoraRecursoMalmo2 extends ImplRecursoSimple implements I
 	private ArrayList<Manzana> apples_parsed;
 	private ArrayList<Agente> agents_parsed;
 	private ArrayList<Obstaculo> obstacles_parsed;
-	private PythonOrderDispatcher dispatcher;
+	public PythonOrderDispatcher dispatcher;
 	public ClaseGeneradoraRecursoMalmo2(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);

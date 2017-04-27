@@ -60,7 +60,7 @@ class OrderServer(object):
     def onlyAllowedCharacter(self, message):
         newMessage = ''
         for character in message:
-            if (character >= 'a' and character <= 'z') or (character >= 'A' and character <= 'Z') or character == " " or (character >= '0' and character <= '9'):
+            if (character >= 'a' and character <= 'z') or (character >= 'A' and character <= 'Z') or character == " " or character == "." or (character >= '0' and character <= '9'):
                 newMessage = newMessage + character
         return newMessage
 
@@ -69,28 +69,29 @@ class OrderServer(object):
 
     def receiveOrder(self):
         message = ""
+        params = []
         while message != "end":
             message = self.clientsocket.recv(128)
-            print "\nmensaje recibido" + " = " + message
             message = self.onlyAllowedCharacter(message)
             message = message.split(" ")
+            print message
             if message[0] != "end":
-                print message
-                print message[1]
-                print str(self.convertStringToId(message[1]))
                 agentNumber = self.convertStringToId(message[1])
+                params.append(float(message[2]))
+                params.append(float(message[3]))
             message = message[0]
             if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher) and agentNumber != -1:
-                self.orderDispatcher[agentNumber].dispatch(Command(self.index[message]))
+                self.orderDispatcher[agentNumber].dispatch(Command(self.index[message], params))
         self.socket.close()
         for obj in self.orderDispatcher:
             obj.stopExecution()
 
 class Command(object):
     
-    def __init__(self, command):
+    def __init__(self, command, params):
         self.command = command
         self.finish = False
+        self.params = params
 
     def action(self, index):
         print "on action function"

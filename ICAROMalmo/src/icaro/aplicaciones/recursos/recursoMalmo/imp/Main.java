@@ -11,12 +11,12 @@ public class Main {
 	public static void main(String[] args) throws IOException, InterruptedException
 	{
 		String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
-		PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("C:\\Python27\\python",rutaIcaroMap, 9288);
+		//PythonOrderDispatcher dispatcher = new PythonOrderDispatcher("E:\\JDK\\Python27\\python",rutaIcaroMap, 9288);
 		//dispatcher.sendCommand("prueba 0");
 		//String input;
 		ClaseGeneradoraRecursoMalmo2 asd = new ClaseGeneradoraRecursoMalmo2(null);
 		asd.updateInformation();
-		
+		asd.dispatcher.sendCommand("up MalmoTutorialBot 12.5 56.5");
         /*String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         while(entradaEscaner.hasNext())
@@ -38,7 +38,7 @@ public class Main {
 			while(!cadena.equalsIgnoreCase("end"))
 			{
 				cadena = new String(entrada.readLine());
-				dispatcher.sendCommand(cadena);
+				asd.dispatcher.sendCommand(cadena);
 				asd.updateInformation();
 				System.out.println(asd.getInformacionAgentes());
 			}
@@ -48,7 +48,7 @@ public class Main {
 			System.out.println("Error de E/S");
 		} 
 		
-		dispatcher.closeDispatcher();
+		//dispatcher.closeDispatcher();
 		Thread.sleep(20000);
 		asd.close();
 	}
