@@ -4,14 +4,19 @@ import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.ServerSocket;
 import java.net.Socket;
 import java.net.UnknownHostException;
+import java.util.ArrayList;
 
 public class PythonOrderDispatcher implements OrderDispatcher 
 {
-    protected Socket socket;
-    protected DataOutputStream outFlow;
+	private ServerSocket serversocket;
+	private Socket inSocket, outSocket;
+	BufferedReader inputData;
+    protected DataOutputStream outputData;
     protected Process pythonDispatcherThread;
+    protected ArrayList<String> commandAcks;
     
 	public PythonOrderDispatcher(String pythonPath, String pythonScript, int port) throws IOException
 	{
@@ -19,13 +24,21 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
 			String[] command = {pythonPath, pythonScript};
-			pythonDispatcherThread = Runtime.getRuntime().exec(command);
+			//pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
 			Thread.sleep(2000);
-            //creamos el socket para comunicarnos con la interfaz de python
-			socket = new Socket("localhost", port);
+            //creamos el outSocket para comunicarnos con la interfaz de python
+			outSocket = new Socket("localhost", port);
+			//creamos el inSocket para recibir los mensajes de python
+			serversocket = new ServerSocket(port + 1);
+			inSocket = new Socket();
+			inSocket = serversocket.accept();
+			//creamos la clase con la que recibimos los mensajes asociados a inSocket
+			inputData = new BufferedReader(new InputStreamReader(inSocket.getInputStream()));
 	        //Flujo de datos hacia la interfaz de python
-	        outFlow = new DataOutputStream(socket.getOutputStream());
+	        outputData = new DataOutputStream(outSocket.getOutputStream());
+	        //iniciamos la estructura de almacenamiento de acks de comandos finalizados
+	        commandAcks = new ArrayList<>();
 		} 
 		catch (UnknownHostException e)
 		{
@@ -57,17 +70,49 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		}
 	}
 
-	public void sendCommand(String order) 
+	public String sendCommand(String order) 
 	{
+		String returnValue = "";
         try
         {            
             //Se manda la orden a la interfaz de python
-            outFlow.writeUTF(order);           
+            outputData.writeUTF(order);
+            do
+            {
+            	returnValue = processAck(returnValue, inputData.readLine());
+            }
+            while(inputData.ready());
         }
         catch (Exception e)
         {
             System.err.println("Capturada la excepción al mandar la orden a la interfaz python");
+            returnValue = "error";
         }
+        return returnValue;
+	}
+	
+	public String getLastAck()
+	{
+		String ack;
+		if(commandAcks.size() > 0)
+		{
+			ack = commandAcks.get(0);
+			commandAcks.remove(0);
+			return ack;
+		}
+		else
+			return "";
+	}
+	
+	protected String processAck(String returnValue, String message)
+	{
+		if(!message.startsWith("ag") && !message.startsWith("ob") && !message.startsWith("ap") && !message.startsWith("Error") && !message.startsWith("Ack"))
+		{
+			commandAcks.add(message);
+			return returnValue;
+		}
+		else
+			return message;			
 	}
 	
 	public void closeDispatcher()
@@ -75,14 +120,15 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		try
 		{
 			//mandamos el mensaje de cierre de conexion
-			outFlow.writeUTF("end");
-			//cerramos el socket para finalizar la comunicacion
-			socket.close();
+			outputData.writeUTF("end");
+			//cerramos el outSocket para finalizar la comunicacion
+			outSocket.close();
+			inSocket.close();
 			//damos tiempo para que se cierre tranquilamente
             Thread.sleep(200);
 			//eliminamos los subprocesos si se queda con los ojos para los lados
-            if(pythonDispatcherThread.isAlive())
-            	pythonDispatcherThread.destroyForcibly();
+            //if(pythonDispatcherThread.isAlive())
+            //	pythonDispatcherThread.destroyForcibly();
 		}
 		catch (IOException e) 
 		{

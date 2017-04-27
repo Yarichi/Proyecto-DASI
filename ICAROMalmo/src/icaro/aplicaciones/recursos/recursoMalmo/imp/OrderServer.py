@@ -5,6 +5,8 @@ from collections import defaultdict
 import heapq
 import Queue as Queue
 import threading
+import time
+import json
 
 agents_pos = dict();
 
@@ -19,6 +21,7 @@ class OrderDispatcher(object):
         
     def execution(self):
         finishCondition = True
+        print str(self.number)
         while self.stop == False:
             if self.queue.empty() == False and finishCondition:
                 obj = self.queue.get()
@@ -29,31 +32,36 @@ class OrderDispatcher(object):
     def stopExecution(self):
         self.stop = True
         
-
-
 class OrderServer(object):
 
     def initializeConnection(self, port):
-        self.socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        self.socket.bind(('localhost', port))
-        self.socket.listen(1)
+        self.inSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.inSocket.bind(('localhost', port))
+        self.inSocket.listen(1)
+        (self.clientsocket, self.clientAddress) = self.inSocket.accept()
+        time.sleep(1)
+        self.outSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        self.outSocket.connect(("127.0.0.1", port + 1))
 
-    def initializeStructures(self, list, dispatcher, agentsId):
+    def initializeStructures(self, list, dispatcher, initInfo, agents):
         self.index = {}
         self.commandList = []
         for element in list:
-            self.index[element[0]] = element[1]
-            self.commandList.append(element[0])
+            self.index[element[0].lower()] = element[1]
+            self.commandList.append(element[0].lower())
         self.orderDispatcher = dispatcher
-        self.agentsId = agentsId
+        self.initInfo = initInfo
+        self.lock = threading.Lock()
+        self.agents = agents
 
-    def __init__(self, port, actionList, dispatcher, agentsId):
-        self.initializeStructures(actionList, dispatcher, agentsId)
+    def __init__(self, port, actionList, dispatcher, initInfo, agents):
+        self.initializeStructures(actionList, dispatcher, initInfo, agents)
         self.initializeConnection(port)
 		
     def convertStringToId(self, queryId):
-        for counter in range(len(self.agentsId)):
-            if self.agentsId[counter].lower() == queryId.lower():
+        list = self.initInfo["agentsId"]
+        for counter in range(len(list)):
+            if list[counter].lower() == queryId.lower():
                 return counter
         return -1
         
@@ -64,25 +72,73 @@ class OrderServer(object):
                 newMessage = newMessage + character
         return newMessage
 
-    def startConnection(self):
-        (self.clientsocket, self.clientAddress) = self.socket.accept()
-
     def receiveOrder(self):
         message = ""
         params = []
-        while message != "end":
+        while True:
             message = self.clientsocket.recv(128)
             message = self.onlyAllowedCharacter(message)
+            message = message.lower()
             message = message.split(" ")
-            print message
-            if message[0] != "end":
-                agentNumber = self.convertStringToId(message[1])
-                params.append(float(message[2]))
-                params.append(float(message[3]))
-            message = message[0]
-            if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher) and agentNumber != -1:
-                self.orderDispatcher[agentNumber].dispatch(Command(self.index[message], params))
-        self.socket.close()
+            #if message[0] != "end":
+            #    agentNumber = self.convertStringToId(message[1])
+            #    params.append(float(message[2]))
+            #    params.append(float(message[3]))
+            print "recibido el mensaje " + str(message)
+            if message[0] == "obstacles" and len(message) == 1:
+                self.lock.acquire(True)
+                self.outSocket.send("ob" + "_" + str(self.initInfo["obstacles"]) + "\n")
+                self.lock.release()
+            elif message[0] == "agents" and len(message) == 1:
+                self.lock.acquire(True)
+                self.outSocket.send("ag" + "_" + str(self.initInfo["agents"]) + "\n")
+                self.lock.release()
+            elif message[0] == "agent" and len(message) == 2:
+                idEntero = self.convertStringToId(message[1])
+                if idEntero != -1:
+                        obs = json.loads(self.agents[idEntero].getWorldState().observations[-1].text)
+                        position = "ag_[["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]]\n"
+                        self.lock.acquire(True)
+                        self.outSocket.send(position)
+                        self.lock.release()
+                else:
+                    self.lock.acquire(True)
+                    self.outSocket.send("Error: id de agente no identificado\n")
+                    self.lock.release()
+            elif message[0] == "apples" and len(message) == 1:
+                self.lock.acquire(True)
+                self.outSocket.send("ap" + "_" + str(self.initInfo["apples"]) + "\n")
+                self.lock.release()
+            elif message[0] == "distance" and len(message) == 4:
+                ##Llamar a la funcion aqui
+                idEntero = self.convertStringToId(message[1])
+                if idEntero != -1:
+                    self.lock.acquire(True)
+                    self.outSocket.send("Ack\n")
+                    self.lock.release()
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3]]))
+                else:
+                    self.lock.acquire(True)
+                    self.outSocket.send("Error: id de agente no identificado\n")
+                    self.lock.release()
+            elif message[0] == "move" and len(message) == 4:
+                ##Llamar a la funcion aqui
+                idEntero = self.convertStringToId(message[1])
+                if idEntero != -1:
+                    self.lock.acquire(True)
+                    self.outSocket.send("Ack\n")
+                    self.lock.release()
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3]]))
+                else:
+                    self.lock.acquire(True)
+                    self.outSocket.send("Error: id de agente no identificado\n")
+                    self.lock.release()
+            elif message[0] == "end" and len(message) == 1:
+                break
+            #message = message[0]
+            #if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher) and agentNumber != -1:
+            #    self.orderDispatcher[agentNumber].dispatch(Command(self.index[message], params))
+        self.inSocket.close()
         for obj in self.orderDispatcher:
             obj.stopExecution()
 
@@ -95,7 +151,7 @@ class Command(object):
 
     def action(self, index):
         print "on action function"
-        self.finish = self.command(index)
+        self.finish = self.command(index, self.params)
         print "on end action function"
         print str(self.finish)
     
@@ -154,7 +210,14 @@ def stop(index):
     print str(finish)
     return finish
 
-
+#def agent(index, params):
+#    obs = json.loads(index.getWorldState().observations[-1].text)
+#    position = "ag_[["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]]\n"
+#    print str(position)
+#    params[1].acquire(True)
+#    params[0].send(position)
+#    params[1].release()
+#    return True
 
 def initDispatcher(world_items, agent_host):
     #TODO se supone que tenemos el numero de agentes
@@ -177,9 +240,9 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop)], dispatches, world_items["agentsId"])
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop),("agent",agent)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
-    o.startConnection()
+    #o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
     thread = threading.Thread(target=o.receiveOrder)
     thread.start()
