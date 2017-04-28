@@ -290,12 +290,16 @@ def GenCuboidWithVariant(x1, y1, z1, x2, y2, z2, blocktype, variant):
     
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25]], enemies=[[46, 227, 46]], agents=[[22, 227, 23]], obstacles=[])
 
-generateObstacles()
 
 xTop = 50
 zTop = 50
+
+
+world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25]], enemies=[[46, 227, 46]], agents=[[22, 227, 23]], obstacles=[], width = zTop, height = xTop)
+
+generateObstacles()
+
 
 # agent = TabQAgent()
 # Create default Malmo objects:
