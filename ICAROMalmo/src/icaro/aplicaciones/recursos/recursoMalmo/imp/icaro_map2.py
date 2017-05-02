@@ -181,7 +181,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
     <AgentSection mode="Survival">
         <Name>robot2Recolector</Name>
         <AgentStart>
-            <Placement x="26.5" y="228.0" z="26.5" pitch="30" yaw="0" />
+            <Placement x="22.5" y="228.0" z="34.5" pitch="30" yaw="0" />
             <Inventory>
                 <InventoryItem slot="8" type="diamond_pickaxe" />
             </Inventory>
@@ -242,23 +242,28 @@ for retry in range(max_retries):
 print "esperando hasta que la mision comience"
 
 #agent_host.startMission( my_mission, my_client_pool, my_mission_record, role, expId )
-retry = 0
-max_retries= 3
 for i in range(len(agent_hosts)):
-    try:
-    # Attempt to start the mission:
-        agent_hosts[i].startMission( my_mission, client_pool, MalmoPython.MissionRecordSpec(), i,   str(uuid.uuid4()))
-    except RuntimeError as e:
-        if retry == max_retries - 1:
-            print "Error starting mission",e
-            print "Is the game running?"
-            exit(1)
-        else:
+    print "iniciando el robot " + str(i)
+    retry = 0
+    max_retries= 3
+    for retry in range(max_retries):
+        try:
+        # Attempt to start the mission:
+            agent_hosts[i].startMission( my_mission, client_pool, MalmoPython.MissionRecordSpec(), i, '') #str(uuid.uuid4())
+            break
+        except RuntimeError as e:
+            if retry == max_retries - 1:
+                print "Error starting mission",e
+                print "Is the game running?"
+                exit(1)
+            else:
                 # In a multi-agent mission, startMission will fail if the integrated server
                 # hasn't yet started - so if none of our clients were available, that may be the
                 # reason. To catch this specifically we could check the results for "MALMONOSERVERYET",
                 # but it should be sufficient to simply wait a bit and try again.
-            time.sleep(5)
+                time.sleep(5)
+
+
 # Loop until mission starts:
 print "Waiting for the mission to start ",
 hasBegun = False
@@ -266,12 +271,17 @@ hadErrors = False
 while not hasBegun and not hadErrors:
     sys.stdout.write(".")
     time.sleep(0.1)
+    #print "miramos a los agentes"
     for ah in agent_hosts:
+        #print "tomamos el estado del mundo del agente " + str(ah)
         world_state = ah.getWorldState()
+        #print "mirando si la mision empezo"
         if world_state.has_mission_begun:
             hasBegun = True
+            #print "empezo"
         if len(world_state.errors):
             hadErrors = True
+            #print "hubo error"
             print "Errors from agent " + agentName(agent_hosts.index(ah))
             for error in world_state.errors:
                 print "Error:",error.text
