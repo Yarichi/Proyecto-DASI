@@ -360,7 +360,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 
 
     <AgentSection mode="Survival">
-        <Name>MalmoTutorialBot</Name>
+        <Name>robot1Recolector</Name>
         <AgentStart>
             <Placement x="22.5" y="228.0" z="22.5" pitch="30" yaw="0" />
             <Inventory>

@@ -6,7 +6,7 @@ public class Agente {
 	private String idAgente;
 	private Coordinate coordinate;
 
-	public Agente(String idAgente, int x, int y, int z){
+	public Agente(String idAgente, double x, double y, double z){
 		this.idAgente = idAgente;
 		this.coordinate = new Coordinate(x, y, z);
 	}

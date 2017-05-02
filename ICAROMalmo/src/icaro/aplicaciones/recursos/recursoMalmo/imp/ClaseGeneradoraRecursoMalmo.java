@@ -39,7 +39,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
-			//Runtime.getRuntime().exec("C:\\Python27\\python " + rutaIcaroMap);
 			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python.exe", rutaIcaroMap, 9288);
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -48,7 +47,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		apples = new ArrayList<String>();
 		obstacles = new ArrayList<String>();
 		ids = new ArrayList<String>();
-		try
+		/*try
 		{
 			serversocket = new ServerSocket(9289);
 			inSocket = new Socket();
@@ -63,7 +62,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			System.err.println("Error: "+e.getMessage());
 		}
-		
+		*/
 		MensajeSimple mensaje = new MensajeSimple(VocabularioRosace.MalmoListo, VocabularioRosace.IdentRecursoMalmo , null);
 		try {
 			AgenteCognitivotImp2 agente;
@@ -161,16 +160,24 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	public ArrayList<Manzana> getInformacionManzanas() {
-		return this.apples_parsed;
+		String apples = this.dispatcher.sendCommand("apples");
+		String apples2 = this.dispatcher.sendCommand("apples");
+		setInformation(apples);
+		return this.parseManzanas(this.apples);
 	}
 
 	@Override
 	public Agente getInformacionAgente(String idAgente) throws Exception {
-		for(Agente tmp : this.agents_parsed){
-			if(tmp.getId() == idAgente) return tmp;
-		}
-		
-		return null;
+		String agent= this.dispatcher.sendCommand("agent " + idAgente);
+		String [] parts = agent.split("\\[");
+		parts = parts[1].split(",");
+		Agente agente = new Agente(idAgente,
+				Double.parseDouble(parts[0]),
+				Double.parseDouble(parts[2].split("\\]")[0]),
+				Double.parseDouble(parts[1])
+				
+				);
+		return agente;
 	}
 	
 	public void updateInformation()

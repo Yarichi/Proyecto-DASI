@@ -45,7 +45,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 	        outputData = new DataOutputStream(outSocket.getOutputStream());
 	        //iniciamos la estructura de almacenamiento de acks de comandos finalizados
 	        commandAcks = new ArrayList<>();
-	        Thread.sleep(5000);
+	        Thread.sleep(10000);
 		} 
 		catch (UnknownHostException e)
 		{

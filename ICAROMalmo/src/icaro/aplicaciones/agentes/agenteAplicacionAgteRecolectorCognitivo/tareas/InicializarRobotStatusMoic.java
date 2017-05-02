@@ -21,7 +21,7 @@ public class InicializarRobotStatusMoic extends TareaSincrona{
 		ItfUsoRecursoMalmo itfMalmo;
 		Agente ag = null;
 		try {
-			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfazUso(VocabularioRosace.IdentRecursoMalmo);
+			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfaz(VocabularioRosace.IdentRecursoMalmo);
 			ag = itfMalmo.getInformacionAgente(this.identAgente);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block

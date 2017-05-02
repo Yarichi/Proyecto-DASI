@@ -101,7 +101,7 @@ class OrderServer(object):
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
                         obs = json.loads(self.agents[idEntero].getWorldState().observations[-1].text)
-                        position = "ag_[["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]]\n"
+                        position = "ag_["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]\n"
                         self.lock.acquire(True)
                         self.outSocket.send(position)
                         self.lock.release()
@@ -113,18 +113,6 @@ class OrderServer(object):
                 self.lock.acquire(True)
                 self.outSocket.send("ap" + "_" + str(self.initInfo["apples"]) + "\n")
                 self.lock.release()
-            elif message[0] == "distance" and len(message) == 4:
-                ##Llamar a la funcion aqui
-                idEntero = self.convertStringToId(message[1])
-                if idEntero != -1:
-                    self.lock.acquire(True)
-                    self.outSocket.send("Ack\n")
-                    self.lock.release()
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocketAck, self.lock, message[2], message[3]]))
-                else:
-                    self.lock.acquire(True)
-                    self.outSocket.send("Error: id de agente no identificado\n")
-                    self.lock.release()
             elif message[0] == "move" and len(message) == 4:
                 ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
@@ -137,15 +125,17 @@ class OrderServer(object):
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
                     self.lock.release()
-            elif message[0] == "end" and len(message) == 1:
-                break
-            elif message[0] == "left" or message[0] == "right":
+            elif message[0] == "eval" and len(message) == 4:
+                ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo]))
+                else:
                     self.lock.acquire(True)
-                    self.outSocket.send("Ack\n")
+                    self.outSocket.send("Error: id de agente no identificado\n")
                     self.lock.release()
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]],[]))
+            elif message[0] == "end" and len(message) == 1:
+                break
             else: 
                 self.lock.acquire(True)
                 self.outSocket.send("No command found\n")
@@ -236,7 +226,6 @@ def move(index,args):
             correctObstacles.append((o[0]+0.5,o[2]+0.5))
     c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
-    
     for (newX,newZ) in route:
         if newZ < zini:
             zini = newZ
@@ -255,7 +244,22 @@ def move(index,args):
             left(index)
             time.sleep(0.75)
     return True
-    
+def eval(index,args):
+    obs = json.loads(index.getWorldState().observations[-1].text)
+    xini = obs["XPos"]
+    zini = obs["ZPos"]
+    correctObstacles = []
+    for o in args[4]["obstacles"]:
+        if o[1] == 226:
+            correctObstacles.append((o[0]+0.5,o[2]+0.5))
+    c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
+    route = c.calculaRuta(float(args[2]),float(args[3]))
+    message = "eval %s %i\n"%(obs['Name'],len(route))
+    outSocket = args[0]
+    args[1].acquire(True)
+    outSocket.send(message)
+    args[1].release()
+    return True
     
 
 #def agent(index, params):
@@ -288,7 +292,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop),("move",move)], dispatches, world_items, agent_host)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop),("move",move),("eval",eval)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
     #o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador

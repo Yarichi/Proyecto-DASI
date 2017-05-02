@@ -20,8 +20,8 @@ public class Main {
 		//asd.updateInformation();
 		//System.out.println(dispatcher.sendCommand("left MalmoTutorialBot"));
 		//System.out.println(dispatcher.sendCommand("right MalmoTutorialBot"));
-		
-		System.out.println(dispatcher.sendCommand("move MalmoTutorialBot 40.5 40.5"));
+		System.out.println("Inicio pruebas..");
+		System.out.println(dispatcher.sendCommand("eval robot1Recolector 40.5 40.5"));
         /*String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         while(entradaEscaner.hasNext())
@@ -53,6 +53,7 @@ public class Main {
 			System.out.println("Error de E/S");
 		} 
 		*/
+		System.out.println("Finalizando prueba...");
 		Thread.sleep(30000);
 		dispatcher.closeDispatcher();
 		//asd.close();
