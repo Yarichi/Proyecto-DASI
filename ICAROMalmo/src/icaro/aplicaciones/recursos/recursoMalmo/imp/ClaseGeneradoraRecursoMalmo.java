@@ -32,6 +32,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Agente> agents_parsed;
 	private ArrayList<Obstaculo> obstacles_parsed;
 	private PythonOrderDispatcher dispatcher;
+	private AgenteCognitivotImp2 agente;
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
@@ -62,20 +63,30 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			System.err.println("Error: "+e.getMessage());
 		}
-		*/
+		 */
 		MensajeSimple mensaje = new MensajeSimple(VocabularioRosace.MalmoListo, VocabularioRosace.IdentRecursoMalmo , null);
+		
 		try {
-			AgenteCognitivotImp2 agente;
-			for(int i=1;i<=2;i++){
-				 agente = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot" + i + "Recolector");
-				 agente.getControl().insertarHecho(mensaje);
+			
+			for(int i=0;i<2;i++){
+				int n = i+1;
+				agente = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot" + n + "Recolector");
+				Thread t = new Thread(){
+					public void run(){
+						agente.getControl().insertarHecho(mensaje);
+					}
+				};
+				t.start();
 			}
 		} catch (Exception e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
 		}
+
+
+		System.out.println("Enviados mensajes de arranque de Malmo");
 	}
-	
+
 	private void buildInformation(String line, ArrayList<String> data)
 	{
 		String[] lines;
@@ -89,7 +100,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			data.add(lines[i]);
 		}
 	}
-	
+
 	private void setInformation(String line)
 	{
 		String[] lines = line.split("_");
@@ -102,7 +113,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		else if(lines[0].equalsIgnoreCase("id"))
 			buildInformation(lines[1], ids);
 	}
-	
+
 	private ArrayList<Agente> parseAgentes(ArrayList<String> agentes){
 		ArrayList<Agente> agentes_return = new ArrayList<Agente>();
 		StringBuilder aux;
@@ -118,7 +129,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		}
 		return agentes_return;
 	}
-	
+
 	private ArrayList<Manzana> parseManzanas(ArrayList<String> manzanas){
 		ArrayList<Manzana> manzanas_return = new ArrayList<Manzana>();
 		StringBuilder aux;
@@ -134,7 +145,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		}
 		return manzanas_return;
 	}
-	
+
 	private ArrayList<Obstaculo> parseObstaculos(ArrayList<String> obstaculos){
 		ArrayList<Obstaculo> obstaculo_return = new ArrayList<Obstaculo>();
 		StringBuilder aux;
@@ -169,26 +180,31 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	@Override
 	public Agente getInformacionAgente(String idAgente) throws Exception {
 		String agent= this.dispatcher.sendCommand("agent " + idAgente);
-		String [] parts = agent.split("\\[");
-		parts = parts[1].split(",");
-		Agente agente = new Agente(idAgente,
-				Double.parseDouble(parts[0]),
-				Double.parseDouble(parts[2].split("\\]")[0]),
-				Double.parseDouble(parts[1])
-				
-				);
-		return agente;
+		if(agent == null){
+			return null;
+		}
+		else{
+			String [] parts = agent.split("\\[");
+			parts = parts[1].split(",");
+			Agente agente = new Agente(idAgente,
+					Double.parseDouble(parts[0]),
+					Double.parseDouble(parts[2].split("\\]")[0]),
+					Double.parseDouble(parts[1])
+
+					);
+			return agente;
+		}
 	}
-	
+
 	public void updateInformation()
 	{
 		String message;
-        try 
-        {
-        	agents.clear();
-        	apples.clear();
-        	obstacles.clear();
-        	ids.clear();
+		try 
+		{
+			agents.clear();
+			apples.clear();
+			obstacles.clear();
+			ids.clear();
 			outFlow.writeUTF("loop");
 			message = inputData.readLine();
 			do
@@ -203,8 +219,8 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			agents_parsed = parseAgentes(agents);
 			obstacles_parsed = parseObstaculos(obstacles);
 		}
-        catch (IOException e) 
-        {
+		catch (IOException e) 
+		{
 			e.printStackTrace();
 		}
 	}
@@ -229,5 +245,5 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			e.printStackTrace();
 		}
 	}
-	
+
 }

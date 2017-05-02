@@ -150,4 +150,5 @@ public class VocabularioRosace extends NombresPredefinidos{
     static public  enum EstadoVictima {esperandoRescate,asignada, reAsignada, rescatada}
 	public static final String RespuestaCosteRecoleccion = "RespuestaCosteRecoleccion";
 	public static final String MalmoListo = "RecursoMalmoIniciado";
+	public static final String identObjetivoRecolectarTodasLasManzanas = "RecolectarTodasLasManzanas";
 }

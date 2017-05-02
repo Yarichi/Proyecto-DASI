@@ -20,6 +20,7 @@ public class ConseguirInformacionDelEntorno extends TareaSincrona{
 			ItfUsoRecursoMalmo itfMalmo = (ItfUsoRecursoMalmo)this.repoInterfaces.obtenerInterfaz(VocabularioRosace.IdentRecursoMalmo);
 			ArrayList<Manzana> manzanas = itfMalmo.getInformacionManzanas();
 			Objetivo o = new RecolectarTodasLasManzanas(manzanas);
+			o.setobjectReferenceId(VocabularioRosace.identObjetivoRecolectarTodasLasManzanas);
 			o.setPending();
 			this.itfProcObjetivos.insertarHecho(o);			
 		} catch (Exception e) {
