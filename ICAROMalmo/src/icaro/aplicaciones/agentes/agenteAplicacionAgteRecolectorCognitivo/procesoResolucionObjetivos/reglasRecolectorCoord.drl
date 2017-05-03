@@ -126,10 +126,8 @@ end
 //Basicamente inicializamos el robotstatusMoic
 rule "Inicializar mi RobotStatusMoic(Obtener mi informacion)"
 when
-   	obj:RecolectarTodasLasManzanas(state == Objetivo.PENDING);
-   	misObj: MisObjetivos();
-   	foco : Focus();
-   	robotStatusMoic : RobotStatusMoic();
+   	obj:RecolectarTodasLasManzanas();
+   	robotStatusMoic : RobotStatusMoic(inicializado == false);
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(InicializarRobotStatusMoic.class);
 	tarea.ejecutar(robotStatusMoic);
@@ -226,11 +224,12 @@ when
 	objDec: DecidirQuienVa(objectDecisionId == id);
 	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == true);
 	infoEquipo: InfoEquipoMoic();
-	Focus(foco == objDec);
+	foco: Focus(foco == objDec);
+	obj2: RecolectarTodasLasManzanas();
 	//informeTarea:InformeDeTarea(identTarea == VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones1, contenidoInforme==id );
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PeticionRecolectarManzana.class);
-	tarea.ejecutar(obj, objDec, info);
+	tarea.ejecutar(obj, objDec, info, foco, obj2);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end

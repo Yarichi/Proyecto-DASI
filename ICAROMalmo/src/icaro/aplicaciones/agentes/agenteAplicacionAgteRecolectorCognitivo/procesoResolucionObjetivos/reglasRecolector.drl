@@ -98,7 +98,7 @@ rule "Inicializar mi RobotStatusMoic(Obtener mi informacion)"
 when
 	mensajeMalmo: MensajeSimple(VocabularioRosace.MalmoListo == contenido)
 	obj: DefinirMiEquipo(state == Objetivo.SOLVED)
-   	robotStatusMoic: RobotStatusMoic();
+   	robotStatusMoic: RobotStatusMoic(inicializado == false);
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(InicializarRobotStatusMoic.class);
 	tarea.ejecutar(robotStatusMoic);

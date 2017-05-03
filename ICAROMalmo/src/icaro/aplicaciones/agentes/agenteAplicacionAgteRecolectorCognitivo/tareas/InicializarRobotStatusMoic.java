@@ -28,7 +28,7 @@ public class InicializarRobotStatusMoic extends TareaSincrona{
 			e.printStackTrace();
 		}
 		robotStatus.setPosicionAgente(ag.getCoordinate());
-		
+		robotStatus.setInicializado(true);
 		
 		this.itfProcObjetivos.actualizarHecho(robotStatus);
 		

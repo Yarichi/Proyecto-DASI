@@ -7,7 +7,20 @@ public class RobotStatusMoic implements Cloneable{
 	private String idRolAgente;
 	private Coordinate posicionAgente;
 	private boolean bloqueado;
+	private boolean inicializado;
 	
+	public RobotStatusMoic(){
+		this.inicializado = false;
+	}
+	
+	public boolean isInicializado() {
+		return inicializado;
+	}
+
+	public void setInicializado(boolean inicializado) {
+		this.inicializado = inicializado;
+	}
+
 	public String getIdRobot() {
 		return idRobot;
 	}
