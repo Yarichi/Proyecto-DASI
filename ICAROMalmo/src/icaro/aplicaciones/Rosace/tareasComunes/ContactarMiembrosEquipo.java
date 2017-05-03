@@ -6,6 +6,8 @@
 package icaro.aplicaciones.Rosace.tareasComunes;
 import icaro.aplicaciones.Rosace.informacion.InfoEquipo;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InfoEquipoMoic;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RobotStatusMoic;
 import icaro.aplicaciones.Rosace.informacion.InfoRolAgente;
 import icaro.aplicaciones.Rosace.informacion.RobotStatus1;
 import icaro.infraestructura.entidadesBasicas.interfaces.InterfazUsoAgente;
@@ -28,8 +30,8 @@ import java.util.ArrayList;
 	@Override
 	public void ejecutar(Object... params) {
 		try {     
-              RobotStatus1 miStatus = (RobotStatus1)params[0];    
-             InfoEquipo equipoInfo = (InfoEquipo)params[1];  
+              RobotStatusMoic miStatus = (RobotStatusMoic)params[0];    
+             InfoEquipoMoic equipoInfo = (InfoEquipoMoic)params[1];  
               nombreAgenteEmisor = this.identAgente;
               agentesEquipo = equipoInfo.getTeamMemberIDs();
               trazas.aceptaNuevaTrazaEjecReglas(identAgente, "Se Ejecuta la Tarea : "+ identTarea + " Los agtes de mi equipo son : " + agentesEquipo );

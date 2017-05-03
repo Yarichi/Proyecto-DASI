@@ -11,13 +11,13 @@ public class InicializarRobotStatusMoic extends TareaSincrona{
 	@Override
 	public void ejecutar(Object... params) {
 		// TODO Auto-generated method stub
-		RobotStatusMoic robotStatus = new RobotStatusMoic();
-		robotStatus.setIdAgente(this.identAgente);
-		if(this.identAgente.contains("1"))
+		RobotStatusMoic robotStatus = (RobotStatusMoic) params[0];
+		//robotStatus.setIdRobot(this.identAgente);
+		/*if(this.identAgente.contains("1"))
 			robotStatus.setIdRobotRol(VocabularioRosace.IdentRolAgtesRecolectorCoord);
 		else{
 			robotStatus.setIdRobotRol(VocabularioRosace.IdentRolAgtesRecolectores);
-		}
+		}*/
 		ItfUsoRecursoMalmo itfMalmo;
 		Agente ag = null;
 		try {
@@ -30,7 +30,7 @@ public class InicializarRobotStatusMoic extends TareaSincrona{
 		robotStatus.setPosicionAgente(ag.getCoordinate());
 		
 		
-		this.itfProcObjetivos.insertarHecho(robotStatus);
+		this.itfProcObjetivos.actualizarHecho(robotStatus);
 		
 		
 	}

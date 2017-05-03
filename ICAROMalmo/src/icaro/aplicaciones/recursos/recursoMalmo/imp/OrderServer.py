@@ -254,11 +254,15 @@ def eval(index,args):
             correctObstacles.append((o[0]+0.5,o[2]+0.5))
     c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
-    message = "eval %s %i\n"%(obs['Name'],len(route))
+    if route is not None:
+        message = "eval %s %i\n"%(obs['Name'],len(route))
+    else:
+        message = "eval %s -1\n"%obs['Name']
     outSocket = args[0]
     args[1].acquire(True)
     outSocket.send(message)
     args[1].release()
+        
     return True
     
 

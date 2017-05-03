@@ -108,7 +108,7 @@ public class PercepcionAgenteCognitivoImp extends PercepcionAgenteCognitivo {
                 mensajeTemporizado.putMomentoRecepcionMsg(System.currentTimeMillis());
                 trazas.aceptaNuevaTrazaMensajeRecibido(mensajeTemporizado);
         }
-            trazas.aceptaNuevaTrazaMensajeRecibido(mensaje);
+            //trazas.aceptaNuevaTrazaMensajeRecibido(mensaje);
 		buzon.offer(mensaje);
 	}
 	

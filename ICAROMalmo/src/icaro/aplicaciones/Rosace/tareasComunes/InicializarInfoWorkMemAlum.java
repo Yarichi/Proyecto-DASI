@@ -7,6 +7,8 @@ package icaro.aplicaciones.Rosace.tareasComunes;
 import icaro.aplicaciones.Rosace.informacion.InfoEquipo;
 import icaro.aplicaciones.Rosace.informacion.RobotStatus1;
 import icaro.aplicaciones.Rosace.informacion.VictimsToRescue;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InfoEquipoMoic;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RobotStatusMoic;
 import icaro.aplicaciones.agentes.componentesInternos.movimientoCtrl.InfoCompMovimiento;
 import icaro.aplicaciones.agentes.componentesInternos.movimientoCtrl.ItfUsoMovimientoCtrl;
 import icaro.aplicaciones.agentes.componentesInternos.movimientoCtrl.imp.MaquinaEstadoMovimientoCtrl.EstadoMovimientoRobot;
@@ -37,15 +39,15 @@ public class InicializarInfoWorkMemAlum extends TareaSincrona{
              MisObjetivos misObjs= new MisObjetivos();
              this.getEnvioHechos().insertarHechoWithoutFireRules(miFoco);
              this.getEnvioHechos().insertarHechoWithoutFireRules(misObjs);
-             RobotStatus1 miStatus = new RobotStatus1();
+             RobotStatusMoic miStatus = new RobotStatusMoic();
                     miStatus.setIdRobot(this.identAgente);
                     miStatus.setIdRobotRol(identRolAgte);
-                    miStatus.setestadoMovimiento(EstadoMovimientoRobot.RobotParado.name());
-             InfoEquipo miEquipo = new InfoEquipo(identAgente, identEquipo);
-                    miEquipo.setTeamMemberStatus( miStatus); 
+                    //miStatus.setestadoMovimiento(EstadoMovimientoRobot.RobotParado.name());*/
+             InfoEquipoMoic miEquipo = new InfoEquipoMoic(identAgente, identEquipo);
+                    miEquipo.setTeamMemberStatus( miStatus);
                     this.getEnvioHechos().insertarHechoWithoutFireRules(miStatus);
                     this.getEnvioHechos().insertarHecho(miEquipo);
-                    this.trazas.aceptaNuevaTrazaEjecReglas(identAgente, this.getIdentTarea()+ "  Actualizo mi estatus. Mi Rol en equipo :  " + miStatus.getIdRobotRol());
+                    //this.trazas.aceptaNuevaTrazaEjecReglas(identAgente, this.getIdentTarea()+ "  Actualizo mi estatus. Mi Rol en equipo :  " + miStatus.getIdRobotRol());
        } catch (Exception e) {
 	e.printStackTrace();
        }                

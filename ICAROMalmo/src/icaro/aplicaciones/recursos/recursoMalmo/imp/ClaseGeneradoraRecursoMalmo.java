@@ -2,6 +2,10 @@ package icaro.aplicaciones.recursos.recursoMalmo.imp;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.concurrent.Semaphore;
+
+import javax.swing.JOptionPane;
+
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
 import java.io.File;
@@ -32,11 +36,12 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Agente> agents_parsed;
 	private ArrayList<Obstaculo> obstacles_parsed;
 	private PythonOrderDispatcher dispatcher;
-	private AgenteCognitivotImp2 agente;
+	private AgenteCognitivotImp2 agente1,agente2;
+	private Semaphore lock;
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
-
+		this.lock = new Semaphore(1);
 		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
@@ -68,16 +73,23 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		
 		try {
 			
-			for(int i=0;i<2;i++){
-				int n = i+1;
-				agente = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot" + n + "Recolector");
-				Thread t = new Thread(){
-					public void run(){
-						agente.getControl().insertarHecho(mensaje);
-					}
-				};
-				t.start();
-			}
+			
+			agente1 = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot1Recolector");
+			Thread t = new Thread(){
+				public void run(){
+					agente1.getControl().insertarHecho(mensaje);
+				}
+			};
+			t.start();
+			agente2 = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot2Recolector");
+			Thread t1 = new Thread(){
+				public void run(){
+					agente2.getControl().insertarHecho(mensaje);
+				}
+			};
+			t1.start();
+				
+			
 		} catch (Exception e2) {
 			// TODO Auto-generated catch block
 			e2.printStackTrace();
@@ -149,7 +161,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Obstaculo> parseObstaculos(ArrayList<String> obstaculos){
 		ArrayList<Obstaculo> obstaculo_return = new ArrayList<Obstaculo>();
 		StringBuilder aux;
-		int i = 0;
 		for (String s : obstaculos){
 			aux = new StringBuilder(s);
 			aux.deleteCharAt(0);
@@ -157,7 +168,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			s = aux.toString();
 			String[] coords = s.split(",");
 			obstaculo_return.add(new Obstaculo(Integer.parseInt(coords[0]), Integer.parseInt(coords[1]),Integer.parseInt(coords[2])));
-			i++;
+	
 		}
 		return obstaculo_return;
 	}
@@ -172,7 +183,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 
 	public ArrayList<Manzana> getInformacionManzanas() {
 		String apples = this.dispatcher.sendCommand("apples");
-		String apples2 = this.dispatcher.sendCommand("apples");
 		setInformation(apples);
 		return this.parseManzanas(this.apples);
 	}
@@ -181,6 +191,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	public Agente getInformacionAgente(String idAgente) throws Exception {
 		String agent= this.dispatcher.sendCommand("agent " + idAgente);
 		if(agent == null){
+			JOptionPane.showMessageDialog(null, "El agente " + idAgente + " no consigue su informacion");
 			return null;
 		}
 		else{
@@ -227,10 +238,13 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 
 	@Override
 	public Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
+		String msg = "eval " + idAgente + " " + x + " " + y;
+		String eval = this.dispatcher.sendCommand(msg);
+		String[] parts = eval.split(" ");
+		return Integer.parseInt(parts[parts.length-1]);
 	}
-
+	
 	public void close()
 	{
 		try
@@ -244,6 +258,17 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		{
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
+		// TODO Auto-generated method stub
+		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
+		String msg = "move " + identAgente + " " + x + " " + y;
+		String movement = this.dispatcher.sendCommand(msg);
+		/*if(!eval.equalsIgnoreCase("ack")){
+			
+		}*/
 	}
 
 }

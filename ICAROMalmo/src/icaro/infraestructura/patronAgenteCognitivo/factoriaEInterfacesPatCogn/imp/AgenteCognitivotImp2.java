@@ -84,7 +84,7 @@ public class AgenteCognitivotImp2 extends AgenteCognitivo implements Serializabl
 //        if ((estadoAgente.equals(NombresPredefinidos.ESTADO_ACTIVO))){
             try {
                 percepcion.aceptaMensaje(mensaje);
-                trazas.aceptaNuevaTrazaMensajeRecibido(mensaje);
+                //trazas.aceptaNuevaTrazaMensajeRecibido(mensaje);
             } catch (RemoteException ex) {
                 java.util.logging.Logger.getLogger(AgenteCognitivotImp2.class.getName()).log(Level.SEVERE, null, ex);
             }

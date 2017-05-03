@@ -3,16 +3,16 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.infor
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
 
 public class RobotStatusMoic implements Cloneable{
-	private String idAgente;
+	private String idRobot;
 	private String idRolAgente;
 	private Coordinate posicionAgente;
 	private boolean bloqueado;
 	
-	public String getIdAgente() {
-		return idAgente;
+	public String getIdRobot() {
+		return idRobot;
 	}
-	public void setIdAgente(String idAgente) {
-		this.idAgente = idAgente;
+	public void setIdRobot(String idAgente) {
+		this.idRobot = idAgente;
 	}
 	public Coordinate getPosicionAgente() {
 		return posicionAgente;

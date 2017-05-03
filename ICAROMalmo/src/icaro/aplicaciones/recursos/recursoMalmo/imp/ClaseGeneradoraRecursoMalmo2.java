@@ -214,5 +214,11 @@ public class ClaseGeneradoraRecursoMalmo2 extends ImplRecursoSimple implements I
 			e.printStackTrace();
 		}
 	}
+
+	@Override
+	public void moverAgente(String identAgente, Coordinate coordinate) throws Exception {
+		// TODO Auto-generated method stub
+		
+	}
 	
 }

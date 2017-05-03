@@ -6,6 +6,7 @@ package icaro.aplicaciones.Rosace.tareasComunes;
 import icaro.aplicaciones.Rosace.informacion.InfoEquipo;
 import icaro.aplicaciones.Rosace.informacion.InfoRolAgente;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InfoEquipoMoic;
 import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 import icaro.infraestructura.recursosOrganizacion.recursoTrazas.imp.componentes.InfoTraza;
 /**
@@ -17,7 +18,7 @@ public class ProcesarInfoRolAgente extends TareaSincrona {
     @Override
     public void ejecutar(Object... params) {
             try {
-                InfoEquipo  miEquipo = (InfoEquipo)params[0];
+                InfoEquipoMoic  miEquipo = (InfoEquipoMoic)params[0];
                 InfoRolAgente infoRolRecibido = (InfoRolAgente)params[1];
                 miEquipo.procesarInfoRolAgente(infoRolRecibido);
                 // Si el equipo es jerarquico y el Rol es de agente asignador de tareas entonces

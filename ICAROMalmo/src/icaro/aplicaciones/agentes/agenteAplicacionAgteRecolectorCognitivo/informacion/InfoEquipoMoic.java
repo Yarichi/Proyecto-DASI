@@ -183,7 +183,7 @@ public class InfoEquipoMoic {
          else return teamInfoAgentStatus.get(identAgte).getIdRobotRol();
      }
      public synchronized void setTeamMemberStatus( RobotStatusMoic miStatus){ 
-         teamInfoAgentStatus.put(miStatus.getIdAgente(), miStatus);
+         teamInfoAgentStatus.put(miStatus.getIdRobot(), miStatus);
      }
      public synchronized Boolean isRobotStatusDefined(String robtId){ 
         return  teamInfoAgentStatus.containsKey(robtId);

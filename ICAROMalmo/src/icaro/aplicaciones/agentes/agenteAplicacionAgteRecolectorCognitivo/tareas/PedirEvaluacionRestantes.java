@@ -21,7 +21,9 @@ public class PedirEvaluacionRestantes extends TareaSincrona{
 		
 		String id = this.agente.getIdentAgente();
 		PeticionRecoleccion pet = new PeticionRecoleccion(id, VocabularioRosace.MsgPeticionEnvioEvaluaciones, obj1.getManzana());
-		this.comunicator.enviarMsgaGrupoAgentes(pet, infoDec.getReceptores());
+		for(int i = 0;i<infoDec.getReceptores().size();i++){
+			this.comunicator.enviarInfoAotroAgente(pet, infoDec.getReceptores().get(i));
+		}
 		this.itfProcObjetivos.eliminarHecho(tarea);
 		this.generarInformeTemporizadoFromConfigProperty(VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones2,obj1, 
 				id,  infoDec.getObjetivoID());

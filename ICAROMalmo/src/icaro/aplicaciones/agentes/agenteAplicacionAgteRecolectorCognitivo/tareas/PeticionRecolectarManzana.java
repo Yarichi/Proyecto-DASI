@@ -22,10 +22,8 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 			miPropuesta.setIdentObjectRefPropuesta(agenteDestino);
 			miPropuesta.setJustificacion(recolectarManzana.getManzana());
 			
-			decidirQuienVa.setSolving();
+			decidirQuienVa.setSolved();
 			this.getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
-			
-			
 			this.itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);
 			this.itfProcObjetivos.eliminarHechoWithoutFireRules(infoDecidirRecolector);
 			this.itfProcObjetivos.actualizarHecho(recolectarManzana);
