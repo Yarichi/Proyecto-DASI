@@ -26,7 +26,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			String[] command = {pythonPath, pythonScript};
 			pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
-			Thread.sleep(500);
+			Thread.sleep(10000);
             //creamos el outSocket para comunicarnos con la interfaz de python
 			outSocket = new Socket("localhost", port);
 			//creamos el inSocket para recibir los mensajes de python
@@ -45,7 +45,6 @@ public class PythonOrderDispatcher implements OrderDispatcher
 	        outputData = new DataOutputStream(outSocket.getOutputStream());
 	        //iniciamos la estructura de almacenamiento de acks de comandos finalizados
 	        commandAcks = new ArrayList<>();
-	        Thread.sleep(14000);
 		} 
 		catch (UnknownHostException e)
 		{

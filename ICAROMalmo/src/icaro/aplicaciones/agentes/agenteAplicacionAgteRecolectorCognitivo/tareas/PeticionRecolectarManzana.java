@@ -25,18 +25,21 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 			miPropuesta.setMensajePropuesta(VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo);
 			miPropuesta.setIdentObjectRefPropuesta(agenteDestino);
 			miPropuesta.setJustificacion(recolectarManzana.getManzana());
-			
+			this.getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
+			recolectarManzana.setSolving();
 			decidirQuienVa.setSolved();
 			foco.setFoco(obj2);
-			this.getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
 			this.itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);
 			this.itfProcObjetivos.eliminarHechoWithoutFireRules(infoDecidirRecolector);
-			this.itfProcObjetivos.actualizarHechoWithoutFireRules(foco);
-			this.itfProcObjetivos.actualizarHecho(recolectarManzana);
+			this.itfProcObjetivos.actualizarHechoWithoutFireRules(recolectarManzana);
+			this.itfProcObjetivos.actualizarHecho(foco);
+
+		}
+		else{
 			
 		}
 		//trazas.aceptaNuevaTrazaEjecReglas(identAgente, "");
-		
+
 	}
 
 }

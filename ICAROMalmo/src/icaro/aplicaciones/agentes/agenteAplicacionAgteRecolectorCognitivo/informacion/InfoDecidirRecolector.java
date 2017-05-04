@@ -65,7 +65,7 @@ public class InfoDecidirRecolector {
 		String agente = "";
 		while(it.hasNext()){
 			Entry<String, Integer> e = it.next();
-			if(mejorCoste == -1 || e.getValue() < mejorCoste){
+			if(mejorCoste == -1 || (e.getValue() != -1 && e.getValue() < mejorCoste)){
 				mejorCoste = e.getValue();
 				agente = e.getKey();
 			}

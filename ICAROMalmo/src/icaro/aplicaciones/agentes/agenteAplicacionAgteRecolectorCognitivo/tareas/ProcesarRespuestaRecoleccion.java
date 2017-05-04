@@ -12,8 +12,9 @@ public class ProcesarRespuestaRecoleccion extends TareaSincrona{
 		RespuestaRecoleccion resp = (RespuestaRecoleccion) params[1];
 		
 		info.addResponse(resp.getEmisor(), resp.getCoste());
-		this.itfProcObjetivos.actualizarHechoWithoutFireRules(info);
-		this.itfProcObjetivos.eliminarHecho(resp);
+		this.itfProcObjetivos.eliminarHechoWithoutFireRules(resp);
+		this.itfProcObjetivos.actualizarHecho(info);
+
 		
 	}
 

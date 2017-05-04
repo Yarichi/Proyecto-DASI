@@ -190,10 +190,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	@Override
 	public Agente getInformacionAgente(String idAgente) throws Exception {
 		String agent= this.dispatcher.sendCommand("agent " + idAgente);
-		if(idAgente.equals("robot1Recolector")){
-			int x;
-			x = 2 + 2;
-		}
 		if(agent == null){
 			JOptionPane.showMessageDialog(null, "El agente " + idAgente + " no consigue su informacion");
 			return null;
@@ -271,8 +267,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		String msg = "move " + identAgente + " " + x + " " + y;
 		String movement = this.dispatcher.sendCommand(msg);
 		/*if(!eval.equalsIgnoreCase("ack")){
-			
+		
 		}*/
+		System.out.println(movement);
 	}
 
 }

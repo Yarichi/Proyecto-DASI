@@ -217,7 +217,10 @@ def stop(index):
     return finish
 
 def move(index,args):
-    obs = json.loads(index.getWorldState().observations[-1].text)
+    obs = index.getWorldState().observations
+    if len(obs) == 0:
+        return true
+    obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
     correctObstacles = []
@@ -245,7 +248,16 @@ def move(index,args):
             time.sleep(0.75)
     return True
 def eval(index,args):
-    obs = json.loads(index.getWorldState().observations[-1].text)
+    outSocket = args[0]
+    obs = index.getWorldState().observations
+    if len(obs)==0:
+        message = "eval %s -1\n"%"Failed"
+        args[1].acquire(True)
+        outSocket.send(message)
+        args[1].release()
+        return True
+        
+    obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
     correctObstacles = []
@@ -258,7 +270,6 @@ def eval(index,args):
         message = "eval %s %i\n"%(obs['Name'],len(route))
     else:
         message = "eval %s -1\n"%obs['Name']
-    outSocket = args[0]
     args[1].acquire(True)
     outSocket.send(message)
     args[1].release()

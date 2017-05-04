@@ -151,8 +151,9 @@ end
 
 rule "Generacion objetivo de recolectar manzana"
 when
-	obj: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
+	obj: RecolectarTodasLasManzanas(state == Objetivo.SOLVING, manzanasRestantes > 0);
 	foco : Focus(foco == obj);
+	not(exists(PropuestaAgente()))
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(GenerarObjetivoRecolectarManzana.class);
 	tarea.ejecutar(obj,foco);
@@ -160,10 +161,11 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
 
-rule "Obtencion de coste de completar la recoleccion de manzana"
+rule "Pido evaluacion a todos del coste de completar la recoleccion de manzana"
 when
-	obj: RecolectarManzana(id: id);
-	objDec: DecidirQuienVa(objectDecisionId == id);
+	not(exists(PropuestaAgente()))
+	obj: RecolectarManzana(id: id, state == Objetivo.PENDING);
+	objDec: DecidirQuienVa(objectDecisionId == id,state == Objetivo.SOLVING);
 	info: InfoDecidirRecolector(ObjetivoID == id, todasLasPeticiones == false );
 	infoEquipo: InfoEquipoMoic();
 	Focus(foco == objDec); 
@@ -176,8 +178,8 @@ end
 
 rule "Proceso una respuesta para la recoleccion de manzanas"
 when
-	obj: RecolectarManzana(id: id);
-	objDec: DecidirQuienVa(objectDecisionId == id);
+	obj: RecolectarManzana(id: id, state == Objetivo.PENDING);
+	objDec: DecidirQuienVa(objectDecisionId == id,state == Objetivo.SOLVING);
 	info: InfoDecidirRecolector(ObjetivoID == id);
 	respuesta: RespuestaRecoleccion(objetivoID == id);
 	Focus(foco == objDec);
@@ -190,8 +192,8 @@ end
 
 rule "Primer timeout para obtencion de todos los costes de reccolectar manzana"
 when
-	obj: RecolectarManzana(id: id);
-	objDec: DecidirQuienVa(objectDecisionId == id);
+	obj: RecolectarManzana(id: id, state == Objetivo.PENDING);
+	objDec: DecidirQuienVa(objectDecisionId == id,state == Objetivo.SOLVING);
 	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == false, todasLasPeticiones == true);
 	infoEquipo: InfoEquipoMoic();
 	Focus(foco == objDec);
@@ -220,13 +222,12 @@ end
 */
 rule "Seleccion del agente con menor coste para recolectar la manzana"
 when
-	obj: RecolectarManzana(id: id);
-	objDec: DecidirQuienVa(objectDecisionId == id);
+	obj: RecolectarManzana(id: id, state == Objetivo.PENDING);
+	objDec: DecidirQuienVa(objectDecisionId == id,state == Objetivo.SOLVING);
 	info: InfoDecidirRecolector(ObjetivoID == id, todasLasRespuestas == true);
 	infoEquipo: InfoEquipoMoic();
 	foco: Focus(foco == objDec);
 	obj2: RecolectarTodasLasManzanas();
-	//informeTarea:InformeDeTarea(identTarea == VocabularioRosace.IdentTareaTimeOutRecibirEvaluaciones1, contenidoInforme==id );
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(PeticionRecolectarManzana.class);
 	tarea.ejecutar(obj, objDec, info, foco, obj2);
@@ -236,12 +237,16 @@ end
 /*
 rule "Resolucion del objetivo recolectar manzana por el agente"
 when
-	obj: RecolectarTodasLasManzanas();
+	obj: RecolectarManzana(state == Objetivo.SOLVING);
+	obj1: RecolectarTodasLasManzanas(state == Objetivo.Solving)
 	//mensaje de que se completo cierta manzana
 then
 	//no lleva tarea, lo hacemos aqui directamente.
 	modify{
-		obj.setRecolectada(id);
+		obj.setSolved();
+	}
+	modify{
+		obj1.setRecolectada(obj.getManzana());
 	}
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
@@ -254,10 +259,10 @@ when
 	infoEquipo : InfoEquipoMoic();
 	peticion : PeticionRecoleccion();
 then
-TareaSincrona tarea = gestorTareas.crearTareaSincrona(CalcularEvaluacion.class);
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(CalcularEvaluacion.class);
 	tarea.ejecutar(peticion,miStatus,infoEquipo);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
-    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName() );     
 end
 
 //Regla de recepcion de recoger manzana. 

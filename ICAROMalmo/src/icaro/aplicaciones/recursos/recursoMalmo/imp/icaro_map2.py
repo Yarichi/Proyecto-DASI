@@ -209,10 +209,7 @@ my_mission = MalmoPython.MissionSpec(mission_xml, True)
 #my_mission.allowAllAbsoluteMovementCommands()
 #my_mission.allowAllContinuousMovementCommands()
 generateAgentsIds()
-print "Comenzando zona pruebas"
-initDispatcher(world_items, agent_hosts)
-print "fin zona de pruebas"
-time.sleep(2)
+
 #thread = threading.Thread(target=provideInitialInfo,args = [world_items])
 #thread.start()
 
@@ -239,7 +236,11 @@ for retry in range(max_retries):
             
     
 
+
 print "esperando hasta que la mision comience"
+
+
+
 
 #agent_host.startMission( my_mission, my_client_pool, my_mission_record, role, expId )
 for i in range(len(agent_hosts)):
@@ -262,6 +263,12 @@ for i in range(len(agent_hosts)):
                 # reason. To catch this specifically we could check the results for "MALMONOSERVERYET",
                 # but it should be sufficient to simply wait a bit and try again.
                 time.sleep(5)
+
+
+print "Comenzando zona pruebas"
+initDispatcher(world_items, agent_hosts)
+print "fin zona de pruebas"
+time.sleep(2)
 
 
 # Loop until mission starts:

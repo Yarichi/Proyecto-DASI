@@ -12,15 +12,17 @@ import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
 public class PedirEvaluacionATodos extends TareaSincrona{
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void ejecutar(Object... params) {
 		RecolectarManzana obj1 = (RecolectarManzana) params[0];
 		InfoDecidirRecolector infoDec = (InfoDecidirRecolector) params[1];
 		InfoEquipoMoic info = (InfoEquipoMoic) params[2];
-		ArrayList<String> members = info.getTeamMemberIDs();
+		ArrayList<String> members = (ArrayList<String>) info.getTeamMemberIDs().clone();
 		members.add(this.identAgente);
 		String id = this.agente.getIdentAgente();
 		infoDec.setReceptores(members);
+		infoDec.setTodasLasRespuestas(false);
 		infoDec.setTodasLasPeticiones(true);
 		PeticionRecoleccion pet = new PeticionRecoleccion(id, VocabularioRosace.MsgPeticionEnvioEvaluaciones, obj1.getManzana());
 		pet.setEmisor(this.identAgente);

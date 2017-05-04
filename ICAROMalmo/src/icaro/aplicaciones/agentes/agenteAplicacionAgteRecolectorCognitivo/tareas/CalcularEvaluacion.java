@@ -19,6 +19,11 @@ public class CalcularEvaluacion extends TareaSincrona {
 		//RecolectarManzana recolectarManzana = (RecolectarManzana) params[1];
 		InfoEquipoMoic infoEquipo = (InfoEquipoMoic) params[2];
 		
+		if(this.identAgente.equalsIgnoreCase("robot2recolector")){
+			int x = 2;
+		}
+		
+		
 		ItfUsoRecursoMalmo itfMalmo;
 		Integer coste = -1;
 		try {
@@ -30,6 +35,7 @@ public class CalcularEvaluacion extends TareaSincrona {
 		}
 		RespuestaRecoleccion resp = new RespuestaRecoleccion(this.identAgente, VocabularioRosace.RespuestaCosteRecoleccion, peticion.getManzana().getId() , coste);
 		this.comunicator.enviarInfoAotroAgente(resp, "robot1Recolector");
+		this.itfProcObjetivos.eliminarHechoWithoutFireRules(peticion);
 	
 	}
 	

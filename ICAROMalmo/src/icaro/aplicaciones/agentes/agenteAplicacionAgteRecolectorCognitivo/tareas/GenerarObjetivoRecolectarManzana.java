@@ -20,7 +20,8 @@ public class GenerarObjetivoRecolectarManzana extends TareaSincrona{
 		InfoDecidirRecolector info = new InfoDecidirRecolector(m.getId());
 		DecidirQuienVa obj2 = new DecidirQuienVa(m.getId());
 		foco.setFoco(obj2);
-		
+		obj1.setPending();
+		obj2.setSolving();
 		this.itfProcObjetivos.actualizarHechoWithoutFireRules(obj);
 		this.itfProcObjetivos.actualizarHechoWithoutFireRules(foco);
 		this.itfProcObjetivos.insertarHechoWithoutFireRules(obj2);
