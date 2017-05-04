@@ -261,7 +261,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
+	public synchronized void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
 		// TODO Auto-generated method stub
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "move " + identAgente + " " + x + " " + y;

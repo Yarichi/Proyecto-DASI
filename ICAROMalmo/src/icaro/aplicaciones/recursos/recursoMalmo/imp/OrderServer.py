@@ -24,11 +24,11 @@ class OrderDispatcher(object):
         finishCondition = True
         print str(self.number)
         while self.stop == False:
-            if self.queue.empty() == False and finishCondition:
+            if self.queue.empty() == False:
                 obj = self.queue.get()
                 #obj.action(agent_host[self.number])
                 obj.action(self.number)
-                finishCondition = obj.isFinished()
+
 
     def stopExecution(self):
         self.stop = True
@@ -156,10 +156,10 @@ class Command(object):
         self.params = params
 
     def action(self, index):
-        print "on action function"
+        #print "on action function"
         self.finish = self.command(index, self.params)
-        print "on end action function"
-        print str(self.finish)
+        #print "on end action function"
+        #print str(self.finish)
     
     def isFinished(self):
         return self.finish
@@ -167,59 +167,51 @@ class Command(object):
 
 
 def up(index):
-    print("prueba ejecutada correctamente.")
-    print str(index)
-    finish = True
+    #print("prueba ejecutada correctamente.")
+    #print str(index)
     #agents_pos[index][0] += 1
     #index.sendCommand("tpx " + agents_pos[index][0])
     index.sendCommand("movenorth 1")
     #index.sendCommand("movenorth 1")
-    print str(finish)
-    return finish
+    #print str(finish)
+    return True
 
 def down(index):
-    print("prueba ejecutada correctamente.")
-    print str(index)
-    finish = True
+   # print("prueba ejecutada correctamente.")
+    #print str(index)
     #agents_pos[index][0] -= 1
     #index.sendCommand("tpx " + agents_pos[index][0])
     index.sendCommand("movesouth 1")
-    print str(finish)
-    return finish
+    #print str(finish)
+    return True
 	
 def right(index):
-    print("prueba ejecutada correctamente.")
-    print str(index)
-    finish = True
+    #print("prueba ejecutada correctamente.")
+    #print str(index)
     #agents_pos[index][2] += 1
     #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("moveeast 1")
-    print str(finish)
-    return finish
+    #print str(finish)
+    return True
 
 def left(index):
-    print("prueba ejecutada correctamente.")
-    print str(index)
-    finish = True
+    #print("prueba ejecutada correctamente.")
+    #print str(index)
     #agents_pos[index][2] -= 1
     #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("movewest 1")
-    print str(finish)
-    return finish
-
-def stop(index):
-    print("prueba ejecutada correctamente.")
-    print str(index)
-    finish = True
-    index.sendCommand("move 0")
-    index.sendCommand("strafe 0")
-    print str(finish)
-    return finish
+    #print str(finish)
+    return True
 
 def move(index,args):
-    obs = index.getWorldState().observations
-    if len(obs) == 0:
-        return true
+    obs = index.peekWorldState().observations
+    tries = 10
+    while len(obs) == 0 and tries > 0:
+        obs = index.getWorldState().observations
+        tries = tries - 1
+    if tries == 0:
+        print "he petado cuando queria ir a " + (args[2]) + " " + (args[3]) 
+        return True
     obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
@@ -233,30 +225,35 @@ def move(index,args):
         if newZ < zini:
             zini = newZ
             up(index)
-            time.sleep(0.75)
+            time.sleep(0.4)
         elif newZ > zini:
             zini = newZ
             down(index)
-            time.sleep(0.75)
+            time.sleep(0.4)
         if newX > xini:
             xini = newX
             right(index)
-            time.sleep(0.75)
+            time.sleep(0.4)
         elif newX < xini:
             xini = newX
             left(index)
-            time.sleep(0.75)
+            time.sleep(0.4)
     return True
 def eval(index,args):
     outSocket = args[0]
-    obs = index.getWorldState().observations
-    if len(obs)==0:
+    obs = index.peekWorldState().observations
+    tries = 10
+    while len(obs) == 0 and tries > 0:
+        obs = index.getWorldState().observations
+        tries = tries - 1
+    if tries == 0:
         message = "eval %s -1\n"%"Failed"
         args[1].acquire(True)
         outSocket.send(message)
         args[1].release()
+        print "he petado cuando calcular evaluacion a " + (args[2]) + " " + (args[3]) 
         return True
-        
+            
     obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
@@ -307,7 +304,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("stop",stop),("move",move),("eval",eval)], dispatches, world_items, agent_host)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
     #o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
