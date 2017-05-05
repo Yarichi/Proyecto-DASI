@@ -310,7 +310,8 @@ print "Mission running "
 
 # Loop until mission ends:
 while world_state.is_mission_running:
-    sys.stdout.write(".")
+    pass
+'''sys.stdout.write(".")
     time.sleep(0.1)
     for i in range(numAgentes):
         world_state = agent_hosts[i].getWorldState()
@@ -322,7 +323,7 @@ while world_state.is_mission_running:
             #observations = json.loads(msg)  # and parse the JSON
             #grid = observations.get(u'floor3x3', 0)  # and get the grid we asked for
             # ADD SOME CODE HERE TO SAVE YOUR AGENT
-
+'''
 print "Mission ended"
 # Mission has ended.
 #thread.join()

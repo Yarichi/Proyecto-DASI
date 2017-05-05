@@ -100,7 +100,7 @@ class OrderServer(object):
             elif message[0] == "agent" and len(message) == 2:
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                        obs = json.loads(self.agents[idEntero].getWorldState().observations[-1].text)
+                        obs = json.loads(self.agents[idEntero].peekWorldState().observations[-1].text)
                         position = "ag_["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]\n"
                         self.lock.acquire(True)
                         self.outSocket.send(position)
@@ -207,7 +207,7 @@ def move(index,args):
     obs = index.peekWorldState().observations
     tries = 10
     while len(obs) == 0 and tries > 0:
-        obs = index.getWorldState().observations
+        obs = index.peekWorldState().observations
         tries = tries - 1
     if tries == 0:
         print "he petado cuando queria ir a " + (args[2]) + " " + (args[3]) 
@@ -244,7 +244,7 @@ def eval(index,args):
     obs = index.peekWorldState().observations
     tries = 10
     while len(obs) == 0 and tries > 0:
-        obs = index.getWorldState().observations
+        obs = index.peekWorldState().observations
         tries = tries - 1
     if tries == 0:
         message = "eval %s -1\n"%"Failed"
@@ -257,6 +257,8 @@ def eval(index,args):
     obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
+    if obs["Name"] == "robot1Recolector":
+        pass
     correctObstacles = []
     for o in args[4]["obstacles"]:
         if o[1] == 226:
@@ -275,7 +277,7 @@ def eval(index,args):
     
 
 #def agent(index, params):
-#    obs = json.loads(index.getWorldState().observations[-1].text)
+#    obs = json.loads(index.peekWorldState().observations[-1].text)
 #    position = "ag_[["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]]\n"
 #    print str(position)
 #    params[1].acquire(True)
