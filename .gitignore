@@ -1,1 +1,5 @@
+*.log
+*.index
+*.properties
+
 MALMO_0.20/
