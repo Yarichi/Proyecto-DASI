@@ -1,3 +1,1 @@
-cd Malmo
-cd Minecraft
-launchClient.bat
+launchClient.bat.lnk

@@ -1,74 +1,74 @@
-[16:51:26] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
-[16:51:26] [main/INFO] [FML/]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
-[16:51:26] [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_121, running on Windows 10:amd64:10.0, installed at C:\Program Files\Java\jdk1.8.0_121\jre
-[16:51:26] [main/DEBUG] [FML/]: Java classpath at launch is C:\Users\David\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar;C:\Users\David\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar;C:\Users\David\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar;C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar;C:\Users\David\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start;V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[16:51:26] [main/DEBUG] [FML/]: Java library path at launch is C:\Program Files\Java\jdk1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin\;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files\Git\cmd;C:\ffmpeg\bin;C:\Python27;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin\;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64\;C:\Users\David\AppData\Local\Microsoft\WindowsApps;;.;C:/Users/David/.gradle/caches/minecraft/net/minecraft/natives/1.8
-[16:51:26] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
-[16:51:26] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
-[16:51:26] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
-[16:51:26] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
-[16:51:26] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
-[16:51:26] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
-[16:51:26] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
-[16:51:26] [main/INFO] [FML/]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
-[16:51:26] [main/DEBUG] [FML/]: Instantiating coremod class OverclockingPlugin
-[16:51:26] [main/WARN] [FML/]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
-[16:51:26] [main/DEBUG] [FML/]: Enqueued coremod OverclockingPlugin
-[16:51:26] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to V:\repos\Proyecto-DASI\Malmo\Minecraft\run\.
-[16:51:26] [main/DEBUG] [FML/]: Discovering coremods
-[16:51:26] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:51:26] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[16:51:26] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:51:26] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
-[16:51:26] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:51:26] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
-[16:51:26] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
-[16:51:26] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
-[16:51:26] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
-[16:51:26] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
-[16:51:26] [main/DEBUG] [FML/]: Injection complete
-[16:51:26] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
-[16:51:26] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
-[16:51:26] [main/ERROR] [FML/]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
-[16:51:27] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
-[16:51:27] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
-[16:51:27] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:51:27] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
-[16:51:27] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.classloading.FluidIdTransformer
-[16:51:27] [main/DEBUG] [FML/]: Injection complete
-[16:51:27] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
-[16:51:27] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
-[16:51:27] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
-[16:51:27] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
-[16:51:27] [main/DEBUG] [FML/]: Injecting coremod OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin} class transformers
-[16:51:27] [main/TRACE] [FML/]: Registering transformer com.microsoft.Malmo.OverclockingClassTransformer
-[16:51:27] [main/DEBUG] [FML/]: Injection complete
-[16:51:27] [main/DEBUG] [FML/]: Running coremod plugin for OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin}
-[16:51:27] [main/DEBUG] [FML/]: Running coremod plugin OverclockingPlugin
-[16:51:27] [main/DEBUG] [FML/]: Coremod plugin class OverclockingPlugin run successfully
-[16:51:27] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
-[16:51:27] [main/DEBUG] [FML/]: Loaded 159 rules from AccessTransformer config file forge_at.cfg
-[16:51:27] [main/DEBUG] [FML/]: Validating minecraft
-[16:51:27] [main/DEBUG] [FML/]: Minecraft validated, launching...
-[16:51:27] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
-[16:51:27] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
-[16:51:27] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
-[16:51:27] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
-[16:51:27] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
-[16:51:27] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
-[16:51:27] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[16:51:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
-[16:51:29] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0,002s
-[16:51:29] [Client thread/INFO] [STDOUT/]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
-// Don't do that.
+[23:25:16] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[23:25:16] [main/INFO] [FML/]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
+[23:25:16] [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_51, running on Windows 8.1:amd64:6.3, installed at D:\Program Files\Java\jdk1.8.0_51\jre
+[23:25:16] [main/DEBUG] [FML/]: Java classpath at launch is C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar;C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar;C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar;C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start;D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[23:25:16] [main/DEBUG] [FML/]: Java library path at launch is D:\Program Files\Java\jdk1.8.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jre1.8.0_51/bin/server;D:/Program Files/Java/jre1.8.0_51/bin;D:/Program Files/Java/jre1.8.0_51/lib/amd64;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin\;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64\;C:\Python27;D:\Program Files (x86)\VulkanSDK\1.0.13.0\Bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Users\a$tuR\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\nodejs\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Windows Live\Shared;D:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\MinGW\bin;C:\MinGW\msys\1.0\bin;D:\Program Files (x86)\LEd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Anaconda2;C:\Anaconda2\Scripts;C:\Anaconda2\Library\bin;C:\Users\a$tuR\AppData\Roaming\npm;C:\texlive\2015\bin\win32;C:\Users\a$tuR\AppData\Local\Microsoft\WindowsApps;C:\Python27;D:\codigos_fuente\git\Malmo-0.21.0-Windows-64bit;C:\ffmpeg\bin;C:\Windows\System32;;.;C:/Users/a$tuR/.gradle/caches/minecraft/net/minecraft/natives/1.8
+[23:25:16] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[23:25:16] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[23:25:16] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[23:25:16] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[23:25:16] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[23:25:16] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[23:25:16] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[23:25:16] [main/INFO] [FML/]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[23:25:16] [main/DEBUG] [FML/]: Instantiating coremod class OverclockingPlugin
+[23:25:16] [main/WARN] [FML/]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[23:25:16] [main/DEBUG] [FML/]: Enqueued coremod OverclockingPlugin
+[23:25:16] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\.
+[23:25:16] [main/DEBUG] [FML/]: Discovering coremods
+[23:25:16] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:25:16] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:25:16] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:25:16] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:25:16] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:25:16] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
+[23:25:16] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[23:25:16] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[23:25:16] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[23:25:16] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[23:25:16] [main/DEBUG] [FML/]: Injection complete
+[23:25:16] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
+[23:25:16] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[23:25:16] [main/ERROR] [FML/]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[23:25:17] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
+[23:25:17] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[23:25:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:25:17] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[23:25:17] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.classloading.FluidIdTransformer
+[23:25:17] [main/DEBUG] [FML/]: Injection complete
+[23:25:17] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[23:25:17] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[23:25:17] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[23:25:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:25:17] [main/DEBUG] [FML/]: Injecting coremod OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin} class transformers
+[23:25:17] [main/TRACE] [FML/]: Registering transformer com.microsoft.Malmo.OverclockingClassTransformer
+[23:25:17] [main/DEBUG] [FML/]: Injection complete
+[23:25:17] [main/DEBUG] [FML/]: Running coremod plugin for OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin}
+[23:25:17] [main/DEBUG] [FML/]: Running coremod plugin OverclockingPlugin
+[23:25:17] [main/DEBUG] [FML/]: Coremod plugin class OverclockingPlugin run successfully
+[23:25:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:25:17] [main/DEBUG] [FML/]: Loaded 159 rules from AccessTransformer config file forge_at.cfg
+[23:25:17] [main/DEBUG] [FML/]: Validating minecraft
+[23:25:17] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[23:25:17] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:25:17] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:25:17] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[23:25:17] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[23:25:17] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
+[23:25:17] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
+[23:25:17] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:25:17] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:25:20] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0,003s
+[23:25:20] [Client thread/INFO] [STDOUT/]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
 
-Time: 26/04/17 16:51
+Time: 8/05/17 23:25
 Description: Loading screen debug info
 
 This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
@@ -80,455 +80,713 @@ A detailed walkthrough of the error, its code path and all known details is as f
 -- System Details --
 Details:
 	Minecraft Version: 1.8
-	Operating System: Windows 10 (amd64) version 10.0
-	Java Version: 1.8.0_121, Oracle Corporation
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
 	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
-	Memory: 438979672 bytes (418 MB) / 538968064 bytes (514 MB) up to 1908932608 bytes (1820 MB)
+	Memory: 617595416 bytes (588 MB) / 711983104 bytes (679 MB) up to 1908932608 bytes (1820 MB)
 	JVM Flags: 1 total; -Xmx2G
 	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
 	FML: 
 	Loaded coremods (and transformers): 
 OverclockingPlugin (unknown)
   com.microsoft.Malmo.OverclockingClassTransformer
-	GL info: ' Vendor: 'VMware, Inc.' Version: '2.1 Mesa 10.0.1' Renderer: 'Gallium 0.4 on llvmpipe (LLVM 3.3, 256 bits)'
-[16:51:29] [Client thread/INFO] [MinecraftForge/]: Attempting early MinecraftForge initialization
-[16:51:29] [Client thread/INFO] [FML/]: MinecraftForge v11.14.3.1543 Initialized
-[16:51:29] [Client thread/INFO] [FML/]: Replaced 204 ore recipies
-[16:51:29] [Client thread/INFO] [MinecraftForge/]: Completed early MinecraftForge initialization
-[16:51:29] [Client thread/DEBUG] [FML/]: File V:\repos\Proyecto-DASI\Malmo\Minecraft\run\config\injectedDependencies.json not found. No dependencies injected
-[16:51:29] [Client thread/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
-[16:51:29] [Client thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar, examining for mod candidates
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar, examining for mod candidates
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar, examining for mod candidates
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar, examining for mod candidates
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar, examining for mod candidates
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar, examining for mod candidates
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar
-[16:51:29] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\David\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\David\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar, examining for mod candidates
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at C:\Users\David\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start, examining for mod candidates
-[16:51:29] [Client thread/DEBUG] [FML/]: Found a minecraft related file at V:\repos\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar, examining for mod candidates
-[16:51:29] [Client thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
-[16:51:29] [Client thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
-[16:51:29] [Client thread/INFO] [FML/]: Searching V:\repos\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
-[16:51:29] [Client thread/DEBUG] [FML/]: Examining file compileDummy.jar for potential mods
-[16:51:29] [Client thread/DEBUG] [FML/]: The mod container compileDummy.jar appears to be missing an mcmod.info file
-[16:51:29] [Client thread/DEBUG] [FML/]: Examining file providedDummy.jar for potential mods
-[16:51:29] [Client thread/DEBUG] [FML/]: The mod container providedDummy.jar appears to be missing an mcmod.info file
-[16:51:29] [Client thread/DEBUG] [FML/]: Examining file forgeSrc-1.8-11.14.3.1543.jar for potential mods
-[16:51:29] [Client thread/DEBUG] [FML/]: The mod container forgeSrc-1.8-11.14.3.1543.jar appears to be missing an mcmod.info file
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining file asm-debug-all-5.0.3.jar for potential mods
-[16:51:30] [Client thread/DEBUG] [FML/]: The mod container asm-debug-all-5.0.3.jar appears to be missing an mcmod.info file
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining file libraryjavasound-20101123.jar for potential mods
-[16:51:30] [Client thread/DEBUG] [FML/]: The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining file guava-17.0.jar for potential mods
-[16:51:30] [Client thread/DEBUG] [FML/]: The mod container guava-17.0.jar appears to be missing an mcmod.info file
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining file jsr305-2.0.1.jar for potential mods
-[16:51:30] [Client thread/DEBUG] [FML/]: The mod container jsr305-2.0.1.jar appears to be missing an mcmod.info file
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining directory start for potential mods
-[16:51:30] [Client thread/DEBUG] [FML/]: No mcmod.info file found in directory start
-[16:51:30] [Client thread/TRACE] [FML/]: Recursing into package net
-[16:51:30] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge
-[16:51:30] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge.gradle
-[16:51:30] [Client thread/DEBUG] [FML/]: Examining file MalmoMod-0.21.0.jar for potential mods
-[16:51:30] [Client thread/TRACE] [FML/]: Located mcmod.info file in file MalmoMod-0.21.0.jar
-[16:51:30] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.microsoft.Malmo.MalmoMod) - loading
-[16:51:30] [Client thread/TRACE] [malmomod/]: Parsed dependency info : [] [] []
-[16:51:30] [Client thread/DEBUG] [malmomod/]: Attempting to load the file version.properties from MalmoMod-0.21.0.jar to locate a version number for malmomod
-[16:51:30] [Client thread/DEBUG] [malmomod/]: Found version 0.21.0 for mod malmomod in version.properties, using
-[16:51:30] [Client thread/INFO] [FML/]: Forge Mod Loader has identified 4 mods to load
-[16:51:30] [Client thread/TRACE] [FML/]: Received a system property request ''
-[16:51:30] [Client thread/TRACE] [FML/]: System property request managing the state of 0 mods
-[16:51:30] [Client thread/DEBUG] [FML/]: After merging, found state information for 0 mods
-[16:51:30] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
-[16:51:30] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
-[16:51:30] [Client thread/DEBUG] [malmomod/]: Enabling mod malmomod
-[16:51:30] [Client thread/DEBUG] [FML/]: Found translations in MalmoMod-0.21.0.jar [en_US]
-[16:51:30] [Client thread/TRACE] [FML/]: Verifying mod requirements are satisfied
-[16:51:30] [Client thread/TRACE] [FML/]: All mod requirements are satisfied
-[16:51:30] [Client thread/TRACE] [FML/]: Sorting mods into an ordered list
-[16:51:30] [Client thread/TRACE] [FML/]: Mod sorting completed successfully
-[16:51:30] [Client thread/DEBUG] [FML/]: Mod sorting data
-[16:51:30] [Client thread/DEBUG] [FML/]: 	malmomod(Microsoft Malmo Mod:0.21.0): MalmoMod-0.21.0.jar ()
-[16:51:30] [Client thread/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
-[16:51:30] [Client thread/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
-[16:51:30] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0,001s
-[16:51:30] [Client thread/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
-[16:51:30] [Client thread/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
-[16:51:30] [Client thread/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
-[16:51:30] [Client thread/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
-[16:51:30] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
-[16:51:30] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
-[16:51:31] [Client thread/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0,181s
-[16:51:31] [Client thread/TRACE] [Forge/Forge]: Sending event FMLConstructionEvent to mod Forge
-[16:51:31] [Client thread/TRACE] [FML/Forge]: Mod Forge is using network checker : No network checking performed
-[16:51:31] [Client thread/TRACE] [FML/Forge]: Testing mod Forge to verify it accepts its own version in a remote connection
-[16:51:31] [Client thread/TRACE] [FML/Forge]: The mod Forge accepts its own version (11.14.3.1543)
-[16:51:31] [Client thread/TRACE] [Forge/Forge]: Sent event FMLConstructionEvent to mod Forge
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0,005s
-[16:51:31] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLConstructionEvent to mod malmomod
-[16:51:31] [Client thread/TRACE] [FML/malmomod]: Mod malmomod is using network checker : Accepting version 0.21.0
-[16:51:31] [Client thread/TRACE] [FML/malmomod]: Testing mod malmomod to verify it accepts its own version in a remote connection
-[16:51:31] [Client thread/TRACE] [FML/malmomod]: The mod malmomod accepts its own version (0.21.0)
-[16:51:31] [Client thread/DEBUG] [FML/malmomod]: Attempting to inject @SidedProxy classes into malmomod
-[16:51:31] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLConstructionEvent to mod malmomod
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Microsoft Malmo Mod took 0,019s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Finished: Construction took 0,207s
-[16:51:31] [Client thread/DEBUG] [FML/]: Mod signature data
-[16:51:31] [Client thread/DEBUG] [FML/]:  	Valid Signatures:
-[16:51:31] [Client thread/DEBUG] [FML/]:  	Missing Signatures:
-[16:51:31] [Client thread/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.05)	minecraft.jar
-[16:51:31] [Client thread/DEBUG] [FML/]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.8-11.14.3.1543.jar
-[16:51:31] [Client thread/DEBUG] [FML/]: 		Forge	(Minecraft Forge	11.14.3.1543)	forgeSrc-1.8-11.14.3.1543.jar
-[16:51:31] [Client thread/DEBUG] [FML/]: 		malmomod	(Microsoft Malmo Mod	0.21.0)	MalmoMod-0.21.0.jar
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,003s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,007s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,007s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,001s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0,030s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0,031s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 0,050s
-[16:51:31] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
-[16:51:31] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
-[16:51:31] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
-[16:51:31] [Client thread/INFO] [FML/]: Processing ObjectHolder annotations
-[16:51:31] [Client thread/INFO] [FML/]: Found 384 ObjectHolder annotations
-[16:51:31] [Client thread/INFO] [FML/]: Identifying ItemStackHolder annotations
-[16:51:31] [Client thread/INFO] [FML/]: Found 0 ItemStackHolder annotations
-[16:51:31] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
-[16:51:31] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0,001s
-[16:51:31] [Client thread/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
-[16:51:31] [Client thread/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0,009s
-[16:51:31] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPreInitializationEvent to mod Forge
-[16:51:31] [Client thread/INFO] [FML/Forge]: Configured a dormant chunk cache size of 0
-[16:51:31] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPreInitializationEvent to mod Forge
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0,020s
-[16:51:31] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPreInitializationEvent to mod malmomod
-[16:51:31] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.21
-[16:51:31] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPreInitializationEvent to mod malmomod
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Microsoft Malmo Mod took 0,111s
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Finished: PreInitialization took 0,141s
-[16:51:31] [Client thread/INFO] [FML/]: Applying holder lookups
-[16:51:31] [Client thread/INFO] [FML/]: Holder lookups applied
-[16:51:31] [Client thread/INFO] [FML/]: Injecting itemstacks
-[16:51:31] [Client thread/INFO] [FML/]: Itemstack injection complete
-[16:51:31] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0,000s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 0,878s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,004s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,002s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0,004s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0,008s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0,000s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0,004s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
-[16:51:32] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
-[16:51:33] [Client thread/INFO] [FML/]: Max texture size: 8192
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching - missingno took 0,001s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,003s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 0,999s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 1,042s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0,001s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0,101s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0,094s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Rendering Setup took 1,241s
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0,000s
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0,000s
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0,000s
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLInitializationEvent to mod malmomod
-[16:51:33] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLInitializationEvent to mod malmomod
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Microsoft Malmo Mod took 0,075s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Initialization took 0,076s
-[16:51:33] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0,002s
-[16:51:33] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0,000s
-[16:51:33] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod Forge
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sending event IMCEvent to mod Forge
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sent event IMCEvent to mod Forge
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0,000s
-[16:51:33] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod malmomod
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sending event IMCEvent to mod malmomod
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sent event IMCEvent to mod malmomod
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Microsoft Malmo Mod took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0,003s
-[16:51:33] [Client thread/INFO] [FML/]: Injecting itemstacks
-[16:51:33] [Client thread/INFO] [FML/]: Itemstack injection complete
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0,000s
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0,000s
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPostInitializationEvent to mod Forge
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPostInitializationEvent to mod Forge
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0,044s
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPostInitializationEvent to mod malmomod
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPostInitializationEvent to mod malmomod
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Microsoft Malmo Mod took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: PostInitialization took 0,045s
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
-[16:51:33] [Client thread/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0,000s
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
-[16:51:33] [Client thread/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0,000s
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sending event FMLLoadCompleteEvent to mod Forge
-[16:51:33] [Client thread/DEBUG] [FML/Forge]: Forge RecipeSorter Baking:
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   14: RecipeEntry("Before", UNKNOWN, )
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   13: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   12: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   11: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   10: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   9: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   8: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   7: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   6: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   5: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   4: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   3: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   2: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
-[16:51:33] [Client thread/DEBUG] [FML/Forge]:   1: RecipeEntry("After", UNKNOWN, )
-[16:51:33] [Client thread/DEBUG] [FML/Forge]: Sorting recipies
-[16:51:33] [Client thread/TRACE] [Forge/Forge]: Sent event FMLLoadCompleteEvent to mod Forge
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0,005s
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLLoadCompleteEvent to mod malmomod
-[16:51:33] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLLoadCompleteEvent to mod malmomod
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Microsoft Malmo Mod took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: LoadComplete took 0,005s
-[16:51:33] [Client thread/DEBUG] [FML/]: Freezing block and item id maps
-[16:51:33] [Client thread/DEBUG] [FML/]: Registry consistency check successful
-[16:51:33] [Client thread/DEBUG] [FML/]: Registry consistency check successful
-[16:51:33] [Client thread/INFO] [FML/]: Forge Mod Loader has successfully loaded 4 mods
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,008s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,008s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,001s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/atlas/blocks.png took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii.png took 0,002s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:dynamic/lightMap_1 took 0,000s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/misc/forcefield.png took 0,002s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii_sga.png took 0,003s
-[16:51:33] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading Texture Manager took 0,007s
-[16:51:35] [Client thread/INFO] [FML/]: Max texture size: 8192
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,155s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Mipmap generation took 0,144s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,019s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,030s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading took 2,007s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 2,007s
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 2,024s
-[16:51:35] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
-[16:51:35] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
-[16:51:35] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
-[16:51:35] [Client thread/DEBUG] [FML/]: Bar Finished: Loading took 6,051s
-[16:51:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
-[16:51:36] [Thread-13/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
-[16:51:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
-[16:51:36] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
-[16:53:07] [Thread-15/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:443]: Received from 127.0.0.1:
-[16:53:07] [Thread-15/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:onCommand:444]: <?xml version="1.0" encoding="UTF-8" standalone="no" ?><MissionInit xmlns="http://ProjectMalmo.microsoft.com" PlatformVersion="0.21.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://ProjectMalmo.microsoft.com MissionInit.xsd"><Mission><About><Summary>Hello world!</Summary></About><ServerSection><ServerInitialConditions><Time><StartTime>1000</StartTime><AllowPassageOfTime>false</AllowPassageOfTime></Time><Weather>clear</Weather></ServerInitialConditions><ServerHandlers><FlatWorldGenerator destroyAfterUse="true" forceReset="false" generatorString="3;7,220*1,5*3,2;3;,biome_1" seed=""/><DrawingDecorator><DrawCuboid type="air" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="obsidian" x1="0" x2="50" y1="227" y2="227" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="0" y1="227" y2="237" z1="0" z2="50"/><DrawCuboid type="glass" x1="0" x2="50" y1="227" y2="237" z1="0" z2="0"/><DrawCuboid type="glass" x1="50" x2="50" y1="227" y2="237" z1="50" z2="0"/><DrawCuboid t
-[16:53:07] [Thread-15/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$1:reply:428]: REPLYING WITH: MALMOOK
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$DormantEpisode:checkForMissionCommand:764]: Mission received: Hello world!
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_HANDLERS
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_HANDLERS
-[16:53:07] [Thread-16/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10301
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: EVALUATING_WORLD_REQUIREMENTS
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: EVALUATING_WORLD_REQUIREMENTS
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: CREATING_NEW_WORLD
-[16:53:07] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: CREATING_NEW_WORLD
-[16:53:08] [Client thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5
-[16:53:08] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerAboutToStartEvent to mod mcp
-[16:53:08] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerAboutToStartEvent to mod mcp
-[16:53:08] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Coder Pack took 0,000s
-[16:53:08] [Server thread/TRACE] [FML/FML]: Sending event FMLServerAboutToStartEvent to mod FML
-[16:53:08] [Server thread/TRACE] [FML/FML]: Sent event FMLServerAboutToStartEvent to mod FML
-[16:53:08] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Forge Mod Loader took 0,000s
-[16:53:08] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerAboutToStartEvent to mod Forge
-[16:53:08] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerAboutToStartEvent to mod Forge
-[16:53:08] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Minecraft Forge took 0,000s
-[16:53:08] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerAboutToStartEvent to mod malmomod
-[16:53:08] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerAboutToStartEvent to mod malmomod
-[16:53:08] [Server thread/DEBUG] [FML/]: Bar Step: ServerAboutToStart - Microsoft Malmo Mod took 0,000s
-[16:53:08] [Server thread/DEBUG] [FML/]: Bar Finished: ServerAboutToStart took 0,001s
-[16:53:08] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5
-[16:53:08] [Server thread/INFO] [FML/]: Injecting existing block and item data into this server instance
-[16:53:08] [Server thread/DEBUG] [FML/]: Registry consistency check successful
-[16:53:08] [Server thread/DEBUG] [FML/]: Registry consistency check successful
-[16:53:08] [Server thread/TRACE] [FML/]: Skipping remap event - no remaps occured
-[16:53:08] [Server thread/INFO] [FML/]: Applying holder lookups
-[16:53:08] [Server thread/INFO] [FML/]: Holder lookups applied
-[16:53:08] [Server thread/DEBUG] [FML/]: Loading persistent fluid defaults from world
-[16:53:08] [Server thread/DEBUG] [FML/]: The fluid minecraft:lava has been selected as the default fluid for lava
-[16:53:08] [Server thread/DEBUG] [FML/]: The fluid minecraft:water has been selected as the default fluid for water
-[16:53:08] [Server thread/INFO] [FML/]: Loading dimension 0 (TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5) (net.minecraft.server.integrated.IntegratedServer@2171856d)
-[16:53:08] [Server thread/INFO] [FML/]: Loading dimension 1 (TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5) (net.minecraft.server.integrated.IntegratedServer@2171856d)
-[16:53:08] [Server thread/INFO] [FML/]: Loading dimension -1 (TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5) (net.minecraft.server.integrated.IntegratedServer@2171856d)
-[16:53:10] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartingEvent to mod mcp
-[16:53:10] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartingEvent to mod mcp
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Coder Pack took 0,000s
-[16:53:10] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartingEvent to mod FML
-[16:53:10] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartingEvent to mod FML
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Forge Mod Loader took 0,000s
-[16:53:10] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartingEvent to mod Forge
-[16:53:10] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartingEvent to mod Forge
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Minecraft Forge took 0,001s
-[16:53:10] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerStartingEvent to mod malmomod
-[16:53:10] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerStartingEvent to mod malmomod
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarting - Microsoft Malmo Mod took 0,000s
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarting took 0,002s
-[16:53:10] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStartedEvent to mod mcp
-[16:53:10] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStartedEvent to mod mcp
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Coder Pack took 0,000s
-[16:53:10] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStartedEvent to mod FML
-[16:53:10] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStartedEvent to mod FML
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Forge Mod Loader took 0,000s
-[16:53:10] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStartedEvent to mod Forge
-[16:53:10] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStartedEvent to mod Forge
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Minecraft Forge took 0,000s
-[16:53:10] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerStartedEvent to mod malmomod
-[16:53:10] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerStartedEvent to mod malmomod
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Step: ServerStarted - Microsoft Malmo Mod took 0,000s
-[16:53:10] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStarted took 0,001s
-[16:53:11] [Netty Local Client IO #0/TRACE] [FML/]: Handshake channel activating
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: null->FMLHandshakeClientState$1:START
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: HELLO
-[16:53:11] [Netty Server IO #1/TRACE] [FML/]: Handshake channel activating
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: null->FMLHandshakeServerState$1:START
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_MOD_READY
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_SERVER_READY
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: HELLO
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: Server FML protocol version 2, 4 byte dimension received 0
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $ServerHello->FMLHandshakeClientState$2:HELLO
-[16:53:11] [Netty Local Client IO #0/INFO] [FML/]: Server protocol version 2
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: Received override dimension 0
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $ClientHello->FMLHandshakeServerState$2:HELLO
-[16:53:11] [Netty Server IO #1/INFO] [FML/]: Client protocol version 2
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: HELLO
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: WAITINGSERVERDATA
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $ModList:4 mods->FMLHandshakeServerState$2:HELLO
-[16:53:11] [Netty Server IO #1/INFO] [FML/]: Client attempting to join with 4 mods : FML@8.0.99.99,malmomod@0.21.0,Forge@11.14.3.1543,mcp@9.05
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: WAITINGCACK
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $ModList:4 mods->FMLHandshakeClientState$3:WAITINGSERVERDATA
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: PENDINGCOMPLETE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{2}->FMLHandshakeServerState$3:WAITINGCACK
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $HandshakeAck:{2}->FMLHandshakeClientState$5:PENDINGCOMPLETE
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: COMPLETE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: COMPLETE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{4}->FMLHandshakeServerState$4:COMPLETE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: DONE
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: The fluid minecraft:lava has been selected as the default fluid for lava
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: The fluid minecraft:water has been selected as the default fluid for water
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]: FMLHandshakeClientState: $HandshakeAck:{3}->FMLHandshakeClientState$6:COMPLETE
-[16:53:11] [Netty Local Client IO #0/DEBUG] [FML/]:   Next: DONE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]: FMLHandshakeServerState: $HandshakeAck:{5}->FMLHandshakeServerState$5:DONE
-[16:53:11] [Netty Server IO #1/DEBUG] [FML/]:   Next: DONE
-[16:53:11] [Netty Local Client IO #0/INFO] [FML/]: [Netty Local Client IO #0] Client side modded connection established
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_MOD_READY
-[16:53:11] [Server thread/INFO] [FML/]: [Server thread] Server side modded connection established
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: DORMANT
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: DORMANT
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:execute:468]: INCOMING MISSION: Received MissionInit directly through ServerStateMachine constructor.
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$DormantEpisode:onReceiveMissionInit:499]: Mission received: Hello world!
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: BUILDING_WORLD
-[16:53:11] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: BUILDING_WORLD
-[16:53:11] [Client thread/DEBUG] [FML/]: Overriding dimension: using 0
-[16:53:12] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_SERVER_READY
-[16:53:12] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
-[16:53:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: WAITING_FOR_AGENTS_TO_ASSEMBLE
-[16:53:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: WAITING_FOR_AGENTS_TO_ASSEMBLE
-[16:53:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:878]: Experiment requires: 
-[16:53:12] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Server.ServerStateMachine$WaitingForAgentsEpisode:execute:881]: >>>> MalmoTutorialBot
-[16:53:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
-[16:53:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.Client.ClientStateMachine$WaitingForServerEpisode:onClientTick:923]: ***Telling server we are ready - MalmoTutorialBot
-[16:53:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: RUNNING
-[16:53:13] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: RUNNING
-[16:53:14] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: RUNNING
-[16:53:14] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: RUNNING
-[16:53:55] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5
-[16:53:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: ERROR
-[16:53:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: SERVER enter state: ERROR
-[16:53:58] [Server thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: SERVER request state: CLEAN_UP
-[16:53:58] [Server thread/TRACE] [mcp/mcp]: Sending event FMLServerStoppingEvent to mod mcp
-[16:53:58] [Server thread/TRACE] [mcp/mcp]: Sent event FMLServerStoppingEvent to mod mcp
-[16:53:58] [Server thread/DEBUG] [FML/]: Bar Step: ServerStopping - Minecraft Coder Pack took 0,000s
-[16:53:58] [Server thread/TRACE] [FML/FML]: Sending event FMLServerStoppingEvent to mod FML
-[16:53:58] [Server thread/TRACE] [FML/FML]: Sent event FMLServerStoppingEvent to mod FML
-[16:53:58] [Server thread/DEBUG] [FML/]: Bar Step: ServerStopping - Forge Mod Loader took 0,000s
-[16:53:58] [Server thread/TRACE] [Forge/Forge]: Sending event FMLServerStoppingEvent to mod Forge
-[16:53:58] [Server thread/TRACE] [Forge/Forge]: Sent event FMLServerStoppingEvent to mod Forge
-[16:53:58] [Server thread/DEBUG] [FML/]: Bar Step: ServerStopping - Minecraft Forge took 0,000s
-[16:53:58] [Server thread/TRACE] [malmomod/malmomod]: Sending event FMLServerStoppingEvent to mod malmomod
-[16:53:58] [Server thread/TRACE] [malmomod/malmomod]: Sent event FMLServerStoppingEvent to mod malmomod
-[16:53:58] [Server thread/DEBUG] [FML/]: Bar Step: ServerStopping - Microsoft Malmo Mod took 0,000s
-[16:53:58] [Server thread/DEBUG] [FML/]: Bar Finished: ServerStopping took 0,001s
-[16:53:58] [Server thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5
-[16:53:58] [Client Shutdown Thread/DEBUG] [FML/]: Gathering id map for writing to world save TEMP_10000_8319aff6-460a-43c8-9bb1-fc42705178c5
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 382.05' Renderer: 'GeForce GTX 660/PCIe/SSE2'
+[23:25:20] [Client thread/INFO] [MinecraftForge/]: Attempting early MinecraftForge initialization
+[23:25:20] [Client thread/INFO] [FML/]: MinecraftForge v11.14.3.1543 Initialized
+[23:25:20] [Client thread/INFO] [FML/]: Replaced 204 ore recipies
+[23:25:20] [Client thread/INFO] [MinecraftForge/]: Completed early MinecraftForge initialization
+[23:25:20] [Client thread/DEBUG] [FML/]: File D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\config\injectedDependencies.json not found. No dependencies injected
+[23:25:20] [Client thread/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
+[23:25:20] [Client thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar, examining for mod candidates
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar, examining for mod candidates
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar, examining for mod candidates
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar, examining for mod candidates
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar, examining for mod candidates
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar, examining for mod candidates
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar
+[23:25:20] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar, examining for mod candidates
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start, examining for mod candidates
+[23:25:20] [Client thread/DEBUG] [FML/]: Found a minecraft related file at D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar, examining for mod candidates
+[23:25:20] [Client thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[23:25:20] [Client thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[23:25:20] [Client thread/INFO] [FML/]: Searching D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
+[23:25:20] [Client thread/DEBUG] [FML/]: Examining file compileDummy.jar for potential mods
+[23:25:20] [Client thread/DEBUG] [FML/]: The mod container compileDummy.jar appears to be missing an mcmod.info file
+[23:25:20] [Client thread/DEBUG] [FML/]: Examining file providedDummy.jar for potential mods
+[23:25:20] [Client thread/DEBUG] [FML/]: The mod container providedDummy.jar appears to be missing an mcmod.info file
+[23:25:20] [Client thread/DEBUG] [FML/]: Examining file forgeSrc-1.8-11.14.3.1543.jar for potential mods
+[23:25:20] [Client thread/DEBUG] [FML/]: The mod container forgeSrc-1.8-11.14.3.1543.jar appears to be missing an mcmod.info file
+[23:25:21] [Client thread/DEBUG] [FML/]: Examining file asm-debug-all-5.0.3.jar for potential mods
+[23:25:21] [Client thread/DEBUG] [FML/]: The mod container asm-debug-all-5.0.3.jar appears to be missing an mcmod.info file
+[23:25:21] [Client thread/DEBUG] [FML/]: Examining file libraryjavasound-20101123.jar for potential mods
+[23:25:21] [Client thread/DEBUG] [FML/]: The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+[23:25:21] [Client thread/DEBUG] [FML/]: Examining file guava-17.0.jar for potential mods
+[23:25:21] [Client thread/DEBUG] [FML/]: The mod container guava-17.0.jar appears to be missing an mcmod.info file
+[23:25:21] [Client thread/DEBUG] [FML/]: Examining file jsr305-2.0.1.jar for potential mods
+[23:25:21] [Client thread/DEBUG] [FML/]: The mod container jsr305-2.0.1.jar appears to be missing an mcmod.info file
+[23:25:22] [Client thread/DEBUG] [FML/]: Examining directory start for potential mods
+[23:25:22] [Client thread/DEBUG] [FML/]: No mcmod.info file found in directory start
+[23:25:22] [Client thread/TRACE] [FML/]: Recursing into package net
+[23:25:22] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge
+[23:25:22] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge.gradle
+[23:25:22] [Client thread/DEBUG] [FML/]: Examining file MalmoMod-0.21.0.jar for potential mods
+[23:25:22] [Client thread/TRACE] [FML/]: Located mcmod.info file in file MalmoMod-0.21.0.jar
+[23:25:22] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.microsoft.Malmo.MalmoMod) - loading
+[23:25:22] [Client thread/TRACE] [malmomod/]: Parsed dependency info : [] [] []
+[23:25:22] [Client thread/DEBUG] [malmomod/]: Attempting to load the file version.properties from MalmoMod-0.21.0.jar to locate a version number for malmomod
+[23:25:22] [Client thread/DEBUG] [malmomod/]: Found version 0.21.0 for mod malmomod in version.properties, using
+[23:25:22] [Client thread/INFO] [FML/]: Forge Mod Loader has identified 4 mods to load
+[23:25:22] [Client thread/TRACE] [FML/]: Received a system property request ''
+[23:25:22] [Client thread/TRACE] [FML/]: System property request managing the state of 0 mods
+[23:25:22] [Client thread/DEBUG] [FML/]: After merging, found state information for 0 mods
+[23:25:22] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
+[23:25:22] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
+[23:25:22] [Client thread/DEBUG] [malmomod/]: Enabling mod malmomod
+[23:25:22] [Client thread/DEBUG] [FML/]: Found translations in MalmoMod-0.21.0.jar [en_US]
+[23:25:22] [Client thread/TRACE] [FML/]: Verifying mod requirements are satisfied
+[23:25:22] [Client thread/TRACE] [FML/]: All mod requirements are satisfied
+[23:25:22] [Client thread/TRACE] [FML/]: Sorting mods into an ordered list
+[23:25:22] [Client thread/TRACE] [FML/]: Mod sorting completed successfully
+[23:25:22] [Client thread/DEBUG] [FML/]: Mod sorting data
+[23:25:22] [Client thread/DEBUG] [FML/]: 	malmomod(Microsoft Malmo Mod:0.21.0): MalmoMod-0.21.0.jar ()
+[23:25:22] [Client thread/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
+[23:25:22] [Client thread/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0,001s
+[23:25:22] [Client thread/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
+[23:25:22] [Client thread/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
+[23:25:22] [Client thread/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[23:25:22] [Client thread/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
+[23:25:22] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
+[23:25:22] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
+[23:25:22] [Client thread/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0,195s
+[23:25:22] [Client thread/TRACE] [Forge/Forge]: Sending event FMLConstructionEvent to mod Forge
+[23:25:22] [Client thread/TRACE] [FML/Forge]: Mod Forge is using network checker : No network checking performed
+[23:25:22] [Client thread/TRACE] [FML/Forge]: Testing mod Forge to verify it accepts its own version in a remote connection
+[23:25:22] [Client thread/TRACE] [FML/Forge]: The mod Forge accepts its own version (11.14.3.1543)
+[23:25:22] [Client thread/TRACE] [Forge/Forge]: Sent event FMLConstructionEvent to mod Forge
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0,005s
+[23:25:22] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLConstructionEvent to mod malmomod
+[23:25:22] [Client thread/TRACE] [FML/malmomod]: Mod malmomod is using network checker : Accepting version 0.21.0
+[23:25:22] [Client thread/TRACE] [FML/malmomod]: Testing mod malmomod to verify it accepts its own version in a remote connection
+[23:25:22] [Client thread/TRACE] [FML/malmomod]: The mod malmomod accepts its own version (0.21.0)
+[23:25:22] [Client thread/DEBUG] [FML/malmomod]: Attempting to inject @SidedProxy classes into malmomod
+[23:25:22] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLConstructionEvent to mod malmomod
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Microsoft Malmo Mod took 0,019s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Finished: Construction took 0,220s
+[23:25:22] [Client thread/DEBUG] [FML/]: Mod signature data
+[23:25:22] [Client thread/DEBUG] [FML/]:  	Valid Signatures:
+[23:25:22] [Client thread/DEBUG] [FML/]:  	Missing Signatures:
+[23:25:22] [Client thread/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.05)	minecraft.jar
+[23:25:22] [Client thread/DEBUG] [FML/]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.8-11.14.3.1543.jar
+[23:25:22] [Client thread/DEBUG] [FML/]: 		Forge	(Minecraft Forge	11.14.3.1543)	forgeSrc-1.8-11.14.3.1543.jar
+[23:25:22] [Client thread/DEBUG] [FML/]: 		malmomod	(Microsoft Malmo Mod	0.21.0)	MalmoMod-0.21.0.jar
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,004s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,011s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,011s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,002s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0,030s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0,031s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 0,058s
+[23:25:22] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:25:22] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:25:22] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
+[23:25:22] [Client thread/INFO] [FML/]: Processing ObjectHolder annotations
+[23:25:22] [Client thread/INFO] [FML/]: Found 384 ObjectHolder annotations
+[23:25:22] [Client thread/INFO] [FML/]: Identifying ItemStackHolder annotations
+[23:25:22] [Client thread/INFO] [FML/]: Found 0 ItemStackHolder annotations
+[23:25:22] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
+[23:25:22] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0,001s
+[23:25:22] [Client thread/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
+[23:25:22] [Client thread/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0,010s
+[23:25:22] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPreInitializationEvent to mod Forge
+[23:25:22] [Client thread/INFO] [FML/Forge]: Configured a dormant chunk cache size of 0
+[23:25:22] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPreInitializationEvent to mod Forge
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0,024s
+[23:25:22] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPreInitializationEvent to mod malmomod
+[23:25:22] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.21
+[23:25:22] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPreInitializationEvent to mod malmomod
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Microsoft Malmo Mod took 0,106s
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Finished: PreInitialization took 0,141s
+[23:25:22] [Client thread/INFO] [FML/]: Applying holder lookups
+[23:25:22] [Client thread/INFO] [FML/]: Holder lookups applied
+[23:25:22] [Client thread/INFO] [FML/]: Injecting itemstacks
+[23:25:22] [Client thread/INFO] [FML/]: Itemstack injection complete
+[23:25:22] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0,000s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 0,758s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,004s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,002s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0,005s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0,007s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0,000s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0,004s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:25:23] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:25:24] [Client thread/INFO] [FML/]: Max texture size: 16384
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching - missingno took 0,001s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,002s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 1,057s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 1,106s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0,002s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0,120s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0,000s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0,000s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0,000s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0,120s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Rendering Setup took 1,351s
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0,000s
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0,000s
+[23:25:24] [Client thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
+[23:25:24] [Client thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0,000s
+[23:25:24] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLInitializationEvent to mod malmomod
+[23:25:24] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
+[23:25:24] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLInitializationEvent to mod malmomod
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Microsoft Malmo Mod took 0,070s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: Initialization took 0,071s
+[23:25:24] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0,002s
+[23:25:24] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0,000s
+[23:25:24] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod Forge
+[23:25:24] [Client thread/TRACE] [Forge/Forge]: Sending event IMCEvent to mod Forge
+[23:25:24] [Client thread/TRACE] [Forge/Forge]: Sent event IMCEvent to mod Forge
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0,000s
+[23:25:24] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod malmomod
+[23:25:24] [Client thread/TRACE] [malmomod/malmomod]: Sending event IMCEvent to mod malmomod
+[23:25:24] [Client thread/TRACE] [malmomod/malmomod]: Sent event IMCEvent to mod malmomod
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Microsoft Malmo Mod took 0,000s
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0,003s
+[23:25:24] [Client thread/INFO] [FML/]: Injecting itemstacks
+[23:25:24] [Client thread/INFO] [FML/]: Itemstack injection complete
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
+[23:25:24] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0,000s
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
+[23:25:24] [Client thread/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
+[23:25:24] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0,000s
+[23:25:24] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPostInitializationEvent to mod Forge
+[23:25:25] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPostInitializationEvent to mod Forge
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0,045s
+[23:25:25] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPostInitializationEvent to mod malmomod
+[23:25:25] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPostInitializationEvent to mod malmomod
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Microsoft Malmo Mod took 0,000s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Finished: PostInitialization took 0,047s
+[23:25:25] [Client thread/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
+[23:25:25] [Client thread/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0,000s
+[23:25:25] [Client thread/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
+[23:25:25] [Client thread/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0,000s
+[23:25:25] [Client thread/TRACE] [Forge/Forge]: Sending event FMLLoadCompleteEvent to mod Forge
+[23:25:25] [Client thread/DEBUG] [FML/Forge]: Forge RecipeSorter Baking:
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   14: RecipeEntry("Before", UNKNOWN, )
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   13: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   12: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   11: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   10: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   9: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   8: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   7: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   6: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   5: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   4: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   3: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   2: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[23:25:25] [Client thread/DEBUG] [FML/Forge]:   1: RecipeEntry("After", UNKNOWN, )
+[23:25:25] [Client thread/DEBUG] [FML/Forge]: Sorting recipies
+[23:25:25] [Client thread/TRACE] [Forge/Forge]: Sent event FMLLoadCompleteEvent to mod Forge
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0,006s
+[23:25:25] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLLoadCompleteEvent to mod malmomod
+[23:25:25] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLLoadCompleteEvent to mod malmomod
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Microsoft Malmo Mod took 0,000s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Finished: LoadComplete took 0,007s
+[23:25:25] [Client thread/DEBUG] [FML/]: Freezing block and item id maps
+[23:25:25] [Client thread/DEBUG] [FML/]: Registry consistency check successful
+[23:25:25] [Client thread/DEBUG] [FML/]: Registry consistency check successful
+[23:25:25] [Client thread/INFO] [FML/]: Forge Mod Loader has successfully loaded 4 mods
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,000s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,009s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,012s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,001s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/atlas/blocks.png took 0,000s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii.png took 0,004s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:dynamic/lightMap_1 took 0,000s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/misc/forcefield.png took 0,002s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii_sga.png took 0,003s
+[23:25:25] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading Texture Manager took 0,009s
+[23:25:26] [Client thread/INFO] [FML/]: Max texture size: 16384
+[23:25:26] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,166s
+[23:25:26] [Client thread/DEBUG] [FML/]: Bar Finished: Mipmap generation took 0,151s
+[23:25:26] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,023s
+[23:25:26] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,034s
+[23:25:27] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading took 2,006s
+[23:25:27] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 2,006s
+[23:25:27] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 2,028s
+[23:25:27] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:25:27] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:25:27] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
+[23:25:27] [Client thread/DEBUG] [FML/]: Bar Finished: Loading took 6,586s
+[23:25:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
+[23:25:27] [Thread-13/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10000
+[23:25:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[23:25:27] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT
+[23:26:09] [main/DEBUG] [FML/]: Injecting tracing printstreams for STDOUT/STDERR.
+[23:26:09] [main/INFO] [FML/]: Forge Mod Loader version 11.14.3.1543 for Minecraft 1.8 loading
+[23:26:09] [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_51, running on Windows 8.1:amd64:6.3, installed at D:\Program Files\Java\jdk1.8.0_51\jre
+[23:26:09] [main/DEBUG] [FML/]: Java classpath at launch is C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar;C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar;C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar;C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar;C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start;D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[23:26:09] [main/DEBUG] [FML/]: Java library path at launch is D:\Program Files\Java\jdk1.8.0_51\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:/Program Files/Java/jre1.8.0_51/bin/server;D:/Program Files/Java/jre1.8.0_51/bin;D:/Program Files/Java/jre1.8.0_51/lib/amd64;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin\;C:\Program Files (x86)\CodeSynthesis XSD 4.0\bin64\;C:\Python27;D:\Program Files (x86)\VulkanSDK\1.0.13.0\Bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\bin;C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v7.5\libnvvp;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;C:\Users\a$tuR\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\nodejs\;C:\Program Files\Microsoft\Web Platform Installer\;C:\Program Files (x86)\Windows Live\Shared;D:\Program Files (x86)\Brackets\command;C:\Program Files (x86)\GtkSharp\2.12\bin;C:\Program Files (x86)\Skype\Phone\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\MinGW\bin;C:\MinGW\msys\1.0\bin;D:\Program Files (x86)\LEd;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Anaconda2;C:\Anaconda2\Scripts;C:\Anaconda2\Library\bin;C:\Users\a$tuR\AppData\Roaming\npm;C:\texlive\2015\bin\win32;C:\Users\a$tuR\AppData\Local\Microsoft\WindowsApps;C:\Python27;D:\codigos_fuente\git\Malmo-0.21.0-Windows-64bit;C:\ffmpeg\bin;C:\Windows\System32;;.;C:/Users/a$tuR/.gradle/caches/minecraft/net/minecraft/natives/1.8
+[23:26:09] [main/INFO] [FML/]: Managed to load a deobfuscated Minecraft name- we are in a deobfuscated environment. Skipping runtime deobfuscation
+[23:26:09] [main/DEBUG] [FML/]: Instantiating coremod class FMLCorePlugin
+[23:26:09] [main/DEBUG] [FML/]: Added access transformer class net.minecraftforge.fml.common.asm.transformers.AccessTransformer to enqueued access transformers
+[23:26:09] [main/DEBUG] [FML/]: Enqueued coremod FMLCorePlugin
+[23:26:09] [main/DEBUG] [FML/]: Instantiating coremod class FMLForgePlugin
+[23:26:09] [main/DEBUG] [FML/]: Enqueued coremod FMLForgePlugin
+[23:26:09] [main/DEBUG] [FML/]: All fundamental core mods are successfully located
+[23:26:09] [main/INFO] [FML/]: Found a command line coremod : com.microsoft.Malmo.OverclockingPlugin
+[23:26:09] [main/DEBUG] [FML/]: Instantiating coremod class OverclockingPlugin
+[23:26:09] [main/WARN] [FML/]: The coremod com.microsoft.Malmo.OverclockingPlugin does not have a MCVersion annotation, it may cause issues with this version of Minecraft
+[23:26:09] [main/DEBUG] [FML/]: Enqueued coremod OverclockingPlugin
+[23:26:09] [main/DEBUG] [FML/]: Attempting to load commandline specified mods, relative to D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\.
+[23:26:09] [main/DEBUG] [FML/]: Discovering coremods
+[23:26:09] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:26:09] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLInjectionAndSortingTweaker
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:26:09] [main/DEBUG] [FML/]: Injecting coremod FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin} class transformers
+[23:26:09] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.BlamingTransformer
+[23:26:09] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.SideTransformer
+[23:26:09] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriptionTransformer
+[23:26:09] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.fml.common.asm.transformers.EventSubscriberTransformer
+[23:26:09] [main/DEBUG] [FML/]: Injection complete
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin for FMLCorePlugin {net.minecraftforge.fml.relauncher.FMLCorePlugin}
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin FMLCorePlugin
+[23:26:09] [main/ERROR] [FML/]: The binary patch set is missing. Either you are in a development environment, or things are not going to work!
+[23:26:09] [main/ERROR] [FML/]: FML appears to be missing any signature data. This is not a good thing
+[23:26:09] [main/DEBUG] [FML/]: Coremod plugin class FMLCorePlugin run successfully
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:26:09] [main/DEBUG] [FML/]: Injecting coremod FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin} class transformers
+[23:26:09] [main/TRACE] [FML/]: Registering transformer net.minecraftforge.classloading.FluidIdTransformer
+[23:26:09] [main/DEBUG] [FML/]: Injection complete
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin for FMLForgePlugin {net.minecraftforge.classloading.FMLForgePlugin}
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin FMLForgePlugin
+[23:26:09] [main/DEBUG] [FML/]: Coremod plugin class FMLForgePlugin run successfully
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.relauncher.CoreModManager$FMLPluginWrapper
+[23:26:09] [main/DEBUG] [FML/]: Injecting coremod OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin} class transformers
+[23:26:09] [main/TRACE] [FML/]: Registering transformer com.microsoft.Malmo.OverclockingClassTransformer
+[23:26:09] [main/DEBUG] [FML/]: Injection complete
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin for OverclockingPlugin {com.microsoft.Malmo.OverclockingPlugin}
+[23:26:09] [main/DEBUG] [FML/]: Running coremod plugin OverclockingPlugin
+[23:26:09] [main/DEBUG] [FML/]: Coremod plugin class OverclockingPlugin run successfully
+[23:26:09] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.FMLDeobfTweaker
+[23:26:09] [main/DEBUG] [FML/]: Loaded 159 rules from AccessTransformer config file forge_at.cfg
+[23:26:09] [main/DEBUG] [FML/]: Validating minecraft
+[23:26:10] [main/DEBUG] [FML/]: Minecraft validated, launching...
+[23:26:10] [main/INFO] [LaunchWrapper/]: Loading tweak class name net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:26:10] [main/INFO] [LaunchWrapper/]: Calling tweak class net.minecraftforge.fml.common.launcher.TerminalTweaker
+[23:26:10] [main/INFO] [LaunchWrapper/]: Launching wrapped minecraft {net.minecraft.client.main.Main}
+[23:26:10] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[23:26:10] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:147]: MALMO: Found Minecraft, attempting to transform it
+[23:26:10] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:153]: MALMO: Found Minecraft.runGameLoop() method, attempting to transform it
+[23:26:10] [main/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockRenderer:168]: MALMO: Hooked into call to Minecraft.updateDisplay()
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:transform:52]: MALMO: Attempting to transform MinecraftServer
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:112]: MALMO: Found MinecraftServer, attempting to transform it
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:118]: MALMO: Found MinecraftServer.run() method, attempting to transform it
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:26:10] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.OverclockingClassTransformer:overclockServer:126]: MALMO: Transforming LDC
+[23:26:14] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - LanguageManager took 0,003s
+[23:26:14] [Client thread/INFO] [STDOUT/]: [net.minecraftforge.fml.client.SplashProgress:start:-1]: ---- Minecraft Crash Report ----
+// Shall we play a game?
+
+Time: 8/05/17 23:26
+Description: Loading screen debug info
+
+This is just a prompt for computer specs to be printed. THIS IS NOT A ERROR
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Windows 8.1 (amd64) version 6.3
+	Java Version: 1.8.0_51, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 616578696 bytes (588 MB) / 710934528 bytes (678 MB) up to 1908932608 bytes (1820 MB)
+	JVM Flags: 1 total; -Xmx2G
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: 
+	Loaded coremods (and transformers): 
+OverclockingPlugin (unknown)
+  com.microsoft.Malmo.OverclockingClassTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 382.05' Renderer: 'GeForce GTX 660/PCIe/SSE2'
+[23:26:14] [Client thread/INFO] [MinecraftForge/]: Attempting early MinecraftForge initialization
+[23:26:14] [Client thread/INFO] [FML/]: MinecraftForge v11.14.3.1543 Initialized
+[23:26:14] [Client thread/INFO] [FML/]: Replaced 204 ore recipies
+[23:26:14] [Client thread/INFO] [MinecraftForge/]: Completed early MinecraftForge initialization
+[23:26:14] [Client thread/DEBUG] [FML/]: File D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\config\injectedDependencies.json not found. No dependencies injected
+[23:26:14] [Client thread/DEBUG] [FML/]: Building injected Mod Containers [net.minecraftforge.fml.common.FMLContainer, net.minecraftforge.common.ForgeModContainer]
+[23:26:14] [Client thread/DEBUG] [FML/]: Attempting to load mods contained in the minecraft jar file and associated classes
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\compileDummy.jar, examining for mod candidates
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\deobfedDeps\providedDummy.jar, examining for mod candidates
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\snapshot\20141130\forgeSrc-1.8-11.14.3.1543.jar, examining for mod candidates
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.minecraft\launchwrapper\1.12\111e7bea9c968cdb3d06ef4632bf7ff0824d0f36\launchwrapper-1.12.jar
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.ow2.asm\asm-debug-all\5.0.3\f9e364ae2a66ce2a543012a4668856e84e5dab74\asm-debug-all-5.0.3.jar, examining for mod candidates
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe.akka\akka-actor_2.11\2.3.3\ed62e9fc709ca0f2ff1a3220daa8b70a2870078e\akka-actor_2.11-2.3.3.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.typesafe\config\1.2.1\f771f71fdae3df231bcd54d5ca2d57f0bf93f467\config-1.2.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors-migration_2.11\1.1.0\dfa8bc42b181d5b9f1a5dd147f8ae308b893eb6f\scala-actors-migration_2.11-1.1.0.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-compiler\2.11.1\56ea2e6c025e0821f28d73ca271218b8dd04926a\scala-compiler-2.11.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-library_2.11\1.0.2\e517c53a7e9acd6b1668c5a35eccbaa3bab9aac\scala-continuations-library_2.11-1.0.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.plugins\scala-continuations-plugin_2.11.1\1.0.2\f361a3283452c57fa30c1ee69448995de23c60f7\scala-continuations-plugin_2.11.1-1.0.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-library\2.11.1\e11da23da3eabab9f4777b9220e60d44c1aab6a\scala-library-2.11.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-parser-combinators_2.11\1.0.1\f05d7345bf5a58924f2837c6c1f4d73a938e1ff0\scala-parser-combinators_2.11-1.0.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-reflect\2.11.1\6580347e61cc7f8e802941e7fde40fa83b8badeb\scala-reflect-2.11.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-swing_2.11\1.0.1\b1cdd92bd47b1e1837139c1c53020e86bb9112ae\scala-swing_2.11-1.0.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang.modules\scala-xml_2.11\1.0.2\820fbca7e524b530fdadc594c39d49a21ea0337e\scala-xml_2.11-1.0.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\lzma\lzma\0.0.1\521616dc7487b42bef0e803bd2fa3faf668101d7\lzma-0.0.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\java3d\vecmath\1.5.2\79846ba34cbd89e2422d74d53752f993dcc2ccaf\vecmath-1.5.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.trove4j\trove4j\3.0.3\42ccaf4761f0dfdfa805c9e340d99a755907e2dd\trove4j-3.0.3.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.ibm.icu\icu4j-core-mojang\51.2\63d216a9311cca6be337c1e458e587f99d382b84\icu4j-core-mojang-51.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.sf.jopt-simple\jopt-simple\4.6\306816fb57cf94f108a43c95731b08934dcae15c\jopt-simple-4.6.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecjorbis\20101023\c73b5636faf089d9f00e8732a829577de25237ee\codecjorbis-20101023.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\codecwav\20101023\12f031cfe88fef5c1dd36c563c0a3a69bd7261da\codecwav-20101023.jar
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\libraryjavasound\20101123\5c5e304366f75f9eaa2e8cca546a1fb6109348b3\libraryjavasound-20101123.jar, examining for mod candidates
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\librarylwjglopenal\20100824\73e80d0794c39665aec3f62eee88ca91676674ef\librarylwjglopenal-20100824.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.paulscode\soundsystem\20120107\419c05fe9be71f792b2d76cfc9b67f1ed0fec7f6\soundsystem-20120107.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\io.netty\netty-all\4.0.15.Final\85cad5eb4fc8ae2ecc990dc7c411771a091ded5\netty-all-4.0.15.Final.jar
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\17.0\9c6ef172e8de35fd8d4d8783e4821e57cdef7445\guava-17.0.jar, examining for mod candidates
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.3.2\90a3822c38ec8c996e84c16a3477ef632cbc87a3\commons-lang3-3.3.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-io\commons-io\2.4\b1b6ea3b7e4aa4f492509a4952029cd8e48019ad\commons-io-2.4.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.9\9ce04e34240f674bc72680f8b843b1457383161a\commons-codec-1.9.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput\2.0.5\39c7796b469a600f72380316f6b1f11db6c2c7c4\jinput-2.0.5.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jutils\jutils\1.0.0\e12fe1fda814bd348c1579329c86943d2cd3c6a6\jutils-1.0.0.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\authlib\1.5.17\893a8c553c0cfc9b6fbdff023747e30152ab09ec\authlib-1.5.17.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.mojang\realms\1.6.1\5655f6fb44aece10e5b3ad7cfee3e6936031c068\realms-1.6.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-compress\1.8.1\a698750c16740fd5b3871425f4cb3bbaa87f529d\commons-compress-1.8.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.3.3\18f4247ff4572a074444572cee34647c43e7c9c7\httpclient-4.3.3.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.3\f6f66e966c70a83ffbdb6f17a0919eaf7c8aca7f\commons-logging-1.1.3.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.3.2\31fbbff1ddbf98f3aa7377c94d33b0447c646b6e\httpcore-4.3.2.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.0-beta9\1dd66e68cccd907880229f9e2de1314bd13ff785\log4j-api-2.0-beta9.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.0-beta9\678861ba1b2e1fccb594bb0ca03114bb05da9695\log4j-core-2.0-beta9.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl\2.9.1\f58c5aabcef0e41718a564be9f8e412fff8db847\lwjgl-2.9.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl_util\2.9.1\290d7ba8a1bd9566f5ddf16ad06f09af5ec9b20e\lwjgl_util-2.9.1.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch\6.5\320a2dfd18513a5f41b4e75729df684488cbd925\twitch-6.5.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.scala-lang\scala-actors\2.11.0\8ccfb6541de179bb1c4d45cf414acee069b7f78b\scala-actors-2.11.0.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\7ff832a6eb9ab6a767f1ade2b548092d0fa64795\jinput-platform-2.0.5-natives-linux.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\385ee093e01f587f30ee1c8a2ee7d408fd732e16\jinput-platform-2.0.5-natives-windows.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\net.java.jinput\jinput-platform\2.0.5\53f9c919f34d2ca9de8c51fc4e1e8282029a9232\jinput-platform-2.0.5-natives-osx.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\206c4ccaecdbcfd2a1631150c69a97bbc9c20c11\twitch-platform-6.5-natives-windows-32.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\9fdd0fd5aed0817063dcf95b69349a171f447ebd\twitch-platform-6.5-natives-windows-64.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-platform\6.5\5f9d1ee26257b3a33f0ca06fed335ef462af659f\twitch-platform-6.5-natives-osx.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\18215140f010c05b9f86ef6f0f8871954d2ccebf\twitch-external-platform-4.5-natives-windows-32.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\tv.twitch\twitch-external-platform\4.5\c3cde57891b935d41b6680a9c5e1502eeab76d86\twitch-external-platform-4.5-natives-windows-64.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\4c517eca808522457dd95ee8fc1fbcdbb602efbe\lwjgl-platform-2.9.1-natives-windows.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\aa9aae879af8eb378e22cfc64db56ec2ca9a44d1\lwjgl-platform-2.9.1-natives-linux.jar
+[23:26:14] [Client thread/TRACE] [FML/]: Skipping known library file C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\org.lwjgl.lwjgl\lwjgl-platform\2.9.1\2d12c83fdfbc04ecabf02c7bc8cc54d034f0daac\lwjgl-platform-2.9.1-natives-osx.jar
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at C:\Users\a$tuR\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\2.0.1\516c03b21d50a644d538de0f0369c620989cd8f0\jsr305-2.0.1.jar, examining for mod candidates
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related directory at C:\Users\a$tuR\.gradle\caches\minecraft\net\minecraftforge\forge\1.8-11.14.3.1543\start, examining for mod candidates
+[23:26:14] [Client thread/DEBUG] [FML/]: Found a minecraft related file at D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar, examining for mod candidates
+[23:26:14] [Client thread/DEBUG] [FML/]: Minecraft jar mods loaded successfully
+[23:26:14] [Client thread/INFO] [FML/]: Found 0 mods from the command line. Injecting into mod discoverer
+[23:26:14] [Client thread/INFO] [FML/]: Searching D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\run\mods for mods
+[23:26:14] [Client thread/DEBUG] [FML/]: Examining file compileDummy.jar for potential mods
+[23:26:14] [Client thread/DEBUG] [FML/]: The mod container compileDummy.jar appears to be missing an mcmod.info file
+[23:26:14] [Client thread/DEBUG] [FML/]: Examining file providedDummy.jar for potential mods
+[23:26:14] [Client thread/DEBUG] [FML/]: The mod container providedDummy.jar appears to be missing an mcmod.info file
+[23:26:14] [Client thread/DEBUG] [FML/]: Examining file forgeSrc-1.8-11.14.3.1543.jar for potential mods
+[23:26:14] [Client thread/DEBUG] [FML/]: The mod container forgeSrc-1.8-11.14.3.1543.jar appears to be missing an mcmod.info file
+[23:26:15] [Client thread/DEBUG] [FML/]: Examining file asm-debug-all-5.0.3.jar for potential mods
+[23:26:15] [Client thread/DEBUG] [FML/]: The mod container asm-debug-all-5.0.3.jar appears to be missing an mcmod.info file
+[23:26:15] [Client thread/DEBUG] [FML/]: Examining file libraryjavasound-20101123.jar for potential mods
+[23:26:15] [Client thread/DEBUG] [FML/]: The mod container libraryjavasound-20101123.jar appears to be missing an mcmod.info file
+[23:26:15] [Client thread/DEBUG] [FML/]: Examining file guava-17.0.jar for potential mods
+[23:26:15] [Client thread/DEBUG] [FML/]: The mod container guava-17.0.jar appears to be missing an mcmod.info file
+[23:26:16] [Client thread/DEBUG] [FML/]: Examining file jsr305-2.0.1.jar for potential mods
+[23:26:16] [Client thread/DEBUG] [FML/]: The mod container jsr305-2.0.1.jar appears to be missing an mcmod.info file
+[23:26:16] [Client thread/DEBUG] [FML/]: Examining directory start for potential mods
+[23:26:16] [Client thread/DEBUG] [FML/]: No mcmod.info file found in directory start
+[23:26:16] [Client thread/TRACE] [FML/]: Recursing into package net
+[23:26:16] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge
+[23:26:16] [Client thread/TRACE] [FML/]: Recursing into package net.minecraftforge.gradle
+[23:26:16] [Client thread/DEBUG] [FML/]: Examining file MalmoMod-0.21.0.jar for potential mods
+[23:26:16] [Client thread/TRACE] [FML/]: Located mcmod.info file in file MalmoMod-0.21.0.jar
+[23:26:16] [Client thread/DEBUG] [FML/]: Identified a mod of type Lnet/minecraftforge/fml/common/Mod; (com.microsoft.Malmo.MalmoMod) - loading
+[23:26:16] [Client thread/TRACE] [malmomod/]: Parsed dependency info : [] [] []
+[23:26:16] [Client thread/DEBUG] [malmomod/]: Attempting to load the file version.properties from MalmoMod-0.21.0.jar to locate a version number for malmomod
+[23:26:16] [Client thread/DEBUG] [malmomod/]: Found version 0.21.0 for mod malmomod in version.properties, using
+[23:26:16] [Client thread/INFO] [FML/]: Forge Mod Loader has identified 4 mods to load
+[23:26:16] [Client thread/TRACE] [FML/]: Received a system property request ''
+[23:26:16] [Client thread/TRACE] [FML/]: System property request managing the state of 0 mods
+[23:26:16] [Client thread/DEBUG] [FML/]: After merging, found state information for 0 mods
+[23:26:16] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
+[23:26:16] [Client thread/DEBUG] [FML/]: Found translations in forgeSrc-1.8-11.14.3.1543.jar [en_US, en_US, en_US]
+[23:26:16] [Client thread/DEBUG] [malmomod/]: Enabling mod malmomod
+[23:26:16] [Client thread/DEBUG] [FML/]: Found translations in MalmoMod-0.21.0.jar [en_US]
+[23:26:16] [Client thread/TRACE] [FML/]: Verifying mod requirements are satisfied
+[23:26:16] [Client thread/TRACE] [FML/]: All mod requirements are satisfied
+[23:26:16] [Client thread/TRACE] [FML/]: Sorting mods into an ordered list
+[23:26:16] [Client thread/TRACE] [FML/]: Mod sorting completed successfully
+[23:26:16] [Client thread/DEBUG] [FML/]: Mod sorting data
+[23:26:16] [Client thread/DEBUG] [FML/]: 	malmomod(Microsoft Malmo Mod:0.21.0): MalmoMod-0.21.0.jar ()
+[23:26:16] [Client thread/TRACE] [mcp/mcp]: Sending event FMLConstructionEvent to mod mcp
+[23:26:16] [Client thread/TRACE] [mcp/mcp]: Sent event FMLConstructionEvent to mod mcp
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Coder Pack took 0,001s
+[23:26:16] [Client thread/TRACE] [FML/FML]: Sending event FMLConstructionEvent to mod FML
+[23:26:16] [Client thread/TRACE] [FML/FML]: Mod FML is using network checker : Invoking method checkModLists
+[23:26:16] [Client thread/TRACE] [FML/FML]: Testing mod FML to verify it accepts its own version in a remote connection
+[23:26:16] [Client thread/TRACE] [FML/FML]: The mod FML accepts its own version (8.0.99.99)
+[23:26:16] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at CLIENT
+[23:26:16] [Client thread/INFO] [FML/FML]: Attempting connection with missing mods [mcp, FML, Forge, malmomod] at SERVER
+[23:26:16] [Client thread/TRACE] [FML/FML]: Sent event FMLConstructionEvent to mod FML
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Forge Mod Loader took 0,295s
+[23:26:16] [Client thread/TRACE] [Forge/Forge]: Sending event FMLConstructionEvent to mod Forge
+[23:26:16] [Client thread/TRACE] [FML/Forge]: Mod Forge is using network checker : No network checking performed
+[23:26:16] [Client thread/TRACE] [FML/Forge]: Testing mod Forge to verify it accepts its own version in a remote connection
+[23:26:16] [Client thread/TRACE] [FML/Forge]: The mod Forge accepts its own version (11.14.3.1543)
+[23:26:16] [Client thread/TRACE] [Forge/Forge]: Sent event FMLConstructionEvent to mod Forge
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Minecraft Forge took 0,007s
+[23:26:16] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLConstructionEvent to mod malmomod
+[23:26:16] [Client thread/TRACE] [FML/malmomod]: Mod malmomod is using network checker : Accepting version 0.21.0
+[23:26:16] [Client thread/TRACE] [FML/malmomod]: Testing mod malmomod to verify it accepts its own version in a remote connection
+[23:26:16] [Client thread/TRACE] [FML/malmomod]: The mod malmomod accepts its own version (0.21.0)
+[23:26:16] [Client thread/DEBUG] [FML/malmomod]: Attempting to inject @SidedProxy classes into malmomod
+[23:26:16] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLConstructionEvent to mod malmomod
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Construction - Microsoft Malmo Mod took 0,031s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Finished: Construction took 0,334s
+[23:26:16] [Client thread/DEBUG] [FML/]: Mod signature data
+[23:26:16] [Client thread/DEBUG] [FML/]:  	Valid Signatures:
+[23:26:16] [Client thread/DEBUG] [FML/]:  	Missing Signatures:
+[23:26:16] [Client thread/DEBUG] [FML/]: 		mcp	(Minecraft Coder Pack	9.05)	minecraft.jar
+[23:26:16] [Client thread/DEBUG] [FML/]: 		FML	(Forge Mod Loader	8.0.99.99)	forgeSrc-1.8-11.14.3.1543.jar
+[23:26:16] [Client thread/DEBUG] [FML/]: 		Forge	(Minecraft Forge	11.14.3.1543)	forgeSrc-1.8-11.14.3.1543.jar
+[23:26:16] [Client thread/DEBUG] [FML/]: 		malmomod	(Microsoft Malmo Mod	0.21.0)	MalmoMod-0.21.0.jar
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,004s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,016s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,011s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,002s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading - LanguageManager took 0,041s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 0,042s
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 0,075s
+[23:26:16] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:26:16] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:26:16] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
+[23:26:16] [Client thread/INFO] [FML/]: Processing ObjectHolder annotations
+[23:26:16] [Client thread/INFO] [FML/]: Found 384 ObjectHolder annotations
+[23:26:16] [Client thread/INFO] [FML/]: Identifying ItemStackHolder annotations
+[23:26:16] [Client thread/INFO] [FML/]: Found 0 ItemStackHolder annotations
+[23:26:16] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPreInitializationEvent to mod mcp
+[23:26:16] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPreInitializationEvent to mod mcp
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Coder Pack took 0,001s
+[23:26:16] [Client thread/TRACE] [FML/FML]: Sending event FMLPreInitializationEvent to mod FML
+[23:26:16] [Client thread/TRACE] [FML/FML]: Sent event FMLPreInitializationEvent to mod FML
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Forge Mod Loader took 0,016s
+[23:26:16] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPreInitializationEvent to mod Forge
+[23:26:16] [Client thread/INFO] [FML/Forge]: Configured a dormant chunk cache size of 0
+[23:26:16] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPreInitializationEvent to mod Forge
+[23:26:16] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Minecraft Forge took 0,032s
+[23:26:16] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPreInitializationEvent to mod malmomod
+[23:26:16] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.Utils.SchemaHelper:testSchemaVersionNumbers:157]: Testing schemas against internal version number: 0.21
+[23:26:17] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPreInitializationEvent to mod malmomod
+[23:26:17] [Client thread/DEBUG] [FML/]: Bar Step: PreInitialization - Microsoft Malmo Mod took 0,113s
+[23:26:17] [Client thread/DEBUG] [FML/]: Bar Finished: PreInitialization took 0,162s
+[23:26:17] [Client thread/INFO] [FML/]: Applying holder lookups
+[23:26:17] [Client thread/INFO] [FML/]: Holder lookups applied
+[23:26:17] [Client thread/INFO] [FML/]: Injecting itemstacks
+[23:26:17] [Client thread/INFO] [FML/]: Itemstack injection complete
+[23:26:17] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - TextureManager took 0,000s
+[23:26:17] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - SoundHandler took 0,802s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,006s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FontRenderer took 0,003s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - GrassColorReloadListener took 0,008s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - FoliageColorReloadListener took 0,010s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - GL Setup took 0,000s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Texture Map took 0,007s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:26:18] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelLoaderRegistry$1 took 0,000s
+[23:26:19] [Client thread/INFO] [FML/]: Max texture size: 16384
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching - missingno took 0,001s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,003s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - ModelManager took 1,271s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Model Manager took 1,333s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderItem took 0,003s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Item Renderer took 0,138s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - EntityRenderer took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - BlockRendererDispatcher took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resource - RenderGlobal took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Rendering Setup - Loading Entity Renderer took 0,094s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Rendering Setup took 1,572s
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sending event FMLInitializationEvent to mod mcp
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sent event FMLInitializationEvent to mod mcp
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Coder Pack took 0,000s
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sending event FMLInitializationEvent to mod FML
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sent event FMLInitializationEvent to mod FML
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Forge Mod Loader took 0,000s
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sending event FMLInitializationEvent to mod Forge
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sent event FMLInitializationEvent to mod Forge
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Minecraft Forge took 0,000s
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLInitializationEvent to mod malmomod
+[23:26:19] [Client thread/INFO] [STDOUT/malmomod]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: WAITING_FOR_MOD_READY
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLInitializationEvent to mod malmomod
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Initialization - Microsoft Malmo Mod took 0,111s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Initialization took 0,112s
+[23:26:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod mcp
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sending event IMCEvent to mod mcp
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sent event IMCEvent to mod mcp
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Coder Pack took 0,002s
+[23:26:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod FML
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sending event IMCEvent to mod FML
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sent event IMCEvent to mod FML
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Forge Mod Loader took 0,000s
+[23:26:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod Forge
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sending event IMCEvent to mod Forge
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sent event IMCEvent to mod Forge
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Minecraft Forge took 0,000s
+[23:26:19] [Client thread/TRACE] [FML/]: Attempting to deliver 0 IMC messages to mod malmomod
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sending event IMCEvent to mod malmomod
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sent event IMCEvent to mod malmomod
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: InterModComms$IMC - Microsoft Malmo Mod took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: InterModComms$IMC took 0,003s
+[23:26:19] [Client thread/INFO] [FML/]: Injecting itemstacks
+[23:26:19] [Client thread/INFO] [FML/]: Itemstack injection complete
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sending event FMLPostInitializationEvent to mod mcp
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sent event FMLPostInitializationEvent to mod mcp
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Coder Pack took 0,000s
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sending event FMLPostInitializationEvent to mod FML
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sent event FMLPostInitializationEvent to mod FML
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Forge Mod Loader took 0,000s
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sending event FMLPostInitializationEvent to mod Forge
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sent event FMLPostInitializationEvent to mod Forge
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Minecraft Forge took 0,045s
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLPostInitializationEvent to mod malmomod
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLPostInitializationEvent to mod malmomod
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: PostInitialization - Microsoft Malmo Mod took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: PostInitialization took 0,046s
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sending event FMLLoadCompleteEvent to mod mcp
+[23:26:19] [Client thread/TRACE] [mcp/mcp]: Sent event FMLLoadCompleteEvent to mod mcp
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Coder Pack took 0,001s
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sending event FMLLoadCompleteEvent to mod FML
+[23:26:19] [Client thread/TRACE] [FML/FML]: Sent event FMLLoadCompleteEvent to mod FML
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Forge Mod Loader took 0,000s
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sending event FMLLoadCompleteEvent to mod Forge
+[23:26:19] [Client thread/DEBUG] [FML/Forge]: Forge RecipeSorter Baking:
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   14: RecipeEntry("Before", UNKNOWN, )
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   13: RecipeEntry("minecraft:shaped", SHAPED, net.minecraft.item.crafting.ShapedRecipes) Before: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   12: RecipeEntry("forge:shapedore", SHAPED, net.minecraftforge.oredict.ShapedOreRecipe) Before: minecraft:shapeless After: minecraft:shaped
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   11: RecipeEntry("minecraft:mapextending", SHAPED, net.minecraft.item.crafting.RecipesMapExtending) Before: minecraft:shapeless After: minecraft:shaped
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   10: RecipeEntry("minecraft:shapeless", SHAPELESS, net.minecraft.item.crafting.ShapelessRecipes) After: minecraft:shaped
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   9: RecipeEntry("minecraft:repair", SHAPELESS, net.minecraft.item.crafting.RecipeRepairItem) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   8: RecipeEntry("forge:shapelessore", SHAPELESS, net.minecraftforge.oredict.ShapelessOreRecipe) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   7: RecipeEntry("minecraft:armordyes", SHAPELESS, net.minecraft.item.crafting.RecipesArmorDyes) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   6: RecipeEntry("minecraft:fireworks", SHAPELESS, net.minecraft.item.crafting.RecipeFireworks) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   5: RecipeEntry("minecraft:pattern_add", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeAddPattern) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   4: RecipeEntry("minecraft:pattern_dupe", SHAPELESS, net.minecraft.item.crafting.RecipesBanners$RecipeDuplicatePattern) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   3: RecipeEntry("minecraft:bookcloning", SHAPELESS, net.minecraft.item.crafting.RecipeBookCloning) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   2: RecipeEntry("minecraft:mapcloning", SHAPELESS, net.minecraft.item.crafting.RecipesMapCloning) After: minecraft:shapeless
+[23:26:19] [Client thread/DEBUG] [FML/Forge]:   1: RecipeEntry("After", UNKNOWN, )
+[23:26:19] [Client thread/DEBUG] [FML/Forge]: Sorting recipies
+[23:26:19] [Client thread/TRACE] [Forge/Forge]: Sent event FMLLoadCompleteEvent to mod Forge
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Minecraft Forge took 0,007s
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sending event FMLLoadCompleteEvent to mod malmomod
+[23:26:19] [Client thread/TRACE] [malmomod/malmomod]: Sent event FMLLoadCompleteEvent to mod malmomod
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: LoadComplete - Microsoft Malmo Mod took 0,001s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: LoadComplete took 0,008s
+[23:26:19] [Client thread/DEBUG] [FML/]: Freezing block and item id maps
+[23:26:19] [Client thread/DEBUG] [FML/]: Registry consistency check successful
+[23:26:19] [Client thread/DEBUG] [FML/]: Registry consistency check successful
+[23:26:19] [Client thread/INFO] [FML/]: Forge Mod Loader has successfully loaded 4 mods
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Default took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Forge Mod Loader took 0,014s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Minecraft Forge took 0,017s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - FMLFileResourcePack:Microsoft Malmo Mod took 0,002s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/atlas/blocks.png took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii.png took 0,004s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:dynamic/lightMap_1 took 0,000s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/misc/forcefield.png took 0,002s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Step: Reloading Texture Manager - minecraft:textures/font/ascii_sga.png took 0,004s
+[23:26:19] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading Texture Manager took 0,009s
+[23:26:21] [Client thread/INFO] [FML/]: Max texture size: 16384
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,168s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Mipmap generation took 0,145s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Texture stitching took 0,022s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Texture creation took 0,036s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Reloading took 1,999s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Step: Loading Resources - Reloading listeners took 1,999s
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Loading Resources took 2,033s
+[23:26:21] [Client thread/DEBUG] [Forge Mod Loader/]: Mod Forge Mod Loader is missing a pack.mcmeta file, substituting a dummy one
+[23:26:21] [Client thread/DEBUG] [Minecraft Forge/]: Mod Minecraft Forge is missing a pack.mcmeta file, substituting a dummy one
+[23:26:21] [Client thread/DEBUG] [Microsoft Malmo Mod/]: Mod Microsoft Malmo Mod is missing a pack.mcmeta file, substituting a dummy one
+[23:26:21] [Client thread/DEBUG] [FML/]: Bar Finished: Loading took 7,249s
+[23:26:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: WAITING_FOR_MOD_READY
+[23:26:22] [Thread-12/INFO] [STDOUT/]: [com.microsoft.Malmo.Utils.TCPInputPoller:run:191]: Listening for messages on port 10001
+[23:26:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:queueStateChange:143]: CLIENT request state: DORMANT
+[23:26:22] [Client thread/INFO] [STDOUT/]: [com.microsoft.Malmo.StateMachine:setState:101]: CLIENT enter state: DORMANT

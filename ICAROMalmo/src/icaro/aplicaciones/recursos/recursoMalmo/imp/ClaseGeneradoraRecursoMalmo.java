@@ -41,8 +41,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
+		cargaMinecraft minecraftLoader;
 		this.lock = new Semaphore(1);
 		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
+		for (int i = 0; i < 2; i++) 
+		{
+			minecraftLoader = new cargaMinecraft();
+			minecraftLoader.start();
+			while(!minecraftLoader.isLoaded());
+		}
 		try {
 			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
 			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python.exe", rutaIcaroMap, 9288);
