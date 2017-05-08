@@ -109,6 +109,10 @@ class OrderServer(object):
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
                     self.lock.release()
+            elif message[0] == "enemies" and len(message) == 1:
+                self.lock.acquire(True)
+                self.outSocket.send("en" + "_" + str(self.initInfo["enemies"]) + "\n")
+                self.lock.release()
             elif message[0] == "apples" and len(message) == 1:
                 self.lock.acquire(True)
                 self.outSocket.send("ap" + "_" + str(self.initInfo["apples"]) + "\n")

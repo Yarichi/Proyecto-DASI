@@ -38,12 +38,12 @@ import threading
 import re
 import uuid
             
-# def generateObstacles():
-#     for i in range(48):
-#         world_items["obstacles"].append([38, 227, i + 3])
-#     for i in [23, 24, 25, 26]:
-#         for j in [22, 23, 24, 25, 26]:
-#             world_items["obstacles"].append([i, 226, j])
+def generateObstacles():
+    for i in range(48):
+        world_items["obstacles"].append([38, 227, i + 3])
+    for i in [23, 24, 25, 26]:
+        for j in [22, 23, 24, 25, 26]:
+            world_items["obstacles"].append([i, 226, j])
 
 def generateAgentsIds():
     #obtenemos en una lista de cadenas los nombres de los agentes con las etiquetas
@@ -85,9 +85,6 @@ def drawMap():
     world += drawCuboid(0, 227, 0, xTop, 237, 0, "barrier")
     world += drawCuboid(xTop, 227, zTop, xTop, 237, 0, "barrier")
     world += drawCuboid(xTop, 227, zTop, 0, 237, zTop, "barrier")
-    for coords in world_items["obstacles"]:
-        world += drawCuboid(coords[0],coords[1],coords[2],coords[3],coords[4],coords[5],"lapis_block")
-        world += drawCuboid(coords[0],coords[4],coords[2],coords[3],coords[4],coords[5],"beacon")
     return world
 
 
@@ -114,7 +111,7 @@ xTop = 50
 zTop = 50
 numAgentes = 2
 
-world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[[23,226,22,26,236,26]], width = zTop, height = xTop)
+world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], width = zTop, height = xTop)
 
 
 # agent = TabQAgent()
