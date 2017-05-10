@@ -28,10 +28,10 @@ que contendran las entidades existentes en el mapa (cercanas y lejanas):
 <ObservationFromNearbyEntities>
     <Range name="close_entities" xrange="2" yrange="2" zrange="2" />
     <Range name="far_entities" xrange="10" yrange="2" zrange="10" update_frequency="100"/>
-</ObservationFromNearbyEntities>
+</ObservationstionFromNearbyEntities>
 
 Cuando se obtiene la informacion del mundo ya se puede 
-world_state = agent_host.getWorldState()
+world_state = agent_host.peekWorldState()
 if world_state.number_of_observations_since_last_state > 0:
     msg = world_state.observations[-1].text
     ob = json.loads(msg)
@@ -59,8 +59,7 @@ EntityInfo.__new__.__defaults__ = (0, 0, 0, "", 1)
 
 sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immediately
 
-world_items = dict(obstacles=[[23,226,22,26,236,26]],apples=[[20,227,20],[12,227,32],[5,227,10],[27,227,20],[20,227,25]],enemies=[[40,229,30]])
-
+world_items = dict(obstacles=[[23,226,22,26,236,26]],apples=[[20,227,20],[12,227,32],[5,227,10],[27,227,20],[20,227,25]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]])
 
 xTop = 50
 zTop = 50
@@ -167,7 +166,6 @@ missionXML='''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </Mission>'''
 
 # Create default Malmo objects:
-
 agent_host = MalmoPython.AgentHost()
 try:
     agent_host.parse( sys.argv )
@@ -208,22 +206,10 @@ while not world_state.has_mission_begun:
 print
 print "Mission running ",
 
-# Possible solution for challenge set in tutorial_4.py:
-
-#agent_host.sendCommand("hotbar.9 1") #Press the hotbar key
-#agent_host.sendCommand("hotbar.9 0") #Release hotbar key - agent should now be holding diamond_pickaxe
-
-#agent_host.sendCommand("pitch 0.2") #Start looking downward slowly
-#time.sleep(1)                        #Wait a second until we are looking in roughly the right direction
-#agent_host.sendCommand("pitch 0")    #Stop tilting the camera
-#agent_host.sendCommand("move 1")     #And start running...
-#agent_host.sendCommand("attack 1")   #Whilst flailing our pickaxe!
-
-# Loop until mission ends:
 while world_state.is_mission_running:
     sys.stdout.write(".")
     time.sleep(1)
-    world_state = agent_host.getWorldState()
+    world_state = agent_host.peekWorldState()
     for error in world_state.errors:
         print "Error:",error.text
     if world_state.number_of_observations_since_last_state > 0: # Have any observations come in?

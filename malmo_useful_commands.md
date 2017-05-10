@@ -1,5 +1,3 @@
-
-
 # To enable discrete movement, inventory  commands and observations from grid, put this inside <AgentHandlers>
 <DiscreteMovementCommands/>
   * then you can send actions = ["movenorth 1", "movesouth 1", "movewest 1", "moveeast 1"]
@@ -31,7 +29,6 @@
 <max x="1" y="-1" z="1"/>
 </Grid>
 </ObservationFromGrid>
-
 
 # Load xml from file
 * -- set up the mission:
@@ -91,8 +88,6 @@ zVel="xs:decimal [0..1]"/>
 
 Entity types: Creeper, Skeleton, Spider, Giant, Zombie, Slime, Ghast, PigZombie, Enderman, CaveSpider, Silverfish, Blaze, LavaSlime, EnderDragon, WitherBoss, Bat, Witch, Endermite, Guardian, Pig, Sheep, Cow, Chicken, Squid, Wolf, MushroomCow, SnowMan, Ozelot, VillagerGolem, EntityHorse, Rabbit, Villager, EnderCrystal
 
-
-
 # Set up agent recorder
 <AgentSection mode="Survival">
         <Name>Watcher#''' + str(i) + '''</Name>
@@ -125,37 +120,10 @@ if len(recordingsDirectory) > 0:
     my_mission_record.recordObservations()
     my_mission_record.recordCommands()
 
-    
-C:\Python27\python.exe icaro_map.py
-
 Iluminar: 
 * lit_furnace
 * lit_pumpkin
 * lit_redstone_lamp
-
-En mob_fun.py hay una forma de obtener informaacion de los agentes.
-
-<ObservationFromNearbyEntities>
-  <Range name="entities" xrange="40" yrange="2" zrange="40"/>
-</ObservationFromNearbyEntities>
-
-msg = world_state.observations[-1].text
-ob = json.loads(msg)
-
-//En multi_agent_test.py
-
-if "entities" in ob:
-    entities = [EntityInfo(**k) for k in ob["entities"]]
-    turn, speed = getVelocity(agentName(i), entities, current_yaw[i], current_pos[i], current_life[i])
-    ah.sendCommand("move " + str(speed))
-    ah.sendCommand("turn " + str(turn))
-if u'LineOfSight' in ob:
-    los = ob[u'LineOfSight']
-    if los[u'hitType'] == "entity" and los[u'inRange'] and los[u'type'] == "Zombie":
-        ah.sendCommand("attack 1")
-        ah.sendCommand("attack 0")
-
-
 
 // reward_far_items_test.py
 Para obtener información en tiempo real de entidades (enemigos) se necesita activar
@@ -176,7 +144,10 @@ EntityInfo = namedtuple('EntityInfo', 'x, y, z, name, quantity')
 EntityInfo.__new__.__defaults__ = (0, 0, 0, "", 1)
 
 Cuando se obtiene la información del mundo ya se puede 
-world_state = agent_host.getWorldState()
+#world_state = agent_host.getWorldState()
+# Peek world state tiene mejor eficiencia (no vacia los buffer)
+world_state = agent_host.peekWorldState()
+
 if world_state.number_of_observations_since_last_state > 0:
     msg = world_state.observations[-1].text
     ob = json.loads(msg)
