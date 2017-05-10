@@ -1,5 +1,6 @@
 *.log
 *.index
 *.properties
-
+*.srg
+*.gz
 MALMO_0.20/
