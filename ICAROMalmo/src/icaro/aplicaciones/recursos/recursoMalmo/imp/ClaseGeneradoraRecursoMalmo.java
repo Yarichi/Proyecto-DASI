@@ -38,20 +38,21 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private PythonOrderDispatcher dispatcher;
 	private AgenteCognitivotImp2 agente1,agente2;
 	private Semaphore lock;
+	public static Integer NUM_AGENTES = 2;
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
 		cargaMinecraft minecraftLoader;
 		this.lock = new Semaphore(1);
 		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
-		for (int i = 0; i < 2; i++) 
+		/*for (int i = 0; i < NUM_AGENTES; i++) 
 		{
 			minecraftLoader = new cargaMinecraft();
 			minecraftLoader.start();
 			while(!minecraftLoader.isLoaded());
-		}
+		}*/
 		try {
-			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map2.py").getAbsolutePath();
+			String rutaIcaroMap = new File("src\\icaro\\aplicaciones\\recursos\\recursoMalmo\\imp\\icaro_map.py").getAbsolutePath();
 			this.dispatcher = new PythonOrderDispatcher("C:\\Python27\\python.exe", rutaIcaroMap, 9288);
 		} catch (IOException e1) {
 			e1.printStackTrace();

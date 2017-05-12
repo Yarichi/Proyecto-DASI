@@ -81,6 +81,7 @@ def drawMap():
     world = ""
     world += drawCuboid(0, 227, 0, xTop, 227, zTop, "air")
     world += drawCuboid(0, 227, 0, xTop, 227, zTop, "glowstone")
+    world += drawCuboid(0, 255, 0, xTop, 255, zTop, "barrier")
     world += drawCuboid(0, 227, 0, 0, 237, zTop, "barrier")
     world += drawCuboid(0, 227, 0, xTop, 237, 0, "barrier")
     world += drawCuboid(xTop, 227, zTop, xTop, 237, 0, "barrier")
@@ -109,9 +110,9 @@ sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immedi
 
 xTop = 50
 zTop = 50
-numAgentes = 2
+numAgentes = 3
 
-world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], width = zTop, height = xTop)
+world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26],[26, 240, 26]], obstacles=[], width = zTop, height = xTop)
 
 
 # agent = TabQAgent()
@@ -194,7 +195,18 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </AgentQuitFromTouchingBlockType>
         </AgentHandlers>
     </AgentSection>
+    <AgentSection mode="Creative">
+        <Name>MrObserver</Name>
+        <AgentStart>
+            <Placement x="25.5" y="256.5" z="25.5" pitch="90"/>
+        </AgentStart>
+        <AgentHandlers>
+          <ContinuousMovementCommands turnSpeedDegs="360"/>
+          <MissionQuitCommands/>
+        </AgentHandlers>
+    </AgentSection>
 </Mission>'''
+
 
 my_mission = MalmoPython.MissionSpec(mission_xml, True)
 #my_mission.removeAllCommandHandlers()
@@ -273,7 +285,7 @@ while not hasBegun and not hadErrors:
     #print "miramos a los agentes"
     for ah in agent_hosts:
         #print "tomamos el estado del mundo del agente " + str(ah)
-        world_state = ah.getWorldState()
+        world_state = ah.peekWorldState()
         #print "mirando si la mision empezo"
         if world_state.has_mission_begun:
             hasBegun = True
