@@ -95,8 +95,8 @@ def drawItems():
     for coords in world_items["apples"]:
         items += drawItem(coords[0], coords[1], coords[2], "apple")
 
-    for coords in world_items["enemies"]:
-        items += drawEntity(coords[0], coords[1], coords[2], "Zombie", 90, 45, 1, 0, 1)
+    #for coords in world_items["enemies"]:
+    #    items += drawEntity(coords[0], coords[1], coords[2], "Zombie", 90, 45, 1, 0, 1)
 
     items += drawLine("lava", 38, 227, 3, 38, 227, 50)
     items += drawLine("lava",-1,227,-1,-1,227,zTop+1)
@@ -110,9 +110,9 @@ sys.stdout = os.fdopen(sys.stdout.fileno(), 'w', 0)  # flush print output immedi
 
 xTop = 50
 zTop = 50
-numAgentes = 3
+numAgentes = 2
 
-world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26],[26, 240, 26]], obstacles=[], width = zTop, height = xTop)
+world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], width = zTop, height = xTop)
 
 
 # agent = TabQAgent()
@@ -175,7 +175,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
     <AgentSection mode="Survival">
         <Name>robot2Recolector</Name>
         <AgentStart>
-            <Placement x="22.5" y="228.0" z="34.5" pitch="30" yaw="0" />
+            <Placement x="22.5" y="228.0" z="34.5" pitch="30" yaw="180" />
             <Inventory>
                 <InventoryItem slot="8" type="diamond_pickaxe" />
             </Inventory>
@@ -195,7 +195,10 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             </AgentQuitFromTouchingBlockType>
         </AgentHandlers>
     </AgentSection>
-    <AgentSection mode="Creative">
+    
+</Mission>'''
+"""
+<AgentSection mode="Creative">
         <Name>MrObserver</Name>
         <AgentStart>
             <Placement x="25.5" y="256.5" z="25.5" pitch="90"/>
@@ -205,8 +208,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
           <MissionQuitCommands/>
         </AgentHandlers>
     </AgentSection>
-</Mission>'''
-
+"""
 
 my_mission = MalmoPython.MissionSpec(mission_xml, True)
 #my_mission.removeAllCommandHandlers()

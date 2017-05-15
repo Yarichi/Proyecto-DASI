@@ -2,6 +2,7 @@ package icaro.aplicaciones.recursos.recursoMalmo.imp;
 
 import java.rmi.RemoteException;
 import java.util.ArrayList;
+import java.util.Hashtable;
 import java.util.concurrent.Semaphore;
 
 import javax.swing.JOptionPane;
@@ -37,13 +38,11 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	private ArrayList<Obstaculo> obstacles_parsed;
 	private PythonOrderDispatcher dispatcher;
 	private AgenteCognitivotImp2 agente1,agente2;
-	private Semaphore lock;
 	public static Integer NUM_AGENTES = 2;
 	public ClaseGeneradoraRecursoMalmo(String idRecurso) throws RemoteException 
 	{
 		super(idRecurso);
 		cargaMinecraft minecraftLoader;
-		this.lock = new Semaphore(1);
 		NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.registrarInterfaz(idRecurso, this);
 		/*for (int i = 0; i < NUM_AGENTES; i++) 
 		{
@@ -195,7 +194,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		return this.parseManzanas(this.apples);
 	}
 
-	@Override
+	
 	public Agente getInformacionAgente(String idAgente) throws Exception {
 		String agent= this.dispatcher.sendCommand("agent " + idAgente);
 		if(agent == null){
@@ -244,7 +243,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		}
 	}
 
-	@Override
+	
 	public Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "eval " + idAgente + " " + x + " " + y;
@@ -269,15 +268,10 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public synchronized void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
-		// TODO Auto-generated method stub
+	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "move " + identAgente + " " + x + " " + y;
 		String movement = this.dispatcher.sendCommand(msg);
-		/*if(!eval.equalsIgnoreCase("ack")){
-		
-		}*/
-		System.out.println(movement);
 	}
 
 }
