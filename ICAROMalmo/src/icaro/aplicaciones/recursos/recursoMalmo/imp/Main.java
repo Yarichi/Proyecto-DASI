@@ -21,7 +21,7 @@ public class Main {
 		//System.out.println(dispatcher.sendCommand("left MalmoTutorialBot"));
 		//System.out.println(dispatcher.sendCommand("right MalmoTutorialBot"));
 		System.out.println("Inicio pruebas..");
-		System.out.println(dispatcher.sendCommand("eval robot1Recolector 20 20"));
+		dispatcher.sendCommand("eval robot1Recolector 20 20");
         /*String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         while(entradaEscaner.hasNext())

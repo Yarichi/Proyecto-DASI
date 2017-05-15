@@ -101,7 +101,7 @@ class OrderServer(object):
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
                         obs = json.loads(self.agents[idEntero].peekWorldState().observations[-1].text)
-                        position = "ag_["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]\n"
+                        position = "ag_" + message[1] + "_["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]\n"
                         self.lock.acquire(True)
                         self.outSocket.send(position)
                         self.lock.release()
@@ -251,7 +251,7 @@ def eval(index,args):
         obs = index.peekWorldState().observations
         tries = tries - 1
     if tries == 0:
-        message = "eval %s -1\n"%"Failed"
+        message = "eval_%s_-1\n"%"Failed"
         args[1].acquire(True)
         outSocket.send(message)
         args[1].release()
@@ -261,8 +261,6 @@ def eval(index,args):
     obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
-    if obs["Name"] == "robot1Recolector":
-        pass
     correctObstacles = []
     for o in args[4]["obstacles"]:
         if o[1] == 226:
@@ -270,9 +268,9 @@ def eval(index,args):
     c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
     if route is not None:
-        message = "eval %s %i\n"%(obs['Name'],len(route))
+        message = "eval_%s_%i\n"%(obs['Name'],len(route))
     else:
-        message = "eval %s -1\n"%obs['Name']
+        message = "eval_%s_-1\n"%obs['Name']
     args[1].acquire(True)
     outSocket.send(message)
     args[1].release()

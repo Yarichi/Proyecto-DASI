@@ -106,7 +106,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		System.out.println("Enviados mensajes de arranque de Malmo");
 	}
 
-	private void buildInformation(String line, ArrayList<String> data)
+	public static void buildInformation(String line, ArrayList<String> data)
 	{
 		String[] lines;
 		line = line.replaceAll("\\[\\[", "\\[");
@@ -149,7 +149,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		return agentes_return;
 	}
 
-	private ArrayList<Manzana> parseManzanas(ArrayList<String> manzanas){
+	public static ArrayList<Manzana> parseManzanas(ArrayList<String> manzanas){
 		ArrayList<Manzana> manzanas_return = new ArrayList<Manzana>();
 		StringBuilder aux;
 		int i = 0;
@@ -188,15 +188,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		return this.agents_parsed;
 	}
 
-	public ArrayList<Manzana> getInformacionManzanas() {
-		String apples = this.dispatcher.sendCommand("apples");
-		setInformation(apples);
-		return this.parseManzanas(this.apples);
+	public void getInformacionManzanas() {
+		this.dispatcher.sendCommand("apples");
+		/*setInformation(apples);
+		return this.parseManzanas(this.apples);*/
 	}
 
 	
-	public Agente getInformacionAgente(String idAgente) throws Exception {
-		String agent= this.dispatcher.sendCommand("agent " + idAgente);
+	public void getInformacionAgente(String idAgente) throws Exception {
+		this.dispatcher.sendCommand("agent " + idAgente);/*
 		if(agent == null){
 			JOptionPane.showMessageDialog(null, "El agente " + idAgente + " no consigue su informacion");
 			return null;
@@ -211,7 +211,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 
 					);
 			return agente;
-		}
+		}*/
 	}
 
 	public void updateInformation()
@@ -244,12 +244,10 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	
-	public Integer calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
+	public void calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "eval " + idAgente + " " + x + " " + y;
-		String eval = this.dispatcher.sendCommand(msg);
-		String[] parts = eval.split(" ");
-		return Integer.parseInt(parts[parts.length-1]);
+		this.dispatcher.sendCommand(msg);
 	}
 	
 	public void close()
@@ -271,7 +269,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "move " + identAgente + " " + x + " " + y;
-		String movement = this.dispatcher.sendCommand(msg);
+		this.dispatcher.sendCommand(msg);
 	}
 
 }

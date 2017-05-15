@@ -14,15 +14,19 @@ import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
 public class ConseguirInformacionDelEntorno extends TareaSincrona{
 
+	public static ArrayList<Manzana> manzanas = null;
 	@Override
 	public void ejecutar(Object... params) {
 		try {
 			ItfUsoRecursoMalmo itfMalmo = (ItfUsoRecursoMalmo)this.repoInterfaces.obtenerInterfaz(VocabularioRosace.IdentRecursoMalmo);
-			ArrayList<Manzana> manzanas = itfMalmo.getInformacionManzanas();
+			itfMalmo.getInformacionManzanas();
+			while(manzanas == null){
+				
+			}
 			Objetivo o = new RecolectarTodasLasManzanas(manzanas);
 			o.setobjectReferenceId(VocabularioRosace.identObjetivoRecolectarTodasLasManzanas);
 			o.setPending();
-			this.itfProcObjetivos.insertarHecho(o);			
+			this.itfProcObjetivos.insertarHecho(o);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

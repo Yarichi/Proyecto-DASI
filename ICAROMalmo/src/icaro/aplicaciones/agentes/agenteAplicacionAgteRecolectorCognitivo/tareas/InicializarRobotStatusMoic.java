@@ -4,6 +4,7 @@ import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RobotStatusMoic;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
+import icaro.aplicaciones.recursos.recursoMalmo.imp.PythonOrderDispatcher;
 import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
 public class InicializarRobotStatusMoic extends TareaSincrona{
@@ -19,17 +20,18 @@ public class InicializarRobotStatusMoic extends TareaSincrona{
 			robotStatus.setIdRobotRol(VocabularioRosace.IdentRolAgtesRecolectores);
 		}*/
 		ItfUsoRecursoMalmo itfMalmo;
-		Agente ag = null;
 		try {
 			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfaz(VocabularioRosace.IdentRecursoMalmo);
-			ag = itfMalmo.getInformacionAgente(this.identAgente);
+			itfMalmo.getInformacionAgente(this.identAgente);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		robotStatus.setPosicionAgente(ag.getCoordinate());
+		while(!PythonOrderDispatcher.agentes.containsKey(this.identAgente.toLowerCase())){
+			
+		}
+		robotStatus.setPosicionAgente(PythonOrderDispatcher.agentes.get(this.identAgente.toLowerCase()));
 		robotStatus.setInicializado(true);
-		
 		this.itfProcObjetivos.actualizarHecho(robotStatus);
 		
 		

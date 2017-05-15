@@ -7,6 +7,7 @@ import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.inform
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RobotStatusMoic;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.RecolectarManzana;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
+import icaro.aplicaciones.recursos.recursoMalmo.imp.PythonOrderDispatcher;
 import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
 public class CalcularEvaluacion extends TareaSincrona {
@@ -18,17 +19,13 @@ public class CalcularEvaluacion extends TareaSincrona {
 		RobotStatusMoic robotStatus = (RobotStatusMoic) params[1];
 		//RecolectarManzana recolectarManzana = (RecolectarManzana) params[1];
 		InfoEquipoMoic infoEquipo = (InfoEquipoMoic) params[2];
-		
-		if(this.identAgente.equalsIgnoreCase("robot2recolector")){
-			int x = 2;
-		}
-		
-		
 		ItfUsoRecursoMalmo itfMalmo;
 		Integer coste = -1;
 		try {
 			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfazGestion(VocabularioRosace.IdentRecursoMalmo);
-			coste = itfMalmo.calculaCoste(this.identAgente,peticion.getManzana().getCoordinate());
+			itfMalmo.calculaCoste(this.identAgente,peticion.getManzana().getCoordinate());
+			while(!PythonOrderDispatcher.evaluaciones.containsKey(this.identAgente)){}
+			coste = PythonOrderDispatcher.evaluaciones.remove(this.identAgente);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
