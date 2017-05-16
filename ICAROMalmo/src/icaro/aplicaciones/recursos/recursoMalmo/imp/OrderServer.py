@@ -171,42 +171,51 @@ class Command(object):
 
 
 def up(index):
-    #print("prueba ejecutada correctamente.")
-    #print str(index)
-    #agents_pos[index][0] += 1
-    #index.sendCommand("tpx " + agents_pos[index][0])
     index.sendCommand("movenorth 1")
-    #index.sendCommand("movenorth 1")
-    #print str(finish)
     return True
 
 def down(index):
-   # print("prueba ejecutada correctamente.")
-    #print str(index)
-    #agents_pos[index][0] -= 1
-    #index.sendCommand("tpx " + agents_pos[index][0])
     index.sendCommand("movesouth 1")
-    #print str(finish)
     return True
 	
 def right(index):
-    #print("prueba ejecutada correctamente.")
-    #print str(index)
-    #agents_pos[index][2] += 1
-    #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("moveeast 1")
-    #print str(finish)
     return True
 
 def left(index):
-    #print("prueba ejecutada correctamente.")
-    #print str(index)
-    #agents_pos[index][2] -= 1
-    #index.sendCommand("tpz " + agents_pos[index][2])
     index.sendCommand("movewest 1")
-    #print str(finish)
     return True
 
+def giraAgente(agente, oriActual,oriNueva):
+    if oriActual == -90 and oriNueva == 0:
+        agente.sendCommand("turn 1")
+    elif oriActual == -90 and oriNueva == 90:
+        agente.sendCommand("turn 2")
+    elif oriActual == -90 and oriNueva == 180:
+        agente.sendCommand("turn -1")
+    elif oriActual == 0 and oriNueva == 90:
+        agente.sendCommand("turn 1")
+    elif oriActual == 0 and oriNueva == -90:
+        agente.sendCommand("turn -1")
+    elif oriActual == 0 and oriNueva == 180:
+        agente.sendCommand("turn 2")
+    elif oriActual == 90 and oriNueva == -90:
+        agente.sendCommand("turn 2")
+    elif oriActual == 90 and oriNueva == 180:
+        agente.sendCommand("turn 1")      
+    elif oriActual == 90 and oriNueva == 0:
+        agente.sendCommand("turn -1")
+    elif oriActual == 180 and oriNueva == 90:
+        agente.sendCommand("turn -1")
+    elif oriActual == 180 and oriNueva == -90:
+        agente.sendCommand("turn 1")
+    elif oriActual == 180 and oriNueva == 0:
+        agente.sendCommand("turn 2")      
+    return oriNueva
+         
+    
+    
+    
 def move(index,args):
     obs = index.peekWorldState().observations
     tries = 10
@@ -219,30 +228,42 @@ def move(index,args):
     obs = json.loads(obs[-1].text)
     xini = obs["XPos"]
     zini = obs["ZPos"]
+    name = obs["Name"]
     correctObstacles = []
     for o in args[4]["obstacles"]:
         if o[1] == 226:
             correctObstacles.append((o[0]+0.5,o[2]+0.5))
     c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
+    #norte es la -Z y Este es la +x.
     for (newX,newZ) in route:
         if newZ < zini:
+            obs['Yaw'] = giraAgente(index, obs['Yaw'],180)
             zini = newZ
-            up(index)
+            index.sendCommand("move 1")
             time.sleep(0.4)
+            
         elif newZ > zini:
             zini = newZ
-            down(index)
+            obs['Yaw'] = giraAgente(index, obs['Yaw'],0)
+            index.sendCommand("move 1")
             time.sleep(0.4)
+            
+            
         if newX > xini:
             xini = newX
-            right(index)
+            obs['Yaw'] = giraAgente(index, obs['Yaw'],-90)
+            index.sendCommand("move 1")
             time.sleep(0.4)
         elif newX < xini:
             xini = newX
-            left(index)
+            obs['Yaw'] = giraAgente(index, obs['Yaw'],90)
+            index.sendCommand("move 1")
             time.sleep(0.4)
     return True
+
+
+
 def eval(index,args):
     outSocket = args[0]
     obs = index.peekWorldState().observations

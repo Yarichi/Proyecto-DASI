@@ -21,7 +21,7 @@ public class Main {
 		//System.out.println(dispatcher.sendCommand("left MalmoTutorialBot"));
 		//System.out.println(dispatcher.sendCommand("right MalmoTutorialBot"));
 		System.out.println("Inicio pruebas..");
-		dispatcher.sendCommand("eval robot1Recolector 20 20");
+		dispatcher.sendCommand("move robot1recolector 26.5 20.5");
         /*String entradaTeclado = "";
         Scanner entradaEscaner = new Scanner (System.in); //Creación de un objeto Scanner
         while(entradaEscaner.hasNext())
@@ -54,7 +54,10 @@ public class Main {
 		} 
 		*/
 		System.out.println("Finalizando prueba...");
-		Thread.sleep(30000);
+		boolean x = true;
+		while(x){
+			
+		}
 		dispatcher.closeDispatcher();
 		//asd.close();
 	}
