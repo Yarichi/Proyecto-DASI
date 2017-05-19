@@ -8,6 +8,7 @@ import threading
 import time
 import json
 from rutasLee import CalculoRutas
+from time import sleep
 
 agents_pos = dict();
 
@@ -118,7 +119,6 @@ class OrderServer(object):
                 self.outSocket.send("ap" + "_" + str(self.initInfo["apples"]) + "\n")
                 self.lock.release()
             elif message[0] == "move" and len(message) == 4:
-                ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
                     self.lock.acquire(True)
@@ -187,106 +187,122 @@ def left(index):
     return True
 
 def giraAgente(agente, oriActual,oriNueva):
-    if oriActual == -90 and oriNueva == 0:
-        agente.sendCommand("turn 1")
-    elif oriActual == -90 and oriNueva == 90:
-        agente.sendCommand("turn 2")
-    elif oriActual == -90 and oriNueva == 180:
-        agente.sendCommand("turn -1")
-    elif oriActual == 0 and oriNueva == 90:
-        agente.sendCommand("turn 1")
-    elif oriActual == 0 and oriNueva == -90:
-        agente.sendCommand("turn -1")
-    elif oriActual == 0 and oriNueva == 180:
-        agente.sendCommand("turn 2")
-    elif oriActual == 90 and oriNueva == -90:
-        agente.sendCommand("turn 2")
-    elif oriActual == 90 and oriNueva == 180:
-        agente.sendCommand("turn 1")      
-    elif oriActual == 90 and oriNueva == 0:
-        agente.sendCommand("turn -1")
-    elif oriActual == 180 and oriNueva == 90:
-        agente.sendCommand("turn -1")
-    elif oriActual == 180 and oriNueva == -90:
-        agente.sendCommand("turn 1")
-    elif oriActual == 180 and oriNueva == 0:
-        agente.sendCommand("turn 2")      
+    print("OrientacionActual: %i, OrientacionNueva: %i"%(oriActual,oriNueva))
+    if oriActual>oriNueva:
+        n = (oriActual-oriNueva)/90
+        for i in range(int(n)):
+            agente.sendCommand("turn -1")
+            sleep(0.1)
+    elif oriActual<oriNueva:
+        n = (oriNueva-oriActual)/90
+        for i in range(int(n)):
+            agente.sendCommand("turn 1")
+            sleep(0.1)
     return oriNueva
-         
+def miraSiHayObstaculos(obs,actualesObstaculos):
+    alrededor = obs['floor3x3']
+    xini = obs['XPos'] -1
+    yini = obs['YPos'] -1
+    zini = obs['ZPos'] -1
+    pos = 0
+    obstaculosDetectados = []
+    for block in alrededor:
+        if yini == (obs['YPos'] -1) and (block == 'agua' or block == 'lava') :
+                if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
+                    obstaculosDetectados.append((xini,zini))
+        elif yini > (obs['YPos'] -1):
+            if block != 'air':
+                if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
+                    obstaculosDetectados.append((xini,zini))
+        pos = pos + 1
+        if pos % 9 == 0:
+            xini = obs['XPos'] -1
+            yini = yini + 1
+            zini = obs['ZPos'] -1
+        elif pos % 3 == 0:
+            xini = obs['XPos'] - 1
+            zini = zini + 1
+        else:
+            xini = xini + 1
+
+    return obstaculosDetectados
     
-    
-    
+def getObservations(agent):
+    obs = json.loads(agent.peekWorldState().observations[-1].text)
+    obs = json.loads(agent.peekWorldState().observations[-1].text)#Importante dos veces, si no,no se actualiza el Yaw
+    return obs
 def move(index,args):
-    obs = index.peekWorldState().observations
-    tries = 10
-    while len(obs) == 0 and tries > 0:
-        obs = index.peekWorldState().observations
-        tries = tries - 1
-    if tries == 0:
-        print "he petado cuando queria ir a " + (args[2]) + " " + (args[3]) 
-        return True
-    obs = json.loads(obs[-1].text)
+    obs = getObservations(index)
     xini = obs["XPos"]
     zini = obs["ZPos"]
     name = obs["Name"]
-    correctObstacles = []
-    for o in args[4]["obstacles"]:
-        if o[1] == 226:
-            correctObstacles.append((o[0]+0.5,o[2]+0.5))
-    c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
+    c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
+    yaw = obs["Yaw"]
     #norte es la -Z y Este es la +x.
     for (newX,newZ) in route:
         if newZ < zini:
-            obs['Yaw'] = giraAgente(index, obs['Yaw'],180)
+            yaw = giraAgente(index, yaw,180)
+            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4]['obstacles'])
+            if len(nuevosObstaculos) > 0:
+                for pos in nuevosObstaculos:
+                    args[4]['obstacles'].append(pos)
+                if (xini,newZ) in args[4]['obstacles']:
+                    move(index,args)
+                    break
             zini = newZ
             index.sendCommand("move 1")
             time.sleep(0.4)
             
         elif newZ > zini:
+            yaw = giraAgente(index, yaw,0)
+            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4]['obstacles'])
+            if len(nuevosObstaculos) > 0:
+                for pos in nuevosObstaculos:
+                    args[4]['obstacles'].append(pos)
+                if (xini,newZ) in args[4]['obstacles']:
+                    move(index,args)
+                    break
             zini = newZ
-            obs['Yaw'] = giraAgente(index, obs['Yaw'],0)
             index.sendCommand("move 1")
             time.sleep(0.4)
-            
+        obs = getObservations(index)
             
         if newX > xini:
+            yaw = giraAgente(index, yaw ,270)
+            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4]['obstacles'])
+            if len(nuevosObstaculos) > 0:
+                for pos in nuevosObstaculos:
+                    args[4]['obstacles'].append(pos)
+                if (newX,zini) in args[4]['obstacles']:
+                    move(index,args)
+                    break
             xini = newX
-            obs['Yaw'] = giraAgente(index, obs['Yaw'],-90)
             index.sendCommand("move 1")
             time.sleep(0.4)
         elif newX < xini:
+            yaw = giraAgente(index, yaw ,90)
+            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4]['obstacles'])
+            if len(nuevosObstaculos) > 0:
+                for pos in nuevosObstaculos:
+                    args[4]['obstacles'].append(pos)
+                if (newX,zini) in args[4]['obstacles']:
+                    move(index,args)
+                    break
             xini = newX
-            obs['Yaw'] = giraAgente(index, obs['Yaw'],90)
             index.sendCommand("move 1")
             time.sleep(0.4)
+        obs = getObservations(index)
     return True
 
 
 
 def eval(index,args):
     outSocket = args[0]
-    obs = index.peekWorldState().observations
-    tries = 10
-    while len(obs) == 0 and tries > 0:
-        obs = index.peekWorldState().observations
-        tries = tries - 1
-    if tries == 0:
-        message = "eval_%s_-1\n"%"Failed"
-        args[1].acquire(True)
-        outSocket.send(message)
-        args[1].release()
-        print "he petado cuando calcular evaluacion a " + (args[2]) + " " + (args[3]) 
-        return True
-            
-    obs = json.loads(obs[-1].text)
+    obs = getObservations(index)
     xini = obs["XPos"]
     zini = obs["ZPos"]
-    correctObstacles = []
-    for o in args[4]["obstacles"]:
-        if o[1] == 226:
-            correctObstacles.append((o[0]+0.5,o[2]+0.5))
-    c = CalculoRutas((xini,zini),correctObstacles,args[4]["width"],args[4]["height"])
+    c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
     if route is not None:
         message = "eval_%s_%i\n"%(obs['Name'],len(route))
@@ -295,19 +311,8 @@ def eval(index,args):
     args[1].acquire(True)
     outSocket.send(message)
     args[1].release()
-        
     return True
     
-
-#def agent(index, params):
-#    obs = json.loads(index.peekWorldState().observations[-1].text)
-#    position = "ag_[["+str(float(obs[u'XPos'])) + ", " + str(float(obs[u'YPos'])) + ", " + str(float(obs[u'ZPos'])) + "]]\n"
-#    print str(position)
-#    params[1].acquire(True)
-#    params[0].send(position)
-#    params[1].release()
-#    return True
-
 def initDispatcher(world_items, agent_host):
     #TODO se supone que tenemos el numero de agentes
     #cogemos el numero de agentes
@@ -317,7 +322,6 @@ def initDispatcher(world_items, agent_host):
     for id in world_items["agentsId"]:
         agents_pos[str(cont)] = world_items["agents"][cont]
         cont+=1
-    #amountAgents = 3;
     #iniciamos la lista de despachadores de ordenes
     dispatches = []
     #para el numero de agentes
@@ -331,18 +335,14 @@ def initDispatcher(world_items, agent_host):
     #creamos la clase que recibe y apunta ordenes
     o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
-    #o.startConnection()
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
     thread = threading.Thread(target=o.receiveOrder)
     thread.start()
     #iniciando la ejecucion de ordenes
-    #thread2 = threading.Thread(target=dispatch.execution)
-    #thread2.start()
     thread2 = []
     for contador in range(amountAgents):
         thread2.append(threading.Thread(target=dispatches[contador].execution))
         thread2[contador].start()
-    #esperamos hasta que los threads acabemos
-    #thread.join()
-    #for contador in range(amountAgents):
-    #    thread2[contador].join()
+    
+    while thread.is_alive() or thread2[0].is_alive():
+        pass

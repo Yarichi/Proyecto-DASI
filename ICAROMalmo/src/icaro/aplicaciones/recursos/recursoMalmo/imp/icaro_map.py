@@ -38,13 +38,13 @@ import threading
 import re
 import uuid
             
-def generateObstacles():
+'''def generateObstacles():
     for i in range(48):
         world_items["obstacles"].append([38, 227, i + 3])
     for i in [23, 24, 25, 26]:
         for j in [22, 23, 24, 25, 26]:
             world_items["obstacles"].append([i, 226, j])
-
+'''
 def generateAgentsIds():
     #obtenemos en una lista de cadenas los nombres de los agentes con las etiquetas
     modified = re.findall("<Name>.*</Name>", mission_xml)
@@ -81,6 +81,7 @@ def drawMap():
     world = ""
     world += drawCuboid(0, 227, 0, xTop, 227, zTop, "air")
     world += drawCuboid(0, 227, 0, xTop, 227, zTop, "glowstone")
+    world += drawCuboid(23, 228, 22, 23, 229, 22, "obsidian")
     world += drawCuboid(0, 255, 0, xTop, 255, zTop, "barrier")
     world += drawCuboid(0, 227, 0, 0, 237, zTop, "barrier")
     world += drawCuboid(0, 227, 0, xTop, 237, 0, "barrier")
@@ -94,10 +95,6 @@ def drawItems():
     items += drawMap()
     for coords in world_items["apples"]:
         items += drawItem(coords[0], coords[1], coords[2], "apple")
-
-    #for coords in world_items["enemies"]:
-    #    items += drawEntity(coords[0], coords[1], coords[2], "Zombie", 90, 45, 1, 0, 1)
-
     items += drawLine("lava", 38, 227, 3, 38, 227, 50)
     items += drawLine("lava",-1,227,-1,-1,227,zTop+1)
     items += drawLine("lava",-1,227,-1,xTop+1,227,-1)
@@ -158,11 +155,11 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         </AgentStart>
         <AgentHandlers>
             <DiscreteMovementCommands/>
-            <ObservationFromFullStats />
+            <ObservationFromFullStats/>
             <ObservationFromGrid>
                 <Grid name="floor3x3">
                     <min x="-1" y="-1" z="-1" />
-                    <max x="1" y="-1" z="1" />
+                    <max x="1" y="1" z="1" />
                 </Grid>
             </ObservationFromGrid>
             <InventoryCommands />
@@ -185,7 +182,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
             <ObservationFromGrid>
                 <Grid name="floor3x3">
                     <min x="-1" y="-1" z="-1" />
-                    <max x="1" y="-1" z="1" />
+                    <max x="1" y="1" z="1" />
                 </Grid>
             </ObservationFromGrid>
             <InventoryCommands />
