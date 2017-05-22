@@ -151,4 +151,5 @@ public class VocabularioRosace extends NombresPredefinidos{
 	public static final String RespuestaCosteRecoleccion = "RespuestaCosteRecoleccion";
 	public static final String MalmoListo = "RecursoMalmoIniciado";
 	public static final String identObjetivoRecolectarTodasLasManzanas = "RecolectarTodasLasManzanas";
+	public static final String MsgConstruirPuente = "ConstruyePuente";
 }

@@ -18,6 +18,7 @@ import java.net.Socket;
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Obstaculo;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
@@ -196,7 +197,8 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 
 	
 	public void getInformacionAgente(String idAgente) throws Exception {
-		this.dispatcher.sendCommand("agent " + idAgente);/*
+		this.dispatcher.sendCommand("agent " + idAgente);
+		/*
 		if(agent == null){
 			JOptionPane.showMessageDialog(null, "El agente " + idAgente + " no consigue su informacion");
 			return null;
@@ -270,6 +272,15 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "move " + identAgente + " " + x + " " + y;
 		this.dispatcher.sendCommand(msg);
+	}
+
+	@Override
+	public void construyePuente(InformeRio informe) {
+		
+		String msg = "buildriver " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaAgente().getX() + " " + informe.getCoordenadaAgente().getZ() + " "  
+				                   + informe.getCoordenadaManzana().getX() + " " + informe.getCoordenadaManzana().getZ() + " " + informe.getOrientacionAgente();
+		this.dispatcher.sendCommand(msg);
+		
 	}
 
 }

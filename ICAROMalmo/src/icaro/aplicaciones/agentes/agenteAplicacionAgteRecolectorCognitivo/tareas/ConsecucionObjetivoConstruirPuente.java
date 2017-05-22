@@ -2,11 +2,12 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tarea
 
 import icaro.aplicaciones.Rosace.informacion.PropuestaAgente;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
 import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
-public class ConsecucionObjetivoRecoleccion extends TareaSincrona{
+public class ConsecucionObjetivoConstruirPuente extends TareaSincrona{
 	ItfUsoRecursoMalmo itfMalmo;
 	PropuestaAgente propuesta;
 	@Override
@@ -18,7 +19,7 @@ public class ConsecucionObjetivoRecoleccion extends TareaSincrona{
 			new Thread(){
 				public void run(){
 					try {
-						itfMalmo.moverAgente(identAgente,((Manzana) propuesta.getJustificacion()).getCoordinate());
+						itfMalmo.construyePuente((InformeRio) propuesta.getJustificacion());
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						e.printStackTrace();

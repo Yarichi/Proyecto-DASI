@@ -13,7 +13,10 @@ import java.util.Hashtable;
 import javax.swing.JOptionPane;
 
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas.ConseguirInformacionDelEntorno;
+import icaro.infraestructura.entidadesBasicas.NombresPredefinidos;
+import icaro.infraestructura.patronAgenteCognitivo.factoriaEInterfacesPatCogn.imp.AgenteCognitivotImp2;
 
 public class PythonOrderDispatcher implements OrderDispatcher 
 {
@@ -198,6 +201,19 @@ public class PythonOrderDispatcher implements OrderDispatcher
 				else{
 					while(evaluaciones.containsKey(lines[1])){}
 					evaluaciones.put(lines[1], Integer.parseInt(lines[2]));						
+				}
+			}
+			//"river agentId agX agZ yaw appleX appleZ"
+			else if(lines[0].equalsIgnoreCase("river")){
+				try {
+					AgenteCognitivotImp2 agenteCoordinador =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot1Recolector");
+					agenteCoordinador.getControl().insertarHecho(new InformeRio(lines[1],
+							new Coordinate(Double.parseDouble(lines[5]), 227, Double.parseDouble(lines[6])),
+							new Coordinate(Double.parseDouble(lines[2]), 227, Double.parseDouble(lines[3])),
+							Integer.parseInt(lines[4])));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
 				}
 			}
 		}

@@ -131,3 +131,12 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
 end
+rule "Proceso peticion de construir puente"
+when
+	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgConstruirPuente)
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConsecucionObjetivoConstruirPuente.class);
+	tarea.ejecutar(peticion);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());    
+end
