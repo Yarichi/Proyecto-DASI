@@ -203,8 +203,10 @@ def giraAgente(agente, oriActual,oriNueva):
             agente.sendCommand("turn 1")
             sleep(0.1)
     return oriNueva
-def miraSiHayObstaculos(obs,actualesObstaculos):
+def miraSiHayObstaculos(obs,world_items):
     alrededor = obs['floor3x3']
+    actualesObstaculos = world_items["obstacles"]
+    actualesRios = world_items["rios"]
     xini = obs['XPos'] -1
     yini = obs['YPos'] -1
     zini = obs['ZPos'] -1
@@ -214,6 +216,7 @@ def miraSiHayObstaculos(obs,actualesObstaculos):
         if yini == (obs['YPos'] -1) and (block == 'agua' or block == 'lava') :
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
                     obstaculosDetectados.append((xini,zini))
+                    actualesRios.append((xini, zini))
         elif yini > (obs['YPos'] -1):
             if block != 'air':
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
@@ -289,12 +292,16 @@ def move(index,args):
     for (newX,newZ) in route:
         if newZ < zini:
             yaw = giraAgente(index, yaw,180)
-            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4]['obstacles'])
+            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
-                    move(index,args)
+                    if(xini,newZ) in args[4]['rios']:
+                        
+                        sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                    else:    
+                        move(index,args)
                     break
             zini = newZ
             index.sendCommand("move 1")
@@ -307,7 +314,10 @@ def move(index,args):
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
-                    move(index,args)
+                    if(xini,newZ) in args[4]['rios']:
+                        sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                    else:
+                        move(index,args)
                     break
             zini = newZ
             index.sendCommand("move 1")
@@ -321,7 +331,10 @@ def move(index,args):
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
-                    move(index,args)
+                    if(xini,newZ) in args[4]['rios']:
+                        sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                    else:
+                        move(index,args)
                     break
             xini = newX
             index.sendCommand("move 1")
@@ -333,7 +346,10 @@ def move(index,args):
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
-                    move(index,args)
+                    if(xini,newZ) in args[4]['rios']:
+                        sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                    else:
+                        move(index,args)
                     break
             xini = newX
             index.sendCommand("move 1")
@@ -341,7 +357,14 @@ def move(index,args):
         obs = getObservations(index)
     return True
 
-
+def sendRiverFound(agentId, posIni, posDest, paw, lock, outSocket):
+    (xini, zini) = posIni
+    (xdest, zdest) = posDest
+    "river agentId agX agZ yaw appleX appleZ"
+    message = "river %s %f %f %d %f %f"%(agentId, xini, zini, yaw, xdest, zdest)
+    lock.acquire(True)
+    outSocket.send(message)
+    lock.release()
 
 def eval(index,args):
     outSocket = args[0]
