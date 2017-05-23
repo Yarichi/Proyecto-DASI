@@ -150,10 +150,12 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         <AgentStart>
             <Placement x="22.5" y="228.0" z="22.5" pitch="30" yaw="0" />
             <Inventory>
-                <InventoryItem slot="8" type="diamond_pickaxe" />
+                <InventoryItem slot="1" type="stone" quantity="64" />
+                <InventoryItem slot="2" type="diamond_pickaxe" />
             </Inventory>
         </AgentStart>
         <AgentHandlers>
+            <InventoryCommands/>
             <DiscreteMovementCommands/>
             <ObservationFromFullStats/>
             <ObservationFromGrid>
@@ -162,7 +164,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
                     <max x="1" y="1" z="1" />
                 </Grid>
             </ObservationFromGrid>
-            <InventoryCommands />
+            
             <AgentQuitFromTouchingBlockType>
                 <Block type="diamond_block" />
             </AgentQuitFromTouchingBlockType>

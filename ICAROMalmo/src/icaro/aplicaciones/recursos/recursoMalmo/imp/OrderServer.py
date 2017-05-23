@@ -129,6 +129,10 @@ class OrderServer(object):
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
                     self.lock.release()
+            elif message[0] == "buildriver" and len(message) == 7:
+                idEntero = self.convertStringToId(message[1])
+                self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]],
+                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocketAck, self.lock, self.initInfo]))
             elif message[0] == "eval" and len(message) == 4:
                 ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
@@ -231,8 +235,50 @@ def getObservations(agent):
     obs = json.loads(agent.peekWorldState().observations[-1].text)
     obs = json.loads(agent.peekWorldState().observations[-1].text)#Importante dos veces, si no,no se actualiza el Yaw
     return obs
+
+#arg[0] --> posicion del puente
+#arg[1] --> posicion a la que ir de la manzana
+#arg[2]--> yaw
+#arg[3] --> socket
+#arg[4] --> lock
+#arg[5] --> world_items
+def buildriver(index, args):
+    (posX, posZ) = args[0]
+    (manX, manZ) = args[1]
+    obs = getObservations(index)
+    yaw = obs["Yaw"]
+    yaw = giraAgente(index, yaw,args[2])
+    arg[0] = args[3]
+    arg[1] = args[4]
+    arg[2] = posX
+    arg[3] = posZ
+    arg[4] = args[5]
+    move(index, args)
+    index.sendCommand("move -1")
+    useBlock(index, 2)
+    arg[2] = manX
+    arg[3] = manZ
+    move(index, args)
+
+
+def useBlock(index, hotbarIndex):
+    index.sendCommand("hotbar.%d 1")%hotbarIndex;
+    index.sendCommand("use");
+    index.sendCommand("hotbar.1 1");
+
+#args[0] --> socket
+#args[1] --> lock
+#args[2] --> X
+#args[3] --> Z
+#args[4] --> world_items
 def move(index,args):
     obs = getObservations(index)
+
+    #CODIGO DE PRUEBAS    
+    while True:
+        index.sendCommand(raw_input());
+    #FIN CODIGO DE PRUEBAS
+
     xini = obs["XPos"]
     zini = obs["ZPos"]
     name = obs["Name"]
@@ -333,7 +379,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval)], dispatches, world_items, agent_host)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval), ("buildriver",buildriver)], dispatches, world_items, agent_host)
     #print Aceptamos la conexion con la clase de java
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
     thread = threading.Thread(target=o.receiveOrder)
