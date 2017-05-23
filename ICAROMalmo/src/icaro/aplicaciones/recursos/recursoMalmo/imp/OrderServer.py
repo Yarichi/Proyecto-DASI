@@ -298,10 +298,11 @@ def move(index,args):
                     args[4]['obstacles'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
                     if(xini,newZ) in args[4]['rios']:
-                        
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                        return False
                     else:    
-                        move(index,args)
+                        if move(index,args) == False:
+                             return False;
                     break
             zini = newZ
             index.sendCommand("move 1")
@@ -316,8 +317,10 @@ def move(index,args):
                 if (xini,newZ) in args[4]['obstacles']:
                     if(xini,newZ) in args[4]['rios']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                        return False
                     else:
-                        move(index,args)
+                        if move(index,args) == False:
+                             return False;
                     break
             zini = newZ
             index.sendCommand("move 1")
@@ -333,8 +336,11 @@ def move(index,args):
                 if (newX,zini) in args[4]['obstacles']:
                     if(xini,newZ) in args[4]['rios']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                        return False
                     else:
                         move(index,args)
+                        if move(index,args) == False:
+                             return False;
                     break
             xini = newX
             index.sendCommand("move 1")
@@ -348,8 +354,11 @@ def move(index,args):
                 if (newX,zini) in args[4]['obstacles']:
                     if(xini,newZ) in args[4]['rios']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), paw, args[1], args[0])
+                        return False
                     else:
                         move(index,args)
+                        if move(index,args) == False:
+                             return False;
                     break
             xini = newX
             index.sendCommand("move 1")
@@ -360,7 +369,6 @@ def move(index,args):
 def sendRiverFound(agentId, posIni, posDest, paw, lock, outSocket):
     (xini, zini) = posIni
     (xdest, zdest) = posDest
-    "river agentId agX agZ yaw appleX appleZ"
     message = "river %s %f %f %d %f %f"%(agentId, xini, zini, yaw, xdest, zdest)
     lock.acquire(True)
     outSocket.send(message)
