@@ -276,17 +276,29 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
 end
-rule "Recibo informe de rio encontrado y lo proceso"
 
+rule "Proceso informe de rio"
 when
 	informeRio : InformeRio();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(CrearObjetivoConstruirPuente.class);
+	tarea.ejecutar(informeRio);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());    
+end
+
+rule "Hay que construir un puente y se pide al encargado que se construya"
+
+when
+	objetivo : ConstruirPuente(state == Objetivo.PENDING)
 	infoEquipo : InfoEquipoMoic();
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(EnviaOrdenConstruirPuente.class);
-	tarea.ejecutar(informeRio,infoEquipo);
+	tarea.ejecutar(objetivo,infoEquipo);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
 end
+
 
 rule "Proceso peticion de construir puente"
 when

@@ -3,17 +3,16 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tarea
 import icaro.aplicaciones.Rosace.informacion.PropuestaAgente;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
-import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.ConstruirPuente;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
 import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 
 public class ConsecucionObjetivoConstruirPuente extends TareaSincrona{
 	ItfUsoRecursoMalmo itfMalmo;
-	PropuestaAgente propuesta;
 	@Override
 	public void ejecutar(Object... params) {
 		// TODO Auto-generated method stub
-		 propuesta = (PropuestaAgente) params[0];
+		PropuestaAgente propuesta = (PropuestaAgente) params[0];
 		try {
 			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfazGestion(VocabularioRosace.IdentRecursoMalmo);
 			new Thread(){

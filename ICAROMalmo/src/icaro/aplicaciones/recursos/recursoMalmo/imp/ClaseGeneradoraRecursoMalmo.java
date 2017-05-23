@@ -276,7 +276,6 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 
 	@Override
 	public void construyePuente(InformeRio informe) {
-		
 		String msg = "buildriver " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaAgente().getX() + " " + informe.getCoordenadaAgente().getZ() + " "  
 				                   + informe.getCoordenadaManzana().getX() + " " + informe.getCoordenadaManzana().getZ() + " " + informe.getOrientacionAgente();
 		this.dispatcher.sendCommand(msg);
