@@ -122,10 +122,7 @@ class OrderServer(object):
             elif message[0] == "move" and len(message) == 4:
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                    self.lock.acquire(True)
-                    self.outSocket.send("Ack\n")
-                    self.lock.release()
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocketAck, self.lock, message[2], message[3], self.initInfo]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
@@ -133,7 +130,7 @@ class OrderServer(object):
             elif "buildriver" in message[0] and len(message) == 7:
                 idEntero = self.convertStringToId(message[1])
                 self.orderDispatcher[idEntero].dispatch(Command(self.index["buildriver"],
-                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocketAck, self.lock, self.initInfo]))
+                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocket, self.lock, self.initInfo]))
             elif message[0] == "eval" and len(message) == 4:
                 ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
@@ -192,7 +189,7 @@ def left(index):
     return True
 
 def giraAgente(agente, oriActual,oriNueva):
-    print("OrientacionActual: %i, OrientacionNueva: %i"%(oriActual,oriNueva))
+    #print("OrientacionActual: %i, OrientacionNueva: %i"%(oriActual,oriNueva))
     if oriActual>oriNueva:
         n = (oriActual-oriNueva)/90
         for i in range(int(n)):
@@ -214,11 +211,12 @@ def miraSiHayObstaculos(obs,world_items):
     zini = obs['ZPos'] -1
     pos = 0
     obstaculosDetectados = []
+    riosDetectados = []
     for block in alrededor:
         if yini == (obs['YPos'] -1) and (block == 'agua' or block == 'lava') :
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
                     obstaculosDetectados.append((xini,zini))
-                    actualesRios.append((xini, zini))
+                    riosDetectados.append((xini, zini))
         elif yini > (obs['YPos'] -1):
             if block != 'air':
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
@@ -234,7 +232,7 @@ def miraSiHayObstaculos(obs,world_items):
         else:
             xini = xini + 1
 
-    return obstaculosDetectados
+    return obstaculosDetectados,riosDetectados
     
 def getObservations(agent):
     obs = json.loads(agent.peekWorldState().observations[-1].text)
@@ -264,6 +262,8 @@ def buildriver(index, args):
     time.sleep(0.1)
     index.sendCommand("move 1")
     time.sleep(0.1)
+    index.sendCommand("move 1")
+    time.sleep(0.1)
     arg[2] = manX
     arg[3] = manZ
     move(index, arg)
@@ -286,7 +286,6 @@ def useBlock(index, hotbarIndex):
 #args[4] --> world_items
 def move(index,args):
     obs = getObservations(index)
-
     xini = obs["XPos"]
     zini = obs["ZPos"]
     name = obs["Name"]
@@ -297,12 +296,14 @@ def move(index,args):
     for (newX,newZ) in route:
         if newZ < zini:
             yaw = giraAgente(index, yaw,180)
-            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
+                    if pos in riosNuevos:
+                        args[4]['rivers'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
-                    if(xini,newZ) in args[4]['rivers']:
+                    if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
                     else:    
@@ -315,12 +316,14 @@ def move(index,args):
             
         elif newZ > zini:
             yaw = giraAgente(index, yaw,0)
-            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
+                    if pos in riosNuevos:
+                        args[4]['rivers'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
-                    if(xini,newZ) in args[4]['rivers']:
+                    if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
                     else:
@@ -334,12 +337,14 @@ def move(index,args):
             
         if newX > xini:
             yaw = giraAgente(index, yaw ,270)
-            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
+                    if pos in riosNuevos:
+                        args[4]['rivers'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
-                    if(xini,newZ) in args[4]['rivers']:
+                    if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
                     else:
@@ -352,12 +357,14 @@ def move(index,args):
             time.sleep(0.4)
         elif newX < xini:
             yaw = giraAgente(index, yaw ,90)
-            nuevosObstaculos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
+                    if pos in riosNuevos:
+                        args[4]['rivers'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
-                    if(xini,newZ) in args[4]['rivers']:
+                    if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
                     else:
@@ -374,7 +381,7 @@ def move(index,args):
 def sendRiverFound(agentId, posIni, posDest, yaw, lock, outSocket):
     (xini, zini) = posIni
     (xdest, zdest) = posDest
-    message = "river %s %f %f %d %f %f"%(agentId, xini, zini, yaw, xdest, zdest)
+    message = "river_%s_%f_%f_%i_%f_%f\n"%(agentId, xini, zini, yaw, xdest, zdest)
     lock.acquire(True)
     outSocket.send(message)
     lock.release()

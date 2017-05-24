@@ -16,5 +16,5 @@ public interface ItfUsoRecursoMalmo extends ItfUsoRecursoSimple{
 	public abstract void getInformacionManzanas() throws Exception;
 	public abstract void calculaCoste(String idAgente, Coordinate coorDestino) throws Exception;
 	public abstract void moverAgente(String identAgente, Coordinate coordinate) throws Exception;
-	public abstract void construyePuente(InformeRio justificacion);
+	public abstract void construyePuente(InformeRio justificacion) throws Exception;
 }

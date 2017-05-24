@@ -109,7 +109,7 @@ xTop = 50
 zTop = 50
 numAgentes = 2
 
-world_items = dict(apples=[[20, 227, 20], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], rivers=[],width = zTop, height = xTop)
+world_items = dict(apples=[[43, 227,43], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], rivers=[],width = zTop, height = xTop)
 
 # agent = TabQAgent()
 # Create default Malmo objects:
@@ -175,7 +175,8 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         <AgentStart>
             <Placement x="22.5" y="228.0" z="34.5" pitch="30" yaw="180" />
             <Inventory>
-                <InventoryItem slot="8" type="diamond_pickaxe" />
+                <InventoryItem slot="1" type="stone" quantity="64" />
+                <InventoryItem slot="2" type="diamond_pickaxe" />
             </Inventory>
         </AgentStart>
         <AgentHandlers>

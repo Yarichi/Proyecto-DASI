@@ -116,6 +116,8 @@ when
 	mensajeMalmo: MensajeSimple(VocabularioRosace.MalmoListo == contenido)
 	obj: DefinirMiEquipo(state == Objetivo.SOLVED)
 then
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," INICIO EJECUCION REGLA: " + drools.getRule().getName()); 
+    
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConseguirInformacionDelEntorno.class);
 	tarea.ejecutar();
 	retract(mensajeMalmo);
