@@ -36,10 +36,6 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 			this.itfProcObjetivos.actualizarHecho(foco);
 
 		}
-		else{
-			@SuppressWarnings("unused")
-			int y1 = 1 + 1;
-		}
 		//trazas.aceptaNuevaTrazaEjecReglas(identAgente, "");
 
 	}

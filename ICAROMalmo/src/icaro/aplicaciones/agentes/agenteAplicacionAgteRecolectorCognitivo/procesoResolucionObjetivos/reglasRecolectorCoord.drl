@@ -252,6 +252,7 @@ then
 end
 
 rule "Resolucion del objetivo recolectar manzana por el agente"
+salience 101
 when
 	obj: RecolectarManzana(state == Objetivo.SOLVING, id: agentId);
 	obj1: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
@@ -266,6 +267,23 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
 end
+
+rule "Resolucion del objetivo recolectar manzana por el recolector"
+when
+	obj: RecolectarManzana(state == Objetivo.PENDING, id: agentId);
+	obj1: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
+	informe : InformeObjetivo(idAgenteInvolucrado == id);
+then
+
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizacionObjetivoRecolectarManzanaCoord.class);
+	tarea.ejecutar(obj, obj1, informe);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
+
+end
+
 //Regla del calculo de la evaluacion
 rule "Calculo mi evaluacion de recolectarManzana"
 when
@@ -284,7 +302,7 @@ rule "Proceso peticion de recoleccion de manzana"
 when
 	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo, idP: identObjectRefPropuesta)
 	obj : RecolectarManzana(state == Objetivo.PENDING, id == idP)
-	not(exists(RecolectarManzana(state == Objetivo.SOLVING, id != idP)))
+	not(exists(RecolectarManzana(state == Objetivo.SOLVING)))
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConsecucionObjetivoRecoleccion.class);
 	tarea.ejecutar(peticion, obj);
@@ -391,7 +409,7 @@ end
 
 rule "Finalizar simulacion todas las manzanas recogidas"
 when
-	obj: RecolectarTodasLasManzanas(manzanasRestantes == 0)
+	obj: RecolectarTodasLasManzanas(manzanasPorRecolectar == 0)
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizarSimulacionRecoleccion.class);
 //	tarea.ejecutar(obj);

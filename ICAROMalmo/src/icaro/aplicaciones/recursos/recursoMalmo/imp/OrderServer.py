@@ -269,10 +269,7 @@ def buildriver(index, args):
     arg = [args[3], args[4], posX, posZ, args[5], args[6]]
     obs = getObservations(index)
     yaw = obs["Yaw"]
-    print yaw
-    print posX +" " +posZ
     move(index, arg)
-    print "HOLA"
     yaw = giraAgente(index, yaw,int(args[2]))
     index.sendCommand("move -1")
     time.sleep(0.4);
@@ -464,7 +461,6 @@ def move(index,args):
     print str(xini) + " " + str(zini)
     for coords in args[4]['apples']:
         if (coords[0]) == xini and (coords[2])  == zini:
-            index.sendCommand("move 1")
             time.sleep(0.4)
             args[1].acquire(True)
             message = "success_%s_%f_%f\n"%(obs['Name'], xini, zini)
