@@ -10,7 +10,8 @@ public class RecolectarTodasLasManzanas extends Objetivo{
 	private ArrayList<String> manzanas_tratadas;
 	private int manzanasRestantes;
 	private int manzanasPorRecolectar;
-
+	private int indiceManzana;
+	
 	//Revisar si hace falta un clone
 	public RecolectarTodasLasManzanas(ArrayList<Manzana> m){
 		this.manzanas = m;
@@ -29,7 +30,7 @@ public class RecolectarTodasLasManzanas extends Objetivo{
 
 	public boolean isRecolectada(String id){return this.manzanas_tratadas.contains(id);}
 
-	public Manzana getNextManzana(){
+	/*public Manzana getNextManzana(){
 		int x = this.manzanas_tratadas.size();
 		if(x == this.manzanas.size()){
 			return null;
@@ -40,6 +41,17 @@ public class RecolectarTodasLasManzanas extends Objetivo{
 			this.manzanasRestantes--;
 			return manzana;
 		}
+	}*/
+	
+	public Manzana getNextManzana(){
+		if(this.indiceManzana < this.manzanas.size()){
+			Manzana m = this.manzanas.get(this.indiceManzana);
+			this.indiceManzana++;
+			this.manzanasRestantes--;
+			
+			return m;
+		}
+		return null;
 	}
 
 	public ArrayList<String> getManzanas_tratadas() {

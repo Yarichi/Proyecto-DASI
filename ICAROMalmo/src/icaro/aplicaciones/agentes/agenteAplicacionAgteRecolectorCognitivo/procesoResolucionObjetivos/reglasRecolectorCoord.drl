@@ -254,33 +254,28 @@ end
 rule "Resolucion del objetivo recolectar manzana por el agente"
 salience 101
 when
-	obj: RecolectarManzana(state == Objetivo.SOLVING, id: agentId);
+	obj: RecolectarManzana(state == Objetivo.SOLVING,idManzana: id ,id: agentId);
 	obj1: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
 	informe : InformeObjetivo(idAgenteInvolucrado == id);
 then
 
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizacionObjetivoRecolectarManzanaCoord.class);
 	tarea.ejecutar(obj, obj1, informe);
- 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
-    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
- 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
-    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+ ". Manzana recogida: " + idManzana +"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()+ ". Manzana recogida: " + idManzana);      
 
 end
-
 rule "Resolucion del objetivo recolectar manzana por el recolector"
 when
-	obj: RecolectarManzana(state == Objetivo.PENDING, id: agentId);
+	obj: RecolectarManzana(state == Objetivo.PENDING, idManzana: id ,id: agentId);
 	obj1: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
 	informe : InformeObjetivo(idAgenteInvolucrado == id);
 then
 
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizacionObjetivoRecolectarManzanaCoord.class);
 	tarea.ejecutar(obj, obj1, informe);
- 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
-    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
- 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
-    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+ ". Manzana recogida: " + idManzana + "\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()+ ". Manzana recogida: " + idManzana );     
 
 end
 

@@ -194,14 +194,14 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	public void getInformacionManzanas() {
-		this.dispatcher.sendCommand("apples");
+		this.dispatcher.sendCommand("apples\n");
 		/*setInformation(apples);
 		return this.parseManzanas(this.apples);*/
 	}
 
 	
-	public void getInformacionAgente(String idAgente) throws Exception {
-		this.dispatcher.sendCommand("agent " + idAgente);
+	public synchronized void getInformacionAgente(String idAgente) throws Exception {
+		this.dispatcher.sendCommand("agent " + idAgente + "\n");
 		/*
 		if(agent == null){
 			JOptionPane.showMessageDialog(null, "El agente " + idAgente + " no consigue su informacion");
@@ -250,9 +250,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	
-	public void calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
+	public synchronized void calculaCoste(String idAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
-		String msg = "eval " + idAgente + " " + x + " " + y;
+		String msg = "eval " + idAgente + " " + x + " " + y + "\n";
 		this.dispatcher.sendCommand(msg);
 	}
 	
@@ -272,9 +272,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
+	public synchronized void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
-		String msg = "move " + identAgente + " " + x + " " + y;
+		String msg = "move " + identAgente + " " + x + " " + y + "\n";
 		System.out.println(identAgente + ": " + msg);
 		new Thread(){
 			public void run(){
@@ -290,7 +290,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public void construyePuente(String msg) {
+	public synchronized void construyePuente(String msg) {
 		/*String msg = "buildriver " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaAgente().getX() + " " + informe.getCoordenadaAgente().getZ() + " "  
 				                   + informe.getCoordenadaManzana().getX() + " " + informe.getCoordenadaManzana().getZ() + " " + informe.getOrientacionAgente();*/
 		
@@ -299,14 +299,14 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public void picaPiedra(String msg) {
+	public synchronized void picaPiedra(String msg) {
 		/*String msg = "pickstone " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaObs().getX() + " " + informe.getCoordenadaObs().getZ() + " "  
                 + informe.getCoordenadaObj().getX() + " " + informe.getCoordenadaObj().getZ() + " " + informe.getOrientacionAgente();*/
 		this.dispatcher.sendCommand(msg);
 		
 	}
 	
-	public void trataMensajeInforme(String msg){
+	public synchronized void trataMensajeInforme(String msg){
 		String[] parts = msg.split(" ");
 		if (parts[0].equals("buildriver")){
 			this.construyePuente(msg);	

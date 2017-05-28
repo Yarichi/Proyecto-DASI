@@ -1,5 +1,7 @@
 package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas;
 
+import javax.swing.JOptionPane;
+
 import icaro.aplicaciones.Rosace.informacion.PropuestaAgente;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InfoDecidirRecolector;
@@ -19,25 +21,39 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 		InfoDecidirRecolector infoDecidirRecolector = (InfoDecidirRecolector) params[2];
 		Focus foco = (Focus) params[3];
 		RecolectarTodasLasManzanas obj2 = (RecolectarTodasLasManzanas) params[4];
+		System.out.println("Voy a seleccionar el mejor agente");
 		String agenteDestino =  infoDecidirRecolector.selectBestAgent();
-
+		System.out.println("El agente: " + agenteDestino); 
+		Thread t = new Thread(){
+			public void run(){
+				try {
+					Thread.sleep(400);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				PropuestaAgente miPropuesta = new PropuestaAgente (identAgente);
+				miPropuesta.setMensajePropuesta(VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo);
+				miPropuesta.setIdentObjectRefPropuesta(recolectarManzana.getManzana().getId());
+				miPropuesta.setJustificacion(recolectarManzana.getManzana());
+				getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
+				
+				
+			}
+		};
 		if(agenteDestino != null){
-			PropuestaAgente miPropuesta = new PropuestaAgente (this.identAgente);
-			miPropuesta.setMensajePropuesta(VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo);
-			miPropuesta.setIdentObjectRefPropuesta(recolectarManzana.getManzana().getId());
-			miPropuesta.setJustificacion(recolectarManzana.getManzana());
-			this.getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
 			recolectarManzana.setAgentId(agenteDestino);
 			decidirQuienVa.setSolved();
 			foco.setFoco(obj2);
-			this.itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);
-			this.itfProcObjetivos.eliminarHechoWithoutFireRules(infoDecidirRecolector);
-			this.itfProcObjetivos.actualizarHechoWithoutFireRules(recolectarManzana);
-			this.itfProcObjetivos.actualizarHecho(foco);
-
+			itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);
+			itfProcObjetivos.eliminarHechoWithoutFireRules(infoDecidirRecolector);
+			itfProcObjetivos.actualizarHechoWithoutFireRules(recolectarManzana);
+			itfProcObjetivos.actualizarHecho(foco);
+			t.start();
 		}
-		//trazas.aceptaNuevaTrazaEjecReglas(identAgente, "");
-
+		else{
+			JOptionPane.showMessageDialog(null, "Agente null en la seleccion");
+		}
 	}
 
 }

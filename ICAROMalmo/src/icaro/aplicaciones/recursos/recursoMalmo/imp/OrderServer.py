@@ -25,11 +25,13 @@ class OrderDispatcher(object):
         finishCondition = True
         print str(self.number)
         while self.stop == False:
-            if self.queue.empty() == False:
+            if not self.queue.empty() and finishCondition == True:
                 obj = self.queue.get()
-                #obj.action(agent_host[self.number])
-                thread = threading.Thread(target=obj.action, args=[self.number])
-                thread.start();
+                obj.action(self.number)
+                finishCondition = obj.isFinished()
+                
+                '''thread = threading.Thread(target=obj.action, args=[self.number])
+                thread.start();'''
 
 
     def stopExecution(self):
@@ -87,6 +89,8 @@ class OrderServer(object):
             message = self.onlyAllowedCharacter(message)
             message = message.lower()
             message = message.split(" ")
+            if '' in message:
+                message.remove('')
             print message
             if message[0] == "end" and len(message) == 1:
                 break
@@ -286,6 +290,7 @@ def buildriver(index, args):
     arg[2] = manX
     arg[3] = manZ
     move(index, arg)
+    return True
 
 #arg[0] --> posicion de la piedra
 #arg[1] --> posicion a la que ir de la manzana
@@ -314,7 +319,8 @@ def pickstone(index, args):
     time.sleep(0.4)
     arg[2] = manX
     arg[3] = manZ
-    move(index, arg)    
+    move(index, arg)
+    return True
 
 def usePick(index, hotbarIndex):
     hb1 = ("hotbar.%d 1")%(int(hotbarIndex))
@@ -369,10 +375,10 @@ def move(index,args):
                 if (xini,newZ) in args[4]['obstacles']:
                     if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     if (xini,newZ) in args[4]['stones_detected']:
                         sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     else:    
                         return move(index,args)
                     break
@@ -394,10 +400,10 @@ def move(index,args):
                 if (xini,newZ) in args[4]['obstacles']:
                     if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     if (xini,newZ) in args[4]['stones_detected']:
                         sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     else:
                         return move(index,args)
                     break
@@ -421,10 +427,10 @@ def move(index,args):
                 if (newX,zini) in args[4]['obstacles']:
                     if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     if (newX,zini) in args[4]['stones_detected']:
                         sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     else:
                         return move(index,args)
                     break
@@ -445,10 +451,10 @@ def move(index,args):
                 if (newX,zini) in args[4]['obstacles']:
                     if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     if (newX,zini) in args[4]['stones_detected']:
                         sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
-                        return False
+                        return True
                     else:
                         return move(index,args)
                     break

@@ -13,7 +13,7 @@ public class FinalizacionObjetivoRecolectarManzanaCoord extends TareaSincrona {
 		RecolectarTodasLasManzanas obj1 = (RecolectarTodasLasManzanas) params[1];
 		InformeObjetivo inf = (InformeObjetivo) params[2];
 		
-		System.out.println("Manzana recogida por " + inf.getIdAgenteInvolucrado());
+		System.out.println("Manzana" + obj.getManzana().getId() + "recogida por " + inf.getIdAgenteInvolucrado());
 		obj.setSolved();
 		obj1.setRecolectada(obj.getManzana().getId());
 		this.itfProcObjetivos.eliminarHechoWithoutFireRules(inf);

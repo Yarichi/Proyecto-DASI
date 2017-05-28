@@ -101,7 +101,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{            
 			//Se manda la orden a la interfaz de python
 			outputData.writeUTF(order);
-			//Thread.sleep(3);
+			Thread.sleep(500);
 		}
 		catch (Exception e)
 		{
