@@ -1,52 +1,2497 @@
-[23:25:17] [Client thread/INFO]: Setting user: Player961
-[23:25:19] [Client thread/INFO]: LWJGL Version: 2.9.1
-[23:25:22] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[23:25:22] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:22] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:22] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:22] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[23:25:22] [Thread-9/INFO]: Initializing LWJGL OpenAL
-[23:25:22] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[23:25:23] [Thread-9/INFO]: OpenAL initialized.
-[23:25:23] [Sound Library Loader/INFO]: Sound engine started
-[23:25:24] [Client thread/INFO]: Created: 16x16 textures-atlas
-[23:25:25] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[23:25:25] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:25] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:25] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:25:25] [Client thread/INFO]: SoundSystem shutting down...
-[23:25:25] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[23:25:25] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[23:25:25] [Thread-11/INFO]: Initializing LWJGL OpenAL
-[23:25:25] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[23:25:25] [Thread-11/INFO]: OpenAL initialized.
-[23:25:25] [Sound Library Loader/INFO]: Sound engine started
-[23:25:26] [Client thread/INFO]: Created: 512x512 textures-atlas
-[23:28:03] [Client thread/INFO]: Stopping!
-[23:28:03] [Client thread/INFO]: SoundSystem shutting down...
-[23:28:03] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-lt, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[23:26:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:16] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:17] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[23:26:17] [Thread-8/INFO]: Initializing LWJGL OpenAL
-[23:26:17] [Thread-8/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[23:26:17] [Thread-8/INFO]: OpenAL initialized.
-[23:26:17] [Sound Library Loader/INFO]: Sound engine started
-[23:26:19] [Client thread/INFO]: Created: 16x16 textures-atlas
-[23:26:19] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
-[23:26:19] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:19] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:19] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in D:\codigos_fuente\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
-[23:26:19] [Client thread/INFO]: SoundSystem shutting down...
-[23:26:20] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
-[23:26:20] [Sound Library Loader/INFO]: Starting up SoundSystem...
-[23:26:20] [Thread-10/INFO]: Initializing LWJGL OpenAL
-[23:26:20] [Thread-10/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
-[23:26:20] [Thread-10/INFO]: OpenAL initialized.
-[23:26:20] [Sound Library Loader/INFO]: Sound engine started
-[23:26:21] [Client thread/INFO]: Created: 512x512 textures-atlas
-[23:28:02] [Client thread/INFO]: Stopping!
-[23:28:02] [Client thread/INFO]: SoundSystem shutting down...
-[23:28:02] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[03:42:56] [Client thread/INFO]: Setting user: Player174
+[03:42:58] [Client thread/INFO]: LWJGL Version: 2.9.1
+[03:43:00] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[03:43:00] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:00] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:00] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:01] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[03:43:01] [Thread-9/INFO]: Initializing LWJGL OpenAL
+[03:43:01] [Thread-9/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[03:43:01] [Thread-9/INFO]: OpenAL initialized.
+[03:43:01] [Sound Library Loader/INFO]: Sound engine started
+[03:43:03] [Client thread/INFO]: Created: 16x16 textures-atlas
+[03:43:03] [Client thread/INFO]: Reloading ResourceManager: Default, FMLFileResourcePack:Forge Mod Loader, FMLFileResourcePack:Minecraft Forge, FMLFileResourcePack:Microsoft Malmo Mod
+[03:43:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:04] [Client thread/WARN]: ResourcePack: ignored non-lowercase namespace: MalmoMod in C:\Users\Sergio\git\Proyecto-DASI\Malmo\Minecraft\build\libs\MalmoMod-0.21.0.jar
+[03:43:04] [Client thread/INFO]: SoundSystem shutting down...
+[03:43:04] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+[03:43:04] [Sound Library Loader/INFO]: Starting up SoundSystem...
+[03:43:04] [Thread-11/INFO]: Initializing LWJGL OpenAL
+[03:43:04] [Thread-11/INFO]: (The LWJGL binding of OpenAL.  For more information, see http://www.lwjgl.org)
+[03:43:04] [Thread-11/INFO]: OpenAL initialized.
+[03:43:04] [Sound Library Loader/INFO]: Sound engine started
+[03:43:06] [Client thread/INFO]: Created: 512x512 textures-atlas
+[04:02:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:02:50] [Server thread/INFO]: Generating keypair
+[04:02:51] [Server thread/INFO]: Converting map!
+[04:02:51] [Server thread/INFO]: Scanning folders...
+[04:02:51] [Server thread/INFO]: Total conversion count is 0
+[04:02:51] [Server thread/WARN]: Unable to find spawn biome
+[04:02:51] [Server thread/INFO]: Preparing start region for level 0
+[04:02:52] [Server thread/INFO]: Preparing spawn area: 37%
+[04:02:53] [Server thread/INFO]: Preparing spawn area: 74%
+[04:02:53] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:02:54] [Client thread/INFO]: Deleting level TEMP_10000_bd7d5b00-7dab-4977-be10-16e0d7d9855c
+[04:02:54] [Client thread/INFO]: Attempt 1...
+[04:02:55] [Server thread/INFO]: Received mission: §9DASI project
+[04:02:55] [Server thread/INFO]: Source: §a127.0.0.1
+[04:02:55] [Client thread/INFO]: Started on 62727
+[04:03:00] [Server thread/INFO]: robot1Recolector[local:E:dd2540f3] logged in with entity id 0 at (-7.5, 227.0, -6.5)
+[04:03:00] [Server thread/INFO]: robot1Recolector joined the game
+[04:03:00] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5818ms behind, skipping 116 tick(s)
+[04:03:03] [Server thread/INFO]: robot2Recolector[/127.0.0.1:62765] logged in with entity id 14 at (-5.5, 227.0, -9.5)
+[04:03:03] [Server thread/INFO]: robot2Recolector joined the game
+[04:03:03] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:10:19] [Server thread/INFO]: Saving and pausing game...
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/Overworld
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/Nether
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/The End
+[04:10:19] [Server thread/INFO]: Stopping server
+[04:10:19] [Server thread/INFO]: Saving players
+[04:10:19] [Server thread/INFO]: Saving worlds
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/Overworld
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/Nether
+[04:10:19] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71'/The End
+[04:10:20] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:10:20] [Server[04:10:29] [Client thread/INFO]: Connecting to 127.0.0.1, 62798
+[04:12:34] [Client thread/INFO]: Connecting to 127.0.0.1, 62842
+[04:13:05] [Client thread/INFO]: Connecting to 127.0.0.1, 62868
+[04:16:13] [Client thread/INFO]: Connecting to 127.0.0.1, 62913
+[04:20:13] [Client thread/INFO]: Stopping!
+[04:20:13] [Client thread/INFO]: SoundSystem shutting down...
+[04:20:13] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+n area: 66%
+[04:10:24] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:10:24] [Client thread/INFO]: Deleting level TEMP_10000_b1e204a0-234a-4fb4-a004-26bbe22c9b71
+[04:10:24] [Client thread/INFO]: Attempt 1...
+[04:10:24] [Server thread/INFO]: robot1Recolector[local:E:521067b9] logged in with entity id 16 at (-6.5, 227.0, -8.5)
+[04:10:24] [Server thread/INFO]: robot1Recolector joined the game
+[04:10:24] [Server thread/INFO]: Received mission: §9DASI project
+[04:10:24] [Server thread/INFO]: Source: §a127.0.0.1
+[04:10:24] [Client thread/INFO]: Started on 62798
+[04:10:24] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:10:24] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:10:30] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5365ms behind, skipping 107 tick(s)
+[04:10:30] [Server thread/INFO]: robot2Recolector[/127.0.0.1:62804] logged in with entity id 26 at (-6.5, 227.0, -5.5)
+[04:10:30] [Server thread/INFO]: robot2Recolector joined the game
+[04:10:30] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:12:23] [Server thread/INFO]: Saving and pausing game...
+[04:12:23] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/Overworld
+[04:12:23] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/Nether
+[04:12:23] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/The End
+[04:12:24] [Server thread/INFO]: Stopping server
+[04:12:24] [Server thread/INFO]: Saving players
+[04:12:24] [Server thread/INFO]: Saving worlds
+[04:12:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/Overworld
+[04:12:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/Nether
+[04:12:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95'/The End
+[04:12:24] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:12:24] [Server thread/INFO]: Generating keypair
+[04:12:24] [Server thread/INFO]: Converting map!
+[04:12:24] [Server thread/INFO]: Scanning folders...
+[04:12:24] [Server thread/INFO]: Total conversion count is 0
+[04:12:24] [Server thread/WARN]: Unable to find spawn biome
+[04:12:24] [Server thread/INFO]: Preparing start region for level 0
+[04:12:25] [Server thread/INFO]: Preparing spawn area: 29%
+[04:12:26] [Server thread/INFO]: Preparing spawn area: 62%
+[04:12:27] [Server thread/INFO]: Preparing spawn area: 99%
+[04:12:28] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:12:28] [Client thread/INFO]: Deleting level TEMP_10000_05e5ee7f-85a2-4dcf-b3d9-c9f33b9bff95
+[04:12:28] [Client thread/INFO]: Attempt 1...
+[04:12:28] [Server thread/INFO]: robot1Recolector[local:E:05b6fe48] logged in with entity id 33 at (-6.5, 227.0, -8.5)
+[04:12:28] [Server thread/INFO]: robot1Recolector joined the game
+[04:12:28] [Server thread/INFO]: Received mission: §9DASI project
+[04:12:28] [Server thread/INFO]: Source: §a127.0.0.1
+[04:12:28] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:12:28] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:12:28] [Client thread/INFO]: Started on 62842
+[04:12:33] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4854ms behind, skipping 97 tick(s)
+[04:12:34] [Server thread/INFO]: robot2Recolector[/127.0.0.1:62848] logged in with entity id 47 at (-9.5, 227.0, -9.5)
+[04:12:34] [Server thread/INFO]: robot2Recolector joined the game
+[04:12:34] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:12:54] [Server thread/INFO]: Saving and pausing game...
+[04:12:54] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/Overworld
+[04:12:55] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/Nether
+[04:12:55] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/The End
+[04:12:55] [Server thread/INFO]: Stopping server
+[04:12:55] [Server thread/INFO]: Saving players
+[04:12:55] [Server thread/INFO]: Saving worlds
+[04:12:55] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/Overworld
+[04:12:55] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/Nether
+[04:12:55] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb'/The End
+[04:12:57] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:12:57] [Server thread/INFO]: Generating keypair
+[04:12:57] [Server thread/INFO]: Converting map!
+[04:12:57] [Server thread/INFO]: Scanning folders...
+[04:12:57] [Server thread/INFO]: Total conversion count is 0
+[04:12:57] [Server thread/WARN]: Unable to find spawn biome
+[04:12:58] [Server thread/INFO]: Preparing start region for level 0
+[04:12:59] [Server thread/INFO]: Preparing spawn area: 33%
+[04:13:00] [Server thread/INFO]: Preparing spawn area: 70%
+[04:13:00] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:13:01] [Client thread/INFO]: Deleting level TEMP_10000_f06aeece-e0f8-479d-a50e-24ec60a5a4cb
+[04:13:01] [Client thread/INFO]: Attempt 1...
+[04:13:01] [Server thread/INFO]: robot1Recolector[local:E:e6059625] logged in with entity id 50 at (-7.5, 227.0, -9.5)
+[04:13:01] [Server thread/INFO]: robot1Recolector joined the game
+[04:13:01] [Server thread/INFO]: Received mission: §9DASI project
+[04:13:01] [Server thread/INFO]: Source: §a127.0.0.1
+[04:13:01] [Client thread/INFO]: Started on 62868
+[04:13:01] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:13:01] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:13:06] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4558ms behind, skipping 91 tick(s)
+[04:13:06] [Server thread/INFO]: robot2Recolector[/127.0.0.1:62874] logged in with entity id 60 at (-5.5, 227.0, -8.5)
+[04:13:06] [Server thread/INFO]: robot2Recolector joined the game
+[04:13:06] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:16:03] [Server thread/INFO]: Saving and pausing game...
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/Overworld
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/Nether
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/The End
+[04:16:03] [Server thread/INFO]: Stopping server
+[04:16:03] [Server thread/INFO]: Saving players
+[04:16:03] [Server thread/INFO]: Saving worlds
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/Overworld
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/Nether
+[04:16:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74'/The End
+[04:16:04] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:16:04] [Server thread/INFO]: Generating keypair
+[04:16:04] [Server thread/INFO]: Converting map!
+[04:16:04] [Server thread/INFO]: Scanning folders...
+[04:16:04] [Server thread/INFO]: Total conversion count is 0
+[04:16:04] [Server thread/WARN]: Unable to find spawn biome
+[04:16:04] [Server thread/INFO]: Preparing start region for level 0
+[04:16:05] [Server thread/INFO]: Preparing spawn area: 30%
+[04:16:06] [Server thread/INFO]: Preparing spawn area: 61%
+[04:16:07] [Server thread/INFO]: Preparing spawn area: 98%
+[04:16:07] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:16:07] [Client thread/INFO]: Deleting level TEMP_10000_d7b2eb1d-64e9-4305-8237-aa2269333b74
+[04:16:07] [Client thread/INFO]: Attempt 1...
+[04:16:08] [Server thread/INFO]: robot1Recolector[local:E:fd05ba36] logged in with entity id 67 at (-9.5, 227.0, -6.5)
+[04:16:08] [Server thread/INFO]: robot1Recolector joined the game
+[04:16:08] [Server thread/INFO]: Received mission: §9DASI project
+[04:16:08] [Server thread/INFO]: Source: §a127.0.0.1
+[04:16:08] [Client thread/INFO]: Started on 62913
+[04:16:08] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:16:08] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:16:12] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4448ms behind, skipping 88 tick(s)
+[04:16:13] [Server thread/INFO]: robot2Recolector[/127.0.0.1:62920] logged in with entity id 81 at (-6.5, 227.0, -9.5)
+[04:16:13] [Server thread/INFO]: robot2Recolector joined the game
+[04:16:13] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:19:33] [Server thread/INFO]: Saving and pausing game...
+[04:19:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/Overworld
+[04:19:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/Nether
+[04:19:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/The End
+[04:19:34] [Server thread/INFO]: Stopping server
+[04:19:34] [Server thread/INFO]: Saving players
+[04:19:34] [Server thread/INFO]: Saving worlds
+[04:19:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/Overworld
+[04:19:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/Nether
+[04:19:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26'/The End
+[04:19:34] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:19:34] [Server thread/INFO]: Generating keypair
+[04:19:35] [Server thread/INFO]: Converting map!
+[04:19:35] [Server thread/INFO]: Scanning folders...
+[04:19:35] [Server thread/INFO]: Total conversion count is 0
+[04:19:35] [Server thread/WARN]: Unable to find spawn biome
+[04:19:35] [Server thread/INFO]: Preparing start region for level 0
+[04:19:36] [Server thread/INFO]: Preparing spawn area: 32%
+[04:19:37] [Server thread/INFO]: Preparing spawn area: 66%
+[04:19:38] [Server thread/INFO]: Preparing spawn area: 97%
+[04:19:38] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:19:38] [Client thread/INFO]: Deleting level TEMP_10000_399493c0-f0fb-40c1-89d8-b6e675fefa26
+[04:19:38] [Client thread/INFO]: Attempt 1...
+[04:19:38] [Server thread/INFO]: robot1Recolector[local:E:5c79d765] logged in with entity id 84 at (-5.5, 227.0, -9.5)
+[04:19:38] [Server thread/INFO]: robot1Recolector joined the game
+[04:19:38] [Server thread/INFO]: Received mission: §9DASI project
+[04:19:38] [Server thread/INFO]: Source: §a127.0.0.1
+[04:19:38] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:19:38] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:19:39] [Client thread/INFO]: Started on 62955
+[04:19:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5108ms behind, skipping 102 tick(s)
+[04:21:43] [Server thread/INFO]: Saving and pausing game...
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/Overworld
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/Nether
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/The End
+[04:21:43] [Server thread/INFO]: Stopping server
+[04:21:43] [Server thread/INFO]: Saving players
+[04:21:43] [Server thread/INFO]: Saving worlds
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/Overworld
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/Nether
+[04:21:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833'/The End
+[04:21:44] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:21:44] [Server thread/INFO]: Generating keypair
+[04:21:44] [Server thread/INFO]: Converting map!
+[04:21:44] [Server thread/INFO]: Scanning folders...
+[04:21:44] [Server thread/INFO]: Total conversion count is 0
+[04:21:44] [Server thread/WARN]: Unable to find spawn biome
+[04:21:44] [Server thread/INFO]: Preparing start region for level 0
+[04:21:45] [Server thread/INFO]: Preparing spawn area: 30%
+[04:21:46] [Server thread/INFO]: Preparing spawn area: 60%
+[04:21:47] [Server thread/INFO]: Preparing spawn area: 96%
+[04:21:47] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:21:47] [Client thread/INFO]: Deleting level TEMP_10000_59522ca9-d6a3-4156-b3c7-bd50b3c79833
+[04:21:47] [Client thread/INFO]: Attempt 1...
+[04:21:47] [Server thread/INFO]: robot1Recolector[local:E:4efd4313] logged in with entity id 98 at (-7.5, 227.0, -7.5)
+[04:21:47] [Server thread/INFO]: robot1Recolector joined the game
+[04:21:48] [Server thread/INFO]: Received mission: §9DASI project
+[04:21:48] [Server thread/INFO]: Source: §a127.0.0.1
+[04:21:48] [Client thread/INFO]: Started on 62987
+[04:21:48] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:21:48] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:21:52] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4320ms behind, skipping 86 tick(s)
+[04:21:55] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63027] logged in with entity id 112 at (-5.5, 227.0, -7.5)
+[04:21:55] [Server thread/INFO]: robot2Recolec[04:24:04] [Client thread/INFO]: Connecting to 127.0.0.1, 63061
+[04:24:57] [Client thread/INFO]: Connecting to 127.0.0.1, 63091
+[04:26:43] [Client thread/INFO]: Connecting to 127.0.0.1, 63121
+[04:29:45] [Client thread/INFO]: Connecting to 127.0.0.1, 63165
+[04:32:03] [Client thread/INFO]: Stopping!
+[04:32:03] [Client thread/INFO]: SoundSystem shutting down...
+[04:32:03] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+r level 'TEMP_10000_49948852-eee2-4886-8acb-90ce8eb6f7f7'/The End
+[04:23:54] [Server thread/INFO]: Stopping server
+[04:23:54] [Server thread/INFO]: Saving players
+[04:23:54] [Server thread/INFO]: Saving worlds
+[04:23:54] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_49948852-eee2-4886-8acb-90ce8eb6f7f7'/Overworld
+[04:23:54] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_49948852-eee2-4886-8acb-90ce8eb6f7f7'/Nether
+[04:23:54] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_49948852-eee2-4886-8acb-90ce8eb6f7f7'/The End
+[04:23:55] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:23:55] [Server thread/INFO]: Generating keypair
+[04:23:55] [Server thread/INFO]: Converting map!
+[04:23:55] [Server thread/INFO]: Scanning folders...
+[04:23:55] [Server thread/INFO]: Total conversion count is 0
+[04:23:55] [Server thread/WARN]: Unable to find spawn biome
+[04:23:55] [Server thread/INFO]: Preparing start region for level 0
+[04:23:56] [Server thread/INFO]: Preparing spawn area: 24%
+[04:23:57] [Server thread/INFO]: Preparing spawn area: 45%
+[04:23:58] [Server thread/INFO]: Preparing spawn area: 72%
+[04:23:59] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:23:59] [Client thread/INFO]: Deleting level TEMP_10000_49948852-eee2-4886-8acb-90ce8eb6f7f7
+[04:23:59] [Client thread/INFO]: Attempt 1...
+[04:23:59] [Server thread/INFO]: robot1Recolector[local:E:03645908] logged in with entity id 115 at (-7.5, 227.0, -9.5)
+[04:23:59] [Server thread/INFO]: robot1Recolector joined the game
+[04:24:00] [Client thread/INFO]: Started on 63061
+[04:24:00] [Server thread/INFO]: Received mission: §9DASI project
+[04:24:00] [Server thread/INFO]: Source: §a127.0.0.1
+[04:24:00] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:24:00] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:24:05] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5190ms behind, skipping 103 tick(s)
+[04:24:05] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63067] logged in with entity id 127 at (-5.5, 227.0, -8.5)
+[04:24:05] [Server thread/INFO]: robot2Recolector joined the game
+[04:24:05] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:24:47] [Server thread/INFO]: Saving and pausing game...
+[04:24:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/Overworld
+[04:24:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/Nether
+[04:24:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/The End
+[04:24:48] [Server thread/INFO]: Stopping server
+[04:24:48] [Server thread/INFO]: Saving players
+[04:24:48] [Server thread/INFO]: Saving worlds
+[04:24:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/Overworld
+[04:24:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/Nether
+[04:24:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4'/The End
+[04:24:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:24:50] [Server thread/INFO]: Generating keypair
+[04:24:50] [Server thread/INFO]: Converting map!
+[04:24:50] [Server thread/INFO]: Scanning folders...
+[04:24:50] [Server thread/INFO]: Total conversion count is 0
+[04:24:50] [Server thread/WARN]: Unable to find spawn biome
+[04:24:50] [Server thread/INFO]: Preparing start region for level 0
+[04:24:51] [Server thread/INFO]: Preparing spawn area: 30%
+[04:24:52] [Server thread/INFO]: Preparing spawn area: 62%
+[04:24:53] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:24:53] [Client thread/INFO]: Deleting level TEMP_10000_b06e53be-e2cc-454b-a123-a1f47b5fd9c4
+[04:24:53] [Client thread/INFO]: Attempt 1...
+[04:24:53] [Server thread/INFO]: robot1Recolector[local:E:5a919cda] logged in with entity id 132 at (-6.5, 227.0, -5.5)
+[04:24:53] [Server thread/INFO]: robot1Recolector joined the game
+[04:24:54] [Server thread/INFO]: Received mission: §9DASI project
+[04:24:54] [Server thread/INFO]: Source: §a127.0.0.1
+[04:24:54] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:24:54] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:24:54] [Client thread/INFO]: Started on 63091
+[04:24:58] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63097] logged in with entity id 142 at (-9.5, 227.0, -9.5)
+[04:24:58] [Server thread/INFO]: robot2Recolector joined the game
+[04:24:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4771ms behind, skipping 95 tick(s)
+[04:24:58] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:26:37] [Server thread/INFO]: Saving and pausing game...
+[04:26:37] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/Overworld
+[04:26:37] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/Nether
+[04:26:37] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/The End
+[04:26:38] [Server thread/INFO]: Stopping server
+[04:26:38] [Server thread/INFO]: Saving players
+[04:26:38] [Server thread/INFO]: Saving worlds
+[04:26:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/Overworld
+[04:26:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/Nether
+[04:26:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a'/The End
+[04:26:38] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:26:38] [Server thread/INFO]: Generating keypair
+[04:26:38] [Server thread/INFO]: Converting map!
+[04:26:38] [Server thread/INFO]: Scanning folders...
+[04:26:38] [Server thread/INFO]: Total conversion count is 0
+[04:26:38] [Server thread/WARN]: Unable to find spawn biome
+[04:26:38] [Server thread/INFO]: Preparing start region for level 0
+[04:26:39] [Server thread/INFO]: Preparing spawn area: 34%
+[04:26:40] [Server thread/INFO]: Preparing spawn area: 62%
+[04:26:41] [Server thread/INFO]: Preparing spawn area: 96%
+[04:26:42] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:26:42] [Client thread/INFO]: Deleting level TEMP_10000_b4e74b0d-3d7b-429a-8afb-96e9032eb15a
+[04:26:42] [Client thread/INFO]: Attempt 1...
+[04:26:42] [Server thread/INFO]: robot1Recolector[local:E:8ae02b0f] logged in with entity id 149 at (-5.5, 227.0, -7.5)
+[04:26:42] [Server thread/INFO]: robot1Recolector joined the game
+[04:26:42] [Server thread/INFO]: Received mission: §9DASI project
+[04:26:42] [Server thread/INFO]: Source: §a127.0.0.1
+[04:26:42] [Client thread/INFO]: Started on 63121
+[04:26:42] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:26:42] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:26:47] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4640ms behind, skipping 92 tick(s)
+[04:26:47] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63126] logged in with entity id 159 at (-6.5, 227.0, -8.5)
+[04:26:47] [Server thread/INFO]: robot2Recolector joined the game
+[04:26:47] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:29:40] [Server thread/INFO]: Saving and pausing game...
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/Overworld
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/Nether
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/The End
+[04:29:40] [Server thread/INFO]: Stopping server
+[04:29:40] [Server thread/INFO]: Saving players
+[04:29:40] [Server thread/INFO]: Saving worlds
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/Overworld
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/Nether
+[04:29:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11712822-e180-47c7-b780-2429b745b794'/The End
+[04:29:41] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:29:41] [Server thread/INFO]: Generating keypair
+[04:29:41] [Server thread/INFO]: Converting map!
+[04:29:41] [Server thread/INFO]: Scanning folders...
+[04:29:41] [Server thread/INFO]: Total conversion count is 0
+[04:29:41] [Server thread/WARN]: Unable to find spawn biome
+[04:29:41] [Server thread/INFO]: Preparing start region for level 0
+[04:29:42] [Server thread/INFO]: Preparing spawn area: 37%
+[04:29:43] [Server thread/INFO]: Preparing spawn area: 72%
+[04:29:44] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:29:44] [Client thread/INFO]: Deleting level TEMP_10000_11712822-e180-47c7-b780-2429b745b794
+[04:29:44] [Client thread/INFO]: Attempt 1...
+[04:29:44] [Server thread/INFO]: robot1Recolector[local:E:a93e2459] logged in with entity id 166 at (-6.5, 227.0, -6.5)
+[04:29:44] [Server thread/INFO]: robot1Recolector joined the game
+[04:29:44] [Server thread/INFO]: Received mission: §9DASI project
+[04:29:44] [Server thread/INFO]: Source: §a127.0.0.1
+[04:29:44] [Client thread/INFO]: Started on 63165
+[04:29:44] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:29:44] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:29:50] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5217ms behind, skipping 104 tick(s)
+[04:29:50] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63170] logged in with entity id 178 at (-5.5, 227.0, -9.5)
+[04:29:50] [Server thread/INFO]: robot2Recolector joined the game
+[04:29:50] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:31:40] [Server thread/INFO]: Saving and pausing game...
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/Overworld
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/Nether
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/The End
+[04:31:40] [Server thread/INFO]: Stopping server
+[04:31:40] [Server thread/INFO]: Saving players
+[04:31:40] [Server thread/INFO]: Saving worlds
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/Overworld
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/Nether
+[04:31:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1'/The End
+[04:31:41] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:31:41] [Server thread/INFO]: Generating keypair
+[04:31:41] [Server thread/INFO]: Converting map!
+[04:31:41] [Server thread/INFO]: Scanning folders...
+[04:31:41] [Server thread/INFO]: Total conversion count is 0
+[04:31:41] [Server thread/WARN]: Unable to find spawn biome
+[04:31:41] [Server thread/INFO]: Preparing start region for level 0
+[04:31:42] [Server thread/INFO]: Preparing spawn area: 38%
+[04:31:43] [Server thread/INFO]: Preparing spawn area: 75%
+[04:31:44] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:31:44] [Client thread/INFO]: Deleting level TEMP_10000_4498bc04-02be-4444-aa65-c74f1d398be1
+[04:31:44] [Client thread/INFO]: Attempt 1...
+[04:31:44] [Server thread/INFO]: robot1Recolector[local:E:8b5329be] logged in with entity id 184 at (-6.5, 227.0, -8.5)
+[04:31:44] [Server thread/INFO]: robot1Recolector joined the game
+[04:31:44] [Server thread/INFO]: Received mission: §9DASI project
+[04:31:44] [Server thread/INFO]: Source: §a127.0.0.1
+[04:31:44] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:31:44] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:31:44] [Client thread/INFO]: Started on 63191
+[04:31:51] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 6203ms behind, skipping 124 tick(s)
+[04:33:26] [Server thread/INFO]: Saving and pausing game...
+[04:33:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/Overworld
+[04:33:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/Nether
+[04:33:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/The End
+[04:33:27] [Server thread/INFO]: Stopping server
+[04:33:27] [Server thread/INFO]: Saving players
+[04:33:27] [Server thread/INFO]: Saving worlds
+[04:33:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/Overworld
+[04:33:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/Nether
+[04:33:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271'/The End
+[04:33:27] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:33:27] [Server thread/INFO]: Generating keypair
+[04:33:27] [Server thread/INFO]: Converting map!
+[04:33:27] [Server thread/INFO]: Scanning folders...
+[04:33:27] [Server thread/INFO]: Total conversion count is 0
+[04:33:27] [Server thread/WARN]: Unable to find spawn biome
+[04:33:27] [Server thread/INFO]: Preparing start region for level 0
+[04:33:28] [Server thread/INFO]: Preparing spawn area: 33%
+[04:33:29] [Server thread/INFO]: Preparing spawn area: 62%
+[04:33:30] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:33:30] [Client thread/INFO]: Deleting level TEMP_10000_67fa26c7-58cd-4ba8-ad72-837e9948c271
+[04:33:30] [Client thread/INFO]: Attempt 1...
+[04:33:31] [Server thread/INFO]: robot1Recolector[local:E:4c8f0a99] logged in with entity id 198 at (-5.5, 227.0, -9.5)
+[04:33:31] [Server thread/INFO]: robot1Recolector joined the game
+[04:33:31] [Server thread/INFO]: Received mission: §9DASI project
+[04:33:31] [Server thread/INFO]: Source: §a127.0.0.1
+[04:33:31] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:33:31] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:33:31] [Client thread/INFO]: Started on 63226
+[04:33:36] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5055ms behind, skipping 101 tick(s)
+[04:33:36] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63263] logged in with entity id 208 at (-5.5, 227.0, -9.5)
+[04:33:36] [Server thread/INFO]: robot2Recolector joined the game
+[04:33:36] [Client thread/INFO]: [CHA[04:34:58] [Client thread/INFO]: Connecting to 127.0.0.1, 63289
+[04:37:45] [Client thread/INFO]: Connecting to 127.0.0.1, 63323
+[04:39:41] [Client thread/INFO]: Connecting to 127.0.0.1, 63356
+[04:41:39] [Client thread/INFO]: Connecting to 127.0.0.1, 63386
+[04:46:31] [Client thread/INFO]: Connecting to 127.0.0.1, 63420
+[04:48:20] [Client thread/INFO]: Connecting to 127.0.0.1, 63475
+[04:49:54] [Client thread/INFO]: Connecting to 127.0.0.1, 63503
+[04:50:13] [Client thread/INFO]: Connecting to 127.0.0.1, 63521
+[04:56:32] [Client thread/INFO]: Connecting to 127.0.0.1, 63555
+[04:57:34] [Client thread/INFO]: Connecting to 127.0.0.1, 63585
+[05:00:39] [Client thread/INFO]: Connecting to 127.0.0.1, 63612
+[05:02:37] [Client thread/INFO]: Connecting to 127.0.0.1, 63639
+[05:03:44] [Client thread/INFO]: Connecting to 127.0.0.1, 63666
+[05:06:27] [Client thread/INFO]: Connecting to 127.0.0.1, 63699
+[05:08:41] [Client thread/INFO]: Connecting to 127.0.0.1, 63725
+[05:10:53] [Client thread/INFO]: Connecting to 127.0.0.1, 63759
+[05:19:56] [Client thread/INFO]: Connecting to 127.0.0.1, 63803
+[05:30:31] [Client thread/INFO]: Connecting to 127.0.0.1, 63861
+[05:31:53] [Client thread/INFO]: Connecting to 127.0.0.1, 63884
+[05:32:54] [Client thread/INFO]: Connecting to 127.0.0.1, 63907
+[05:34:02] [Client thread/INFO]: Connecting to 127.0.0.1, 63931
+[05:35:10] [Client thread/INFO]: Connecting to 127.0.0.1, 63957
+[05:36:13] [Client thread/INFO]: Connecting to 127.0.0.1, 63984
+[05:41:44] [Client thread/INFO]: Connecting to 127.0.0.1, 64030
+[05:43:30] [Client thread/INFO]: Connecting to 127.0.0.1, 64086
+[05:46:54] [Client thread/INFO]: Stopping!
+[05:46:54] [Client thread/INFO]: SoundSystem shutting down...
+[05:46:54] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+215 at (-8.5, 227.0, -5.5)
+[04:34:54] [Server thread/INFO]: robot1Recolector joined the game
+[04:34:55] [Server thread/INFO]: Received mission: §9DASI project
+[04:34:55] [Server thread/INFO]: Source: §a127.0.0.1
+[04:34:55] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:34:55] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:34:55] [Client thread/INFO]: Started on 63289
+[04:34:59] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4917ms behind, skipping 98 tick(s)
+[04:34:59] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63295] logged in with entity id 225 at (-6.5, 227.0, -8.5)
+[04:34:59] [Server thread/INFO]: robot2Recolector joined the game
+[04:35:00] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:37:35] [Server thread/INFO]: Saving and pausing game...
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/Overworld
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/Nether
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/The End
+[04:37:35] [Server thread/INFO]: Stopping server
+[04:37:35] [Server thread/INFO]: Saving players
+[04:37:35] [Server thread/INFO]: Saving worlds
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/Overworld
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/Nether
+[04:37:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584'/The End
+[04:37:36] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:37:36] [Server thread/INFO]: Generating keypair
+[04:37:36] [Server thread/INFO]: Converting map!
+[04:37:36] [Server thread/INFO]: Scanning folders...
+[04:37:36] [Server thread/INFO]: Total conversion count is 0
+[04:37:36] [Server thread/WARN]: Unable to find spawn biome
+[04:37:36] [Server thread/INFO]: Preparing start region for level 0
+[04:37:37] [Server thread/INFO]: Preparing spawn area: 29%
+[04:37:38] [Server thread/INFO]: Preparing spawn area: 55%
+[04:37:39] [Server thread/INFO]: Preparing spawn area: 88%
+[04:37:39] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:37:40] [Client thread/INFO]: Deleting level TEMP_10000_f157821c-a8e0-46d6-80cc-da5faa9d1584
+[04:37:40] [Client thread/INFO]: Attempt 1...
+[04:37:40] [Server thread/INFO]: robot1Recolector[local:E:1959b493] logged in with entity id 232 at (-9.5, 227.0, -7.5)
+[04:37:40] [Server thread/INFO]: robot1Recolector joined the game
+[04:37:40] [Server thread/INFO]: Received mission: §9DASI project
+[04:37:40] [Server thread/INFO]: Source: §a127.0.0.1
+[04:37:40] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:37:40] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:37:40] [Client thread/INFO]: Started on 63323
+[04:37:45] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4706ms behind, skipping 94 tick(s)
+[04:37:46] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63329] logged in with entity id 246 at (-6.5, 227.0, -6.5)
+[04:37:46] [Server thread/INFO]: robot2Recolector joined the game
+[04:37:46] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:39:30] [Server thread/INFO]: Saving and pausing game...
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/Overworld
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/Nether
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/The End
+[04:39:30] [Server thread/INFO]: Stopping server
+[04:39:30] [Server thread/INFO]: Saving players
+[04:39:30] [Server thread/INFO]: Saving worlds
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/Overworld
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/Nether
+[04:39:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522'/The End
+[04:39:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:39:31] [Server thread/INFO]: Generating keypair
+[04:39:31] [Server thread/INFO]: Converting map!
+[04:39:31] [Server thread/INFO]: Scanning folders...
+[04:39:31] [Server thread/INFO]: Total conversion count is 0
+[04:39:31] [Server thread/WARN]: Unable to find spawn biome
+[04:39:31] [Server thread/INFO]: Preparing start region for level 0
+[04:39:32] [Server thread/INFO]: Preparing spawn area: 30%
+[04:39:33] [Server thread/INFO]: Preparing spawn area: 55%
+[04:39:34] [Server thread/INFO]: Preparing spawn area: 89%
+[04:39:34] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:39:35] [Client thread/INFO]: Deleting level TEMP_10000_68dc5061-878a-48fa-a226-c54bef3f5522
+[04:39:35] [Client thread/INFO]: Attempt 1...
+[04:39:35] [Server thread/INFO]: robot1Recolector[local:E:cea0dde9] logged in with entity id 249 at (-8.5, 227.0, -9.5)
+[04:39:35] [Server thread/INFO]: robot1Recolector joined the game
+[04:39:35] [Server thread/INFO]: Received mission: §9DASI project
+[04:39:35] [Server thread/INFO]: Source: §a127.0.0.1
+[04:39:35] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:39:35] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:39:35] [Client thread/INFO]: Started on 63356
+[04:39:40] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4748ms behind, skipping 94 tick(s)
+[04:39:41] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63363] logged in with entity id 263 at (-7.5, 227.0, -6.5)
+[04:39:41] [Server thread/INFO]: robot2Recolector joined the game
+[04:39:41] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:41:34] [Server thread/INFO]: Saving and pausing game...
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/Overworld
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/Nether
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/The End
+[04:41:34] [Server thread/INFO]: Stopping server
+[04:41:34] [Server thread/INFO]: Saving players
+[04:41:34] [Server thread/INFO]: Saving worlds
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/Overworld
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/Nether
+[04:41:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024'/The End
+[04:41:35] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:41:35] [Server thread/INFO]: Generating keypair
+[04:41:35] [Server thread/INFO]: Converting map!
+[04:41:35] [Server thread/INFO]: Scanning folders...
+[04:41:35] [Server thread/INFO]: Total conversion count is 0
+[04:41:35] [Server thread/WARN]: Unable to find spawn biome
+[04:41:35] [Server thread/INFO]: Preparing start region for level 0
+[04:41:36] [Server thread/INFO]: Preparing spawn area: 31%
+[04:41:37] [Server thread/INFO]: Preparing spawn area: 58%
+[04:41:38] [Server thread/INFO]: Preparing spawn area: 92%
+[04:41:38] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:41:38] [Client thread/INFO]: Deleting level TEMP_10000_db8dd24e-69ee-44ee-a780-419fcc7ca024
+[04:41:38] [Client thread/INFO]: Attempt 1...
+[04:41:39] [Server thread/INFO]: robot1Recolector[local:E:58e2cb11] logged in with entity id 269 at (-9.5, 227.0, -6.5)
+[04:41:39] [Server thread/INFO]: robot1Recolector joined the game
+[04:41:39] [Server thread/INFO]: Received mission: §9DASI project
+[04:41:39] [Server thread/INFO]: Source: §a127.0.0.1
+[04:41:39] [Client thread/INFO]: Started on 63386
+[04:41:39] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:41:39] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:41:44] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4846ms behind, skipping 96 tick(s)
+[04:41:44] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63391] logged in with entity id 279 at (-8.5, 227.0, -5.5)
+[04:41:44] [Server thread/INFO]: robot2Recolector joined the game
+[04:41:44] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:46:26] [Server thread/INFO]: Saving and pausing game...
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/Overworld
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/Nether
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/The End
+[04:46:26] [Server thread/INFO]: Stopping server
+[04:46:26] [Server thread/INFO]: Saving players
+[04:46:26] [Server thread/INFO]: Saving worlds
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/Overworld
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/Nether
+[04:46:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e'/The End
+[04:46:27] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:46:27] [Server thread/INFO]: Generating keypair
+[04:46:27] [Server thread/INFO]: Converting map!
+[04:46:27] [Server thread/INFO]: Scanning folders...
+[04:46:27] [Server thread/INFO]: Total conversion count is 0
+[04:46:27] [Server thread/WARN]: Unable to find spawn biome
+[04:46:27] [Server thread/INFO]: Preparing start region for level 0
+[04:46:28] [Server thread/INFO]: Preparing spawn area: 31%
+[04:46:29] [Server thread/INFO]: Preparing spawn area: 57%
+[04:46:30] [Server thread/INFO]: Preparing spawn area: 93%
+[04:46:30] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:46:30] [Client thread/INFO]: Deleting level TEMP_10000_89efe7b2-1eab-4e5b-9fb1-bcdac9821c2e
+[04:46:30] [Client thread/INFO]: Attempt 1...
+[04:46:30] [Server thread/INFO]: robot1Recolector[local:E:517b00d8] logged in with entity id 286 at (-9.5, 227.0, -5.5)
+[04:46:30] [Server thread/INFO]: robot1Recolector joined the game
+[04:46:31] [Server thread/INFO]: Received mission: §9DASI project
+[04:46:31] [Server thread/INFO]: Source: §a127.0.0.1
+[04:46:31] [Client thread/INFO]: Started on 63420
+[04:46:31] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:46:31] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:46:35] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4612ms behind, skipping 92 tick(s)
+[04:46:35] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63425] logged in with entity id 296 at (-9.5, 227.0, -5.5)
+[04:46:35] [Server thread/INFO]: robot2Recolector joined the game
+[04:46:35] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:47:30] [Server thread/INFO]: Saving and pausing game...
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/Overworld
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/Nether
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/The End
+[04:47:30] [Server thread/INFO]: Stopping server
+[04:47:30] [Server thread/INFO]: Saving players
+[04:47:30] [Server thread/INFO]: Saving worlds
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/Overworld
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/Nether
+[04:47:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17'/The End
+[04:47:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:47:31] [Server thread/INFO]: Generating keypair
+[04:47:31] [Server thread/INFO]: Converting map!
+[04:47:31] [Server thread/INFO]: Scanning folders...
+[04:47:31] [Server thread/INFO]: Total conversion count is 0
+[04:47:31] [Server thread/WARN]: Unable to find spawn biome
+[04:47:31] [Server thread/INFO]: Preparing start region for level 0
+[04:47:32] [Server thread/INFO]: Preparing spawn area: 34%
+[04:47:33] [Server thread/INFO]: Preparing spawn area: 66%
+[04:47:34] [Server thread/INFO]: Preparing spawn area: 95%
+[04:47:34] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:47:34] [Client thread/INFO]: Deleting level TEMP_10000_870029d5-1a11-46e7-a277-23ced3d5bb17
+[04:47:34] [Client thread/INFO]: Attempt 1...
+[04:47:34] [Server thread/INFO]: robot1Recolector[local:E:b9b706e2] logged in with entity id 302 at (-6.5, 227.0, -9.5)
+[04:47:34] [Server thread/INFO]: robot1Recolector joined the game
+[04:47:35] [Server thread/INFO]: Received mission: §9DASI project
+[04:47:35] [Server thread/INFO]: Source: §a127.0.0.1
+[04:47:35] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:47:35] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:47:35] [Client thread/INFO]: Started on 63454
+[04:47:39] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4790ms behind, skipping 95 tick(s)
+[04:48:10] [Server thread/INFO]: Saving and pausing game...
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/Overworld
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/Nether
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/The End
+[04:48:10] [Server thread/INFO]: Stopping server
+[04:48:10] [Server thread/INFO]: Saving players
+[04:48:10] [Server thread/INFO]: Saving worlds
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/Overworld
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/Nether
+[04:48:10] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c'/The End
+[04:48:12] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:48:12] [Server thread/INFO]: Generating keypair
+[04:48:13] [Server thread/INFO]: Converting map!
+[04:48:13] [Server thread/INFO]: Scanning folders...
+[04:48:13] [Server thread/INFO]: Total conversion count is 0
+[04:48:13] [Server thread/WARN]: Unable to find spawn biome
+[04:48:13] [Server thread/INFO]: Preparing start region for level 0
+[04:48:14] [Server thread/INFO]: Preparing spawn area: 33%
+[04:48:15] [Server thread/INFO]: Preparing spawn area: 70%
+[04:48:15] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:48:16] [Client thread/INFO]: Deleting level TEMP_10000_4f2bfa24-2987-4950-990e-1f821541a31c
+[04:48:16] [Client thread/INFO]: Attempt 1...
+[04:48:16] [Server thread/INFO]: robot1Recolector[local:E:8a9ae6ae] logged in with entity id 316 at (-9.5, 227.0, -7.5)
+[04:48:16] [Server thread/INFO]: robot1Recolector joined the game
+[04:48:16] [Server thread/INFO]: Received mission: §9DASI project
+[04:48:16] [Server thread/INFO]: Source: §a127.0.0.1
+[04:48:16] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:48:16] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:48:16] [Client thread/INFO]: Started on 63475
+[04:48:21] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63482] logged in with entity id 326 at (-7.5, 227.0, -7.5)
+[04:48:21] [Server thread/INFO]: robot2Recolector joined the game
+[04:48:21] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4686ms behind, skipping 93 tick(s)
+[04:48:21] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:49:48] [Server thread/INFO]: Saving and pausing game...
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/Overworld
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/Nether
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/The End
+[04:49:48] [Server thread/INFO]: Stopping server
+[04:49:48] [Server thread/INFO]: Saving players
+[04:49:48] [Server thread/INFO]: Saving worlds
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/Overworld
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/Nether
+[04:49:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6'/The End
+[04:49:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:49:49] [Server thread/INFO]: Generating keypair
+[04:49:49] [Server thread/INFO]: Converting map!
+[04:49:49] [Server thread/INFO]: Scanning folders...
+[04:49:49] [Server thread/INFO]: Total conversion count is 0
+[04:49:49] [Server thread/WARN]: Unable to find spawn biome
+[04:49:49] [Server thread/INFO]: Preparing start region for level 0
+[04:49:50] [Server thread/INFO]: Preparing spawn area: 36%
+[04:49:51] [Server thread/INFO]: Preparing spawn area: 73%
+[04:49:52] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:49:52] [Client thread/INFO]: Deleting level TEMP_10000_b6d9f059-6882-4ba1-bc5c-0f878e17cab6
+[04:49:52] [Client thread/INFO]: Attempt 1...
+[04:49:52] [Server thread/INFO]: robot1Recolector[local:E:d8ae0542] logged in with entity id 334 at (-8.5, 227.0, -7.5)
+[04:49:52] [Server thread/INFO]: robot1Recolector joined the game
+[04:49:53] [Server thread/INFO]: Received mission: §9DASI project
+[04:49:53] [Server thread/INFO]: Source: §a127.0.0.1
+[04:49:53] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:49:53] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:49:53] [Client thread/INFO]: Started on 63503
+[04:49:57] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4541ms behind, skipping 90 tick(s)
+[04:49:57] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63508] logged in with entity id 344 at (-7.5, 227.0, -5.5)
+[04:49:57] [Server thread/INFO]: robot2Recolector joined the game
+[04:49:57] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:50:03] [Server thread/INFO]: Saving and pausing game...
+[04:50:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/Overworld
+[04:50:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/Nether
+[04:50:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/The End
+[04:50:04] [Server thread/INFO]: Stopping server
+[04:50:04] [Server thread/INFO]: Saving players
+[04:50:04] [Server thread/INFO]: Saving worlds
+[04:50:04] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/Overworld
+[04:50:04] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/Nether
+[04:50:04] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d'/The End
+[04:50:06] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:50:06] [Server thread/INFO]: Generating keypair
+[04:50:06] [Server thread/INFO]: Converting map!
+[04:50:06] [Server thread/INFO]: Scanning folders...
+[04:50:06] [Server thread/INFO]: Total conversion count is 0
+[04:50:06] [Server thread/WARN]: Unable to find spawn biome
+[04:50:06] [Server thread/INFO]: Preparing start region for level 0
+[04:50:07] [Server thread/INFO]: Preparing spawn area: 32%
+[04:50:08] [Server thread/INFO]: Preparing spawn area: 65%
+[04:50:09] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:50:09] [Client thread/INFO]: Deleting level TEMP_10000_eea2d8bb-c2b4-4ba6-a37a-ea32003e8a1d
+[04:50:09] [Client thread/INFO]: Attempt 1...
+[04:50:09] [Server thread/INFO]: robot1Recolector[local:E:1ba2eaa1] logged in with entity id 350 at (-8.5, 227.0, -6.5)
+[04:50:09] [Server thread/INFO]: robot1Recolector joined the game
+[04:50:09] [Server thread/INFO]: Received mission: §9DASI project
+[04:50:09] [Server thread/INFO]: Source: §a127.0.0.1
+[04:50:10] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:50:10] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:50:10] [Client thread/INFO]: Started on 63521
+[04:50:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5033ms behind, skipping 100 tick(s)
+[04:50:15] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63528] logged in with entity id 360 at (-8.5, 227.0, -7.5)
+[04:50:15] [Server thread/INFO]: robot2Recolector joined the game
+[04:50:15] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:56:27] [Server thread/INFO]: Saving and pausing game...
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/Overworld
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/Nether
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/The End
+[04:56:27] [Server thread/INFO]: Stopping server
+[04:56:27] [Server thread/INFO]: Saving players
+[04:56:27] [Server thread/INFO]: Saving worlds
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/Overworld
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/Nether
+[04:56:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f'/The End
+[04:56:28] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:56:28] [Server thread/INFO]: Generating keypair
+[04:56:28] [Server thread/INFO]: Converting map!
+[04:56:28] [Server thread/INFO]: Scanning folders...
+[04:56:28] [Server thread/INFO]: Total conversion count is 0
+[04:56:28] [Server thread/WARN]: Unable to find spawn biome
+[04:56:28] [Server thread/INFO]: Preparing start region for level 0
+[04:56:29] [Server thread/INFO]: Preparing spawn area: 31%
+[04:56:30] [Server thread/INFO]: Preparing spawn area: 59%
+[04:56:31] [Server thread/INFO]: Preparing spawn area: 92%
+[04:56:31] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:56:31] [Client thread/INFO]: Deleting level TEMP_10000_4ecef08f-d485-4e9f-8bbc-0ade2d5fc48f
+[04:56:31] [Client thread/INFO]: Attempt 1...
+[04:56:32] [Server thread/INFO]: robot1Recolector[local:E:deacb088] logged in with entity id 369 at (-7.5, 227.0, -8.5)
+[04:56:32] [Server thread/INFO]: robot1Recolector joined the game
+[04:56:32] [Server thread/INFO]: Received mission: §9DASI project
+[04:56:32] [Server thread/INFO]: Source: §a127.0.0.1
+[04:56:32] [Client thread/INFO]: Started on 63555
+[04:56:32] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:56:32] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:56:36] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4496ms behind, skipping 89 tick(s)
+[04:56:36] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63560] logged in with entity id 379 at (-8.5, 227.0, -9.5)
+[04:56:36] [Server thread/INFO]: robot2Recolector joined the game
+[04:56:36] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[04:57:24] [Server thread/INFO]: Saving and pausing game...
+[04:57:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/Overworld
+[04:57:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/Nether
+[04:57:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/The End
+[04:57:25] [Server thread/INFO]: Stopping server
+[04:57:25] [Server thread/INFO]: Saving players
+[04:57:25] [Server thread/INFO]: Saving worlds
+[04:57:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/Overworld
+[04:57:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/Nether
+[04:57:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7'/The End
+[04:57:25] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[04:57:25] [Server thread/INFO]: Generating keypair
+[04:57:26] [Server thread/INFO]: Converting map!
+[04:57:26] [Server thread/INFO]: Scanning folders...
+[04:57:26] [Server thread/INFO]: Total conversion count is 0
+[04:57:26] [Server thread/WARN]: Unable to find spawn biome
+[04:57:26] [Server thread/INFO]: Preparing start region for level 0
+[04:57:27] [Server thread/INFO]: Preparing spawn area: 28%
+[04:57:28] [Server thread/INFO]: Preparing spawn area: 57%
+[04:57:29] [Server thread/INFO]: Preparing spawn area: 92%
+[04:57:29] [Server thread/INFO]: Changing view distance to 6, from 10
+[04:57:29] [Client thread/INFO]: Deleting level TEMP_10000_7aa56dc0-f158-4572-adf5-d85eaff719f7
+[04:57:29] [Client thread/INFO]: Attempt 1...
+[04:57:29] [Server thread/INFO]: robot1Recolector[local:E:ecadc633] logged in with entity id 386 at (-8.5, 227.0, -9.5)
+[04:57:29] [Server thread/INFO]: robot1Recolector joined the game
+[04:57:29] [Server thread/INFO]: Received mission: §9DASI project
+[04:57:29] [Server thread/INFO]: Source: §a127.0.0.1
+[04:57:29] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[04:57:29] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[04:57:29] [Client thread/INFO]: Started on 63585
+[04:57:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4370ms behind, skipping 87 tick(s)
+[04:57:35] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63591] logged in with entity id 400 at (-9.5, 227.0, -5.5)
+[04:57:35] [Server thread/INFO]: robot2Recolector joined the game
+[04:57:35] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:00:34] [Server thread/INFO]: Saving and pausing game...
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/Overworld
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/Nether
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/The End
+[05:00:34] [Server thread/INFO]: Stopping server
+[05:00:34] [Server thread/INFO]: Saving players
+[05:00:34] [Server thread/INFO]: Saving worlds
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/Overworld
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/Nether
+[05:00:34] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01'/The End
+[05:00:35] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:00:35] [Server thread/INFO]: Generating keypair
+[05:00:35] [Server thread/INFO]: Converting map!
+[05:00:35] [Server thread/INFO]: Scanning folders...
+[05:00:35] [Server thread/INFO]: Total conversion count is 0
+[05:00:35] [Server thread/WARN]: Unable to find spawn biome
+[05:00:35] [Server thread/INFO]: Preparing start region for level 0
+[05:00:36] [Server thread/INFO]: Preparing spawn area: 29%
+[05:00:37] [Server thread/INFO]: Preparing spawn area: 60%
+[05:00:38] [Server thread/INFO]: Preparing spawn area: 99%
+[05:00:38] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:00:38] [Client thread/INFO]: Deleting level TEMP_10000_0c17ad7f-1cb1-4a10-b36f-d554d8ed5f01
+[05:00:38] [Client thread/INFO]: Attempt 1...
+[05:00:38] [Server thread/INFO]: robot1Recolector[local:E:2d870912] logged in with entity id 405 at (-9.5, 227.0, -9.5)
+[05:00:38] [Server thread/INFO]: robot1Recolector joined the game
+[05:00:38] [Server thread/INFO]: Received mission: §9DASI project
+[05:00:38] [Server thread/INFO]: Source: §a127.0.0.1
+[05:00:38] [Client thread/INFO]: Started on 63612
+[05:00:38] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:00:38] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:00:43] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4932ms behind, skipping 98 tick(s)
+[05:00:43] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63617] logged in with entity id 415 at (-7.5, 227.0, -5.5)
+[05:00:43] [Server thread/INFO]: robot2Recolector joined the game
+[05:00:43] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:02:32] [Server thread/INFO]: Saving and pausing game...
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/Overworld
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/Nether
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/The End
+[05:02:32] [Server thread/INFO]: Stopping server
+[05:02:32] [Server thread/INFO]: Saving players
+[05:02:32] [Server thread/INFO]: Saving worlds
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/Overworld
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/Nether
+[05:02:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d'/The End
+[05:02:33] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:02:33] [Server thread/INFO]: Generating keypair
+[05:02:33] [Server thread/INFO]: Converting map!
+[05:02:33] [Server thread/INFO]: Scanning folders...
+[05:02:33] [Server thread/INFO]: Total conversion count is 0
+[05:02:33] [Server thread/WARN]: Unable to find spawn biome
+[05:02:33] [Server thread/INFO]: Preparing start region for level 0
+[05:02:34] [Server thread/INFO]: Preparing spawn area: 29%
+[05:02:35] [Server thread/INFO]: Preparing spawn area: 58%
+[05:02:36] [Server thread/INFO]: Preparing spawn area: 99%
+[05:02:36] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:02:36] [Client thread/INFO]: Deleting level TEMP_10000_54b715fc-803c-4389-a3ec-6d46d1ca608d
+[05:02:36] [Client thread/INFO]: Attempt 1...
+[05:02:36] [Server thread/INFO]: robot1Recolector[local:E:9d48f2b8] logged in with entity id 423 at (-7.5, 227.0, -6.5)
+[05:02:36] [Server thread/INFO]: robot1Recolector joined the game
+[05:02:37] [Server thread/INFO]: Received mission: §9DASI project
+[05:02:37] [Server thread/INFO]: Source: §a127.0.0.1
+[05:02:37] [Client thread/INFO]: Started on 63639
+[05:02:37] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:02:37] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:02:41] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4701ms behind, skipping 94 tick(s)
+[05:02:41] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63644] logged in with entity id 435 at (-6.5, 227.0, -7.5)
+[05:02:41] [Server thread/INFO]: robot2Recolector joined the game
+[05:02:41] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:03:39] [Server thread/INFO]: Saving and pausing game...
+[05:03:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/Overworld
+[05:03:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/Nether
+[05:03:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/The End
+[05:03:40] [Server thread/INFO]: Stopping server
+[05:03:40] [Server thread/INFO]: Saving players
+[05:03:40] [Server thread/INFO]: Saving worlds
+[05:03:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/Overworld
+[05:03:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/Nether
+[05:03:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd'/The End
+[05:03:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:03:40] [Server thread/INFO]: Generating keypair
+[05:03:40] [Server thread/INFO]: Converting map!
+[05:03:40] [Server thread/INFO]: Scanning folders...
+[05:03:40] [Server thread/INFO]: Total conversion count is 0
+[05:03:40] [Server thread/WARN]: Unable to find spawn biome
+[05:03:40] [Server thread/INFO]: Preparing start region for level 0
+[05:03:41] [Server thread/INFO]: Preparing spawn area: 30%
+[05:03:42] [Server thread/INFO]: Preparing spawn area: 59%
+[05:03:43] [Server thread/INFO]: Preparing spawn area: 96%
+[05:03:43] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:03:44] [Client thread/INFO]: Deleting level TEMP_10000_509f6528-decd-4042-be45-bacdc4f049fd
+[05:03:44] [Client thread/INFO]: Attempt 1...
+[05:03:44] [Server thread/INFO]: robot1Recolector[local:E:7e175a6e] logged in with entity id 441 at (-6.5, 227.0, -7.5)
+[05:03:44] [Server thread/INFO]: robot1Recolector joined the game
+[05:03:44] [Server thread/INFO]: Received mission: §9DASI project
+[05:03:44] [Server thread/INFO]: Source: §a127.0.0.1
+[05:03:44] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:03:44] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:03:44] [Client thread/INFO]: Started on 63666
+[05:03:48] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4403ms behind, skipping 88 tick(s)
+[05:03:48] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63671] logged in with entity id 451 at (-9.5, 227.0, -7.5)
+[05:03:48] [Server thread/INFO]: robot2Recolector joined the game
+[05:03:48] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:06:17] [Server thread/INFO]: Saving and pausing game...
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/Overworld
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/Nether
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/The End
+[05:06:17] [Server thread/INFO]: Stopping server
+[05:06:17] [Server thread/INFO]: Saving players
+[05:06:17] [Server thread/INFO]: Saving worlds
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/Overworld
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/Nether
+[05:06:17] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9'/The End
+[05:06:18] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:06:18] [Server thread/INFO]: Generating keypair
+[05:06:18] [Server thread/INFO]: Converting map!
+[05:06:18] [Server thread/INFO]: Scanning folders...
+[05:06:18] [Server thread/INFO]: Total conversion count is 0
+[05:06:18] [Server thread/WARN]: Unable to find spawn biome
+[05:06:18] [Server thread/INFO]: Preparing start region for level 0
+[05:06:19] [Server thread/INFO]: Preparing spawn area: 31%
+[05:06:20] [Server thread/INFO]: Preparing spawn area: 56%
+[05:06:21] [Server thread/INFO]: Preparing spawn area: 89%
+[05:06:22] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:06:22] [Client thread/INFO]: Deleting level TEMP_10000_98cf3ad2-6269-412b-b672-d428a867a3f9
+[05:06:22] [Client thread/INFO]: Attempt 1...
+[05:06:22] [Server thread/INFO]: robot1Recolector[local:E:8a431526] logged in with entity id 460 at (-5.5, 227.0, -7.5)
+[05:06:22] [Server thread/INFO]: robot1Recolector joined the game
+[05:06:22] [Server thread/INFO]: Received mission: §9DASI project
+[05:06:22] [Server thread/INFO]: Source: §a127.0.0.1
+[05:06:22] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:06:22] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:06:22] [Client thread/INFO]: Started on 63699
+[05:06:27] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4521ms behind, skipping 90 tick(s)
+[05:06:28] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63705] logged in with entity id 474 at (-6.5, 227.0, -9.5)
+[05:06:28] [Server thread/INFO]: robot2Recolector joined the game
+[05:06:28] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:08:35] [Server thread/INFO]: Saving and pausing game...
+[05:08:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/Overworld
+[05:08:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/Nether
+[05:08:35] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/The End
+[05:08:36] [Server thread/INFO]: Stopping server
+[05:08:36] [Server thread/INFO]: Saving players
+[05:08:36] [Server thread/INFO]: Saving worlds
+[05:08:36] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/Overworld
+[05:08:36] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/Nether
+[05:08:36] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080'/The End
+[05:08:36] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:08:36] [Server thread/INFO]: Generating keypair
+[05:08:36] [Server thread/INFO]: Converting map!
+[05:08:36] [Server thread/INFO]: Scanning folders...
+[05:08:36] [Server thread/INFO]: Total conversion count is 0
+[05:08:36] [Server thread/WARN]: Unable to find spawn biome
+[05:08:36] [Server thread/INFO]: Preparing start region for level 0
+[05:08:37] [Server thread/INFO]: Preparing spawn area: 32%
+[05:08:38] [Server thread/INFO]: Preparing spawn area: 58%
+[05:08:39] [Server thread/INFO]: Preparing spawn area: 92%
+[05:08:40] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:08:40] [Client thread/INFO]: Deleting level TEMP_10000_6e7e7cbf-2b4e-4f42-97c5-b3fad7d94080
+[05:08:40] [Client thread/INFO]: Attempt 1...
+[05:08:40] [Server thread/INFO]: robot1Recolector[local:E:bf8328ca] logged in with entity id 480 at (-8.5, 227.0, -5.5)
+[05:08:40] [Server thread/INFO]: robot1Recolector joined the game
+[05:08:40] [Server thread/INFO]: Received mission: §9DASI project
+[05:08:40] [Server thread/INFO]: Source: §a127.0.0.1
+[05:08:40] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:08:40] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:08:40] [Client thread/INFO]: Started on 63725
+[05:08:45] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4951ms behind, skipping 99 tick(s)
+[05:08:45] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63730] logged in with entity id 490 at (-5.5, 227.0, -6.5)
+[05:08:45] [Server thread/INFO]: robot2Recolector joined the game
+[05:08:45] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:10:47] [Server thread/INFO]: Saving and pausing game...
+[05:10:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/Overworld
+[05:10:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/Nether
+[05:10:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/The End
+[05:10:48] [Server thread/INFO]: Stopping server
+[05:10:48] [Server thread/INFO]: Saving players
+[05:10:48] [Server thread/INFO]: Saving worlds
+[05:10:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/Overworld
+[05:10:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/Nether
+[05:10:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba'/The End
+[05:10:48] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:10:48] [Server thread/INFO]: Generating keypair
+[05:10:48] [Server thread/INFO]: Converting map!
+[05:10:48] [Server thread/INFO]: Scanning folders...
+[05:10:48] [Server thread/INFO]: Total conversion count is 0
+[05:10:48] [Server thread/WARN]: Unable to find spawn biome
+[05:10:48] [Server thread/INFO]: Preparing start region for level 0
+[05:10:49] [Server thread/INFO]: Preparing spawn area: 33%
+[05:10:50] [Server thread/INFO]: Preparing spawn area: 62%
+[05:10:51] [Server thread/INFO]: Preparing spawn area: 95%
+[05:10:52] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:10:52] [Client thread/INFO]: Deleting level TEMP_10000_ff14f743-8278-4439-9a20-b7afa4b4a1ba
+[05:10:52] [Client thread/INFO]: Attempt 1...
+[05:10:52] [Server thread/INFO]: robot1Recolector[local:E:d664601d] logged in with entity id 498 at (-5.5, 227.0, -9.5)
+[05:10:52] [Server thread/INFO]: robot1Recolector joined the game
+[05:10:52] [Server thread/INFO]: Received mission: §9DASI project
+[05:10:52] [Server thread/INFO]: Source: §a127.0.0.1
+[05:10:52] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:10:52] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:10:52] [Client thread/INFO]: Started on 63759
+[05:10:57] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4612ms behind, skipping 92 tick(s)
+[05:10:57] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63764] logged in with entity id 508 at (-6.5, 227.0, -9.5)
+[05:10:57] [Server thread/INFO]: robot2Recolector joined the game
+[05:10:57] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:19:51] [Server thread/INFO]: Saving and pausing game...
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/Overworld
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/Nether
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/The End
+[05:19:51] [Server thread/INFO]: Stopping server
+[05:19:51] [Server thread/INFO]: Saving players
+[05:19:51] [Server thread/INFO]: Saving worlds
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/Overworld
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/Nether
+[05:19:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149'/The End
+[05:19:52] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:19:52] [Server thread/INFO]: Generating keypair
+[05:19:52] [Server thread/INFO]: Converting map!
+[05:19:52] [Server thread/INFO]: Scanning folders...
+[05:19:52] [Server thread/INFO]: Total conversion count is 0
+[05:19:52] [Server thread/WARN]: Unable to find spawn biome
+[05:19:52] [Server thread/INFO]: Preparing start region for level 0
+[05:19:53] [Server thread/INFO]: Preparing spawn area: 27%
+[05:19:54] [Server thread/INFO]: Preparing spawn area: 65%
+[05:19:55] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:19:55] [Client thread/INFO]: Deleting level TEMP_10000_cab12915-488c-49a7-ad79-2304c811d149
+[05:19:55] [Client thread/INFO]: Attempt 1...
+[05:19:55] [Server thread/INFO]: robot1Recolector[local:E:63f4629f] logged in with entity id 520 at (-6.5, 227.0, -8.5)
+[05:19:55] [Server thread/INFO]: robot1Recolector joined the game
+[05:19:56] [Client thread/INFO]: Started on 63803
+[05:19:56] [Server thread/INFO]: Received mission: §9DASI project
+[05:19:56] [Server thread/INFO]: Source: §a127.0.0.1
+[05:19:56] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:19:56] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:20:00] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4563ms behind, skipping 91 tick(s)
+[05:20:00] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63808] logged in with entity id 532 at (-9.5, 227.0, -9.5)
+[05:20:00] [Server thread/INFO]: robot2Recolector joined the game
+[05:20:00] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:30:26] [Server thread/INFO]: Saving and pausing game...
+[05:30:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/Overworld
+[05:30:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/Nether
+[05:30:26] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/The End
+[05:30:27] [Server thread/INFO]: Stopping server
+[05:30:27] [Server thread/INFO]: Saving players
+[05:30:27] [Server thread/INFO]: Saving worlds
+[05:30:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/Overworld
+[05:30:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/Nether
+[05:30:27] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee'/The End
+[05:30:27] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:30:27] [Server thread/INFO]: Generating keypair
+[05:30:27] [Server thread/INFO]: Converting map!
+[05:30:27] [Server thread/INFO]: Scanning folders...
+[05:30:27] [Server thread/INFO]: Total conversion count is 0
+[05:30:27] [Server thread/WARN]: Unable to find spawn biome
+[05:30:28] [Server thread/INFO]: Preparing start region for level 0
+[05:30:29] [Server thread/INFO]: Preparing spawn area: 29%
+[05:30:30] [Server thread/INFO]: Preparing spawn area: 62%
+[05:30:31] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:30:31] [Client thread/INFO]: Deleting level TEMP_10000_f4aec027-1943-4839-ad99-830da6f331ee
+[05:30:31] [Client thread/INFO]: Attempt 1...
+[05:30:31] [Server thread/INFO]: robot1Recolector[local:E:f8031837] logged in with entity id 537 at (-8.5, 227.0, -6.5)
+[05:30:31] [Server thread/INFO]: robot1Recolector joined the game
+[05:30:31] [Server thread/INFO]: Received mission: §9DASI project
+[05:30:31] [Server thread/INFO]: Source: §a127.0.0.1
+[05:30:31] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:30:31] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:30:31] [Client thread/INFO]: Started on 63861
+[05:30:36] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4572ms behind, skipping 91 tick(s)
+[05:30:36] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63866] logged in with entity id 547 at (-7.5, 227.0, -8.5)
+[05:30:36] [Server thread/INFO]: robot2Recolector joined the game
+[05:30:36] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:31:48] [Server thread/INFO]: Saving and pausing game...
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/Overworld
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/Nether
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/The End
+[05:31:48] [Server thread/INFO]: Stopping server
+[05:31:48] [Server thread/INFO]: Saving players
+[05:31:48] [Server thread/INFO]: Saving worlds
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/Overworld
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/Nether
+[05:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb'/The End
+[05:31:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:31:49] [Server thread/INFO]: Generating keypair
+[05:31:49] [Server thread/INFO]: Converting map!
+[05:31:49] [Server thread/INFO]: Scanning folders...
+[05:31:49] [Server thread/INFO]: Total conversion count is 0
+[05:31:49] [Server thread/WARN]: Unable to find spawn biome
+[05:31:49] [Server thread/INFO]: Preparing start region for level 0
+[05:31:50] [Server thread/INFO]: Preparing spawn area: 28%
+[05:31:51] [Server thread/INFO]: Preparing spawn area: 61%
+[05:31:52] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:31:52] [Client thread/INFO]: Deleting level TEMP_10000_e295b91b-faa7-40a8-91b7-9160f100d0eb
+[05:31:52] [Client thread/INFO]: Attempt 1...
+[05:31:52] [Server thread/INFO]: robot1Recolector[local:E:0607a299] logged in with entity id 554 at (-5.5, 227.0, -9.5)
+[05:31:52] [Server thread/INFO]: robot1Recolector joined the game
+[05:31:52] [Server thread/INFO]: Received mission: §9DASI project
+[05:31:52] [Server thread/INFO]: Source: §a127.0.0.1
+[05:31:52] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:31:52] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:31:52] [Client thread/INFO]: Started on 63884
+[05:31:56] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4308ms behind, skipping 86 tick(s)
+[05:31:56] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63889] logged in with entity id 566 at (-7.5, 227.0, -7.5)
+[05:31:56] [Server thread/INFO]: robot2Recolector joined the game
+[05:31:57] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:32:49] [Server thread/INFO]: Saving and pausing game...
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/Overworld
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/Nether
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/The End
+[05:32:49] [Server thread/INFO]: Stopping server
+[05:32:49] [Server thread/INFO]: Saving players
+[05:32:49] [Server thread/INFO]: Saving worlds
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/Overworld
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/Nether
+[05:32:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93'/The End
+[05:32:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:32:50] [Server thread/INFO]: Generating keypair
+[05:32:50] [Server thread/INFO]: Converting map!
+[05:32:50] [Server thread/INFO]: Scanning folders...
+[05:32:50] [Server thread/INFO]: Total conversion count is 0
+[05:32:50] [Server thread/WARN]: Unable to find spawn biome
+[05:32:50] [Server thread/INFO]: Preparing start region for level 0
+[05:32:51] [Server thread/INFO]: Preparing spawn area: 29%
+[05:32:52] [Server thread/INFO]: Preparing spawn area: 58%
+[05:32:53] [Server thread/INFO]: Preparing spawn area: 98%
+[05:32:53] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:32:53] [Client thread/INFO]: Deleting level TEMP_10000_07d921d5-ee43-462d-860f-f214d12d7c93
+[05:32:53] [Client thread/INFO]: Attempt 1...
+[05:32:53] [Server thread/INFO]: robot1Recolector[local:E:0e8ea692] logged in with entity id 571 at (-6.5, 227.0, -5.5)
+[05:32:53] [Server thread/INFO]: robot1Recolector joined the game
+[05:32:53] [Server thread/INFO]: Received mission: §9DASI project
+[05:32:53] [Server thread/INFO]: Source: §a127.0.0.1
+[05:32:53] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:32:53] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:32:53] [Client thread/INFO]: Started on 63907
+[05:32:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4905ms behind, skipping 98 tick(s)
+[05:32:58] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63912] logged in with entity id 581 at (-8.5, 227.0, -7.5)
+[05:32:58] [Server thread/INFO]: robot2Recolector joined the game
+[05:32:58] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:33:57] [Server thread/INFO]: Saving and pausing game...
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/Overworld
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/Nether
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/The End
+[05:33:57] [Server thread/INFO]: Stopping server
+[05:33:57] [Server thread/INFO]: Saving players
+[05:33:57] [Server thread/INFO]: Saving worlds
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/Overworld
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/Nether
+[05:33:57] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1'/The End
+[05:33:58] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:33:58] [Server thread/INFO]: Generating keypair
+[05:33:58] [Server thread/INFO]: Converting map!
+[05:33:58] [Server thread/INFO]: Scanning folders...
+[05:33:58] [Server thread/INFO]: Total conversion count is 0
+[05:33:58] [Server thread/WARN]: Unable to find spawn biome
+[05:33:58] [Server thread/INFO]: Preparing start region for level 0
+[05:33:59] [Server thread/INFO]: Preparing spawn area: 28%
+[05:34:00] [Server thread/INFO]: Preparing spawn area: 58%
+[05:34:01] [Server thread/INFO]: Preparing spawn area: 97%
+[05:34:01] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:34:01] [Client thread/INFO]: Deleting level TEMP_10000_7eafd75b-7c91-4bd2-8037-f9f053cad6b1
+[05:34:01] [Client thread/INFO]: Attempt 1...
+[05:34:01] [Server thread/INFO]: robot1Recolector[local:E:b4168dc9] logged in with entity id 588 at (-8.5, 227.0, -9.5)
+[05:34:01] [Server thread/INFO]: robot1Recolector joined the game
+[05:34:02] [Server thread/INFO]: Received mission: §9DASI project
+[05:34:02] [Server thread/INFO]: Source: §a127.0.0.1
+[05:34:02] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:34:02] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:34:02] [Client thread/INFO]: Started on 63931
+[05:34:06] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4510ms behind, skipping 90 tick(s)
+[05:34:06] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63936] logged in with entity id 598 at (-8.5, 227.0, -6.5)
+[05:34:06] [Server thread/INFO]: robot2Recolector joined the game
+[05:34:06] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:35:05] [Server thread/INFO]: Saving and pausing game...
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/Overworld
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/Nether
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/The End
+[05:35:05] [Server thread/INFO]: Stopping server
+[05:35:05] [Server thread/INFO]: Saving players
+[05:35:05] [Server thread/INFO]: Saving worlds
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/Overworld
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/Nether
+[05:35:05] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9'/The End
+[05:35:06] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:35:06] [Server thread/INFO]: Generating keypair
+[05:35:06] [Server thread/INFO]: Converting map!
+[05:35:06] [Server thread/INFO]: Scanning folders...
+[05:35:06] [Server thread/INFO]: Total conversion count is 0
+[05:35:06] [Server thread/WARN]: Unable to find spawn biome
+[05:35:06] [Server thread/INFO]: Preparing start region for level 0
+[05:35:07] [Server thread/INFO]: Preparing spawn area: 30%
+[05:35:08] [Server thread/INFO]: Preparing spawn area: 58%
+[05:35:09] [Server thread/INFO]: Preparing spawn area: 98%
+[05:35:09] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:35:09] [Client thread/INFO]: Deleting level TEMP_10000_f416efdf-3866-4ff3-b0b7-ae327d1c95b9
+[05:35:09] [Client thread/INFO]: Attempt 1...
+[05:35:10] [Server thread/INFO]: robot1Recolector[local:E:efdfe59b] logged in with entity id 605 at (-7.5, 227.0, -9.5)
+[05:35:10] [Server thread/INFO]: robot1Recolector joined the game
+[05:35:10] [Server thread/INFO]: Received mission: §9DASI project
+[05:35:10] [Server thread/INFO]: Source: §a127.0.0.1
+[05:35:10] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:35:10] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:35:10] [Client thread/INFO]: Started on 63957
+[05:35:14] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4514ms behind, skipping 90 tick(s)
+[05:35:14] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63962] logged in with entity id 617 at (-8.5, 227.0, -5.5)
+[05:35:14] [Server thread/INFO]: robot2Recolector joined the game
+[05:35:14] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:36:03] [Server thread/INFO]: Saving and pausing game...
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/Overworld
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/Nether
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/The End
+[05:36:03] [Server thread/INFO]: Stopping server
+[05:36:03] [Server thread/INFO]: Saving players
+[05:36:03] [Server thread/INFO]: Saving worlds
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/Overworld
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/Nether
+[05:36:03] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348'/The End
+[05:36:04] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:36:04] [Server thread/INFO]: Generating keypair
+[05:36:04] [Server thread/INFO]: Converting map!
+[05:36:04] [Server thread/INFO]: Scanning folders...
+[05:36:04] [Server thread/INFO]: Total conversion count is 0
+[05:36:04] [Server thread/WARN]: Unable to find spawn biome
+[05:36:04] [Server thread/INFO]: Preparing start region for level 0
+[05:36:05] [Server thread/INFO]: Preparing spawn area: 27%
+[05:36:06] [Server thread/INFO]: Preparing spawn area: 58%
+[05:36:07] [Server thread/INFO]: Preparing spawn area: 96%
+[05:36:07] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:36:08] [Client thread/INFO]: Deleting level TEMP_10000_956b223b-90d0-4f7f-8b51-c5a95ce5b348
+[05:36:08] [Client thread/INFO]: Attempt 1...
+[05:36:08] [Server thread/INFO]: robot1Recolector[local:E:ff979a0e] logged in with entity id 622 at (-8.5, 227.0, -9.5)
+[05:36:08] [Server thread/INFO]: robot1Recolector joined the game
+[05:36:08] [Client thread/INFO]: Started on 63984
+[05:36:08] [Server thread/INFO]: Received mission: §9DASI project
+[05:36:08] [Server thread/INFO]: Source: §a127.0.0.1
+[05:36:08] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:36:08] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:36:13] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4628ms behind, skipping 92 tick(s)
+[05:36:13] [Server thread/INFO]: robot2Recolector[/127.0.0.1:63990] logged in with entity id 636 at (-5.5, 227.0, -6.5)
+[05:36:13] [Server thread/INFO]: robot2Recolector joined the game
+[05:36:13] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:41:39] [Server thread/INFO]: Saving and pausing game...
+[05:41:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/Overworld
+[05:41:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/Nether
+[05:41:39] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/The End
+[05:41:40] [Server thread/INFO]: Stopping server
+[05:41:40] [Server thread/INFO]: Saving players
+[05:41:40] [Server thread/INFO]: Saving worlds
+[05:41:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/Overworld
+[05:41:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/Nether
+[05:41:40] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd'/The End
+[05:41:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:41:40] [Server thread/INFO]: Generating keypair
+[05:41:40] [Server thread/INFO]: Converting map!
+[05:41:40] [Server thread/INFO]: Scanning folders...
+[05:41:40] [Server thread/INFO]: Total conversion count is 0
+[05:41:40] [Server thread/WARN]: Unable to find spawn biome
+[05:41:40] [Server thread/INFO]: Preparing start region for level 0
+[05:41:41] [Server thread/INFO]: Preparing spawn area: 27%
+[05:41:42] [Server thread/INFO]: Preparing spawn area: 55%
+[05:41:43] [Server thread/INFO]: Preparing spawn area: 95%
+[05:41:43] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:41:44] [Client thread/INFO]: Deleting level TEMP_10000_086f52bc-ce44-487b-83ae-3914bcbb91fd
+[05:41:44] [Client thread/INFO]: Attempt 1...
+[05:41:44] [Server thread/INFO]: robot1Recolector[local:E:5f9d941c] logged in with entity id 642 at (-5.5, 227.0, -6.5)
+[05:41:44] [Server thread/INFO]: robot1Recolector joined the game
+[05:41:44] [Server thread/INFO]: Received mission: §9DASI project
+[05:41:44] [Server thread/INFO]: Source: §a127.0.0.1
+[05:41:44] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:41:44] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:41:44] [Client thread/INFO]: Started on 64030
+[05:41:49] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4961ms behind, skipping 99 tick(s)
+[05:41:49] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64035] logged in with entity id 652 at (-5.5, 227.0, -5.5)
+[05:41:49] [Server thread/INFO]: robot2Recolector joined the game
+[05:41:49] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:43:24] [Server thread/INFO]: Saving and pausing game...
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/Overworld
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/Nether
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/The End
+[05:43:25] [Server thread/INFO]: Stopping server
+[05:43:25] [Server thread/INFO]: Saving players
+[05:43:25] [Server thread/INFO]: Saving worlds
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/Overworld
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/Nether
+[05:43:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c'/The End
+[05:43:26] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:43:26] [Server thread/INFO]: Generating keypair
+[05:43:26] [Server thread/INFO]: Converting map!
+[05:43:26] [Server thread/INFO]: Scanning folders...
+[05:43:26] [Server thread/INFO]: Total conversion count is 0
+[05:43:26] [Server thread/WARN]: Unable to find spawn biome
+[05:43:26] [Server thread/INFO]: Preparing start region for level 0
+[05:43:27] [Server thread/INFO]: Preparing spawn area: 33%
+[05:43:28] [Server thread/INFO]: Preparing spawn area: 62%
+[05:43:29] [Server thread/INFO]: Preparing spawn area: 93%
+[05:43:29] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:43:29] [Client thread/INFO]: Deleting level TEMP_10000_a2880024-89bf-48fe-b29f-ac23357bc89c
+[05:43:29] [Client thread/INFO]: Attempt 1...
+[05:43:29] [Server thread/INFO]: robot1Recolector[local:E:c74ac8c1] logged in with entity id 660 at (-7.5, 227.0, -9.5)
+[05:43:29] [Server thread/INFO]: robot1Recolector joined the game
+[05:43:29] [Server thread/INFO]: Received mission: §9DASI project
+[05:43:29] [Server thread/INFO]: Source: §a127.0.0.1
+[05:43:29] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:43:29] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:43:29] [Client thread/INFO]: Started on 64086
+[05:43:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4476ms behind, skipping 89 tick(s)
+[05:43:34] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64091] logged in with entity id 670 at (-6.5, 227.0, -8.5)
+[05:43:34] [Server thread/INFO]: robot2Recolector joined the game
+[05:43:34] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:46:22] [Server thread/INFO]: Saving and pausing game...
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/Overworld
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/Nether
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/The End
+[05:46:22] [Server thread/INFO]: Stopping server
+[05:46:22] [Server thread/INFO]: Saving players
+[05:46:22] [Server thread/INFO]: Saving worlds
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/Overworld
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/Nether
+[05:46:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df'/The End
+[05:46:23] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:46:23] [Server thread/INFO]: Generating keypair
+[05:46:23] [Server thread/INFO]: Converting map!
+[05:46:23] [Server thread/INFO]: Scanning folders...
+[05:46:23] [Server thread/INFO]: Total conversion count is 0
+[05:46:23] [Server thread/WARN]: Unable to find spawn biome
+[05:46:23] [Server thread/INFO]: Preparing start region for level 0
+[05:46:24] [Server thread/INFO]: Preparing spawn area: 37%
+[05:46:25] [Server thread/INFO]: Preparing spawn area: 71%
+[05:46:26] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:46:26] [Client thread/INFO]: Deleting level TEMP_10000_9f6f65d6-b52c-47b7-9b75-cbd4902fa2df
+[05:46:26] [Client thread/INFO]: Attempt 1...
+[05:46:26] [Server thread/INFO]: robot1Recolector[local:E:11901a89] logged in with entity id 680 at (-5.5, 227.0, -9.5)
+[05:46:26] [Server thread/INFO]: robot1Recolector joined the game
+[05:46:26] [Server thread/INFO]: Received mission: §9DASI project
+[05:46:26] [Server thread/INFO]: Source: §a127.0.0.1
+[05:46:26] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:46:26] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:46:26] [Client thread/INFO]: Started on 64116
+[05:46:32] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5705ms behind, skipping 114 tick(s)
+[05:46:50] [Server thread/INFO]: Saving and pausing game...
+[05:46:50] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/Overworld
+[05:46:50] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/Nether
+[05:46:50] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/The End
+[05:46:51] [Server thread/INFO]: Stopping server
+[05:46:51] [Server thread/INFO]: Saving players
+[05:46:51] [Server thread/INFO]: Saving worlds
+[05:46:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/Overworld
+[05:46:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/Nether
+[05:46:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e'/The End
+[05:46:53] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:46:53] [Server thread/INFO]: Generating keypair
+[05:46:53] [Server thread/INFO]: Converting map!
+[05:46:53] [Server thread/INFO]: Scanning folders...
+[05:46:53] [Server thread/INFO]: Total conversion count is 0
+[05:46:53] [Server thread/WARN]: Unable to find spawn biome
+[05:46:53] [Server thread/INFO]: Preparing start region for level 0
+[05:46:54] [Server thread/INFO]: Preparing spawn area: 36%
+[05:46:55] [Server thread/INFO]: Preparing spawn area: 76%
+[05:46:55] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:46:56] [Client thread/INFO]: Deleting level TEMP_10000_11e2d8fc-b27b-4755-9663-6dd9ce6d5d0e
+[05:46:56] [Client thread/INFO]: Attempt 1...
+[05:46:56] [Server thread/INFO]: robot1Recolector[local:E:b71521a0] logged in with entity id 694 at (-9.5, 227.0, -5.5)
+[05:46:56] [Server thread/INFO]: robot1Recolector joined the game
+[05:46:56] [Server thread/INFO]: Received mission: §9DASI project
+[05:46:56] [Server thread/INFO]: Source: §a127.0.0.1
+[05:46:56] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:46:56] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:46:56] [Client thread/INFO]: Started on 64135
+[05:47:00] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4340ms behind, skipping 86 tick(s)
+[05:49:51] [Server thread/INFO]: Saving and pausing game...
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/Overworld
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/Nether
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/The End
+[05:49:51] [Server thread/INFO]: Stopping server
+[05:49:51] [Server thread/INFO]: Saving players
+[05:49:51] [Server thread/INFO]: Saving worlds
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/Overworld
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/Nether
+[05:49:51] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9'/The End
+[05:49:52] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:49:52] [Server thread/INFO]: Generating keypair
+[05:49:52] [Server thread/INFO]: Converting map!
+[05:49:52] [Server thread/INFO]: Scanning folders...
+[05:49:52] [Server thread/INFO]: Total conversion count is 0
+[05:49:52] [Server thread/WARN]: Unable to find spawn biome
+[05:49:52] [Server thread/INFO]: Preparing start region for level 0
+[05:49:53] [Server thread/INFO]: Preparing spawn area: 30%
+[05:49:54] [Server thread/INFO]: Preparing spawn area: 62%
+[05:49:55] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:49:55] [Client thread/INFO]: Deleting level TEMP_10000_dbf1e92a-aff3-4dd2-958e-5981fa9541d9
+[05:49:55] [Client thread/INFO]: Attempt 1...
+[05:49:55] [Server thread/INFO]: robot1Recolector[local:E:f4980e87] logged in with entity id 708 at (-9.5, 227.0, -8.5)
+[05:49:55] [Server thread/INFO]: robot1Recolector joined the game
+[05:49:55] [Server thread/INFO]: Received mission: §9DASI project
+[05:49:55] [Server thread/INFO]: Source: §a127.0.0.1
+[05:49:55] [Client thread/INFO]: Started on 64158
+[05:49:55] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:49:55] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:50:00] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4863ms behind, skipping 97 tick(s)
+[05:50:00] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64195] logged in with entity id 720 at (-7.5, 227.0, -9.5)
+[05:50:00] [Server thread/INFO]: robot2Recolector joined the game
+[05:50:00] [Client thread/INFO]: [CHAT[05:53:07] [Client thread/INFO]: Connecting to 127.0.0.1, 64216
+[05:54:53] [Client thread/INFO]: Connecting to 127.0.0.1, 64250
+[05:56:26] [Client thread/INFO]: Connecting to 127.0.0.1, 64274
+[05:57:37] [Client thread/INFO]: Connecting to 127.0.0.1, 64300
+[05:59:29] [Client thread/INFO]: Connecting to 127.0.0.1, 64325
+[06:00:37] [Client thread/INFO]: Connecting to 127.0.0.1, 64355
+[06:03:16] [Client thread/INFO]: Connecting to 127.0.0.1, 64380
+[06:08:35] [Client thread/INFO]: Connecting to 127.0.0.1, 64412
+[06:11:07] [Client thread/INFO]: Connecting to 127.0.0.1, 64441
+[06:13:35] [Client thread/INFO]: Stopping!
+[06:13:35] [Client thread/INFO]: SoundSystem shutting down...
+[06:13:35] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+evel 'TEMP_10000_5e8dbaad-5719-4433-8559-f3fde49f4f02'/Nether
+[05:53:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5e8dbaad-5719-4433-8559-f3fde49f4f02'/The End
+[05:53:03] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:53:03] [Server thread/INFO]: Generating keypair
+[05:53:03] [Server thread/INFO]: Converting map!
+[05:53:03] [Server thread/INFO]: Scanning folders...
+[05:53:03] [Server thread/INFO]: Total conversion count is 0
+[05:53:03] [Server thread/WARN]: Unable to find spawn biome
+[05:53:03] [Server thread/INFO]: Preparing start region for level 0
+[05:53:04] [Server thread/INFO]: Preparing spawn area: 27%
+[05:53:05] [Server thread/INFO]: Preparing spawn area: 56%
+[05:53:06] [Server thread/INFO]: Preparing spawn area: 95%
+[05:53:06] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:53:06] [Client thread/INFO]: Deleting level TEMP_10000_5e8dbaad-5719-4433-8559-f3fde49f4f02
+[05:53:06] [Client thread/INFO]: Attempt 1...
+[05:53:06] [Server thread/INFO]: robot1Recolector[local:E:9882f9fd] logged in with entity id 726 at (-5.5, 227.0, -7.5)
+[05:53:06] [Server thread/INFO]: robot1Recolector joined the game
+[05:53:07] [Server thread/INFO]: Received mission: §9DASI project
+[05:53:07] [Server thread/INFO]: Source: §a127.0.0.1
+[05:53:07] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:53:07] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:53:07] [Client thread/INFO]: Started on 64216
+[05:53:11] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4437ms behind, skipping 88 tick(s)
+[05:53:11] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64221] logged in with entity id 736 at (-9.5, 227.0, -6.5)
+[05:53:11] [Server thread/INFO]: robot2Recolector joined the game
+[05:53:11] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:54:47] [Server thread/INFO]: Saving and pausing game...
+[05:54:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/Overworld
+[05:54:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/Nether
+[05:54:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/The End
+[05:54:48] [Server thread/INFO]: Stopping server
+[05:54:48] [Server thread/INFO]: Saving players
+[05:54:48] [Server thread/INFO]: Saving worlds
+[05:54:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/Overworld
+[05:54:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/Nether
+[05:54:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386'/The End
+[05:54:48] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:54:48] [Server thread/INFO]: Generating keypair
+[05:54:48] [Server thread/INFO]: Converting map!
+[05:54:48] [Server thread/INFO]: Scanning folders...
+[05:54:48] [Server thread/INFO]: Total conversion count is 0
+[05:54:48] [Server thread/WARN]: Unable to find spawn biome
+[05:54:48] [Server thread/INFO]: Preparing start region for level 0
+[05:54:49] [Server thread/INFO]: Preparing spawn area: 29%
+[05:54:50] [Server thread/INFO]: Preparing spawn area: 60%
+[05:54:51] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:54:51] [Client thread/INFO]: Deleting level TEMP_10000_757e11a9-0696-4547-b25c-41b4dedde386
+[05:54:51] [Client thread/INFO]: Attempt 1...
+[05:54:52] [Server thread/INFO]: robot1Recolector[local:E:3d5f20be] logged in with entity id 745 at (-8.5, 227.0, -9.5)
+[05:54:52] [Server thread/INFO]: robot1Recolector joined the game
+[05:54:52] [Server thread/INFO]: Received mission: §9DASI project
+[05:54:52] [Server thread/INFO]: Source: §a127.0.0.1
+[05:54:52] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:54:52] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:54:52] [Client thread/INFO]: Started on 64250
+[05:54:56] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4594ms behind, skipping 91 tick(s)
+[05:54:56] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64255] logged in with entity id 755 at (-5.5, 227.0, -8.5)
+[05:54:56] [Server thread/INFO]: robot2Recolector joined the game
+[05:54:56] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:56:20] [Server thread/INFO]: Saving and pausing game...
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/Overworld
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/Nether
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/The End
+[05:56:21] [Server thread/INFO]: Stopping server
+[05:56:21] [Server thread/INFO]: Saving players
+[05:56:21] [Server thread/INFO]: Saving worlds
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/Overworld
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/Nether
+[05:56:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50'/The End
+[05:56:21] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:56:21] [Server thread/INFO]: Generating keypair
+[05:56:21] [Server thread/INFO]: Converting map!
+[05:56:21] [Server thread/INFO]: Scanning folders...
+[05:56:21] [Server thread/INFO]: Total conversion count is 0
+[05:56:21] [Server thread/WARN]: Unable to find spawn biome
+[05:56:21] [Server thread/INFO]: Preparing start region for level 0
+[05:56:22] [Server thread/INFO]: Preparing spawn area: 29%
+[05:56:23] [Server thread/INFO]: Preparing spawn area: 59%
+[05:56:24] [Server thread/INFO]: Preparing spawn area: 98%
+[05:56:25] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:56:25] [Client thread/INFO]: Deleting level TEMP_10000_7814f469-8486-4e64-afa6-7e3b04e69f50
+[05:56:25] [Client thread/INFO]: Attempt 1...
+[05:56:25] [Server thread/INFO]: robot1Recolector[local:E:c72b5427] logged in with entity id 764 at (-6.5, 227.0, -7.5)
+[05:56:25] [Server thread/INFO]: robot1Recolector joined the game
+[05:56:25] [Server thread/INFO]: Received mission: §9DASI project
+[05:56:25] [Server thread/INFO]: Source: §a127.0.0.1
+[05:56:25] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:56:25] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:56:25] [Client thread/INFO]: Started on 64274
+[05:56:30] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4632ms behind, skipping 92 tick(s)
+[05:56:30] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64279] logged in with entity id 774 at (-9.5, 227.0, -6.5)
+[05:56:30] [Server thread/INFO]: robot2Recolector joined the game
+[05:56:30] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:57:31] [Server thread/INFO]: Saving and pausing game...
+[05:57:31] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/Overworld
+[05:57:31] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/Nether
+[05:57:31] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/The End
+[05:57:32] [Server thread/INFO]: Stopping server
+[05:57:32] [Server thread/INFO]: Saving players
+[05:57:32] [Server thread/INFO]: Saving worlds
+[05:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/Overworld
+[05:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/Nether
+[05:57:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9'/The End
+[05:57:32] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:57:32] [Server thread/INFO]: Generating keypair
+[05:57:32] [Server thread/INFO]: Converting map!
+[05:57:32] [Server thread/INFO]: Scanning folders...
+[05:57:32] [Server thread/INFO]: Total conversion count is 0
+[05:57:32] [Server thread/WARN]: Unable to find spawn biome
+[05:57:32] [Server thread/INFO]: Preparing start region for level 0
+[05:57:33] [Server thread/INFO]: Preparing spawn area: 32%
+[05:57:34] [Server thread/INFO]: Preparing spawn area: 61%
+[05:57:35] [Server thread/INFO]: Preparing spawn area: 97%
+[05:57:35] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:57:36] [Client thread/INFO]: Deleting level TEMP_10000_b7a2cdeb-3744-4b3c-b795-fe4414a6e0b9
+[05:57:36] [Client thread/INFO]: Attempt 1...
+[05:57:36] [Server thread/INFO]: robot1Recolector[local:E:d80b60e1] logged in with entity id 782 at (-5.5, 227.0, -9.5)
+[05:57:36] [Server thread/INFO]: robot1Recolector joined the game
+[05:57:36] [Server thread/INFO]: Received mission: §9DASI project
+[05:57:36] [Server thread/INFO]: Source: §a127.0.0.1
+[05:57:36] [Client thread/INFO]: Started on 64300
+[05:57:36] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:57:36] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:57:41] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4800ms behind, skipping 96 tick(s)
+[05:57:41] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64305] logged in with entity id 792 at (-5.5, 227.0, -6.5)
+[05:57:41] [Server thread/INFO]: robot2Recolector joined the game
+[05:57:41] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[05:59:24] [Server thread/INFO]: Saving and pausing game...
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/Overworld
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/Nether
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/The End
+[05:59:24] [Server thread/INFO]: Stopping server
+[05:59:24] [Server thread/INFO]: Saving players
+[05:59:24] [Server thread/INFO]: Saving worlds
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/Overworld
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/Nether
+[05:59:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4'/The End
+[05:59:25] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[05:59:25] [Server thread/INFO]: Generating keypair
+[05:59:25] [Server thread/INFO]: Converting map!
+[05:59:25] [Server thread/INFO]: Scanning folders...
+[05:59:25] [Server thread/INFO]: Total conversion count is 0
+[05:59:25] [Server thread/WARN]: Unable to find spawn biome
+[05:59:25] [Server thread/INFO]: Preparing start region for level 0
+[05:59:26] [Server thread/INFO]: Preparing spawn area: 30%
+[05:59:27] [Server thread/INFO]: Preparing spawn area: 66%
+[05:59:28] [Server thread/INFO]: Changing view distance to 6, from 10
+[05:59:28] [Client thread/INFO]: Deleting level TEMP_10000_40c6e678-4e65-4768-83bb-50a1cbafdaf4
+[05:59:28] [Client thread/INFO]: Attempt 1...
+[05:59:28] [Server thread/INFO]: robot1Recolector[local:E:b4dce319] logged in with entity id 800 at (-6.5, 227.0, -6.5)
+[05:59:28] [Server thread/INFO]: robot1Recolector joined the game
+[05:59:28] [Server thread/INFO]: Received mission: §9DASI project
+[05:59:28] [Server thread/INFO]: Source: §a127.0.0.1
+[05:59:28] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[05:59:28] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[05:59:28] [Client thread/INFO]: Started on 64325
+[05:59:33] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4466ms behind, skipping 89 tick(s)
+[06:00:32] [Server thread/INFO]: Saving and pausing game...
+[06:00:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/Overworld
+[06:00:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/Nether
+[06:00:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/The End
+[06:00:33] [Server thread/INFO]: Stopping server
+[06:00:33] [Server thread/INFO]: Saving players
+[06:00:33] [Server thread/INFO]: Saving worlds
+[06:00:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/Overworld
+[06:00:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/Nether
+[06:00:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81'/The End
+[06:00:33] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:00:33] [Server thread/INFO]: Generating keypair
+[06:00:33] [Server thread/INFO]: Converting map!
+[06:00:33] [Server thread/INFO]: Scanning folders...
+[06:00:33] [Server thread/INFO]: Total conversion count is 0
+[06:00:33] [Server thread/WARN]: Unable to find spawn biome
+[06:00:33] [Server thread/INFO]: Preparing start region for level 0
+[06:00:34] [Server thread/INFO]: Preparing spawn area: 28%
+[06:00:35] [Server thread/INFO]: Preparing spawn area: 63%
+[06:00:36] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:00:36] [Client thread/INFO]: Deleting level TEMP_10000_195fde82-ca32-4c35-9de7-37186e12ca81
+[06:00:36] [Client thread/INFO]: Attempt 1...
+[06:00:37] [Server thread/INFO]: robot1Recolector[local:E:557903fb] logged in with entity id 814 at (-5.5, 227.0, -9.5)
+[06:00:37] [Server thread/INFO]: robot1Recolector joined the game
+[06:00:37] [Server thread/INFO]: Received mission: §9DASI project
+[06:00:37] [Server thread/INFO]: Source: §a127.0.0.1
+[06:00:37] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:00:37] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:00:37] [Client thread/INFO]: Started on 64355
+[06:00:41] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4598ms behind, skipping 91 tick(s)
+[06:00:41] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64360] logged in with entity id 824 at (-8.5, 227.0, -7.5)
+[06:00:41] [Server thread/INFO]: robot2Recolector joined the game
+[06:00:41] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:03:11] [Server thread/INFO]: Saving and pausing game...
+[06:03:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/Overworld
+[06:03:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/Nether
+[06:03:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/The End
+[06:03:12] [Server thread/INFO]: Stopping server
+[06:03:12] [Server thread/INFO]: Saving players
+[06:03:12] [Server thread/INFO]: Saving worlds
+[06:03:12] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/Overworld
+[06:03:12] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/Nether
+[06:03:12] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf'/The End
+[06:03:12] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:03:12] [Server thread/INFO]: Generating keypair
+[06:03:12] [Server thread/INFO]: Converting map!
+[06:03:12] [Server thread/INFO]: Scanning folders...
+[06:03:12] [Server thread/INFO]: Total conversion count is 0
+[06:03:12] [Server thread/WARN]: Unable to find spawn biome
+[06:03:12] [Server thread/INFO]: Preparing start region for level 0
+[06:03:13] [Server thread/INFO]: Preparing spawn area: 28%
+[06:03:14] [Server thread/INFO]: Preparing spawn area: 60%
+[06:03:15] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:03:15] [Client thread/INFO]: Deleting level TEMP_10000_ec4e281a-723a-45c7-814a-0f3fc92476cf
+[06:03:15] [Client thread/INFO]: Attempt 1...
+[06:03:15] [Server thread/INFO]: robot1Recolector[local:E:36d77e62] logged in with entity id 833 at (-7.5, 227.0, -7.5)
+[06:03:15] [Server thread/INFO]: robot1Recolector joined the game
+[06:03:16] [Server thread/INFO]: Received mission: §9DASI project
+[06:03:16] [Server thread/INFO]: Source: §a127.0.0.1
+[06:03:16] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:03:16] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:03:16] [Client thread/INFO]: Started on 64380
+[06:03:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4747ms behind, skipping 94 tick(s)
+[06:03:20] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64385] logged in with entity id 843 at (-6.5, 227.0, -5.5)
+[06:03:20] [Server thread/INFO]: robot2Recolector joined the game
+[06:03:20] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:08:29] [Server thread/INFO]: Saving and pausing game...
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/Overworld
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/Nether
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/The End
+[06:08:30] [Server thread/INFO]: Stopping server
+[06:08:30] [Server thread/INFO]: Saving players
+[06:08:30] [Server thread/INFO]: Saving worlds
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/Overworld
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/Nether
+[06:08:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef'/The End
+[06:08:30] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:08:30] [Server thread/INFO]: Generating keypair
+[06:08:31] [Server thread/INFO]: Converting map!
+[06:08:31] [Server thread/INFO]: Scanning folders...
+[06:08:31] [Server thread/INFO]: Total conversion count is 0
+[06:08:31] [Server thread/WARN]: Unable to find spawn biome
+[06:08:31] [Server thread/INFO]: Preparing start region for level 0
+[06:08:32] [Server thread/INFO]: Preparing spawn area: 29%
+[06:08:33] [Server thread/INFO]: Preparing spawn area: 61%
+[06:08:34] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:08:34] [Client thread/INFO]: Deleting level TEMP_10000_33241ffa-b93a-4be1-a2fd-171d0ba4d7ef
+[06:08:34] [Client thread/INFO]: Attempt 1...
+[06:08:34] [Server thread/INFO]: robot1Recolector[local:E:450718fc] logged in with entity id 853 at (-6.5, 227.0, -5.5)
+[06:08:34] [Server thread/INFO]: robot1Recolector joined the game
+[06:08:34] [Server thread/INFO]: Received mission: §9DASI project
+[06:08:34] [Server thread/INFO]: Source: §a127.0.0.1
+[06:08:34] [Client thread/INFO]: Started on 64412
+[06:08:34] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:08:34] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:08:39] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4571ms behind, skipping 91 tick(s)
+[06:08:39] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64417] logged in with entity id 865 at (-6.5, 227.0, -9.5)
+[06:08:39] [Server thread/INFO]: robot2Recolector joined the game
+[06:08:39] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:11:02] [Server thread/INFO]: Saving and pausing game...
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/Overworld
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/Nether
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/The End
+[06:11:02] [Server thread/INFO]: Stopping server
+[06:11:02] [Server thread/INFO]: Saving players
+[06:11:02] [Server thread/INFO]: Saving worlds
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/Overworld
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/Nether
+[06:11:02] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d'/The End
+[06:11:03] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:11:03] [Server thread/INFO]: Generating keypair
+[06:11:03] [Server thread/INFO]: Converting map!
+[06:11:03] [Server thread/INFO]: Scanning folders...
+[06:11:03] [Server thread/INFO]: Total conversion count is 0
+[06:11:03] [Server thread/WARN]: Unable to find spawn biome
+[06:11:03] [Server thread/INFO]: Preparing start region for level 0
+[06:11:04] [Server thread/INFO]: Preparing spawn area: 29%
+[06:11:05] [Server thread/INFO]: Preparing spawn area: 59%
+[06:11:06] [Server thread/INFO]: Preparing spawn area: 97%
+[06:11:06] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:11:06] [Client thread/INFO]: Deleting level TEMP_10000_5c18bb3b-337c-45ef-af19-4f2e7375a83d
+[06:11:06] [Client thread/INFO]: Attempt 1...
+[06:11:06] [Server thread/INFO]: robot1Recolector[local:E:f79b1255] logged in with entity id 872 at (-6.5, 227.0, -5.5)
+[06:11:06] [Server thread/INFO]: robot1Recolector joined the game
+[06:11:07] [Server thread/INFO]: Received mission: §9DASI project
+[06:11:07] [Server thread/INFO]: Source: §a127.0.0.1
+[06:11:07] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:11:07] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:11:07] [Client thread/INFO]: Started on 64441
+[06:11:11] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4542ms behind, skipping 90 tick(s)
+[06:11:11] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64446] logged in with entity id 884 at (-8.5, 227.0, -8.5)
+[06:11:11] [Server thread/INFO]: robot2Recolector joined the game
+[06:11:11] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:12:59] [Server thread/INFO]: Saving and pausing game...
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/Overworld
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/Nether
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/The End
+[06:12:59] [Server thread/INFO]: Stopping server
+[06:12:59] [Server thread/INFO]: Saving players
+[06:12:59] [Server thread/INFO]: Saving worlds
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/Overworld
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/Nether
+[06:12:59] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564'/The End
+[06:13:00] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:13:00] [Server thread/INFO]: Generating keypair
+[06:13:00] [Server thread/INFO]: Converting map!
+[06:13:00] [Server thread/INFO]: Scanning folders...
+[06:13:00] [Server thread/INFO]: Total conversion count is 0
+[06:13:00] [Server thread/WARN]: Unable to find spawn biome
+[06:13:00] [Server thread/INFO]: Preparing start region for level 0
+[06:13:01] [Server thread/INFO]: Preparing spawn area: 38%
+[06:13:02] [Server thread/INFO]: Preparing spawn area: 77%
+[06:13:03] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:13:03] [Client thread/INFO]: Deleting level TEMP_10000_51315e13-754f-4adf-b78f-4761dbdf3564
+[06:13:03] [Client thread/INFO]: Attempt 1...
+[06:13:03] [Server thread/INFO]: robot1Recolector[local:E:d617d784] logged in with entity id 894 at (-7.5, 227.0, -8.5)
+[06:13:03] [Server thread/INFO]: robot1Recolector joined the game
+[06:13:03] [Client thread/INFO]: Started on 64464
+[06:13:03] [Server thread/INFO]: Received mission: §9DASI project
+[06:13:03] [Server thread/INFO]: Source: §a127.0.0.1
+[06:13:03] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:13:03] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:13:08] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4717ms behind, skipping 94 tick(s)
+[06:13:21] [Server thread/INFO]: Saving and pausing game...
+[06:13:21] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/Overworld
+[06:13:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/Nether
+[06:13:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/The End
+[06:13:22] [Server thread/INFO]: Stopping server
+[06:13:22] [Server thread/INFO]: Saving players
+[06:13:22] [Server thread/INFO]: Saving worlds
+[06:13:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/Overworld
+[06:13:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/Nether
+[06:13:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120'/The End
+[06:13:26] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:13:26] [Server thread/INFO]: Generating keypair
+[06:13:26] [Server thread/INFO]: Converting map!
+[06:13:26] [Server thread/INFO]: Scanning folders...
+[06:13:26] [Server thread/INFO]: Total conversion count is 0
+[06:13:26] [Server thread/WARN]: Unable to find spawn biome
+[06:13:27] [Server thread/INFO]: Preparing start region for level 0
+[06:13:28] [Server thread/INFO]: Preparing spawn area: 16%
+[06:13:29] [Server thread/INFO]: Preparing spawn area: 40%
+[06:13:30] [Server thread/INFO]: Preparing spawn area: 61%
+[06:13:31] [Server thread/INFO]: Preparing spawn area: 87%
+[06:13:31] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:13:31] [Client thread/INFO]: Deleting level TEMP_10000_3a4df0f7-c32c-4003-9376-a6e3e7068120
+[06:13:31] [Client thread/INFO]: Attempt 1...
+[06:13:31] [Server thread/INFO]: robot1Recolector[local:E:8c475872] logged in with entity id 908 at (-7.5, 227.0, -8.5)
+[06:13:31] [Server thread/INFO]: robot1Recolector joined the game
+[06:13:32] [Client thread/INFO]: Started on 64482
+[06:13:32] [Server thread/INFO]: Received mission: §9DASI project
+[06:13:32] [Server thread/INFO]: Source: §a127.0.0.1
+[06:13:32] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:13:32] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:13:38] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 6034ms behind, skipping 120 tick(s)
+[06:16:22] [Server thread/INFO]: Saving and pausing game...
+[06:16:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/Overworld
+[06:16:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/Nether
+[06:16:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/The End
+[06:16:22] [Server thread/INFO]: Stopping server
+[06:16:22] [Server thread/INFO]: Saving players
+[06:16:22] [Server thread/INFO]: Saving worlds
+[06:16:22] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/Overworld
+[06:16:23] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/Nether
+[06:16:23] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404'/The End
+[06:16:23] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:16:23] [Server thread/INFO]: Generating keypair
+[06:16:23] [Server thread/INFO]: Converting map!
+[06:16:23] [Server thread/INFO]: Scanning folders...
+[06:16:23] [Server thread/INFO]: Total conversion count is 0
+[06:16:23] [Server thread/WARN]: Unable to find spawn biome
+[06:16:23] [Server thread/INFO]: Preparing start region for level 0
+[06:16:24] [Server thread/INFO]: Preparing spawn area: 32%
+[06:16:25] [Server thread/INFO]: Preparing spawn area: 60%
+[06:16:26] [Server thread/INFO]: Preparing spawn area: 93%
+[06:16:27] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:16:27] [Client thread/INFO]: Deleting level TEMP_10000_7b3f175f-d046-428a-be7e-9e4e2f26f404
+[06:16:27] [Client thread/INFO]: Attempt 1...
+[06:16:27] [Server thread/INFO]: robot1Recolector[local:E:de4574ef] logged in with entity id 922 at (-5.5, 227.0, -7.5)
+[06:16:27] [Server thread/INFO]: robot1Recolector joined the game
+[06:16:27] [Server thread/INFO]: Received mission: §9DASI project
+[06:16:27] [Server thread/INFO]: Source: §a127.0.0.1
+[06:16:27] [Client thread/INFO]: Started on 64510
+[06:16:27] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:16:27] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:16:32] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5156ms behind, skipping 103 tick(s)
+[06:16:32] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64547] logged in with entity id 932 at (-8.5, 227.0, -8.5)
+[06:16:32] [Server thread/INFO]: robot2Recol[06:17:25] [Client thread/INFO]: Connecting to 127.0.0.1, 64566
+[06:20:48] [Client thread/INFO]: Connecting to 127.0.0.1, 64591
+[06:21:35] [Client thread/INFO]: Connecting to 127.0.0.1, 64616
+[06:22:51] [Client thread/INFO]: Connecting to 127.0.0.1, 64638
+[06:24:12] [Client thread/INFO]: Connecting to 127.0.0.1, 64661
+[06:24:48] [Client thread/INFO]: Connecting to 127.0.0.1, 64686
+[06:26:11] [Client thread/INFO]: Connecting to 127.0.0.1, 64713
+[06:27:37] [Client thread/INFO]: Connecting to 127.0.0.1, 64739
+[06:29:52] [Client thread/INFO]: Connecting to 127.0.0.1, 64765
+[06:31:53] [Client thread/INFO]: Connecting to 127.0.0.1, 64789
+[06:33:16] [Client thread/INFO]: Connecting to 127.0.0.1, 64812
+[06:34:21] [Client thread/INFO]: Connecting to 127.0.0.1, 64837
+[06:35:35] [Client thread/INFO]: Connecting to 127.0.0.1, 64862
+[06:37:18] [Client thread/INFO]: Connecting to 127.0.0.1, 64889
+[06:41:59] [Client thread/INFO]: Connecting to 127.0.0.1, 64922
+[06:44:21] [Client thread/INFO]: Connecting to 127.0.0.1, 64949
+[06:49:04] [Client thread/INFO]: Connecting to 127.0.0.1, 64978
+[06:50:29] [Client thread/INFO]: Connecting to 127.0.0.1, 65007
+[06:52:25] [Client thread/INFO]: Connecting to 127.0.0.1, 65033
+[06:53:30] [Client thread/INFO]: Connecting to 127.0.0.1, 65063
+[06:56:17] [Client thread/INFO]: Stopping!
+[06:56:17] [Client thread/INFO]: SoundSystem shutting down...
+[06:56:17] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com
+spawn area: 39%
+[06:17:23] [Server thread/INFO]: Preparing spawn area: 77%
+[06:17:24] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:17:24] [Client thread/INFO]: Deleting level TEMP_10000_a92816d3-1681-4036-a618-a9a4d1e90ace
+[06:17:24] [Client thread/INFO]: Attempt 1...
+[06:17:24] [Server thread/INFO]: robot1Recolector[local:E:4965e414] logged in with entity id 939 at (-9.5, 227.0, -5.5)
+[06:17:24] [Server thread/INFO]: robot1Recolector joined the game
+[06:17:25] [Server thread/INFO]: Received mission: §9DASI project
+[06:17:25] [Server thread/INFO]: Source: §a127.0.0.1
+[06:17:25] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:17:25] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:17:25] [Client thread/INFO]: Started on 64566
+[06:17:29] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4647ms behind, skipping 92 tick(s)
+[06:17:29] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64571] logged in with entity id 951 at (-7.5, 227.0, -5.5)
+[06:17:29] [Server thread/INFO]: robot2Recolector joined the game
+[06:17:29] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:20:43] [Server thread/INFO]: Saving and pausing game...
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/Overworld
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/Nether
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/The End
+[06:20:43] [Server thread/INFO]: Stopping server
+[06:20:43] [Server thread/INFO]: Saving players
+[06:20:43] [Server thread/INFO]: Saving worlds
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/Overworld
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/Nether
+[06:20:43] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299'/The End
+[06:20:43] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:20:43] [Server thread/INFO]: Generating keypair
+[06:20:44] [Server thread/INFO]: Converting map!
+[06:20:44] [Server thread/INFO]: Scanning folders...
+[06:20:44] [Server thread/INFO]: Total conversion count is 0
+[06:20:44] [Server thread/WARN]: Unable to find spawn biome
+[06:20:44] [Server thread/INFO]: Preparing start region for level 0
+[06:20:45] [Server thread/INFO]: Preparing spawn area: 39%
+[06:20:46] [Server thread/INFO]: Preparing spawn area: 76%
+[06:20:46] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:20:47] [Client thread/INFO]: Deleting level TEMP_10000_b92fd13e-4c6d-45a2-baf9-5ab318fed299
+[06:20:47] [Client thread/INFO]: Attempt 1...
+[06:20:47] [Server thread/INFO]: robot1Recolector[local:E:3138aba1] logged in with entity id 957 at (-9.5, 227.0, -8.5)
+[06:20:47] [Server thread/INFO]: robot1Recolector joined the game
+[06:20:47] [Server thread/INFO]: Received mission: §9DASI project
+[06:20:47] [Server thread/INFO]: Source: §a127.0.0.1
+[06:20:47] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:20:47] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:20:47] [Client thread/INFO]: Started on 64591
+[06:20:52] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4723ms behind, skipping 94 tick(s)
+[06:20:52] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64596] logged in with entity id 969 at (-9.5, 227.0, -7.5)
+[06:20:52] [Server thread/INFO]: robot2Recolector joined the game
+[06:20:52] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:21:24] [Server thread/INFO]: Saving and pausing game...
+[06:21:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/Overworld
+[06:21:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/Nether
+[06:21:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/The End
+[06:21:25] [Server thread/INFO]: Stopping server
+[06:21:25] [Server thread/INFO]: Saving players
+[06:21:25] [Server thread/INFO]: Saving worlds
+[06:21:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/Overworld
+[06:21:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/Nether
+[06:21:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c'/The End
+[06:21:26] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:21:26] [Server thread/INFO]: Generating keypair
+[06:21:26] [Server thread/INFO]: Converting map!
+[06:21:26] [Server thread/INFO]: Scanning folders...
+[06:21:26] [Server thread/INFO]: Total conversion count is 0
+[06:21:26] [Server thread/WARN]: Unable to find spawn biome
+[06:21:26] [Server thread/INFO]: Preparing start region for level 0
+[06:21:27] [Server thread/INFO]: Preparing spawn area: 39%
+[06:21:28] [Server thread/INFO]: Preparing spawn area: 79%
+[06:21:29] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:21:29] [Client thread/INFO]: Deleting level TEMP_10000_ebed095e-6668-484b-95b0-b5467365880c
+[06:21:29] [Client thread/INFO]: Attempt 1...
+[06:21:29] [Server thread/INFO]: robot1Recolector[local:E:8d824f5c] logged in with entity id 974 at (-8.5, 227.0, -9.5)
+[06:21:29] [Server thread/INFO]: robot1Recolector joined the game
+[06:21:30] [Server thread/INFO]: Received mission: §9DASI project
+[06:21:30] [Server thread/INFO]: Source: §a127.0.0.1
+[06:21:30] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:21:30] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:21:30] [Client thread/INFO]: Started on 64616
+[06:21:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4548ms behind, skipping 90 tick(s)
+[06:21:35] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64621] logged in with entity id 988 at (-9.5, 227.0, -5.5)
+[06:21:35] [Server thread/INFO]: robot2Recolector joined the game
+[06:21:35] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:22:45] [Server thread/INFO]: Saving and pausing game...
+[06:22:45] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/Overworld
+[06:22:45] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/Nether
+[06:22:45] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/The End
+[06:22:46] [Server thread/INFO]: Stopping server
+[06:22:46] [Server thread/INFO]: Saving players
+[06:22:46] [Server thread/INFO]: Saving worlds
+[06:22:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/Overworld
+[06:22:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/Nether
+[06:22:46] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83'/The End
+[06:22:46] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:22:46] [Server thread/INFO]: Generating keypair
+[06:22:46] [Server thread/INFO]: Converting map!
+[06:22:46] [Server thread/INFO]: Scanning folders...
+[06:22:46] [Server thread/INFO]: Total conversion count is 0
+[06:22:46] [Server thread/WARN]: Unable to find spawn biome
+[06:22:46] [Server thread/INFO]: Preparing start region for level 0
+[06:22:47] [Server thread/INFO]: Preparing spawn area: 40%
+[06:22:48] [Server thread/INFO]: Preparing spawn area: 78%
+[06:22:49] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:22:49] [Client thread/INFO]: Deleting level TEMP_10000_aff40bae-ed75-4933-b427-dc10e8c87f83
+[06:22:49] [Client thread/INFO]: Attempt 1...
+[06:22:49] [Server thread/INFO]: robot1Recolector[local:E:f7466094] logged in with entity id 992 at (-8.5, 227.0, -6.5)
+[06:22:49] [Server thread/INFO]: robot1Recolector joined the game
+[06:22:50] [Server thread/INFO]: Received mission: §9DASI project
+[06:22:50] [Server thread/INFO]: Source: §a127.0.0.1
+[06:22:50] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:22:50] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:22:50] [Client thread/INFO]: Started on 64638
+[06:22:55] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 5948ms behind, skipping 118 tick(s)
+[06:22:55] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64643] logged in with entity id 1004 at (-8.5, 227.0, -8.5)
+[06:22:55] [Server thread/INFO]: robot2Recolector joined the game
+[06:22:56] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:24:06] [Server thread/INFO]: Saving and pausing game...
+[06:24:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/Overworld
+[06:24:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/Nether
+[06:24:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/The End
+[06:24:07] [Server thread/INFO]: Stopping server
+[06:24:07] [Server thread/INFO]: Saving players
+[06:24:07] [Server thread/INFO]: Saving worlds
+[06:24:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/Overworld
+[06:24:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/Nether
+[06:24:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599'/The End
+[06:24:07] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:24:07] [Server thread/INFO]: Generating keypair
+[06:24:07] [Server thread/INFO]: Converting map!
+[06:24:07] [Server thread/INFO]: Scanning folders...
+[06:24:07] [Server thread/INFO]: Total conversion count is 0
+[06:24:07] [Server thread/WARN]: Unable to find spawn biome
+[06:24:07] [Server thread/INFO]: Preparing start region for level 0
+[06:24:08] [Server thread/INFO]: Preparing spawn area: 38%
+[06:24:09] [Server thread/INFO]: Preparing spawn area: 78%
+[06:24:10] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:24:10] [Client thread/INFO]: Deleting level TEMP_10000_3cc5fb0f-77d0-4da5-8b1c-438544b70599
+[06:24:10] [Client thread/INFO]: Attempt 1...
+[06:24:10] [Server thread/INFO]: robot1Recolector[local:E:206a945d] logged in with entity id 1009 at (-6.5, 227.0, -6.5)
+[06:24:10] [Server thread/INFO]: robot1Recolector joined the game
+[06:24:11] [Server thread/INFO]: Received mission: §9DASI project
+[06:24:11] [Server thread/INFO]: Source: §a127.0.0.1
+[06:24:11] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:24:11] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:24:11] [Client thread/INFO]: Started on 64661
+[06:24:15] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4530ms behind, skipping 90 tick(s)
+[06:24:15] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64666] logged in with entity id 1021 at (-5.5, 227.0, -9.5)
+[06:24:15] [Server thread/INFO]: robot2Recolector joined the game
+[06:24:15] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:24:38] [Server thread/INFO]: Saving and pausing game...
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/Overworld
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/Nether
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/The End
+[06:24:38] [Server thread/INFO]: Stopping server
+[06:24:38] [Server thread/INFO]: Saving players
+[06:24:38] [Server thread/INFO]: Saving worlds
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/Overworld
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/Nether
+[06:24:38] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270'/The End
+[06:24:40] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:24:40] [Server thread/INFO]: Generating keypair
+[06:24:41] [Server thread/INFO]: Converting map!
+[06:24:41] [Server thread/INFO]: Scanning folders...
+[06:24:41] [Server thread/INFO]: Total conversion count is 0
+[06:24:41] [Server thread/WARN]: Unable to find spawn biome
+[06:24:41] [Server thread/INFO]: Preparing start region for level 0
+[06:24:42] [Server thread/INFO]: Preparing spawn area: 31%
+[06:24:43] [Server thread/INFO]: Preparing spawn area: 69%
+[06:24:43] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:24:44] [Client thread/INFO]: Deleting level TEMP_10000_aadfb5f4-2e6a-4c05-804d-0f0fda09d270
+[06:24:44] [Client thread/INFO]: Attempt 1...
+[06:24:44] [Server thread/INFO]: robot1Recolector[local:E:2ebe131f] logged in with entity id 1026 at (-8.5, 227.0, -8.5)
+[06:24:44] [Server thread/INFO]: robot1Recolector joined the game
+[06:24:44] [Server thread/INFO]: Received mission: §9DASI project
+[06:24:44] [Server thread/INFO]: Source: §a127.0.0.1
+[06:24:44] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:24:44] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:24:44] [Client thread/INFO]: Started on 64686
+[06:24:49] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4702ms behind, skipping 94 tick(s)
+[06:24:49] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64692] logged in with entity id 1038 at (-5.5, 227.0, -9.5)
+[06:24:49] [Server thread/INFO]: robot2Recolector joined the game
+[06:24:49] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:26:06] [Server thread/INFO]: Saving and pausing game...
+[06:26:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/Overworld
+[06:26:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/Nether
+[06:26:06] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/The End
+[06:26:07] [Server thread/INFO]: Stopping server
+[06:26:07] [Server thread/INFO]: Saving players
+[06:26:07] [Server thread/INFO]: Saving worlds
+[06:26:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/Overworld
+[06:26:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/Nether
+[06:26:07] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812'/The End
+[06:26:07] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:26:07] [Server thread/INFO]: Generating keypair
+[06:26:07] [Server thread/INFO]: Converting map!
+[06:26:07] [Server thread/INFO]: Scanning folders...
+[06:26:07] [Server thread/INFO]: Total conversion count is 0
+[06:26:07] [Server thread/WARN]: Unable to find spawn biome
+[06:26:07] [Server thread/INFO]: Preparing start region for level 0
+[06:26:08] [Server thread/INFO]: Preparing spawn area: 33%
+[06:26:09] [Server thread/INFO]: Preparing spawn area: 62%
+[06:26:10] [Server thread/INFO]: Preparing spawn area: 97%
+[06:26:11] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:26:11] [Client thread/INFO]: Deleting level TEMP_10000_dac25bd5-e4e0-4463-a6c3-fc84cfc70812
+[06:26:11] [Client thread/INFO]: Attempt 1...
+[06:26:11] [Server thread/INFO]: robot1Recolector[local:E:d893de88] logged in with entity id 1043 at (-6.5, 227.0, -5.5)
+[06:26:11] [Server thread/INFO]: robot1Recolector joined the game
+[06:26:11] [Server thread/INFO]: Received mission: §9DASI project
+[06:26:11] [Server thread/INFO]: Source: §a127.0.0.1
+[06:26:11] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:26:11] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:26:11] [Client thread/INFO]: Started on 64713
+[06:26:16] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4965ms behind, skipping 99 tick(s)
+[06:26:16] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64718] logged in with entity id 1053 at (-8.5, 227.0, -9.5)
+[06:26:16] [Server thread/INFO]: robot2Recolector joined the game
+[06:26:16] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:27:32] [Server thread/INFO]: Saving and pausing game...
+[06:27:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/Overworld
+[06:27:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/Nether
+[06:27:32] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/The End
+[06:27:33] [Server thread/INFO]: Stopping server
+[06:27:33] [Server thread/INFO]: Saving players
+[06:27:33] [Server thread/INFO]: Saving worlds
+[06:27:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/Overworld
+[06:27:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/Nether
+[06:27:33] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d'/The End
+[06:27:33] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:27:33] [Server thread/INFO]: Generating keypair
+[06:27:33] [Server thread/INFO]: Converting map!
+[06:27:33] [Server thread/INFO]: Scanning folders...
+[06:27:33] [Server thread/INFO]: Total conversion count is 0
+[06:27:33] [Server thread/WARN]: Unable to find spawn biome
+[06:27:33] [Server thread/INFO]: Preparing start region for level 0
+[06:27:34] [Server thread/INFO]: Preparing spawn area: 27%
+[06:27:35] [Server thread/INFO]: Preparing spawn area: 60%
+[06:27:36] [Server thread/INFO]: Preparing spawn area: 98%
+[06:27:37] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:27:37] [Client thread/INFO]: Deleting level TEMP_10000_19b407b7-3221-420f-a6b0-59a24e36412d
+[06:27:37] [Client thread/INFO]: Attempt 1...
+[06:27:37] [Server thread/INFO]: robot1Recolector[local:E:3b630309] logged in with entity id 1059 at (-9.5, 227.0, -8.5)
+[06:27:37] [Server thread/INFO]: robot1Recolector joined the game
+[06:27:37] [Server thread/INFO]: Received mission: §9DASI project
+[06:27:37] [Server thread/INFO]: Source: §a127.0.0.1
+[06:27:37] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:27:37] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:27:37] [Client thread/INFO]: Started on 64739
+[06:27:42] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4602ms behind, skipping 92 tick(s)
+[06:27:42] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64744] logged in with entity id 1069 at (-7.5, 227.0, -7.5)
+[06:27:42] [Server thread/INFO]: robot2Recolector joined the game
+[06:27:42] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:29:47] [Server thread/INFO]: Saving and pausing game...
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/Overworld
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/Nether
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/The End
+[06:29:47] [Server thread/INFO]: Stopping server
+[06:29:47] [Server thread/INFO]: Saving players
+[06:29:47] [Server thread/INFO]: Saving worlds
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/Overworld
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/Nether
+[06:29:47] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c'/The End
+[06:29:48] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:29:48] [Server thread/INFO]: Generating keypair
+[06:29:48] [Server thread/INFO]: Converting map!
+[06:29:48] [Server thread/INFO]: Scanning folders...
+[06:29:48] [Server thread/INFO]: Total conversion count is 0
+[06:29:48] [Server thread/WARN]: Unable to find spawn biome
+[06:29:48] [Server thread/INFO]: Preparing start region for level 0
+[06:29:49] [Server thread/INFO]: Preparing spawn area: 31%
+[06:29:50] [Server thread/INFO]: Preparing spawn area: 60%
+[06:29:51] [Server thread/INFO]: Preparing spawn area: 94%
+[06:29:51] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:29:51] [Client thread/INFO]: Deleting level TEMP_10000_09750174-ea6f-4edc-a86e-7d85dd0d522c
+[06:29:51] [Client thread/INFO]: Attempt 1...
+[06:29:51] [Server thread/INFO]: robot1Recolector[local:E:9d2e605b] logged in with entity id 1076 at (-8.5, 227.0, -9.5)
+[06:29:51] [Server thread/INFO]: robot1Recolector joined the game
+[06:29:52] [Server thread/INFO]: Received mission: §9DASI project
+[06:29:52] [Server thread/INFO]: Source: §a127.0.0.1
+[06:29:52] [Client thread/INFO]: Started on 64765
+[06:29:52] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:29:52] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:29:56] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4545ms behind, skipping 90 tick(s)
+[06:29:56] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64770] logged in with entity id 1086 at (-5.5, 227.0, -9.5)
+[06:29:56] [Server thread/INFO]: robot2Recolector joined the game
+[06:29:56] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:31:48] [Server thread/INFO]: Saving and pausing game...
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/Overworld
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/Nether
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/The End
+[06:31:48] [Server thread/INFO]: Stopping server
+[06:31:48] [Server thread/INFO]: Saving players
+[06:31:48] [Server thread/INFO]: Saving worlds
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/Overworld
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/Nether
+[06:31:48] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4'/The End
+[06:31:49] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:31:49] [Server thread/INFO]: Generating keypair
+[06:31:49] [Server thread/INFO]: Converting map!
+[06:31:49] [Server thread/INFO]: Scanning folders...
+[06:31:49] [Server thread/INFO]: Total conversion count is 0
+[06:31:49] [Server thread/WARN]: Unable to find spawn biome
+[06:31:49] [Server thread/INFO]: Preparing start region for level 0
+[06:31:50] [Server thread/INFO]: Preparing spawn area: 28%
+[06:31:51] [Server thread/INFO]: Preparing spawn area: 55%
+[06:31:52] [Server thread/INFO]: Preparing spawn area: 93%
+[06:31:52] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:31:52] [Client thread/INFO]: Deleting level TEMP_10000_5c48d8f5-d18e-4335-9bf4-b9422b0aeec4
+[06:31:52] [Client thread/INFO]: Attempt 1...
+[06:31:53] [Server thread/INFO]: robot1Recolector[local:E:be2638ce] logged in with entity id 1092 at (-8.5, 227.0, -6.5)
+[06:31:53] [Server thread/INFO]: robot1Recolector joined the game
+[06:31:53] [Server thread/INFO]: Received mission: §9DASI project
+[06:31:53] [Server thread/INFO]: Source: §a127.0.0.1
+[06:31:53] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:31:53] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:31:53] [Client thread/INFO]: Started on 64789
+[06:31:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4733ms behind, skipping 94 tick(s)
+[06:31:58] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64794] logged in with entity id 1104 at (-6.5, 227.0, -9.5)
+[06:31:58] [Server thread/INFO]: robot2Recolector joined the game
+[06:31:58] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:33:11] [Server thread/INFO]: Saving and pausing game...
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/Overworld
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/Nether
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/The End
+[06:33:11] [Server thread/INFO]: Stopping server
+[06:33:11] [Server thread/INFO]: Saving players
+[06:33:11] [Server thread/INFO]: Saving worlds
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/Overworld
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/Nether
+[06:33:11] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a'/The End
+[06:33:12] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:33:12] [Server thread/INFO]: Generating keypair
+[06:33:12] [Server thread/INFO]: Converting map!
+[06:33:12] [Server thread/INFO]: Scanning folders...
+[06:33:12] [Server thread/INFO]: Total conversion count is 0
+[06:33:12] [Server thread/WARN]: Unable to find spawn biome
+[06:33:12] [Server thread/INFO]: Preparing start region for level 0
+[06:33:13] [Server thread/INFO]: Preparing spawn area: 26%
+[06:33:14] [Server thread/INFO]: Preparing spawn area: 58%
+[06:33:15] [Server thread/INFO]: Preparing spawn area: 99%
+[06:33:15] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:33:15] [Client thread/INFO]: Deleting level TEMP_10000_3dd8dd31-a254-40fa-8c6d-60bddd1b4f8a
+[06:33:15] [Client thread/INFO]: Attempt 1...
+[06:33:15] [Server thread/INFO]: robot1Recolector[local:E:472cf946] logged in with entity id 1109 at (-8.5, 227.0, -8.5)
+[06:33:15] [Server thread/INFO]: robot1Recolector joined the game
+[06:33:16] [Server thread/INFO]: Received mission: §9DASI project
+[06:33:16] [Server thread/INFO]: Source: §a127.0.0.1
+[06:33:16] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:33:16] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:33:16] [Client thread/INFO]: Started on 64812
+[06:33:20] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4495ms behind, skipping 89 tick(s)
+[06:33:20] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64817] logged in with entity id 1121 at (-6.5, 227.0, -9.5)
+[06:33:20] [Server thread/INFO]: robot2Recolector joined the game
+[06:33:20] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:34:15] [Server thread/INFO]: Saving and pausing game...
+[06:34:15] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/Overworld
+[06:34:15] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/Nether
+[06:34:15] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/The End
+[06:34:16] [Server thread/INFO]: Stopping server
+[06:34:16] [Server thread/INFO]: Saving players
+[06:34:16] [Server thread/INFO]: Saving worlds
+[06:34:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/Overworld
+[06:34:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/Nether
+[06:34:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0'/The End
+[06:34:16] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:34:16] [Server thread/INFO]: Generating keypair
+[06:34:16] [Server thread/INFO]: Converting map!
+[06:34:16] [Server thread/INFO]: Scanning folders...
+[06:34:16] [Server thread/INFO]: Total conversion count is 0
+[06:34:16] [Server thread/WARN]: Unable to find spawn biome
+[06:34:16] [Server thread/INFO]: Preparing start region for level 0
+[06:34:17] [Server thread/INFO]: Preparing spawn area: 30%
+[06:34:18] [Server thread/INFO]: Preparing spawn area: 58%
+[06:34:19] [Server thread/INFO]: Preparing spawn area: 93%
+[06:34:20] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:34:20] [Client thread/INFO]: Deleting level TEMP_10000_c258798b-d2a5-4b3f-9ae2-fefea2ff12c0
+[06:34:20] [Client thread/INFO]: Attempt 1...
+[06:34:20] [Server thread/INFO]: robot1Recolector[local:E:771fdc31] logged in with entity id 1126 at (-9.5, 227.0, -9.5)
+[06:34:20] [Server thread/INFO]: robot1Recolector joined the game
+[06:34:20] [Server thread/INFO]: Received mission: §9DASI project
+[06:34:20] [Server thread/INFO]: Source: §a127.0.0.1
+[06:34:20] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:34:20] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:34:20] [Client thread/INFO]: Started on 64837
+[06:34:25] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4607ms behind, skipping 92 tick(s)
+[06:34:25] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64842] logged in with entity id 1138 at (-5.5, 227.0, -6.5)
+[06:34:25] [Server thread/INFO]: robot2Recolector joined the game
+[06:34:25] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:35:30] [Server thread/INFO]: Saving and pausing game...
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/Overworld
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/Nether
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/The End
+[06:35:30] [Server thread/INFO]: Stopping server
+[06:35:30] [Server thread/INFO]: Saving players
+[06:35:30] [Server thread/INFO]: Saving worlds
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/Overworld
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/Nether
+[06:35:30] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f'/The End
+[06:35:31] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:35:31] [Server thread/INFO]: Generating keypair
+[06:35:31] [Server thread/INFO]: Converting map!
+[06:35:31] [Server thread/INFO]: Scanning folders...
+[06:35:31] [Server thread/INFO]: Total conversion count is 0
+[06:35:31] [Server thread/WARN]: Unable to find spawn biome
+[06:35:31] [Server thread/INFO]: Preparing start region for level 0
+[06:35:32] [Server thread/INFO]: Preparing spawn area: 32%
+[06:35:33] [Server thread/INFO]: Preparing spawn area: 59%
+[06:35:34] [Server thread/INFO]: Preparing spawn area: 93%
+[06:35:34] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:35:34] [Client thread/INFO]: Deleting level TEMP_10000_a24a1e38-bcc4-4c70-9c6f-0dd54ab0731f
+[06:35:34] [Client thread/INFO]: Attempt 1...
+[06:35:34] [Server thread/INFO]: robot1Recolector[local:E:d62bb7de] logged in with entity id 1144 at (-5.5, 227.0, -7.5)
+[06:35:34] [Server thread/INFO]: robot1Recolector joined the game
+[06:35:35] [Server thread/INFO]: Received mission: §9DASI project
+[06:35:35] [Server thread/INFO]: Source: §a127.0.0.1
+[06:35:35] [Client thread/INFO]: Started on 64862
+[06:35:35] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:35:35] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:35:39] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4623ms behind, skipping 92 tick(s)
+[06:35:39] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64867] logged in with entity id 1154 at (-5.5, 227.0, -6.5)
+[06:35:39] [Server thread/INFO]: robot2Recolector joined the game
+[06:35:39] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:37:13] [Server thread/INFO]: Saving and pausing game...
+[06:37:13] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/Overworld
+[06:37:13] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/Nether
+[06:37:13] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/The End
+[06:37:14] [Server thread/INFO]: Stopping server
+[06:37:14] [Server thread/INFO]: Saving players
+[06:37:14] [Server thread/INFO]: Saving worlds
+[06:37:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/Overworld
+[06:37:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/Nether
+[06:37:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08'/The End
+[06:37:14] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:37:14] [Server thread/INFO]: Generating keypair
+[06:37:14] [Server thread/INFO]: Converting map!
+[06:37:14] [Server thread/INFO]: Scanning folders...
+[06:37:14] [Server thread/INFO]: Total conversion count is 0
+[06:37:14] [Server thread/WARN]: Unable to find spawn biome
+[06:37:14] [Server thread/INFO]: Preparing start region for level 0
+[06:37:15] [Server thread/INFO]: Preparing spawn area: 36%
+[06:37:16] [Server thread/INFO]: Preparing spawn area: 74%
+[06:37:17] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:37:17] [Client thread/INFO]: Deleting level TEMP_10000_aa103a7d-41f0-490e-9610-40ff8d0aef08
+[06:37:17] [Client thread/INFO]: Attempt 1...
+[06:37:17] [Server thread/INFO]: robot1Recolector[local:E:ab3a8502] logged in with entity id 1162 at (-7.5, 227.0, -7.5)
+[06:37:17] [Server thread/INFO]: robot1Recolector joined the game
+[06:37:18] [Server thread/INFO]: Received mission: §9DASI project
+[06:37:18] [Server thread/INFO]: Source: §a127.0.0.1
+[06:37:18] [Client thread/INFO]: Started on 64889
+[06:37:18] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:37:18] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:37:22] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4641ms behind, skipping 92 tick(s)
+[06:37:22] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64895] logged in with entity id 1174 at (-7.5, 227.0, -5.5)
+[06:37:22] [Server thread/INFO]: robot2Recolector joined the game
+[06:37:22] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:41:49] [Server thread/INFO]: Saving and pausing game...
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/Overworld
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/Nether
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/The End
+[06:41:49] [Server thread/INFO]: Stopping server
+[06:41:49] [Server thread/INFO]: Saving players
+[06:41:49] [Server thread/INFO]: Saving worlds
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/Overworld
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/Nether
+[06:41:49] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4'/The End
+[06:41:50] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:41:50] [Server thread/INFO]: Generating keypair
+[06:41:50] [Server thread/INFO]: Converting map!
+[06:41:50] [Server thread/INFO]: Scanning folders...
+[06:41:50] [Server thread/INFO]: Total conversion count is 0
+[06:41:50] [Server thread/WARN]: Unable to find spawn biome
+[06:41:50] [Server thread/INFO]: Preparing start region for level 0
+[06:41:51] [Server thread/INFO]: Preparing spawn area: 31%
+[06:41:52] [Server thread/INFO]: Preparing spawn area: 57%
+[06:41:53] [Server thread/INFO]: Preparing spawn area: 91%
+[06:41:53] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:41:53] [Client thread/INFO]: Deleting level TEMP_10000_9fd0f5e6-9652-4764-aa56-a12bbc92caf4
+[06:41:53] [Client thread/INFO]: Attempt 1...
+[06:41:53] [Server thread/INFO]: robot1Recolector[local:E:f3f28446] logged in with entity id 1180 at (-7.5, 227.0, -6.5)
+[06:41:53] [Server thread/INFO]: robot1Recolector joined the game
+[06:41:54] [Server thread/INFO]: Received mission: §9DASI project
+[06:41:54] [Server thread/INFO]: Source: §a127.0.0.1
+[06:41:54] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:41:54] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:41:54] [Client thread/INFO]: Started on 64922
+[06:41:58] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4465ms behind, skipping 89 tick(s)
+[06:41:59] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64928] logged in with entity id 1194 at (-5.5, 227.0, -6.5)
+[06:41:59] [Server thread/INFO]: robot2Recolector joined the game
+[06:41:59] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:44:16] [Server thread/INFO]: Saving and pausing game...
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/Overworld
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/Nether
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/The End
+[06:44:16] [Server thread/INFO]: Stopping server
+[06:44:16] [Server thread/INFO]: Saving players
+[06:44:16] [Server thread/INFO]: Saving worlds
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/Overworld
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/Nether
+[06:44:16] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94'/The End
+[06:44:17] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:44:17] [Server thread/INFO]: Generating keypair
+[06:44:17] [Server thread/INFO]: Converting map!
+[06:44:17] [Server thread/INFO]: Scanning folders...
+[06:44:17] [Server thread/INFO]: Total conversion count is 0
+[06:44:17] [Server thread/WARN]: Unable to find spawn biome
+[06:44:17] [Server thread/INFO]: Preparing start region for level 0
+[06:44:18] [Server thread/INFO]: Preparing spawn area: 31%
+[06:44:19] [Server thread/INFO]: Preparing spawn area: 59%
+[06:44:20] [Server thread/INFO]: Preparing spawn area: 93%
+[06:44:20] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:44:20] [Client thread/INFO]: Deleting level TEMP_10000_bb74cbc4-bdbe-427d-984c-77c14b313b94
+[06:44:20] [Client thread/INFO]: Attempt 1...
+[06:44:20] [Server thread/INFO]: robot1Recolector[local:E:18437231] logged in with entity id 1198 at (-5.5, 227.0, -6.5)
+[06:44:20] [Server thread/INFO]: robot1Recolector joined the game
+[06:44:20] [Server thread/INFO]: Received mission: §9DASI project
+[06:44:20] [Server thread/INFO]: Source: §a127.0.0.1
+[06:44:21] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:44:21] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:44:21] [Client thread/INFO]: Started on 64949
+[06:44:25] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4738ms behind, skipping 94 tick(s)
+[06:44:25] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64954] logged in with entity id 1208 at (-8.5, 227.0, -6.5)
+[06:44:25] [Server thread/INFO]: robot2Recolector joined the game
+[06:44:25] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:48:53] [Server thread/INFO]: Saving and pausing game...
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/Overworld
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/Nether
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/The End
+[06:48:53] [Server thread/INFO]: Stopping server
+[06:48:53] [Server thread/INFO]: Saving players
+[06:48:53] [Server thread/INFO]: Saving worlds
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/Overworld
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/Nether
+[06:48:53] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714'/The End
+[06:48:54] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:48:54] [Server thread/INFO]: Generating keypair
+[06:48:54] [Server thread/INFO]: Converting map!
+[06:48:54] [Server thread/INFO]: Scanning folders...
+[06:48:54] [Server thread/INFO]: Total conversion count is 0
+[06:48:54] [Server thread/WARN]: Unable to find spawn biome
+[06:48:54] [Server thread/INFO]: Preparing start region for level 0
+[06:48:55] [Server thread/INFO]: Preparing spawn area: 31%
+[06:48:56] [Server thread/INFO]: Preparing spawn area: 57%
+[06:48:57] [Server thread/INFO]: Preparing spawn area: 89%
+[06:48:57] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:48:57] [Client thread/INFO]: Deleting level TEMP_10000_c18a81f7-f21b-42fe-9422-78ded951b714
+[06:48:57] [Client thread/INFO]: Attempt 1...
+[06:48:57] [Server thread/INFO]: robot1Recolector[local:E:328f7eda] logged in with entity id 1216 at (-6.5, 227.0, -9.5)
+[06:48:57] [Server thread/INFO]: robot1Recolector joined the game
+[06:48:58] [Server thread/INFO]: Received mission: §9DASI project
+[06:48:58] [Server thread/INFO]: Source: §a127.0.0.1
+[06:48:58] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:48:58] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:48:58] [Client thread/INFO]: Started on 64978
+[06:49:02] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4654ms behind, skipping 93 tick(s)
+[06:49:04] [Server thread/INFO]: robot2Recolector[/127.0.0.1:64984] logged in with entity id 1230 at (-5.5, 227.0, -5.5)
+[06:49:04] [Server thread/INFO]: robot2Recolector joined the game
+[06:49:04] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:50:24] [Server thread/INFO]: Saving and pausing game...
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/Overworld
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/Nether
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/The End
+[06:50:24] [Server thread/INFO]: Stopping server
+[06:50:24] [Server thread/INFO]: Saving players
+[06:50:24] [Server thread/INFO]: Saving worlds
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/Overworld
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/Nether
+[06:50:24] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0'/The End
+[06:50:25] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:50:25] [Server thread/INFO]: Generating keypair
+[06:50:25] [Server thread/INFO]: Converting map!
+[06:50:25] [Server thread/INFO]: Scanning folders...
+[06:50:25] [Server thread/INFO]: Total conversion count is 0
+[06:50:25] [Server thread/WARN]: Unable to find spawn biome
+[06:50:25] [Server thread/INFO]: Preparing start region for level 0
+[06:50:26] [Server thread/INFO]: Preparing spawn area: 31%
+[06:50:27] [Server thread/INFO]: Preparing spawn area: 60%
+[06:50:28] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:50:28] [Client thread/INFO]: Deleting level TEMP_10000_e9280ea0-5ef4-4bb5-b3f8-78c93076d1f0
+[06:50:28] [Client thread/INFO]: Attempt 1...
+[06:50:28] [Server thread/INFO]: robot1Recolector[local:E:835ed314] logged in with entity id 1297 at (-8.5, 227.0, -6.5)
+[06:50:28] [Server thread/INFO]: robot1Recolector joined the game
+[06:50:28] [Server thread/INFO]: Received mission: §9DASI project
+[06:50:28] [Server thread/INFO]: Source: §a127.0.0.1
+[06:50:28] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:50:28] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:50:28] [Client thread/INFO]: Started on 65007
+[06:50:33] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4861ms behind, skipping 97 tick(s)
+[06:50:33] [Server thread/INFO]: robot2Recolector[/127.0.0.1:65012] logged in with entity id 1309 at (-5.5, 227.0, -5.5)
+[06:50:33] [Server thread/INFO]: robot2Recolector joined the game
+[06:50:33] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:52:20] [Server thread/INFO]: Saving and pausing game...
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/Overworld
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/Nether
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/The End
+[06:52:20] [Server thread/INFO]: Stopping server
+[06:52:20] [Server thread/INFO]: Saving players
+[06:52:20] [Server thread/INFO]: Saving worlds
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/Overworld
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/Nether
+[06:52:20] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5'/The End
+[06:52:21] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:52:21] [Server thread/INFO]: Generating keypair
+[06:52:21] [Server thread/INFO]: Converting map!
+[06:52:21] [Server thread/INFO]: Scanning folders...
+[06:52:21] [Server thread/INFO]: Total conversion count is 0
+[06:52:21] [Server thread/WARN]: Unable to find spawn biome
+[06:52:21] [Server thread/INFO]: Preparing start region for level 0
+[06:52:22] [Server thread/INFO]: Preparing spawn area: 29%
+[06:52:23] [Server thread/INFO]: Preparing spawn area: 54%
+[06:52:24] [Server thread/INFO]: Preparing spawn area: 93%
+[06:52:24] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:52:24] [Client thread/INFO]: Deleting level TEMP_10000_8f7f629a-8901-4440-a4c7-16205f2335c5
+[06:52:24] [Client thread/INFO]: Attempt 1...
+[06:52:25] [Server thread/INFO]: robot1Recolector[local:E:b1eedf1d] logged in with entity id 1314 at (-9.5, 227.0, -9.5)
+[06:52:25] [Server thread/INFO]: robot1Recolector joined the game
+[06:52:25] [Server thread/INFO]: Received mission: §9DASI project
+[06:52:25] [Server thread/INFO]: Source: §a127.0.0.1
+[06:52:25] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:52:25] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:52:25] [Client thread/INFO]: Started on 65033
+[06:52:30] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4770ms behind, skipping 95 tick(s)
+[06:52:30] [Server thread/INFO]: robot2Recolector[/127.0.0.1:65038] logged in with entity id 1326 at (-8.5, 227.0, -7.5)
+[06:52:30] [Server thread/INFO]: robot2Recolector joined the game
+[06:52:30] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:53:25] [Server thread/INFO]: Saving and pausing game...
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/Overworld
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/Nether
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/The End
+[06:53:25] [Server thread/INFO]: Stopping server
+[06:53:25] [Server thread/INFO]: Saving players
+[06:53:25] [Server thread/INFO]: Saving worlds
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/Overworld
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/Nether
+[06:53:25] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c'/The End
+[06:53:25] [Server thread/INFO]: Starting integrated minecraft server version 1.8
+[06:53:25] [Server thread/INFO]: Generating keypair
+[06:53:25] [Server thread/INFO]: Converting map!
+[06:53:25] [Server thread/INFO]: Scanning folders...
+[06:53:25] [Server thread/INFO]: Total conversion count is 0
+[06:53:25] [Server thread/WARN]: Unable to find spawn biome
+[06:53:25] [Server thread/INFO]: Preparing start region for level 0
+[06:53:26] [Server thread/INFO]: Preparing spawn area: 28%
+[06:53:27] [Server thread/INFO]: Preparing spawn area: 59%
+[06:53:28] [Server thread/INFO]: Preparing spawn area: 96%
+[06:53:29] [Server thread/INFO]: Changing view distance to 6, from 10
+[06:53:29] [Client thread/INFO]: Deleting level TEMP_10000_1b746ecd-d009-47fd-8806-c0497e02e05c
+[06:53:29] [Client thread/INFO]: Attempt 1...
+[06:53:29] [Server thread/INFO]: robot1Recolector[local:E:21778ef6] logged in with entity id 1330 at (-9.5, 227.0, -8.5)
+[06:53:29] [Server thread/INFO]: robot1Recolector joined the game
+[06:53:29] [Server thread/INFO]: Received mission: §9DASI project
+[06:53:29] [Server thread/INFO]: Source: §a127.0.0.1
+[06:53:29] [Client thread/INFO]: [CHAT] Received mission: §9DASI project
+[06:53:29] [Client thread/INFO]: [CHAT] Source: §a127.0.0.1
+[06:53:29] [Client thread/INFO]: Started on 65063
+[06:53:34] [Server thread/WARN]: Can't keep up! Did the system time change, or is the server overloaded? Running 4822ms behind, skipping 96 tick(s)
+[06:53:34] [Server thread/INFO]: robot2Recolector[/127.0.0.1:65068] logged in with entity id 1342 at (-6.5, 227.0, -9.5)
+[06:53:34] [Server thread/INFO]: robot2Recolector joined the game
+[06:53:34] [Client thread/INFO]: [CHAT] robot2Recolector joined the game
+[06:56:14] [Client thread/INFO]: Stopping!
+[06:56:14] [Client thread/INFO]: SoundSystem shutting down...
+[06:56:14] [Server thread/INFO]: Stopping server
+[06:56:14] [Server thread/INFO]: Saving players
+[06:56:14] [Server thread/INFO]: Saving worlds
+[06:56:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_63eadfc9-ebb4-4f4e-ad96-a6034c539e59'/Overworld
+[06:56:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_63eadfc9-ebb4-4f4e-ad96-a6034c539e59'/Nether
+[06:56:14] [Server thread/INFO]: Saving chunks for level 'TEMP_10000_63eadfc9-ebb4-4f4e-ad96-a6034c539e59'/The End
+[06:56:14] [Client thread/WARN]: Author: Paul Lamb, www.paulscode.com

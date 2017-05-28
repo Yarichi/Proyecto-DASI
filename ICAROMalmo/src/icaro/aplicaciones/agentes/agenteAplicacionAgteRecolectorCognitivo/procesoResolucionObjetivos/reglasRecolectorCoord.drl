@@ -110,6 +110,7 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
 
+
 //Cuando se resuelve la definicion del equipo salta
 rule "Obtencion de informacion del entorno"
 when
@@ -125,6 +126,8 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
 
+
+
 //Basicamente inicializamos el robotstatusMoic
 rule "Inicializar mi RobotStatusMoic(Obtener mi informacion)"
 when
@@ -137,6 +140,18 @@ then
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName()); 
 end
 
+rule "Genero conocimiento de informe"
+when
+   	obj:RecolectarTodasLasManzanas();
+   	robotStatusMoic : RobotStatusMoic(inicializado == true);
+   	not(exists(ConocimientoInformes()))
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(GenerarConocimientoInformesCoord.class);
+	tarea.ejecutar();
+	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
+	
+end
 
 rule "Focalizar objetivo de recolectar todas las manzanas"
 when
@@ -155,7 +170,7 @@ rule "Generacion objetivo de recolectar manzana"
 when
 	obj: RecolectarTodasLasManzanas(state == Objetivo.SOLVING, manzanasRestantes > 0);
 	foco : Focus(foco == obj);
-	not(exists(PropuestaAgente()))
+	//not(exists(PropuestaAgente()))
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(GenerarObjetivoRecolectarManzana.class);
 	tarea.ejecutar(obj,foco);
@@ -165,7 +180,6 @@ end
 
 rule "Pido evaluacion a todos del coste de completar la recoleccion de manzana"
 when
-	not(exists(PropuestaAgente()))
 	obj: RecolectarManzana(id: id, state == Objetivo.PENDING);
 	objDec: DecidirQuienVa(objectDecisionId == id,state == Objetivo.SOLVING);
 	info: InfoDecidirRecolector(ObjetivoID == id, todasLasPeticiones == false );
@@ -236,24 +250,22 @@ then
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 end
-/*
+
 rule "Resolucion del objetivo recolectar manzana por el agente"
 when
-	obj: RecolectarManzana(state == Objetivo.SOLVING);
-	obj1: RecolectarTodasLasManzanas(state == Objetivo.Solving)
-	//mensaje de que se completo cierta manzana
+	obj: RecolectarManzana(state == Objetivo.SOLVING, id: agentId);
+	obj1: RecolectarTodasLasManzanas(state == Objetivo.SOLVING);
+	informe : InformeObjetivo(idAgenteInvolucrado == id);
 then
-	//no lleva tarea, lo hacemos aqui directamente.
-	modify{
-		obj.setSolved();
-	}
-	modify{
-		obj1.setRecolectada(obj.getManzana());
-	}
+
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizacionObjetivoRecolectarManzanaCoord.class);
+	tarea.ejecutar(obj, obj1, informe);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
-end*/
+end
 //Regla del calculo de la evaluacion
 rule "Calculo mi evaluacion de recolectarManzana"
 when
@@ -270,14 +282,17 @@ end
 //Regla de recepcion de recoger manzana. 
 rule "Proceso peticion de recoleccion de manzana"
 when
-	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo)
+	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo, idP: identObjectRefPropuesta)
+	obj : RecolectarManzana(state == Objetivo.PENDING, id == idP)
+	not(exists(RecolectarManzana(state == Objetivo.SOLVING, id != idP)))
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConsecucionObjetivoRecoleccion.class);
-	tarea.ejecutar(peticion);
+	tarea.ejecutar(peticion, obj);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());     
 
 end
+
 
 rule "Proceso informe de rio"
 when
@@ -294,20 +309,92 @@ rule "Hay que construir un puente y se pide al encargado que se construya"
 when
 	objetivo : ConstruirPuente(state == Objetivo.PENDING)
 	infoEquipo : InfoEquipoMoic();
+	cono : ConocimientoInformes();
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(EnviaOrdenConstruirPuente.class);
-	tarea.ejecutar(objetivo,infoEquipo);
+	tarea.ejecutar(objetivo,infoEquipo, cono);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
 end
 
 
-rule "Proceso peticion de construir puente"
+rule "Realizo tratamiento del informe"
 when
-	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgConstruirPuente)
+	informe : InformeAbs()
+	i : FormatoInforme(inf == informe)
+	cono : ConocimientoInformes()
 then
-	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConsecucionObjetivoConstruirPuente.class);
-	tarea.ejecutar(peticion);
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(TratamientodeInforme.class);
+	tarea.ejecutar(informe, cono);
+	retract(i);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());        
+end
+
+
+rule "Proceso informe de piedra"
+when
+	informePiedra : InformePiedra();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(CrearObjetivoPicarPiedra.class);
+	tarea.ejecutar(informePiedra);
  	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());    
+end
+
+rule "Hay que picar una pierda y se pide al encargado que la pique"
+
+when
+	objetivo : PicarPiedra(state == Objetivo.PENDING)
+	infoEquipo : InfoEquipoMoic();
+	cono : ConocimientoInformes();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(EnviaOrdenPicarPiedra.class);
+	tarea.ejecutar(objetivo,infoEquipo, cono);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
+end
+
+rule "Hay que picar una pierda y soy yo quien pica"
+
+when
+	objetivo : PicarPiedra(state == Objetivo.PENDING, idAgenteDescubridor == agentId, inf: informe)
+	infoEquipo : InfoEquipoMoic();
+	cono : ConocimientoInformes();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(TratamientodeInforme.class);
+	tarea.ejecutar(inf, cono);
+	modify(objetivo){
+		setSolved();
+		};
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
+end
+
+
+rule "Hay que poner un puente y soy yo quien construye"
+
+when
+	objetivo : ConstruirPuente(state == Objetivo.PENDING, idAgenteDescubridor == agentId, inf: informe)
+	infoEquipo : InfoEquipoMoic();
+	cono : ConocimientoInformes();
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(TratamientodeInforme.class);
+	tarea.ejecutar(inf, cono);
+	modify(objetivo){
+		setSolved();
+		};
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
+end
+
+
+rule "Finalizar simulacion todas las manzanas recogidas"
+when
+	obj: RecolectarTodasLasManzanas(manzanasRestantes == 0)
+then
+	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizarSimulacionRecoleccion.class);
+//	tarea.ejecutar(obj);
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+    recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());
 end

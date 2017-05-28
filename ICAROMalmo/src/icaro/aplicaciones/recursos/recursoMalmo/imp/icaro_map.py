@@ -87,6 +87,8 @@ def drawMap():
     world += drawCuboid(0, 227, 0, xTop, 237, 0, "barrier")
     world += drawCuboid(xTop, 227, zTop, xTop, 237, 0, "barrier")
     world += drawCuboid(xTop, 227, zTop, 0, 237, zTop, "barrier")
+    for coords in world_items["stones"]:
+        world += drawCuboid(coords[0], coords[1], coords[2],coords[0], coords[1], coords[2], "stone")
     return world
 
 
@@ -109,8 +111,8 @@ xTop = 50
 zTop = 50
 numAgentes = 2
 
-world_items = dict(apples=[[43, 227,43], [12, 227, 32], [5, 227, 10], [27, 227, 20], [20, 227, 25],[4, 227, 4]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], obstacles=[], rivers=[],width = zTop, height = xTop)
-
+world_items = dict(apples=[[43.5, 227,43.5], [12.5, 227, 32.5], [5.5, 227, 10.5], [27.5, 227, 20.5], [20.5, 227, 25.5],[4.5, 227, 4.5]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], stones = [[22,228,23],[21,228,22], [22, 228, 21]], stones_detected = [], obstacles=[], rivers=[],width = zTop, height = xTop)
+agent_routes = dict(robot1Recolector=0, robot2Recolector=0)
 # agent = TabQAgent()
 # Create default Malmo objects:
 agent_hosts = []
@@ -150,7 +152,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         <AgentStart>
             <Placement x="22.5" y="228.0" z="22.5" pitch="30" yaw="0" />
             <Inventory>
-                <InventoryItem slot="1" type="stone" quantity="64" />
+                <InventoryItem slot="1" type="glowstone" quantity="64" />
                 <InventoryItem slot="2" type="diamond_pickaxe" />
             </Inventory>
         </AgentStart>
@@ -175,7 +177,7 @@ mission_xml = '''<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
         <AgentStart>
             <Placement x="22.5" y="228.0" z="34.5" pitch="30" yaw="180" />
             <Inventory>
-                <InventoryItem slot="1" type="stone" quantity="64" />
+                <InventoryItem slot="1" type="glowstone" quantity="64" />
                 <InventoryItem slot="2" type="diamond_pickaxe" />
             </Inventory>
         </AgentStart>
@@ -245,7 +247,7 @@ for retry in range(max_retries):
 
 print "esperando hasta que la mision comience"
 
-
+my_mission.setViewpoint( 1 )
 
 
 #agent_host.startMission( my_mission, my_client_pool, my_mission_record, role, expId )
@@ -272,7 +274,7 @@ for i in range(len(agent_hosts)):
 
 
 print "Inicializando Order Server con world_items para enviarlo a JAVA"
-initDispatcher(world_items, agent_hosts)
+initDispatcher(world_items, agent_routes, agent_hosts)
 time.sleep(2)
 print "Inicializacion completa"
 

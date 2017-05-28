@@ -7,7 +7,7 @@ public class Manzana {
 	private String Id;
 	private boolean recolectado;
 	
-	public Manzana(String id, int x, int y, int z) {
+	public Manzana(String id, float x, float y, float z) {
 		this.coordinate = new Coordinate(x,y,z);
 		this.Id = id;
 		this.recolectado = false;

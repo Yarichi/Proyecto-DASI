@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Hashtable;
 import java.util.concurrent.Semaphore;
 
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 import java.io.BufferedReader;
@@ -18,6 +19,7 @@ import java.net.Socket;
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
 import icaro.aplicaciones.Rosace.informacion.VocabularioRosace;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Agente;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformePiedra;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Manzana;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.Obstaculo;
@@ -77,6 +79,8 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			System.err.println("Error: "+e.getMessage());
 		}
 		 */
+	    JOptionPane.showConfirmDialog(null, "Acepte cuando los minecraft esten iniciados", "Espera",
+	            JOptionPane.OK_OPTION, JOptionPane.WARNING_MESSAGE);
 		MensajeSimple mensaje = new MensajeSimple(VocabularioRosace.MalmoListo, VocabularioRosace.IdentRecursoMalmo , null);
 		
 		try {
@@ -160,7 +164,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			aux.deleteCharAt(aux.length()-1);
 			s = aux.toString();
 			String[] coords = s.split(",");
-			manzanas_return.add(new Manzana("Manzana" + i, Integer.parseInt(coords[0]), Integer.parseInt(coords[1]),Integer.parseInt(coords[2])));
+			manzanas_return.add(new Manzana("Manzana" + i, Float.parseFloat(coords[0]), Float.parseFloat(coords[1]),Float.parseFloat(coords[2])));
 			i++;
 		}
 		return manzanas_return;
@@ -271,15 +275,45 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	public void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
 		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
 		String msg = "move " + identAgente + " " + x + " " + y;
-		this.dispatcher.sendCommand(msg);
+		System.out.println(identAgente + ": " + msg);
+		new Thread(){
+			public void run(){
+				try {
+					dispatcher.sendCommand(msg);
+					//sleep(10000);
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}.start();
 	}
 
 	@Override
-	public void construyePuente(InformeRio informe) {
-		String msg = "buildriver " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaAgente().getX() + " " + informe.getCoordenadaAgente().getZ() + " "  
-				                   + informe.getCoordenadaManzana().getX() + " " + informe.getCoordenadaManzana().getZ() + " " + informe.getOrientacionAgente();
+	public void construyePuente(String msg) {
+		/*String msg = "buildriver " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaAgente().getX() + " " + informe.getCoordenadaAgente().getZ() + " "  
+				                   + informe.getCoordenadaManzana().getX() + " " + informe.getCoordenadaManzana().getZ() + " " + informe.getOrientacionAgente();*/
+		
 		this.dispatcher.sendCommand(msg);
 		
+	}
+
+	@Override
+	public void picaPiedra(String msg) {
+		/*String msg = "pickstone " + informe.getIdAgenteInvolucrado() + " " + informe.getCoordenadaObs().getX() + " " + informe.getCoordenadaObs().getZ() + " "  
+                + informe.getCoordenadaObj().getX() + " " + informe.getCoordenadaObj().getZ() + " " + informe.getOrientacionAgente();*/
+		this.dispatcher.sendCommand(msg);
+		
+	}
+	
+	public void trataMensajeInforme(String msg){
+		String[] parts = msg.split(" ");
+		if (parts[0].equals("buildriver")){
+			this.construyePuente(msg);	
+		}
+		else if (parts[0].equals("pickstone")){
+			this.picaPiedra(msg);	
+		}
 	}
 
 }

@@ -13,6 +13,8 @@ import java.util.Hashtable;
 import javax.swing.JOptionPane;
 
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeObjetivo;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformePiedra;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.InformeRio;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.tareas.ConseguirInformacionDelEntorno;
 import icaro.infraestructura.entidadesBasicas.NombresPredefinidos;
@@ -99,6 +101,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{            
 			//Se manda la orden a la interfaz de python
 			outputData.writeUTF(order);
+			//Thread.sleep(3);
 		}
 		catch (Exception e)
 		{
@@ -157,9 +160,6 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		// TODO Auto-generated method stub
 		while(true){
 			try {
-				/*while(!inputData.ready()){
-					System.out.println("I'm not ready!!");
-				}*/
 				String msg = inputData.readLine();
 				if(msg == null){
 					JOptionPane.showMessageDialog(null, "Fallos en la comunicación...");
@@ -206,11 +206,34 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			//"river agentId agX agZ yaw appleX appleZ"
 			else if(lines[0].equalsIgnoreCase("river")){
 				try {
-					AgenteCognitivotImp2 agenteCoordinador =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot1Recolector");
+					AgenteCognitivotImp2 agenteCoordinador =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_"+lines[1]);
 					agenteCoordinador.getControl().insertarHecho(new InformeRio(lines[1],
 							new Coordinate(Double.parseDouble(lines[5]), 227, Double.parseDouble(lines[6])),
 							new Coordinate(Double.parseDouble(lines[2]), 227, Double.parseDouble(lines[3])),
 							Integer.parseInt(lines[4])));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			
+			else if(lines[0].equalsIgnoreCase("stone")){
+				try {
+					AgenteCognitivotImp2 agenteCoordinador =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_" +lines[1]);
+					agenteCoordinador.getControl().insertarHecho(new InformePiedra(lines[1],
+							new Coordinate(Double.parseDouble(lines[5]), 227, Double.parseDouble(lines[6])),
+							new Coordinate(Double.parseDouble(lines[2]), 227, Double.parseDouble(lines[3])),
+							Integer.parseInt(lines[4])));
+				} catch (Exception e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+			else if(lines[0].equalsIgnoreCase("success")){
+				try {
+					System.out.println(lines[1] + ": " + lines[2] + " " + lines[3]);
+					AgenteCognitivotImp2 agente =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_"+lines[1]);
+					agente.getControl().insertarHecho(new InformeObjetivo(lines[1]));
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -20,13 +20,14 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 		Focus foco = (Focus) params[3];
 		RecolectarTodasLasManzanas obj2 = (RecolectarTodasLasManzanas) params[4];
 		String agenteDestino =  infoDecidirRecolector.selectBestAgent();
+
 		if(agenteDestino != null){
 			PropuestaAgente miPropuesta = new PropuestaAgente (this.identAgente);
 			miPropuesta.setMensajePropuesta(VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo);
-			miPropuesta.setIdentObjectRefPropuesta(agenteDestino);
+			miPropuesta.setIdentObjectRefPropuesta(recolectarManzana.getManzana().getId());
 			miPropuesta.setJustificacion(recolectarManzana.getManzana());
 			this.getComunicator().enviarInfoAotroAgente(miPropuesta, agenteDestino);
-			recolectarManzana.setSolving();
+			recolectarManzana.setAgentId(agenteDestino);
 			decidirQuienVa.setSolved();
 			foco.setFoco(obj2);
 			this.itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);
@@ -36,7 +37,8 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 
 		}
 		else{
-			
+			@SuppressWarnings("unused")
+			int y1 = 1 + 1;
 		}
 		//trazas.aceptaNuevaTrazaEjecReglas(identAgente, "");
 

@@ -19,8 +19,8 @@ public class VocabularioRosace extends NombresPredefinidos{
 //    public static final String IdentEquipoJerarquico= "robotSubordinado";
     public static final String IdentEquipoJerarquicoConCambioRol= "jerarquicoConCR";
     public static final String IdentAgteDistribuidorTareas= IdentEquipoJerarquico+"RobotAsignador";
-    public static final String IdentRolAgtesRecolectores= "agenteRecolector";
-    public static final String IdentRolAgtesRecolectorCoord = "agenteRecolectorCoord";
+    public static final String IdentRolAgtesRecolectores= "robot2Recolector";
+    public static final String IdentRolAgtesRecolectorCoord = "robot1Recolector";
     public static final String IdentRolAgteDistribuidorTareas= "agenteAsignador";
     public static final String IdentRolAgtesSubordinados= "robotSubordinado";
     public static final String IdentRolAgtesSubordinadosConCR= "robotSubordinadoConCR";
@@ -152,4 +152,13 @@ public class VocabularioRosace extends NombresPredefinidos{
 	public static final String MalmoListo = "RecursoMalmoIniciado";
 	public static final String identObjetivoRecolectarTodasLasManzanas = "RecolectarTodasLasManzanas";
 	public static final String MsgConstruirPuente = "ConstruyePuente";
+	public static final String MsgPicarPiedra = "PicaPiedra";
+	public static final String parte_informe_orientacion = "orientacion";
+	public static final String parte_informe_coordAgenteX = "coord_agente_X";
+	public static final String parte_informe_coordAgenteZ = "coord_agente_Z";
+	public static final String parte_informe_coordObjX = "coord_obj_X";
+	public static final String parte_informe_coordObjZ = "coord_obj_Z";
+	public static final String parte_informe_coordObsX = "coord_obs_X";
+	public static final String parte_informe_coordObsZ = "coord_obs_Z";
+	public static final String parte_informe_idAgente = "idAgente";
 }

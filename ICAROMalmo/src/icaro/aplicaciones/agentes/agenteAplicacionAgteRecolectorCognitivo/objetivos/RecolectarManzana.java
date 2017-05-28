@@ -12,6 +12,7 @@ import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.Objetivo;
 public class RecolectarManzana extends Objetivo{
 	private Manzana manzana;
 	private String id;
+	private String agentId;
 	
 	public String getId() {
 		return id;
@@ -28,6 +29,14 @@ public class RecolectarManzana extends Objetivo{
 	
 	public void setManzana(Manzana m){this.manzana = m;}
 	public Manzana getManzana(){return this.manzana;}
+
+	public String getAgentId() {
+		return agentId;
+	}
+
+	public void setAgentId(String agentId) {
+		this.agentId = agentId;
+	}
 	
 
 }

@@ -28,7 +28,8 @@ class OrderDispatcher(object):
             if self.queue.empty() == False:
                 obj = self.queue.get()
                 #obj.action(agent_host[self.number])
-                obj.action(self.number)
+                thread = threading.Thread(target=obj.action, args=[self.number])
+                thread.start();
 
 
     def stopExecution(self):
@@ -48,7 +49,7 @@ class OrderServer(object):
         self.outSocketAck = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.outSocketAck.connect(("127.0.0.1", port + 2))
 
-    def initializeStructures(self, list, dispatcher, initInfo, agents):
+    def initializeStructures(self, list, dispatcher, initInfo, agents, agent_routes):
         self.index = {}
         self.commandList = []
         for element in list:
@@ -56,11 +57,12 @@ class OrderServer(object):
             self.commandList.append(element[0].lower())
         self.orderDispatcher = dispatcher
         self.initInfo = initInfo
+        self.agentRoutes = agent_routes
         self.lock = threading.Lock()
         self.agents = agents
 
-    def __init__(self, port, actionList, dispatcher, initInfo, agents):
-        self.initializeStructures(actionList, dispatcher, initInfo, agents)
+    def __init__(self, port, actionList, dispatcher, initInfo, agents, agent_routes):
+        self.initializeStructures(actionList, dispatcher, initInfo, agents, agent_routes)
         self.initializeConnection(port)
 		
     def convertStringToId(self, queryId):
@@ -82,11 +84,22 @@ class OrderServer(object):
         params = []
         while True:
             message = self.clientsocket.recv(128)
-            print message
             message = self.onlyAllowedCharacter(message)
             message = message.lower()
             message = message.split(" ")
-            #if message[0] != "end":
+            print message
+            if message[0] == "end" and len(message) == 1:
+                break
+            else:
+                #thread = threading.Thread(target=self.parseMessage, args=[message])
+                #thread.start()
+                self.parseMessage(message)
+        self.inSocket.close()
+        for obj in self.orderDispatcher:
+            obj.stopExecution()
+
+    def parseMessage(self, message):
+                    #if message[0] != "end":
             #    agentNumber = self.convertStringToId(message[1])
             #    params.append(float(message[2]))
             #    params.append(float(message[3]))
@@ -122,7 +135,7 @@ class OrderServer(object):
             elif message[0] == "move" and len(message) == 4:
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
@@ -130,18 +143,21 @@ class OrderServer(object):
             elif "buildriver" in message[0] and len(message) == 7:
                 idEntero = self.convertStringToId(message[1])
                 self.orderDispatcher[idEntero].dispatch(Command(self.index["buildriver"],
-                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocket, self.lock, self.initInfo]))
+                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocket, self.lock, self.initInfo, self.agentRoutes]))
+            elif "pickstone" in message[0] and len(message) == 7:
+                idEntero = self.convertStringToId(message[1])
+                self.orderDispatcher[idEntero].dispatch(Command(self.index["pickstone"],
+                                                        [(message[2], message[3]), (message[4], message[5]), message[6], self.outSocket, self.lock, self.initInfo, self.agentRoutes]))
+
             elif message[0] == "eval" and len(message) == 4:
                 ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
                     self.lock.release()
-            elif message[0] == "end" and len(message) == 1:
-                break
             else: 
                 self.lock.acquire(True)
                 self.outSocket.send("No command found\n")
@@ -149,10 +165,6 @@ class OrderServer(object):
             #message = message[0]
             #if message != "end" and message in self.commandList and agentNumber < len(self.orderDispatcher) and agentNumber != -1:
             #    self.orderDispatcher[agentNumber].dispatch(Command(self.index[message], params))
-        self.inSocket.close()
-        for obj in self.orderDispatcher:
-            obj.stopExecution()
-
 
 class Command(object):
     
@@ -201,8 +213,8 @@ def giraAgente(agente, oriActual,oriNueva):
             agente.sendCommand("turn 1")
             sleep(0.1)
     return oriNueva
+
 def miraSiHayObstaculos(obs,world_items):
-    print world_items
     alrededor = obs['floor3x3']
     actualesObstaculos = world_items['obstacles']
     actualesRios = world_items["rivers"]
@@ -211,12 +223,18 @@ def miraSiHayObstaculos(obs,world_items):
     zini = obs['ZPos'] -1
     pos = 0
     obstaculosDetectados = []
+    piedrasDetectadas = []
     riosDetectados = []
     for block in alrededor:
         if yini == (obs['YPos'] -1) and (block == 'agua' or block == 'lava') :
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
                     obstaculosDetectados.append((xini,zini))
                     riosDetectados.append((xini, zini))
+        if yini > (obs['YPos'] -1) and (block == 'stone') :
+            if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
+                obstaculosDetectados.append((xini,zini))
+                piedrasDetectadas.append((xini, zini))
+                print piedrasDetectadas
         elif yini > (obs['YPos'] -1):
             if block != 'air':
                 if (xini,zini) not in actualesObstaculos and (xini,zini) not in obstaculosDetectados:
@@ -232,7 +250,7 @@ def miraSiHayObstaculos(obs,world_items):
         else:
             xini = xini + 1
 
-    return obstaculosDetectados,riosDetectados
+    return obstaculosDetectados,riosDetectados, piedrasDetectadas
     
 def getObservations(agent):
     obs = json.loads(agent.peekWorldState().observations[-1].text)
@@ -248,26 +266,69 @@ def getObservations(agent):
 def buildriver(index, args):
     (posX, posZ) = args[0]
     (manX, manZ) = args[1]
-    arg = [args[3], args[4], posX, posZ, args[5]]
+    arg = [args[3], args[4], posX, posZ, args[5], args[6]]
     obs = getObservations(index)
     yaw = obs["Yaw"]
+    print yaw
+    print posX +" " +posZ
     move(index, arg)
+    print "HOLA"
     yaw = giraAgente(index, yaw,int(args[2]))
     index.sendCommand("move -1")
+    time.sleep(0.4);
     index.sendCommand("move -1")
     useBlock(index, 2)
     index.sendCommand("move 1")
-    time.sleep(0.1)
+    time.sleep(0.4)
     index.sendCommand("move 1")
-    time.sleep(0.1)
+    time.sleep(0.4)
     index.sendCommand("move 1")
-    time.sleep(0.1)
+    time.sleep(0.4)
     index.sendCommand("move 1")
-    time.sleep(0.1)
+    time.sleep(0.4)
     arg[2] = manX
     arg[3] = manZ
     move(index, arg)
 
+#arg[0] --> posicion de la piedra
+#arg[1] --> posicion a la que ir de la manzana
+#arg[2]--> yaw
+#arg[3] --> socket
+#arg[4] --> lock
+#arg[5] --> world_items
+def pickstone(index, args):
+    (posX, posZ) = args[0]
+    (manX, manZ) = args[1]
+    arg = [args[3], args[4], posX, posZ, args[5], args[6]]
+    obs = getObservations(index)
+    yaw = obs["Yaw"]
+    move(index, arg)
+    yaw = giraAgente(index, yaw,int(args[2]))
+
+    usePick(index, 3)
+    time.sleep(0.4)
+    index.sendCommand("move 1")
+    time.sleep(0.4)
+    index.sendCommand("move 1")
+    time.sleep(0.4)
+    index.sendCommand("move 1")
+    time.sleep(0.4)
+    index.sendCommand("move 1")
+    time.sleep(0.4)
+    arg[2] = manX
+    arg[3] = manZ
+    move(index, arg)    
+
+def usePick(index, hotbarIndex):
+    hb1 = ("hotbar.%d 1")%(int(hotbarIndex))
+    hb2 = "hotbar.1 1"
+    use = "attack 1"
+    index.sendCommand(hb1)
+    time.sleep(0.1)
+    index.sendCommand(use)
+    time.sleep(0.1)
+    index.sendCommand(hb2)
+ 
 
 def useBlock(index, hotbarIndex):
     hb1 = ("hotbar.%d 1")%(int(hotbarIndex))
@@ -291,91 +352,124 @@ def move(index,args):
     name = obs["Name"]
     c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
+    args[5][obs['Name']] = len(route)
+    
+    print args[5][obs['Name']] 
     yaw = obs["Yaw"]
     #norte es la -Z y Este es la +x.
     for (newX,newZ) in route:
+        print str(newX) + " " + str(newZ)
         if newZ < zini:
             yaw = giraAgente(index, yaw,180)
-            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos, piedrasNuevas = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                     if pos in riosNuevos:
                         args[4]['rivers'].append(pos)
+                    if pos in piedrasNuevas:
+                        args[4]['stones_detected'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
                     if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
+                    if (xini,newZ) in args[4]['stones_detected']:
+                        sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
+                        return False
                     else:    
-                        if move(index,args) == False:
-                             return False;
+                        return move(index,args)
                     break
             zini = newZ
+            print args[5][obs['Name']] 
             index.sendCommand("move 1")
             time.sleep(0.4)
             
         elif newZ > zini:
             yaw = giraAgente(index, yaw,0)
-            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos, piedrasNuevas = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                     if pos in riosNuevos:
                         args[4]['rivers'].append(pos)
+                    if pos in piedrasNuevas:
+                        args[4]['stones_detected'].append(pos)
                 if (xini,newZ) in args[4]['obstacles']:
                     if (xini,newZ) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
+                    if (xini,newZ) in args[4]['stones_detected']:
+                        sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
+                        return False
                     else:
-                        if move(index,args) == False:
-                             return False;
+                        return move(index,args)
                     break
             zini = newZ
+            print args[5][obs['Name']]
+            
             index.sendCommand("move 1")
             time.sleep(0.4)
         obs = getObservations(index)
             
         if newX > xini:
             yaw = giraAgente(index, yaw ,270)
-            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos, piedrasNuevas = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                     if pos in riosNuevos:
                         args[4]['rivers'].append(pos)
+                    if pos in piedrasNuevas:
+                        args[4]['stones_detected'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
                     if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
+                    if (newX,zini) in args[4]['stones_detected']:
+                        sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
+                        return False
                     else:
-                        move(index,args)
-                        if move(index,args) == False:
-                             return False;
+                        return move(index,args)
                     break
             xini = newX
+            print args[5][obs['Name']]
             index.sendCommand("move 1")
             time.sleep(0.4)
         elif newX < xini:
             yaw = giraAgente(index, yaw ,90)
-            nuevosObstaculos,riosNuevos = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
+            nuevosObstaculos,riosNuevos, piedrasNuevas = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
             if len(nuevosObstaculos) > 0:
                 for pos in nuevosObstaculos:
                     args[4]['obstacles'].append(pos)
                     if pos in riosNuevos:
                         args[4]['rivers'].append(pos)
+                    if pos in piedrasNuevas:
+                        args[4]['stones_detected'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
                     if (newX,zini) in args[4]['rivers']:
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return False
+                    if (newX,zini) in args[4]['stones_detected']:
+                        sendStoneFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
+                        return False
                     else:
-                        move(index,args)
-                        if move(index,args) == False:
-                             return False;
+                        return move(index,args)
                     break
             xini = newX
+            print args[5][obs['Name']]
             index.sendCommand("move 1")
             time.sleep(0.4)
         obs = getObservations(index)
+        args[5][obs['Name']] = args[5][obs['Name']] - 1
+    print str(xini) + " " + str(zini)
+    for coords in args[4]['apples']:
+        if (coords[0]) == xini and (coords[2])  == zini:
+            index.sendCommand("move 1")
+            time.sleep(0.4)
+            args[1].acquire(True)
+            message = "success_%s_%f_%f\n"%(obs['Name'], xini, zini)
+            args[0].send(message)
+            args[1].release()
     return True
 
 def sendRiverFound(agentId, posIni, posDest, yaw, lock, outSocket):
@@ -386,6 +480,15 @@ def sendRiverFound(agentId, posIni, posDest, yaw, lock, outSocket):
     outSocket.send(message)
     lock.release()
 
+def sendStoneFound(agentId, posIni, posDest, yaw, lock, outSocket):
+    (xini, zini) = posIni
+    (xdest, zdest) = posDest
+    message = "stone_%s_%f_%f_%i_%f_%f\n"%(agentId, xini, zini, yaw, xdest, zdest)
+    lock.acquire(True)
+    outSocket.send(message)
+    lock.release()
+
+
 def eval(index,args):
     outSocket = args[0]
     obs = getObservations(index)
@@ -393,8 +496,9 @@ def eval(index,args):
     zini = obs["ZPos"]
     c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
+    print len(route)+args[5][obs['Name']]
     if route is not None:
-        message = "eval_%s_%i\n"%(obs['Name'],len(route))
+        message = "eval_%s_%i\n"%(obs['Name'],len(route)+args[5][obs['Name']])
     else:
         message = "eval_%s_-1\n"%obs['Name']
     args[1].acquire(True)
@@ -402,7 +506,7 @@ def eval(index,args):
     args[1].release()
     return True
     
-def initDispatcher(world_items, agent_host):
+def initDispatcher(world_items, agent_routes, agent_host):
     #TODO se supone que tenemos el numero de agentes
     #cogemos el numero de agentes
     amountAgents = len(world_items["agents"])
@@ -422,7 +526,7 @@ def initDispatcher(world_items, agent_host):
         #lo metemos en la lista
         dispatches.append(dispatch)
     #creamos la clase que recibe y apunta ordenes
-    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval), ("buildriver",buildriver)], dispatches, world_items, agent_host)
+    o = OrderServer(9288, [("up", up),("down", down),("right",right),("left",left),("move",move),("eval",eval), ("buildriver",buildriver), ("pickstone", pickstone)], dispatches, world_items, agent_host, agent_routes)
     #print Aceptamos la conexion con la clase de java
     #print Como ya hay conexion establecemos un hilo para que vaya pasando las ordenes al despachador
     thread = threading.Thread(target=o.receiveOrder)

@@ -2,8 +2,7 @@ package icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.infor
 
 import icaro.aplicaciones.Rosace.informacion.Coordinate;
 
-public class InformeRio {
-	private String idAgenteInvolucrado;
+public class InformeRio extends InformeAbs {
 	private Coordinate coordenadaManzana;
 	private Coordinate coordenadaAgente;
 	private int orientacionAgente;
@@ -12,32 +11,34 @@ public class InformeRio {
 	
 	public InformeRio(String idAgenteInvolucrado, Coordinate coordenadaManzana, Coordinate coordenadaAgente,
 			int orientacionAgente) {
-		this.idAgenteInvolucrado = idAgenteInvolucrado;
+		super(idAgenteInvolucrado);
 		this.coordenadaManzana = coordenadaManzana;
-		this.coordenadaAgente = coordenadaAgente;
 		this.orientacionAgente = orientacionAgente;
+		this.coordenadaAgente = coordenadaAgente;
 	}
 	
 	
 	
-	public String getIdAgenteInvolucrado() {
-		return idAgenteInvolucrado;
+	public InformeRio() {
+		super();
 	}
-	public void setIdAgenteInvolucrado(String idAgenteInvolucrado) {
-		this.idAgenteInvolucrado = idAgenteInvolucrado;
-	}
-	public Coordinate getCoordenadaManzana() {
+
+
+
+	public Coordinate getCoordenadaObj() {
 		return coordenadaManzana;
 	}
-	public void setCoordenadaManzana(Coordinate coordenadaManzana) {
+	public void setCoordenadaObj(Coordinate coordenadaManzana) {
 		this.coordenadaManzana = coordenadaManzana;
 	}
-	public Coordinate getCoordenadaAgente() {
+	
+	public Coordinate getCoordenadaObs() {
 		return coordenadaAgente;
 	}
-	public void setCoordenadaAgente(Coordinate coordenadaAgente) {
-		this.coordenadaAgente = coordenadaAgente;
+	public void setCoordenadaObs(Coordinate coordenada) {
+		this.coordenadaAgente = coordenada;
 	}
+	
 	public int getOrientacionAgente() {
 		return orientacionAgente;
 	}
