@@ -135,7 +135,7 @@ end
 rule "Proceso peticion de recoleccion de manzana"
 when
 	peticion : PropuestaAgente(mensajePropuesta == VocabularioRosace.MsgPropuesta_Para_Aceptar_Objetivo)
-	not(exists(RecolectarManzana(state == Objetivo.SOLVING)))
+	//not(exists(RecolectarManzana(state == Objetivo.SOLVING)))
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(ConsecucionObjetivoRecoleccion.class);
 	tarea.ejecutar(peticion, null);
@@ -177,7 +177,7 @@ when
 then
 	TareaSincrona tarea = gestorTareas.crearTareaSincrona(FinalizacionObjetivoRecolectarManzana.class);
 	tarea.ejecutar(obj, informe);
- 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+"\n\n" );
+ 	System.out.println( "\n"+agentId +" EJECUTO LA REGLA: "+drools.getRule().getName()+ "\n\n" );
     recursoTrazas.aceptaNuevaTrazaEjecReglas(agentId," EJECUTO LA REGLA: " + drools.getRule().getName());        
 
 end

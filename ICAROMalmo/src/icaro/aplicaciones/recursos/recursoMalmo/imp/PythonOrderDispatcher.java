@@ -37,7 +37,7 @@ public class PythonOrderDispatcher implements OrderDispatcher
 		{
 			//Iniciamos el proceso de inicializacion de la parte de python
 			String[] command = {pythonPath, pythonScript};
-			pythonDispatcherThread = Runtime.getRuntime().exec(command);
+			//pythonDispatcherThread = Runtime.getRuntime().exec(command);
 			//damos tiempo para que se inicie tranquilamente
 			Thread.sleep(10000);
 			//creamos el outSocket para comunicarnos con la interfaz de python
@@ -231,9 +231,8 @@ public class PythonOrderDispatcher implements OrderDispatcher
 			}
 			else if(lines[0].equalsIgnoreCase("success")){
 				try {
-					System.out.println(lines[1] + ": " + lines[2] + " " + lines[3]);
-					AgenteCognitivotImp2 agente =  (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_"+lines[1]);
-					agente.getControl().insertarHecho(new InformeObjetivo(lines[1]));
+					AgenteCognitivotImp2 agente = (AgenteCognitivotImp2) NombresPredefinidos.REPOSITORIO_INTERFACES_OBJ.obtenerInterfaz("Itf_Ges_robot1Recolector");
+					agente.getControl().insertarHecho(new InformeObjetivo("robot1Recolector",lines[2]));
 				} catch (Exception e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

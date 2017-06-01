@@ -7,6 +7,7 @@ import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.inform
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RespuestaRecoleccion;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.informacion.RobotStatusMoic;
 import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.RecolectarManzana;
+import icaro.aplicaciones.agentes.agenteAplicacionAgteRecolectorCognitivo.objetivos.RecolectarTodasLasManzanas;
 import icaro.aplicaciones.recursos.recursoMalmo.ItfUsoRecursoMalmo;
 import icaro.aplicaciones.recursos.recursoMalmo.imp.PythonOrderDispatcher;
 import icaro.infraestructura.entidadesBasicas.comunicacion.MensajeSimple;
@@ -15,16 +16,20 @@ import icaro.infraestructura.entidadesBasicas.procesadorCognitivo.TareaSincrona;
 public class FinalizacionObjetivoRecolectarManzana extends TareaSincrona {
 
 	@Override
-	public void ejecutar(Object... params) {
+	public void ejecutar(Object... params) {		
 		RecolectarManzana obj = (RecolectarManzana) params[0];
-		InformeObjetivo inf = (InformeObjetivo) params[1];
+		RecolectarTodasLasManzanas obj1 = (RecolectarTodasLasManzanas) params[1];
+		InformeObjetivo inf = (InformeObjetivo) params[2];
 		
-		obj.setSolved();
-		this.comunicator.enviarInfoAotroAgente(new MensajeSimple(new InformeObjetivo(this.identAgente), this.identAgente, VocabularioRosace.IdentRolAgtesRecolectorCoord), VocabularioRosace.IdentRolAgtesRecolectorCoord);
+		if(!this.identAgente.equalsIgnoreCase(inf.getIdAgenteInvolucrado()))
+			this.comunicator.enviarInfoAotroAgente(new MensajeSimple(new InformeObjetivo(inf.getIdAgenteInvolucrado(),inf.getIdManzana()), this.identAgente, VocabularioRosace.IdentRolAgtesRecolectorCoord), VocabularioRosace.IdentRolAgtesRecolectorCoord);
+		else{
+			obj.setSolved();
+			this.itfProcObjetivos.actualizarHechoWithoutFireRules(obj);
+		}
+		obj1.setRecolectada(obj.getManzana().getId());
 		this.itfProcObjetivos.eliminarHechoWithoutFireRules(inf);
-		this.itfProcObjetivos.actualizarHecho(obj);
-		
-	
+		this.itfProcObjetivos.actualizarHecho(obj1);
 	}
 	
 

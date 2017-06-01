@@ -1,3 +1,11 @@
+'''
+Authors declaration: for the DASI subject in the UCM by
+                            Sergio Moreno de Pradas
+                            Adrian Garcia Garcia
+                            David Diaz Morgado
+                            David Gomez
+                            Luis Garcia
+'''
 # coding=utf-8
 import string
 import socket as socket
@@ -9,28 +17,41 @@ import time
 import json
 from rutasLee import CalculoRutas
 from time import sleep
+from stringprep import c7_set
 
 agents_pos = dict();
 
 class OrderDispatcher(object):
     def __init__(self, agentNumber):
-        self.queue = Queue.Queue()
+        self.queue = Queue.PriorityQueue()
         self.stop = False
         self.number = agentNumber
         
-    def dispatch(self, action):
-        self.queue.put(action)
+    def dispatch(self, action,priority=10):
+        self.queue.put((priority,action))
         
     def execution(self):
         finishCondition = True
+        objAux = None
         print str(self.number)
         while self.stop == False:
-            if not self.queue.empty() and finishCondition == True:
+            if objAux != None:
+                objAux.action(self.number)
+                finishCondition = objAux.isFinished()
+                objAux = None
+            elif not self.queue.empty() and finishCondition == True:
                 obj = self.queue.get()
-                obj.action(self.number)
-                finishCondition = obj.isFinished()
-                
-                '''thread = threading.Thread(target=obj.action, args=[self.number])
+                obj[1].action(self.number)
+                finishCondition = obj[1].isFinished()
+                time.sleep(0.2)
+            '''elif not self.queue.empty() and finishCondition == False:
+                obj = self.queue.get()
+                if obj[1].getCommand().func_name == "eval":
+                   obj[1].action(self.number)
+                   finishCondition = obj[1].isFinished()
+                else:
+                    objAux = obj[1]'''
+            '''thread = threading.Thread(target=obj.action, args=[self.number])
                 thread.start();'''
 
 
@@ -91,23 +112,18 @@ class OrderServer(object):
             message = message.split(" ")
             if '' in message:
                 message.remove('')
-            print message
+            print(message)
             if message[0] == "end" and len(message) == 1:
                 break
             else:
-                #thread = threading.Thread(target=self.parseMessage, args=[message])
-                #thread.start()
-                self.parseMessage(message)
+                thread = threading.Thread(target=self.parseMessage, args=[message])
+                thread.start()
+                #self.parseMessage(message)
         self.inSocket.close()
         for obj in self.orderDispatcher:
             obj.stopExecution()
 
     def parseMessage(self, message):
-                    #if message[0] != "end":
-            #    agentNumber = self.convertStringToId(message[1])
-            #    params.append(float(message[2]))
-            #    params.append(float(message[3]))
-            print "recibido el mensaje " + str(message)
             if message[0] == "obstacles" and len(message) == 1:
                 self.lock.acquire(True)
                 self.outSocket.send("ob" + "_" + str(self.initInfo["obstacles"]) + "\n")
@@ -136,10 +152,10 @@ class OrderServer(object):
                 self.lock.acquire(True)
                 self.outSocket.send("ap" + "_" + str(self.initInfo["apples"]) + "\n")
                 self.lock.release()
-            elif message[0] == "move" and len(message) == 4:
+            elif message[0] == "move" and len(message) == 5:
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes,message[4]]))
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
@@ -157,7 +173,7 @@ class OrderServer(object):
                 ##Llamar a la funcion aqui
                 idEntero = self.convertStringToId(message[1])
                 if idEntero != -1:
-                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes]))
+                    self.orderDispatcher[idEntero].dispatch(Command(self.index[message[0]], [self.outSocket, self.lock, message[2], message[3], self.initInfo, self.agentRoutes]),9)
                 else:
                     self.lock.acquire(True)
                     self.outSocket.send("Error: id de agente no identificado\n")
@@ -183,9 +199,12 @@ class Command(object):
         #print "on end action function"
         #print str(self.finish)
     
+    def getCommand(self):
+        return self.command
+    
     def isFinished(self):
         return self.finish
-
+    
 
 
 def up(index):
@@ -271,9 +290,9 @@ def buildriver(index, args):
     (posX, posZ) = args[0]
     (manX, manZ) = args[1]
     arg = [args[3], args[4], posX, posZ, args[5], args[6]]
+    move(index, arg)
     obs = getObservations(index)
     yaw = obs["Yaw"]
-    move(index, arg)
     yaw = giraAgente(index, yaw,int(args[2]))
     index.sendCommand("move -1")
     time.sleep(0.4);
@@ -302,11 +321,10 @@ def pickstone(index, args):
     (posX, posZ) = args[0]
     (manX, manZ) = args[1]
     arg = [args[3], args[4], posX, posZ, args[5], args[6]]
+    move(index, arg)
     obs = getObservations(index)
     yaw = obs["Yaw"]
-    move(index, arg)
     yaw = giraAgente(index, yaw,int(args[2]))
-
     usePick(index, 3)
     time.sleep(0.4)
     index.sendCommand("move 1")
@@ -355,13 +373,15 @@ def move(index,args):
     name = obs["Name"]
     c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
-    args[5][obs['Name']] = len(route)
+    args[5][obs['Name']] = len(route) 
     
-    print args[5][obs['Name']] 
+    if len(args) == 7:
+        idManzana = args[6]
+        args[4]["ids_manzanas"]["%i,%i"%(int(float(args[2])),int(float(args[3])))] = idManzana
+    
     yaw = obs["Yaw"]
     #norte es la -Z y Este es la +x.
     for (newX,newZ) in route:
-        print str(newX) + " " + str(newZ)
         if newZ < zini:
             yaw = giraAgente(index, yaw,180)
             nuevosObstaculos,riosNuevos, piedrasNuevas = miraSiHayObstaculos(json.loads(index.peekWorldState().observations[-1].text),args[4])
@@ -383,7 +403,6 @@ def move(index,args):
                         return move(index,args)
                     break
             zini = newZ
-            print args[5][obs['Name']] 
             index.sendCommand("move 1")
             time.sleep(0.4)
             
@@ -408,7 +427,6 @@ def move(index,args):
                         return move(index,args)
                     break
             zini = newZ
-            print args[5][obs['Name']]
             
             index.sendCommand("move 1")
             time.sleep(0.4)
@@ -426,6 +444,7 @@ def move(index,args):
                         args[4]['stones_detected'].append(pos)
                 if (newX,zini) in args[4]['obstacles']:
                     if (newX,zini) in args[4]['rivers']:
+                        obs = getObservations(index)
                         sendRiverFound(name, (xini, zini), (float(args[2]), float(args[3])), yaw, args[1], args[0])
                         return True
                     if (newX,zini) in args[4]['stones_detected']:
@@ -435,7 +454,6 @@ def move(index,args):
                         return move(index,args)
                     break
             xini = newX
-            print args[5][obs['Name']]
             index.sendCommand("move 1")
             time.sleep(0.4)
         elif newX < xini:
@@ -459,19 +477,19 @@ def move(index,args):
                         return move(index,args)
                     break
             xini = newX
-            print args[5][obs['Name']]
             index.sendCommand("move 1")
             time.sleep(0.4)
         obs = getObservations(index)
         args[5][obs['Name']] = args[5][obs['Name']] - 1
-    print str(xini) + " " + str(zini)
-    for coords in args[4]['apples']:
-        if (coords[0]) == xini and (coords[2])  == zini:
-            time.sleep(0.4)
-            args[1].acquire(True)
-            message = "success_%s_%f_%f\n"%(obs['Name'], xini, zini)
-            args[0].send(message)
-            args[1].release()
+  
+    time.sleep(0.4)
+    if "%i,%i"%(int(float(args[2])),int(float(args[3]))) in args[4]["ids_manzanas"]:
+        idManzana = args[4]["ids_manzanas"]["%i,%i"%(int(float(args[2])),int(float(args[3])))]
+        args[1].acquire(True)
+        message = "success_%s_%s_%f_%f\n"%(obs['Name'], idManzana,xini, zini)
+        print(message)
+        args[0].send(message)
+        args[1].release()
     return True
 
 def sendRiverFound(agentId, posIni, posDest, yaw, lock, outSocket):
@@ -498,7 +516,6 @@ def eval(index,args):
     zini = obs["ZPos"]
     c = CalculoRutas((xini,zini),args[4]["obstacles"],args[4]["width"],args[4]["height"])
     route = c.calculaRuta(float(args[2]),float(args[3]))
-    print len(route)+args[5][obs['Name']]
     if route is not None:
         message = "eval_%s_%i\n"%(obs['Name'],len(route)+args[5][obs['Name']])
     else:

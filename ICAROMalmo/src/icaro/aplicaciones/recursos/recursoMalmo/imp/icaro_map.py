@@ -1,29 +1,11 @@
-# ------------------------------------------------------------------------------------------------
-# Copyright (c) 2016 Microsoft Corporation
-# 
-# Permission is hereby granted, free of charge, to any person obtaining a copy of this software and
-# associated documentation files (the "Software"), to deal in the Software without restriction,
-# including without limitation the rights to use, copy, modify, merge, publish, distribute,
-# sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is
-# furnished to do so, subject to the following conditions:
-# 
-# The above copyright notice and this permission notice shall be included in all copies or
-# substantial portions of the Software.
-# 
-# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT
-# NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-# NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM,
-# DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-# ------------------------------------------------------------------------------------------------
-
-# Tutorial sample #6: Discrete movement, rewards, and learning
-
-# The "Cliff Walking" example using Q-learning.
-# From pages 148-150 of:
-# Richard S. Sutton and Andrews G. Barto
-# Reinforcement Learning, An Introduction
-# MIT Press, 1998
+'''
+Authors declaration: for the DASI subject in the UCM by
+                            Sergio Moreno de Pradas
+                            Adrian Garcia Garcia
+                            David Diaz Morgado
+                            David Gomez
+                            Luis Garcia
+'''
 
 import MalmoPython
 import json
@@ -38,13 +20,8 @@ import threading
 import re
 import uuid
             
-'''def generateObstacles():
-    for i in range(48):
-        world_items["obstacles"].append([38, 227, i + 3])
-    for i in [23, 24, 25, 26]:
-        for j in [22, 23, 24, 25, 26]:
-            world_items["obstacles"].append([i, 226, j])
-'''
+
+
 def generateAgentsIds():
     #obtenemos en una lista de cadenas los nombres de los agentes con las etiquetas
     modified = re.findall("<Name>.*</Name>", mission_xml)
@@ -111,7 +88,7 @@ xTop = 50
 zTop = 50
 numAgentes = 2
 
-world_items = dict(apples=[[43.5, 227,43.5], [12.5, 227, 32.5], [5.5, 227, 10.5], [27.5, 227, 20.5], [20.5, 227, 25.5],[4.5, 227, 4.5]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], stones = [], stones_detected = [], obstacles=[], rivers=[],width = zTop, height = xTop)
+world_items = dict(apples=[[43.5, 227,43.5], [12.5, 227, 32.5], [5.5, 227, 10.5], [27.5, 227, 20.5], [20.5, 227, 25.5],[4.5, 227, 4.5]], enemies=[[2,229,2],[42,229,7],[41,229,47],[40,229,30]], agents=[[22, 227, 22],[26, 227, 26]], stones = [], stones_detected = [], obstacles=[], ids_manzanas={} ,rivers=[],width = zTop, height = xTop)
 agent_routes = dict(robot1Recolector=0, robot2Recolector=0)
 # agent = TabQAgent()
 # Create default Malmo objects:

@@ -20,7 +20,7 @@ public class ConsecucionObjetivoRecoleccion extends TareaSincrona{
 			itfMalmo = (ItfUsoRecursoMalmo) this.repoInterfaces.obtenerInterfazGestion(VocabularioRosace.IdentRecursoMalmo);
 			Coordinate coord = ((Manzana)propuesta.getJustificacion()).getCoordinate();
 			System.out.println("La manzana esta en: " + coord.getX()+" " +coord.getY() + " " + coord.getZ());
-			itfMalmo.moverAgente(identAgente,((Manzana) propuesta.getJustificacion()).getCoordinate());
+			itfMalmo.moverAgente(identAgente,(Manzana) propuesta.getJustificacion());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

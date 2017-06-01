@@ -27,7 +27,7 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 		Thread t = new Thread(){
 			public void run(){
 				try {
-					Thread.sleep(400);
+					Thread.sleep(1000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -42,7 +42,10 @@ public class PeticionRecolectarManzana extends TareaSincrona{
 			}
 		};
 		if(agenteDestino != null){
-			recolectarManzana.setAgentId(agenteDestino);
+			this.trazas.aceptaNuevaTrazaEjecReglas(this.identAgente, "             Agente seleccionado: " + agenteDestino + ". Id manzana: "+ recolectarManzana.getManzana().getId());
+			recolectarManzana.setAgentID(agenteDestino);
+			if(!this.identAgente.equalsIgnoreCase(agenteDestino))
+				recolectarManzana.setSolving();
 			decidirQuienVa.setSolved();
 			foco.setFoco(obj2);
 			itfProcObjetivos.actualizarHechoWithoutFireRules(decidirQuienVa);

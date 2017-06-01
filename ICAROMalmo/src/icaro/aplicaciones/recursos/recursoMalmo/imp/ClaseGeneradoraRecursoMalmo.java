@@ -164,7 +164,7 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 			aux.deleteCharAt(aux.length()-1);
 			s = aux.toString();
 			String[] coords = s.split(",");
-			manzanas_return.add(new Manzana("Manzana" + i, Float.parseFloat(coords[0]), Float.parseFloat(coords[1]),Float.parseFloat(coords[2])));
+			manzanas_return.add(new Manzana("manzana" + i, Float.parseFloat(coords[0]), Float.parseFloat(coords[1]),Float.parseFloat(coords[2])));
 			i++;
 		}
 		return manzanas_return;
@@ -272,9 +272,9 @@ public class ClaseGeneradoraRecursoMalmo extends ImplRecursoSimple implements It
 	}
 
 	@Override
-	public synchronized void moverAgente(String identAgente, Coordinate coorDestino) throws Exception {
-		double x =(int)coorDestino.getX() + 0.5, y = (int)coorDestino.getZ() + 0.5;
-		String msg = "move " + identAgente + " " + x + " " + y + "\n";
+	public synchronized void moverAgente(String identAgente, Manzana manzana) throws Exception {
+		double x =(int)manzana.getCoordinate().getX() + 0.5, y = (int)manzana.getCoordinate().getZ() + 0.5;
+		String msg = "move " + identAgente + " " + x + " " + y + " " + manzana.getId() + "\n";
 		System.out.println(identAgente + ": " + msg);
 		new Thread(){
 			public void run(){
